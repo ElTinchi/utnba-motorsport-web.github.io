@@ -1,5 +1,5 @@
 import {cleanUnderbody} from './undertray.js?v=side-rail-20';
-import {zones,reserved,fitLogo} from './zones.js?v=utn-white-18';
+import {reserved} from './zones.js?v=no-sae-20';
 import {CarRenderer,parseGLB,cameraBasis,rayDirection,raycast,norm,cross,dot,scale,add} from './engine.js?v=utn-right-19';
 const $=id=>document.getElementById(id),canvas=$('car-canvas');
 const camera={yaw:.72,pitch:.23,distance:9.5};
@@ -9,7 +9,16 @@ let active=true,previous=0,frame=0,loadController=null;
 const pointers=new Map();let gesture=null;
 const mark=()=>{dirty=true;};
 function message(text){$('placement-status').textContent=text;}
-function setPlacing(value){placing=value;canvas.classList.toggle('placing',value);$('place-logo').setAttribute('aria-pressed',String(value));$('place-logo').textContent=value?'Tocá la carrocería':'Colocar / mover logo';}
+function setPlacing(value){placing=value;canvas.classList.toggle('placing',value);$('place-logo').setAttribute('aria-pressed',String(value));$('place-logo').textContent=value?'Tocá la carrocería':'Elegir ubicación';}
+function updateSteps(){
+ const uploaded=hasLogo,positioned=uploaded&&Boolean(placement);
+ $('step-upload').classList.toggle('customizer-step--active',!uploaded);
+ $('step-upload').classList.toggle('customizer-step--complete',uploaded);
+ $('step-place').classList.toggle('customizer-step--active',uploaded&&!positioned);
+ $('step-place').classList.toggle('customizer-step--complete',positioned);
+ $('step-adjust').classList.toggle('customizer-step--active',positioned);
+ $('download-image').disabled=!ready||!positioned;
+}
 function stopRotation(){auto=false;$('rotate').setAttribute('aria-pressed','false');}
 function fitDistance(){return 8.3/Math.min(1,canvas.clientWidth/Math.max(canvas.clientHeight,1));}
 function chooseView(name){[camera.yaw,camera.pitch]=presets[name];camera.distance=fitDistance();stopRotation();document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===name)));mark();}
@@ -33,16 +42,11 @@ async function reservations(){
  for(const zone of reserved){
   const [u,v,w,h]=zone.box,x=u*4096,y=v*4096,width=w*4096,height=h*4096;
   if(zone.kind==='number'||zone.kind==='utn')continue;
-  {
-   const source=zone.kind==='utn'?utnMark:markCanvas;
-   const fit=Math.min(width/source.width,height/source.height);
-   const dw=source.width*fit,dh=source.height*fit;
-   ctx.save();
-   ctx.translate(x+width/2,y+height/2);
-   if(zone.flipX)ctx.scale(-1,1);
-   ctx.drawImage(source,-dw/2,-dh/2,dw,dh);
-   ctx.restore();
-  }
+  const fit=Math.min(width/markCanvas.width,height/markCanvas.height);
+  const dw=markCanvas.width*fit,dh=markCanvas.height*fit;
+  ctx.save();ctx.translate(x+width/2,y+height/2);
+  if(zone.flipX)ctx.scale(-1,1);
+  ctx.drawImage(markCanvas,-dw/2,-dh/2,dw,dh);ctx.restore();
  }
  renderer.setReservations(texture);
  renderer.setInstitution(utnMark,reserved.filter(z=>z.kind==='utn').map(z=>z.box));
@@ -77,11 +81,11 @@ function placeAt(x,y){
   hit={...centerHit,point:[0,centerHit.point[1],centerHit.point[2]],normal:norm([0,centerHit.normal[1],centerHit.normal[2]])};
  }
  if(!hit||!hit.body){message('Elegí una superficie de la carrocería.');return;}
- if(hit.uv&&reserved.some(z=>hit.uv[0]>=z.box[0]&&hit.uv[0]<=z.box[0]+z.box[2]&&hit.uv[1]>=z.box[1]&&hit.uv[1]<=z.box[1]+z.box[3])){message('Ese espacio está reservado para SAE o el número del auto.');return;}
+ if(hit.uv&&reserved.some(z=>hit.uv[0]>=z.box[0]&&hit.uv[0]<=z.box[0]+z.box[2]&&hit.uv[1]>=z.box[1]&&hit.uv[1]<=z.box[1]+z.box[3])){message('Ese espacio está reservado para la identidad reglamentaria o el número del auto.');return;}
  let right=centered?[1,0,0]:norm(cross([0,1,0],hit.normal));
  if(!centered&&Math.abs(dot(hit.normal,[0,1,0]))>.92)right=norm(cross([0,0,-1],hit.normal));
  placement={point:hit.point,normal:hit.normal,right,up:norm(cross(hit.normal,right)),mirror:!centered};
- $('logo-adjustments').disabled=false;$('show-logo').checked=true;$('logo-angle').value=0;$('angle-value').textContent='0°';setPlacing(false);message(centered?'Logo centrado sobre el eje del auto.':'Logo aplicado simétricamente en ambos laterales.');mark();
+ $('logo-adjustments').disabled=false;$('show-logo').checked=true;$('logo-angle').value=0;$('angle-value').textContent='0°';setPlacing(false);updateSteps();message(centered?'Logo centrado sobre el eje del auto.':'Logo aplicado simétricamente en ambos laterales.');mark();
 }
 $('place-logo').addEventListener('click',()=>{stopRotation();setPlacing(!placing);message(placing?'Tocá la carrocería para colocar tu logo.':'Podés girar el auto.');});
 function tick(now){
@@ -114,7 +118,7 @@ async function load(){
     // Release compressed image storage once textures are on the GPU.
     model.imageBlobs=[];await reservations();ready=true;chooseView('three');renderer.render(camera,null);
     $('loading').hidden=true;$('logo-file').disabled=false;
-    document.querySelectorAll('.stage button').forEach(b=>b.disabled=false);
+    document.querySelectorAll('.stage button').forEach(b=>b.disabled=false);updateSteps();
     mark();
   }catch(error){if(error.name!=='AbortError'){console.error(error);showError(error.message||'Ocurrió un problema al cargar el auto.');}}
 }
@@ -169,14 +173,30 @@ $('logo-file').addEventListener('change',async event=>{
     renderer.setLogo(scratch);hasLogo=true;
     url=URL.createObjectURL(file);if(logoURL)URL.revokeObjectURL(logoURL);logoURL=url;
     $('logo-preview').src=url;$('logo-name').textContent=file.name;$('logo-summary').hidden=false;$('place-logo').disabled=false;
-    if(placement){$('logo-adjustments').disabled=false;message('Logo actualizado sobre la superficie seleccionada.');}else{message('Logo listo. Activá “Colocar / mover logo” y tocá la carrocería.');}
-    $('show-logo').checked=true;mark();
+    if(placement){$('logo-adjustments').disabled=false;message('Logo actualizado sobre la superficie seleccionada.');}else{message('Logo listo. Elegí una ubicación y tocá la carrocería.');}
+    $('show-logo').checked=true;updateSteps();mark();
   }catch(error){if(url)URL.revokeObjectURL(url);message(error.message||'No pudimos abrir esa imagen. Probá con otro archivo.');}
 });
 $('remove-logo').addEventListener('click',()=>{
   uploadSerial++;hasLogo=false;placement=null;$('place-logo').disabled=true;setPlacing(false);$('logo-file').value='';$('logo-summary').hidden=true;$('logo-preview').removeAttribute('src');
   if(logoURL){URL.revokeObjectURL(logoURL);logoURL=null;}
-  $('logo-adjustments').disabled=true;$('logo-size').value=100;$('logo-angle').value=0;$('angle-value').textContent='0°';$('size-value').textContent='100%';message('Primero, cargá tu logo.');mark();
+  $('logo-adjustments').disabled=true;$('logo-size').value=100;$('logo-angle').value=0;$('angle-value').textContent='0°';$('size-value').textContent='100%';updateSteps();message('Primero, cargá tu logo.');mark();
 });
+$('download-image').addEventListener('click',()=>{
+ if(!ready||!placement||!hasLogo)return;
+ renderer.render(camera,decal());
+ canvas.toBlob(blob=>{
+  if(!blob){message('No pudimos generar la imagen. Probá nuevamente.');return;}
+  const url=URL.createObjectURL(blob),link=document.createElement('a');
+  link.href=url;link.download='utnba-motorsport-mi-marca.png';link.click();
+  setTimeout(()=>URL.revokeObjectURL(url),1000);message('Imagen descargada.');
+ },'image/png');
+});
+$('viewer-theme').addEventListener('click',()=>{
+ const next=document.documentElement.dataset.theme==='light'?'dark':'light';
+ document.documentElement.dataset.theme=next;localStorage.setItem('utnba-theme',next);
+ document.querySelector('meta[name="theme-color"]').content=next==='light'?'#f7f3e9':'#151519';mark();
+});
+updateSteps();
 window.addEventListener('pagehide',()=>{cancelAnimationFrame(frame);loadController?.abort();renderer?.dispose();if(logoURL)URL.revokeObjectURL(logoURL);});
 window.addEventListener('pageshow',event=>{if(event.persisted)location.reload();});

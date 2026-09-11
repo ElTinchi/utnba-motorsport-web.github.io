@@ -53,7 +53,7 @@
 .fs-page__notice {
   font-size: 0.9rem;
   color: var(--color-white-subtle);
-  background: rgba(221, 14, 14, 0.08);
+  background: rgba(var(--red-rgb), 0.08);
   border-left: 3px solid var(--color-red);
   padding: 0.9rem 1.1rem;
   line-height: 1.6;
@@ -65,7 +65,7 @@
   grid-template-columns: 1fr;
   gap: 1rem;
   padding: 2.5rem 0;
-  border-top: 1px solid rgba(252, 246, 230, 0.1);
+  border-top: 1px solid rgba(var(--ink-rgb), 0.1);
 }
 
 @media (min-width: 700px) {
@@ -78,7 +78,7 @@
 .fs-section__index {
   font-size: 1.5rem;
   font-weight: 800;
-  color: rgba(252, 246, 230, 0.25);
+  color: rgba(var(--ink-rgb), 0.25);
 }
 
 .fs-section__eyebrow {
@@ -145,7 +145,7 @@
 
 .fs-event {
   background: rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(252, 246, 230, 0.08);
+  border: 1px solid rgba(var(--ink-rgb), 0.08);
   border-radius: 14px;
   padding: 1.5rem;
 }

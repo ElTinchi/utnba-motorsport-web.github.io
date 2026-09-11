@@ -14,14 +14,28 @@ import NotFound from './pages/NotFound.jsx';
 import { ROUTES, LEGACY_REDIRECTS } from './routes';
 
 // Al navegar entre páginas el scroll se queda donde estaba: con React Router
-// no hay recarga que lo resetee. Excepción: si la URL trae un #ancla, la
-// respetamos y dejamos que el navegador salte ahí.
+// no hay recarga que lo resetee.
+//
+// Si la URL trae un #ancla hay que saltar a mano. El navegador no lo hace solo:
+// en una navegación de React Router la URL cambia antes de que monte la página
+// nueva, así que cuando el navegador busca el elemento del ancla todavía no
+// existe. Es el caso de los links de áreas del Home hacia /el-equipo#<área>.
+//
+// scrollIntoView() sin `behavior` usa el scroll-behavior del CSS, que ya está
+// anulado bajo prefers-reduced-motion. Por eso no se pasa 'smooth' explícito:
+// forzarlo se saltearía esa preferencia.
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    if (hash) return;
-    window.scrollTo(0, 0);
+    if (!hash) {
+      window.scrollTo(0, 0);
+      return;
+    }
+
+    const target = document.getElementById(decodeURIComponent(hash.slice(1)));
+    if (target) target.scrollIntoView();
+    else window.scrollTo(0, 0);
   }, [pathname, hash]);
 
   return null;

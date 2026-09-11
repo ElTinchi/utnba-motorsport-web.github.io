@@ -9,6 +9,10 @@
     "joinUs": "Join us",
     "sponsors": "Sponsors"
   },
+  "theme": {
+    "useLight": "Use light mode",
+    "useDark": "Use dark mode"
+  },
   "footer": {
     "copyright": "© {{year}} UTN BA Motorsport · Universidad Tecnológica Nacional · Facultad Regional Buenos Aires",
     "contactLabel": "Contact",
@@ -32,8 +36,8 @@
     "joinLink": "See open calls",
     "areas": {
       "kicker": "How the team is organised",
-      "title": "Six areas, one car",
-      "intro": "Each area runs its own workstream, and the car is what comes out of all six together. Whatever engineering degree you're in, there's a place where what you study gets used."
+      "title": "Seven areas, one car",
+      "intro": "Each area runs its own workstream, and the car is what comes out of all seven together. Whatever engineering degree you're in, there's a place where what you study gets used."
     },
     "academy": {
       "kicker": "The UTN BA Motorsport academy",
@@ -43,7 +47,7 @@
         {
           "logoAlt": "Rookie UTNBA",
           "number": "Level 01",
-          "title": "Rookie & Freshman",
+          "title": "Rookie",
           "body": "Your first contact with automotive engineering. You build a go-kart, learn to weld and use tools like the lathe, and get hands-on with the team's manufacturing processes."
         },
         {
@@ -184,10 +188,10 @@
         "number": "01",
         "logoAlt": "Rookie UTNBA",
         "eyebrow": "The first step",
-        "title": "Rookie & Freshman",
+        "title": "Rookie",
         "paragraphs": [
-          "It all starts here. As a Rookie, your first project inside the team is building a go-kart — a simple, concrete challenge to start building with your hands before you get into the single-seater.",
-          "As a Freshman, if you're in your first or second year, you take your first steps into automotive engineering: welding, using tools like the lathe, and a first real look at the team's manufacturing processes.",
+          "It all starts here: your first project inside the team is building a go-kart — a simple, concrete challenge to start building with your hands before you get into the single-seater.",
+          "Along the way you take your first steps into automotive engineering: welding, using tools like the lathe, and a first real look at the team's manufacturing processes.",
           "No prior experience needed. This is the entry point to the team, built so anyone can join and grow."
         ]
       },
@@ -232,29 +236,6 @@
       }
     ],
     "statsNote": "The students-per-year figure is our own estimate (between 15,000 and 25,000) based on public data, not an official number.",
-    "sourcesLabel": "Sources",
-    "sources": [
-      {
-        "label": "Formula Student — Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Formula_Student"
-      },
-      {
-        "label": "Formula SAE — Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Formula_SAE"
-      },
-      {
-        "label": "Baja SAE — Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Baja_SAE"
-      },
-      {
-        "label": "Red Bull — Global Formula Racing",
-        "url": "https://www.redbull.com/us-en/theredbulletin/global-formula-racing-formula-sae"
-      },
-      {
-        "label": "Wichita State University — Formula SAE",
-        "url": "https://www.wichita.edu/academics/engineering/mechanical_engineering/students/formula-sae/competition.php"
-      }
-    ],
     "fsLink": "See the full rulebook and events"
   },
   "sponsorsPage": {
@@ -326,6 +307,11 @@
         "subtitle": "Build and assembly",
         "body": "Where the design becomes a car. Cutting, welding, machining and assembly: this is where every part is physically built and the car is put together."
       },
+      "cnc": {
+        "title": "CNC",
+        "subtitle": "Precision machining",
+        "body": "Makes the parts that leave no room for error. Uprights, hubs, bushings and suspension clamps come out of here: the components that hold the wheel and feed its loads into the chassis, machined under numerical control from the Design team's models. A tenth of a millimetre out of tolerance gets paid for on track."
+      },
       "industrial": {
         "title": "Industrial",
         "subtitle": "Manufacturing and processes",
@@ -353,8 +339,8 @@
       "We are the first Formula SAE generation at UTN BA. That means we inherited neither a car nor a manual: we are writing both. Everything decided now is the starting point for the teams that come after us.",
       "We believe the best way to learn engineering is by building it. Here what you study at university gets applied to a real part, with a real competition date and real consequences if it does not work."
     ],
-    "areasTitle": "The six areas",
-    "areasIntro": "Each area runs its own workstream, and the car is what comes out of all six together. Whatever engineering degree you're in, there's a place where what you study gets used.",
+    "areasTitle": "The seven areas",
+    "areasIntro": "Each area runs its own workstream, and the car is what comes out of all seven together. Whatever engineering degree you're in, there's a place where what you study gets used.",
     "noPhotos": "We haven't uploaded photos of this area yet.",
     "ctaTitle": "Want to be part of it?",
     "ctaText": "Whenever an intake opens, we publish the target profiles, requirements and selection stages on Instagram.",

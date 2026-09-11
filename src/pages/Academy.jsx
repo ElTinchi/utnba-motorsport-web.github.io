@@ -13,7 +13,6 @@ export default function Academy() {
   const { t } = useTranslation();
   const sections = t('motorsportPage.sections', { returnObjects: true });
   const stats = t('motorsportPage.stats', { returnObjects: true });
-  const sources = t('motorsportPage.sources', { returnObjects: true });
 
   return (
     <section className="ms-page">
@@ -71,19 +70,6 @@ export default function Academy() {
             </div>
           </article>
         ))}
-
-        <div className="ms-sources">
-          <h3 className="ms-sources__title">{t('motorsportPage.sourcesLabel')}</h3>
-          <ul className="ms-sources__list">
-            {sources.map((source) => (
-              <li key={source.url}>
-                <a href={source.url} target="_blank" rel="noopener noreferrer" className="ms-sources__link">
-                  {source.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
       </div>
     </section>
   );

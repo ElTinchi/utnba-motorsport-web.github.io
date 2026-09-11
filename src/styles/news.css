@@ -17,7 +17,7 @@
 
 .news-card {
   background: rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(252, 246, 230, 0.07);
+  border: 1px solid rgba(var(--ink-rgb), 0.07);
   border-radius: 14px;
   overflow: hidden;
   transition: transform 0.25s ease, border-color 0.25s ease;
@@ -25,7 +25,7 @@
 
 .news-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(252, 246, 230, 0.18);
+  border-color: rgba(var(--ink-rgb), 0.18);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -76,7 +76,7 @@
 .news-empty {
   padding: clamp(2rem, 5vw, 3.5rem);
   background: rgba(0, 0, 0, 0.35);
-  border: 1px dashed rgba(252, 246, 230, 0.16);
+  border: 1px dashed rgba(var(--ink-rgb), 0.16);
   border-radius: 18px;
   max-width: 640px;
 }

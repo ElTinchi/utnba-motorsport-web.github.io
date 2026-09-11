@@ -63,7 +63,7 @@
   grid-template-columns: 1fr;
   gap: 1rem;
   padding: 1.75rem 0;
-  border-top: 1px solid rgba(252, 246, 230, 0.1);
+  border-top: 1px solid rgba(var(--ink-rgb), 0.1);
 }
 
 @media (min-width: 700px) {
@@ -76,8 +76,8 @@
 /* Baja SAE: no es continuación de la escalera, es un camino aparte */
 .ms-section--parallel {
   border-top-style: dashed;
-  border-top-color: rgba(252, 246, 230, 0.25);
-  background: rgba(252, 246, 230, 0.02);
+  border-top-color: rgba(var(--ink-rgb), 0.25);
+  background: rgba(var(--ink-rgb), 0.02);
   border-radius: 16px;
   margin: 0.5rem 0;
   padding: 2.5rem 1.5rem;
@@ -92,7 +92,7 @@
 .ms-section__index {
   font-size: 1.5rem;
   font-weight: 800;
-  color: rgba(252, 246, 230, 0.25);
+  color: rgba(var(--ink-rgb), 0.25);
 }
 
 .ms-section__logo {
@@ -156,48 +156,11 @@
 .ms-stats {
   margin-top: 2.5rem;
   padding-top: 2.5rem;
-  border-top: 1px solid rgba(252, 246, 230, 0.1);
+  border-top: 1px solid rgba(var(--ink-rgb), 0.1);
 }
 
 .ms-stats__title {
   font-size: 1.15rem;
   font-weight: 700;
   margin-bottom: 1.75rem;
-}
-
-/* ========================================
-   Fuentes
-   ======================================== */
-.ms-sources {
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(252, 246, 230, 0.1);
-}
-
-.ms-sources__title {
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--color-white-subtle);
-  margin-bottom: 0.9rem;
-}
-
-.ms-sources__list {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 1.25rem;
-}
-
-.ms-sources__link {
-  font-size: 0.85rem;
-  color: var(--color-white-muted);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  transition: color 0.2s ease;
-}
-
-.ms-sources__link:hover {
-  color: var(--color-white);
 }

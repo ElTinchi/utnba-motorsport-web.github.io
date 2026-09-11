@@ -7,7 +7,6 @@ import '../styles/sponsors-carousel.css';
 // fondo oscuro: ahí se invirtió la luminosidad, conservando el tono de marca).
 export const SPONSORS = [
   { name: 'UTN BA', href: 'https://www.frba.utn.edu.ar/', logo: '/assets/img/sponsors/onwhite/logoutnba.png' },
-  { name: 'Bosch', href: 'https://www.bosch.com/', logo: '/assets/img/sponsors/onwhite/bosch.png' },
   { name: 'Cognitive AI', href: 'https://cognitive.com.ar/', logo: '/assets/img/sponsors/onwhite/cognitive.png' },
   { name: 'Ernesto Mayer SA', href: 'https://www.emayer.com.ar/', logo: '/assets/img/sponsors/onwhite/emayer.png' },
   { name: 'Polimetal Procesos', href: 'https://polimetalprocesos.com.ar/', logo: '/assets/img/sponsors/onwhite/polimetal.png' },
@@ -17,7 +16,6 @@ export const SPONSORS = [
   { name: 'MathWorks', href: 'https://www.mathworks.com/', logo: '/assets/img/sponsors/onwhite/mathworks.png' },
   { name: 'Bender', href: 'https://www.bender.de/', logo: '/assets/img/sponsors/onwhite/benderlogo.png' },
   { name: 'Grupo Paglia', href: 'https://www.instagram.com/grupopaglia_/', logo: '/assets/img/sponsors/onwhite/grupopaglia.png' },
-  { name: 'Leandro Di Matteo', href: 'https://www.linkedin.com/in/leandrodimatteo/?locale=es', logo: '/assets/img/sponsors/onwhite/leandrodimatteo.png' },
 ];
 
 // `duplicate` marca la copia visual del loop: no debe recibir foco de teclado

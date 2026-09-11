@@ -8,6 +8,8 @@
    sube y lo va tapando al scrollear (efecto reveal)
    ======================================== */
 .hero {
+  --ink-rgb: 252, 246, 230;
+  --surface-rgb: 21, 21, 25;
   position: fixed;
   inset: 0;
   z-index: 0;
@@ -110,7 +112,7 @@
 }
 
 .hero__track-curb--white {
-  stroke: rgba(252, 246, 230, 0.28);
+  stroke: rgba(var(--ink-rgb), 0.28);
   stroke-dashoffset: 14;
 }
 
@@ -121,7 +123,7 @@
 
 .hero__track-line {
   fill: none;
-  stroke: rgba(252, 246, 230, 0.45);
+  stroke: rgba(var(--ink-rgb), 0.45);
   stroke-width: 3.5;
   stroke-dasharray: 11 13;
   stroke-linecap: round;
@@ -287,7 +289,7 @@
 
 .home-highlight {
   background: rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(252, 246, 230, 0.08);
+  border: 1px solid rgba(var(--ink-rgb), 0.08);
   border-radius: 16px;
   padding: 2rem;
 }
@@ -387,7 +389,7 @@
 
 .academy-level {
   background: rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(252, 246, 230, 0.08);
+  border: 1px solid rgba(var(--ink-rgb), 0.08);
   border-radius: 16px;
   padding: 1.5rem;
 }
@@ -405,8 +407,8 @@
 
 .academy-level--parallel {
   border-style: dashed;
-  border-color: rgba(252, 246, 230, 0.25);
-  background: rgba(252, 246, 230, 0.03);
+  border-color: rgba(var(--ink-rgb), 0.25);
+  background: rgba(var(--ink-rgb), 0.03);
 }
 
 .academy-level__badge {
@@ -416,7 +418,7 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--color-white);
-  background: rgba(252, 246, 230, 0.1);
+  background: rgba(var(--ink-rgb), 0.1);
   border-radius: 999px;
   padding: 0.3rem 0.7rem;
   margin-bottom: 1rem;
@@ -426,7 +428,7 @@
   display: block;
   font-size: 0.85rem;
   font-weight: 700;
-  color: rgba(252, 246, 230, 0.35);
+  color: rgba(var(--ink-rgb), 0.35);
   margin-bottom: 0.9rem;
 }
 
@@ -445,8 +447,8 @@
 
 .academy__stats {
   padding: 2.5rem 0;
-  border-top: 1px solid rgba(252, 246, 230, 0.1);
-  border-bottom: 1px solid rgba(252, 246, 230, 0.1);
+  border-top: 1px solid rgba(var(--ink-rgb), 0.1);
+  border-bottom: 1px solid rgba(var(--ink-rgb), 0.1);
   margin-bottom: 2.5rem;
 }
 
@@ -469,7 +471,7 @@
    ======================================== */
 .areas {
   padding: 4rem 1.5rem 5rem;
-  border-top: 1px solid rgba(252, 246, 230, 0.07);
+  border-top: 1px solid rgba(var(--ink-rgb), 0.07);
 }
 
 @media (min-width: 1200px) {
@@ -509,30 +511,67 @@
   margin-bottom: 3rem;
 }
 
+/* Las áreas son 7, que es primo: cualquier corte por fila deja una fila
+   incompleta. Por eso esto es flex y no grid — el ancho de tarjeta define
+   cuántas entran, y `justify-content: center` deja la fila corta centrada en
+   vez de pegada a la izquierda, que era lo que se veía mal.
+   En desktop el ancho está calculado para que entren las 7 en una sola línea. */
 .areas__grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem 1.25rem;
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-@media (min-width: 720px) {
+/* min-width: 0 es necesario, no cosmético: por defecto un ítem flex no puede
+   achicarse por debajo de su contenido mínimo, y "Comunicación" es una sola
+   palabra de ~148px. Sin esto, la séptima tarjeta se niega a entrar y tira la
+   fila abajo por más que el ancho calculado alcance. */
+.areas__grid > li {
+  flex: 0 1 calc((100% - 1.25rem) / 2); /* 2 por fila */
+  display: flex;
+  min-width: 0;
+}
+
+@media (min-width: 640px) {
   .areas__grid {
-    grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem 1.5rem;
   }
-}
-
-@media (min-width: 1100px) {
-  .areas__grid {
-    grid-template-columns: repeat(6, 1fr);
+  .areas__grid > li {
+    flex-basis: calc((100% - 3 * 1.5rem) / 4); /* 4 por fila */
   }
 }
 
+@media (min-width: 1200px) {
+  .areas__grid > li {
+    flex-basis: calc((100% - 6 * 1.5rem) / 7); /* las 7 en una sola línea */
+  }
+}
+
+/* La tarjeta entera es el link a /el-equipo#<área>. */
 .area-card {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.75rem 0.35rem;
+  border-radius: 14px;
   text-align: center;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.area-card:hover,
+.area-card:focus-visible {
+  background-color: rgba(var(--ink-rgb), 0.05);
+  transform: translateY(-3px);
+}
+
+.area-card:focus-visible {
+  outline: 2px solid var(--color-red);
+  outline-offset: 2px;
 }
 
 .area-card__icon {
@@ -551,6 +590,20 @@
   font-size: 0.85rem;
   color: var(--color-white-subtle);
   line-height: 1.5;
+  text-wrap: balance;
+}
+
+/* Solo en la fila única: cada tarjeta mide ~1/7 del ancho y el título más largo
+   ("Comunicación") no entra a cuerpo fijo por debajo de ~1450px. Escalándolo
+   con el viewport entra desde los 1200px. Abajo de eso las tarjetas son anchas
+   y el cuerpo fijo se mantiene. */
+@media (min-width: 1200px) {
+  .area-card__title {
+    font-size: clamp(0.76rem, 1vw, 1.02rem);
+  }
+  .area-card__subtitle {
+    font-size: clamp(0.73rem, 0.85vw, 0.85rem);
+  }
 }
 
 /* ========================================
@@ -558,7 +611,7 @@
    ======================================== */
 .home-sponsors {
   padding: clamp(5rem, 10vw, 9rem) 0 5rem;
-  border-top: 1px solid rgba(252, 246, 230, 0.07);
+  border-top: 1px solid rgba(var(--ink-rgb), 0.07);
   text-align: center;
 }
 
@@ -600,9 +653,9 @@
   overflow: hidden;
   max-width: 720px;
   margin: 2rem 0;
-  border: 1px solid rgba(252, 246, 230, 0.1);
+  border: 1px solid rgba(var(--ink-rgb), 0.1);
   border-radius: 14px;
-  background: rgba(252, 246, 230, 0.1);
+  background: rgba(var(--ink-rgb), 0.1);
 }
 
 .home-sponsors__figures span {
@@ -642,7 +695,7 @@
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--color-white-muted);
-  border-bottom: 1px solid rgba(252, 246, 230, 0.25);
+  border-bottom: 1px solid rgba(var(--ink-rgb), 0.25);
   padding-bottom: 2px;
   transition: color 0.2s ease, border-color 0.2s ease;
 }

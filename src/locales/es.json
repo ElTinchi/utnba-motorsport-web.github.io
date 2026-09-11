@@ -9,6 +9,10 @@
     "joinUs": "Sumate",
     "sponsors": "Sponsors"
   },
+  "theme": {
+    "useLight": "Usar modo claro",
+    "useDark": "Usar modo oscuro"
+  },
   "footer": {
     "copyright": "© {{year}} UTN BA Motorsport · Universidad Tecnológica Nacional · Facultad Regional Buenos Aires",
     "contactLabel": "Contacto",
@@ -32,8 +36,8 @@
     "joinLink": "Ver convocatorias",
     "areas": {
       "kicker": "Cómo se divide el equipo",
-      "title": "Seis áreas, un solo auto",
-      "intro": "Cada área tiene su propio frente de trabajo, y el monoplaza sale de la suma de las seis. No importa de qué ingeniería vengas: hay un lugar donde lo que estudiás se aplica."
+      "title": "Siete áreas, un solo auto",
+      "intro": "Cada área tiene su propio frente de trabajo, y el monoplaza sale de la suma de las siete. No importa de qué ingeniería vengas: hay un lugar donde lo que estudiás se aplica."
     },
     "academy": {
       "kicker": "La academia UTN BA Motorsport",
@@ -43,7 +47,7 @@
         {
           "logoAlt": "Rookie UTNBA",
           "number": "Nivel 01",
-          "title": "Rookie & Freshman",
+          "title": "Rookie",
           "body": "Tu primer contacto con la ingeniería automotriz. Armás un karting, aprendés a soldar y a usar el torno, y te metés de lleno en los procesos de fabricación del equipo."
         },
         {
@@ -184,10 +188,10 @@
         "number": "01",
         "logoAlt": "Rookie UTNBA",
         "eyebrow": "El primer paso",
-        "title": "Rookie & Freshman",
+        "title": "Rookie",
         "paragraphs": [
-          "Todo arranca acá. Como Rookie, tu primer proyecto dentro del equipo es armar un karting — un desafío simple y concreto para empezar a construir con las manos antes de meterte con el monoplaza.",
-          "Como Freshman, si estás en primer o segundo año, das tus primeros pasos en la ingeniería automotriz: soldadura, uso de herramientas como el torno, y el primer acercamiento real a los procesos de fabricación del equipo.",
+          "Todo arranca acá: tu primer proyecto dentro del equipo es armar un karting — un desafío simple y concreto para empezar a construir con las manos antes de meterte con el monoplaza.",
+          "En el camino das tus primeros pasos en la ingeniería automotriz: soldadura, uso de herramientas como el torno, y el primer acercamiento real a los procesos de fabricación del equipo.",
           "No hace falta experiencia previa. Esta es la puerta de entrada al equipo, pensada para que cualquiera pueda sumarse y crecer."
         ]
       },
@@ -232,29 +236,6 @@
       }
     ],
     "statsNote": "La cifra de estudiantes por año es una estimación propia (entre 15.000 y 25.000) a partir de datos públicos, no un dato oficial.",
-    "sourcesLabel": "Fuentes",
-    "sources": [
-      {
-        "label": "Formula Student — Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Formula_Student"
-      },
-      {
-        "label": "Formula SAE — Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Formula_SAE"
-      },
-      {
-        "label": "Baja SAE — Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Baja_SAE"
-      },
-      {
-        "label": "Red Bull — Global Formula Racing",
-        "url": "https://www.redbull.com/us-en/theredbulletin/global-formula-racing-formula-sae"
-      },
-      {
-        "label": "Wichita State University — Formula SAE",
-        "url": "https://www.wichita.edu/academics/engineering/mechanical_engineering/students/formula-sae/competition.php"
-      }
-    ],
     "fsLink": "Conocé el reglamento y las pruebas en detalle"
   },
   "sponsorsPage": {
@@ -356,6 +337,11 @@
         "subtitle": "Construcción y ensamble",
         "body": "Donde el diseño se vuelve auto. Corte, soldadura, mecanizado y ensamble: acá se construye físicamente cada parte y se arma el monoplaza completo."
       },
+      "cnc": {
+        "title": "CNC",
+        "subtitle": "Mecanizado de precisión",
+        "body": "Fabrica las piezas que no toleran error. Portamazas, mazas, bujes y abrazaderas de suspensión salen de acá: los componentes que sostienen la rueda y bajan los esfuerzos al chasis, mecanizados por control numérico a partir de los modelos de Diseño. Una décima fuera de tolerancia se paga en pista."
+      },
       "industrial": {
         "title": "Industrial",
         "subtitle": "Manufactura y procesos",
@@ -383,8 +369,8 @@
       "Somos la primera generación de Fórmula SAE de la UTN BA. Eso quiere decir que no heredamos un auto ni un manual: estamos escribiendo los dos. Todo lo que se decide ahora es el punto de partida de los equipos que vengan después.",
       "Creemos que la mejor forma de aprender ingeniería es construyéndola. Acá lo que se estudia en la facultad se aplica sobre una pieza real, con una fecha de competencia real y consecuencias reales si no funciona."
     ],
-    "areasTitle": "Las seis áreas",
-    "areasIntro": "Cada área tiene su propio frente de trabajo, y el auto sale de la suma de las seis. No importa de qué ingeniería vengas: hay un lugar donde lo que estudiás se aplica.",
+    "areasTitle": "Las siete áreas",
+    "areasIntro": "Cada área tiene su propio frente de trabajo, y el auto sale de la suma de las siete. No importa de qué ingeniería vengas: hay un lugar donde lo que estudiás se aplica.",
     "noPhotos": "Todavía no subimos fotos de esta área.",
     "ctaTitle": "¿Querés ser parte?",
     "ctaText": "Cuando abrimos una convocatoria, publicamos en Instagram los perfiles buscados, requisitos y etapas de selección.",

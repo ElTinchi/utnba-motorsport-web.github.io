@@ -6,6 +6,17 @@
   <title>UTN BA Motorsport — Fórmula SAE eléctrico de la UTN Buenos Aires</title>
   <meta name="description" content="Somos la primera generación de Fórmula SAE de la UTN Buenos Aires. Diseñamos, fabricamos y ponemos en pista un monoplaza 100% eléctrico para competir en Fórmula SAE Brasil 2027.">
   <meta name="theme-color" content="#151519">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        var dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.dataset.theme = saved || (dark ? 'dark' : 'light');
+      } catch (error) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    })();
+  </script>
   <link rel="icon" type="image/png" href="/assets/img/favicon.png">
   <link rel="canonical" href="https://utnbamotorsport.com.ar/">
 

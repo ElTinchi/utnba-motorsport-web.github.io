@@ -1,5 +1,69 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#151519"><title>Tu marca en el auto — UTN BA Motorsport</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="visor.css"><link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;800&display=swap" rel="stylesheet"></head>
-<body><script>if(new URLSearchParams(location.search).has('embed')){document.documentElement.classList.add('embed');const link=document.createElement('link');link.rel='stylesheet';link.href='embed.css';document.head.append(link)}addEventListener('DOMContentLoaded',()=>document.querySelectorAll('a[href="index.html#sponsors"]').forEach(link=>link.href='/sponsors'))</script><a class="skip" href="#visor">Saltar al visualizador</a><header class="header"><a class="brand" href="/"><img src="assets/logo.png" alt="UTN BA Motorsport" width="205" height="45"></a><a class="back-site" href="/sponsors">← Volver al equipo</a></header>
-<main class="viewer-page"><div class="viewer-heading"><div><p class="eyebrow">UTN BA MOTORSPORT / PATROCINIO</p><h1>TU MARCA.<br><em>EN NUESTRO AUTO.</em></h1></div><p>Explorá el monoplaza y probá tu logo sobre la carrocería. Una primera mirada a lo que podemos construir juntos.</p></div>
-<div class="viewer-layout"><section class="stage" id="visor" aria-label="Visualizador del monoplaza"><div class="stage-top"><span><i></i> MONOPLAZA ELÉCTRICO</span><span>FSAEB 2027</span></div><canvas id="car-canvas" tabindex="0" aria-label="Auto en 3D. Arrastrá para girar, usá la rueda para acercarte. Con el teclado, usá flechas para girar y más o menos para zoom." aria-describedby="canvas-help"></canvas><div id="loading" class="loading" role="status"><span class="loader-ring"></span><strong>PREPARANDO EL AUTO</strong><p id="load-progress">Cargando el modelo 3D…</p><button id="retry" hidden>Volver a intentar</button></div><div class="stage-tools"><button id="rotate" type="button" aria-pressed="false" disabled>Giro automático</button><div><button id="zoom-in" type="button" aria-label="Acercar" disabled>＋</button><button id="zoom-out" type="button" aria-label="Alejar" disabled>−</button><button id="reset-view" type="button" disabled>Restablecer vista</button></div></div><p id="canvas-help">Arrastrá para girar · Rueda o dos dedos para acercarte</p><div class="view-presets" role="group" aria-label="Vistas del auto"><button data-view="three" aria-pressed="true" disabled>3/4</button><button data-view="side" aria-pressed="false" disabled>Lateral</button><button data-view="front" aria-pressed="false" disabled>Frente</button><button data-view="rear" aria-pressed="false" disabled>Trasera</button><button data-view="top" aria-pressed="false" disabled>Superior</button></div></section>
-<aside class="customizer" aria-label="Personalizar patrocinio"><div class="customizer-title"><span>01 /</span><h2>PROBÁ TU MARCA</h2></div><label class="upload-label" for="logo-file"><span aria-hidden="true">↑</span><strong>Subí el logo de tu empresa</strong><small>PNG con transparencia, JPG o WebP · hasta 10 MB</small><input id="logo-file" type="file" accept="image/png,image/jpeg,image/webp" disabled></label><div class="logo-summary" id="logo-summary" hidden><img id="logo-preview" alt="Logo cargado"><span id="logo-name"></span><button id="remove-logo" type="button" aria-label="Quitar logo">×</button></div><p class="local-note">Tu logo se procesa en este navegador. No se envía al equipo.</p><div class="customizer-title"><span>02 /</span><h2>ELEGÍ LA UBICACIÓN</h2></div><p class="field-help">Girá el auto y elegí dónde colocar tu logo. En los laterales se replica del otro lado; sobre la trompa se centra automáticamente.</p><button id="place-logo" class="button solid" type="button" aria-pressed="false" disabled>Colocar / mover logo</button><div class="reserved-note"><strong>ESPACIOS RESERVADOS</strong><p>2 ubicaciones para FSAE · Número en los laterales y arriba de la trompa.</p><p>Número <b>7 provisional</b>, pendiente de asignación.</p><p>Las ubicaciones SAE, los logos UTN y los números están fijos y no se pueden usar para patrocinio.</p></div><p id="placement-status" class="placement-status" role="status" aria-live="polite">Primero, cargá tu logo.</p><fieldset id="logo-adjustments" disabled><legend>AJUSTÁ EL RESULTADO</legend><label for="logo-size">Tamaño <output id="size-value">100%</output></label><input id="logo-size" type="range" min="30" max="180" value="100"><label for="logo-angle">Rotación <output id="angle-value">0°</output></label><input id="logo-angle" type="range" min="-180" max="180" value="0" step="1"><div class="visibility-control"><label for="show-logo">Mostrar logo</label><input id="show-logo" type="checkbox" checked></div></fieldset><p class="simulation-note">SIMULACIÓN ORIENTATIVA<br><span>La ubicación y el tamaño definitivos se acuerdan con el equipo. La vista no indica disponibilidad ni reserva un espacio.</span></p><a class="button light" href="mailto:motorsports@frba.utn.edu.ar?subject=Mi%20marca%20en%20el%20monoplaza">Conversemos <span>↗</span></a></aside></div><div class="viewer-foot"><span>INGENIERÍA PÚBLICA ARGENTINA.</span><a href="index.html#sponsors">Conocé a quienes ya nos acompañan ↗</a></div></main><script type="module" src="visor.js?v=side-rail-20"></script></body></html>
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#151519">
+  <title>Tu marca en el auto — UTN BA Motorsport</title>
+  <script>
+    try {
+      const saved = localStorage.getItem('theme');
+      const dark = matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.dataset.theme = saved || (dark ? 'dark' : 'light');
+    } catch { document.documentElement.dataset.theme = 'dark'; }
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="visor.css">
+  <link rel="stylesheet" href="visor-ui.css">
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a class="skip" href="#visor">Saltar al visualizador</a>
+  <header class="header viewer-header">
+    <a class="brand" href="/"><img src="assets/logo.png" alt="UTN BA Motorsport" width="205" height="45"></a>
+    <div class="viewer-header__actions">
+      <button id="viewer-theme" class="icon-button" type="button" aria-label="Cambiar tema" title="Cambiar tema"><span aria-hidden="true">◐</span></button>
+      <a class="back-site" href="/sponsors">← Volver a sponsors</a>
+    </div>
+  </header>
+  <main class="viewer-page">
+    <div class="viewer-heading">
+      <div><p class="eyebrow">UTN BA MOTORSPORT / PATROCINIO</p><h1>TU MARCA.<br><em>EN NUESTRO AUTO.</em></h1></div>
+      <p>Subí tu logo, elegí una zona de la carrocería y ajustá el resultado en tiempo real.</p>
+    </div>
+    <div class="viewer-layout">
+      <section class="stage" id="visor" aria-label="Visualizador del monoplaza">
+        <div class="stage-top"><span><i></i> MONOPLAZA ELÉCTRICO</span><span>PROTOTIPO 3D</span></div>
+        <canvas id="car-canvas" tabindex="0" aria-label="Auto en 3D. Arrastrá para girar, usá la rueda para acercarte." aria-describedby="canvas-help"></canvas>
+        <div id="loading" class="loading" role="status"><span class="loader-ring"></span><strong>PREPARANDO EL AUTO</strong><p id="load-progress">Cargando el modelo 3D…</p><button id="retry" hidden>Volver a intentar</button></div>
+        <div class="stage-tools"><button id="rotate" type="button" aria-pressed="false" disabled>Giro automático</button><div><button id="zoom-in" type="button" aria-label="Acercar" disabled>＋</button><button id="zoom-out" type="button" aria-label="Alejar" disabled>−</button><button id="reset-view" type="button" disabled>Restablecer vista</button></div></div>
+        <p id="canvas-help">Arrastrá para girar · Rueda o dos dedos para acercarte</p>
+        <div class="view-presets" role="group" aria-label="Vistas del auto"><button data-view="three" aria-pressed="true" disabled>3/4</button><button data-view="side" aria-pressed="false" disabled>Lateral</button><button data-view="front" aria-pressed="false" disabled>Frente</button><button data-view="rear" aria-pressed="false" disabled>Trasera</button><button data-view="top" aria-pressed="false" disabled>Superior</button></div>
+      </section>
+      <aside class="customizer" aria-label="Personalizar patrocinio">
+        <section class="customizer-step customizer-step--active" id="step-upload">
+          <div class="customizer-title"><span>01</span><div><small>PRIMER PASO</small><h2>SUBÍ TU LOGO</h2></div></div>
+          <label class="upload-label" for="logo-file"><span aria-hidden="true">↑</span><strong>Elegí el archivo de tu empresa</strong><small>PNG transparente, JPG o WebP · hasta 10 MB</small><input id="logo-file" type="file" accept="image/png,image/jpeg,image/webp" disabled></label>
+          <div class="logo-summary" id="logo-summary" hidden><img id="logo-preview" alt="Logo cargado"><span id="logo-name"></span><button id="remove-logo" type="button" aria-label="Quitar logo">×</button></div>
+          <p class="local-note">El archivo se procesa solamente en tu navegador.</p>
+        </section>
+        <section class="customizer-step" id="step-place">
+          <div class="customizer-title"><span>02</span><div><small>SEGUNDO PASO</small><h2>UBICALO EN EL AUTO</h2></div></div>
+          <p class="field-help">Activá la colocación y tocá la carrocería. En los laterales se replica simétricamente.</p>
+          <button id="place-logo" class="button solid" type="button" aria-pressed="false" disabled>Elegir ubicación</button>
+          <p id="placement-status" class="placement-status" role="status" aria-live="polite">Primero, cargá tu logo.</p>
+        </section>
+        <section class="customizer-step" id="step-adjust">
+          <div class="customizer-title"><span>03</span><div><small>ÚLTIMO PASO</small><h2>AJUSTÁ Y GUARDÁ</h2></div></div>
+          <fieldset id="logo-adjustments" disabled><label for="logo-size">Tamaño <output id="size-value">100%</output></label><input id="logo-size" type="range" min="30" max="180" value="100"><label for="logo-angle">Rotación <output id="angle-value">0°</output></label><input id="logo-angle" type="range" min="-180" max="180" value="0" step="1"><div class="visibility-control"><label for="show-logo">Mostrar logo</label><input id="show-logo" type="checkbox" checked></div></fieldset>
+          <button id="download-image" class="button outline viewer-download" type="button" disabled>Descargar imagen <span>↓</span></button>
+        </section>
+        <p class="simulation-note">SIMULACIÓN ORIENTATIVA<span>La ubicación y el tamaño definitivos se acuerdan con el equipo. La vista no reserva un espacio comercial.</span></p>
+        <a class="button light viewer-contact" href="mailto:motorsports@frba.utn.edu.ar?subject=Mi%20marca%20en%20el%20monoplaza">Conversemos <span>↗</span></a>
+      </aside>
+    </div>
+    <div class="viewer-foot"><span>INGENIERÍA PÚBLICA ARGENTINA.</span><a href="/sponsors">Conocé a quienes ya nos acompañan ↗</a></div>
+  </main>
+  <script type="module" src="visor.js?v=ux-2"></script>
+</body>
+</html>

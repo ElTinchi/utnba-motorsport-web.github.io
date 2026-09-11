@@ -3,7 +3,6 @@ import PageShell from '../components/PageShell.jsx';
 import '../styles/car.css';
 
 const RENDER_APP_URL = '/visor/visor.html';
-const RENDER_APP_EMBED_URL = `${RENDER_APP_URL}?embed=1`;
 
 // Ficha técnica. Solo están cargados los datos que hoy son públicos y ciertos;
 // el resto lo completa el equipo. El texto de cada fila vive en los locales,
@@ -55,19 +54,13 @@ export default function Car() {
             ))}
           </ul>
 
-          <div className="car-viewer__frame">
-            <iframe
-              src={RENDER_APP_EMBED_URL}
-              title={t('carPage.viewer.title')}
-              loading="lazy"
-              allow="fullscreen"
-            />
-          </div>
+          <a className="car-viewer__preview" href={RENDER_APP_URL} aria-label={t('carPage.viewer.openButton')}>
+            <img src="/assets/img/render_fsae.jpg" alt="" loading="lazy" />
+            <span>{t('carPage.viewer.openButton')} <span aria-hidden="true">↗</span></span>
+          </a>
           <a
             className="btn btn--primary"
             href={RENDER_APP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
           >
             {t('carPage.viewer.openButton')}
           </a>

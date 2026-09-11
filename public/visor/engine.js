@@ -171,7 +171,7 @@ void main(){
 }`;
 export class CarRenderer {
   constructor(canvas,model) {
-    this.canvas=canvas;this.model=model;this.gl=canvas.getContext('webgl2',{alpha:true,antialias:true,powerPreference:'high-performance'});
+    this.canvas=canvas;this.model=model;this.gl=canvas.getContext('webgl2',{alpha:true,antialias:true,preserveDrawingBuffer:true,powerPreference:'high-performance'});
     if(!this.gl)throw Error('Tu navegador no tiene WebGL 2 disponible. Probá con Chrome o Edge con aceleración gráfica.');
     const gl=this.gl,compile=(type,source)=>{const s=gl.createShader(type);gl.shaderSource(s,source);gl.compileShader(s);if(!gl.getShaderParameter(s,gl.COMPILE_STATUS))throw Error(gl.getShaderInfoLog(s));return s;};
     this.program=gl.createProgram();const vs=compile(gl.VERTEX_SHADER,vertex),fs=compile(gl.FRAGMENT_SHADER,fragment);

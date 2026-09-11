@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ROUTES } from '../routes';
 import LanguageSwitcher from './LanguageSwitcher.jsx';
+import ThemeToggle from './ThemeToggle.jsx';
 
 export default function Header() {
   const { t } = useTranslation();
@@ -38,7 +39,10 @@ export default function Header() {
     <header className={`header${scrolled ? ' header--scrolled' : ''}`} role="banner">
       <div className="header__container">
         <NavLink to={ROUTES.home} className="header__logo" aria-label="UTN BA Motorsport" onClick={closeAll}>
-          <img src="/assets/img/logo.png" alt="UTN BA Motorsport" className="header__logo-img" width="42" height="42" />
+          <picture>
+            <source srcSet="/assets/img/logo-light.png" media="(prefers-color-scheme: light)" />
+            <img src="/assets/img/logo.png" alt="UTN BA Motorsport" className="header__logo-img" width="215" height="45" />
+          </picture>
         </NavLink>
 
         <button
@@ -94,6 +98,7 @@ export default function Header() {
         </nav>
 
         <div className="header__actions">
+          <ThemeToggle />
           <LanguageSwitcher />
           <NavLink to={ROUTES.joinUs} className="btn btn--primary btn--small header__cta" onClick={closeAll}>
             {t('nav.joinUs')}

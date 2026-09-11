@@ -1,9 +1,9 @@
 .join-callout {
   max-width: 780px;
   padding: clamp(1.75rem, 5vw, 3.5rem);
-  border: 1px solid rgba(221, 14, 14, 0.35);
+  border: 1px solid rgba(var(--red-rgb), 0.35);
   border-radius: 20px;
-  background: radial-gradient(circle at 90% 10%, rgba(221, 14, 14, 0.18), transparent 42%), rgba(0, 0, 0, 0.35);
+  background: radial-gradient(circle at 90% 10%, rgba(var(--red-rgb), 0.18), transparent 42%), rgba(0, 0, 0, 0.35);
 }
 
 .join-callout__status {
@@ -11,7 +11,7 @@
   margin-bottom: 1rem;
   padding: 0.35rem 0.7rem;
   border-radius: 999px;
-  background: rgba(252, 246, 230, 0.1);
+  background: rgba(var(--ink-rgb), 0.1);
   color: var(--color-white);
   font-size: 0.7rem;
   font-weight: 800;
@@ -49,7 +49,7 @@
   align-items: flex-start;
   gap: 1.25rem;
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(252, 246, 230, 0.1);
+  border-top: 1px solid rgba(var(--ink-rgb), 0.1);
 }
 
 .join-step__number {
@@ -68,7 +68,7 @@
   margin-top: 2rem;
   padding: 1rem 1.25rem;
   border-left: 3px solid var(--color-red);
-  background: rgba(221, 14, 14, 0.07);
+  background: rgba(var(--red-rgb), 0.07);
   color: var(--color-white-muted);
   font-size: 0.9rem;
   line-height: 1.65;

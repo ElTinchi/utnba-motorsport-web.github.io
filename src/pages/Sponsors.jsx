@@ -116,7 +116,7 @@ export default function Sponsors() {
             <h2 id="viewer-title">{t('sponsorsPage.viewer.title')}</h2>
             <p>{t('sponsorsPage.viewer.text')}</p>
             <div className="sp-viewer__actions">
-              <NavLink to={ROUTES.car} className="btn btn--primary">{t('sponsorsPage.viewer.button')}</NavLink>
+              <a href="/visor/visor.html" className="btn btn--primary">{t('sponsorsPage.viewer.button')}</a>
               <a href={`mailto:${CONTACT_EMAIL}`} className="btn btn--secondary">{t('sponsorsPage.ctaButton')}</a>
             </div>
             <small>{t('sponsorsPage.viewer.note')}</small>
