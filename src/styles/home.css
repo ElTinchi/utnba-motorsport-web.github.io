@@ -10,6 +10,7 @@
 .hero {
   --ink-rgb: 252, 246, 230;
   --surface-rgb: 21, 21, 25;
+  --red-rgb: 221, 14, 14;
   position: fixed;
   inset: 0;
   z-index: 0;
@@ -18,7 +19,8 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: var(--color-black);
+  background: #151519;
+  color: #fcf6e6;
 }
 
 .hero__bg {
@@ -178,7 +180,7 @@
 .hero__tagline {
   font-size: 0.9rem;
   font-weight: 600;
-  color: var(--color-white-muted);
+  color: rgba(252, 246, 230, 0.7);
   text-transform: uppercase;
   letter-spacing: 0.15em;
 }
