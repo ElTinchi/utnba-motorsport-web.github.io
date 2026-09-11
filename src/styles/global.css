@@ -585,7 +585,8 @@ button {
 .footer__brands {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
 }
 
 .footer__brand {
@@ -605,10 +606,35 @@ button {
   background: rgba(252, 246, 230, 0.15);
 }
 
-.footer__fsae-logo {
-  height: 34px;
+.footer__partner-logo {
   width: auto;
   object-fit: contain;
+}
+
+.footer__partner-logo--fsae {
+  height: 42px;
+}
+
+.footer__partner-logo--sae {
+  height: 34px;
+}
+
+@media (max-width: 420px) {
+  .footer__brands {
+    gap: 0.65rem;
+  }
+
+  .footer__brands-divider {
+    display: none;
+  }
+
+  .footer__partner-logo--fsae {
+    height: 36px;
+  }
+
+  .footer__partner-logo--sae {
+    height: 29px;
+  }
 }
 
 .footer__links {

@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ROUTES, CONTACT_EMAIL } from '../routes';
@@ -29,7 +28,6 @@ const SOCIALS = [
 export default function Footer() {
   const { t } = useTranslation();
   const year = new Date().getFullYear();
-  const [fsaeLogoFailed, setFsaeLogoFailed] = useState(false);
 
   return (
     <footer className="footer" role="contentinfo">
@@ -40,19 +38,21 @@ export default function Footer() {
               <img src="/assets/img/logo.png" alt="UTN BA Motorsport" className="footer__logo" width="44" height="44" />
             </NavLink>
 
-            {!fsaeLogoFailed && (
-              <>
-                <span className="footer__brands-divider" aria-hidden="true"></span>
-                <img
-                  src="/assets/img/sponsors/fsae-brasil.png"
-                  alt="Fórmula SAE Brasil"
-                  className="footer__fsae-logo"
-                  width="44"
-                  height="44"
-                  onError={() => setFsaeLogoFailed(true)}
-                />
-              </>
-            )}
+            <span className="footer__brands-divider" aria-hidden="true"></span>
+            <img
+              src="/assets/img/sponsors/fsae-brasil.png"
+              alt="Fórmula SAE Brasil"
+              className="footer__partner-logo footer__partner-logo--fsae"
+              width="96"
+              height="96"
+            />
+            <img
+              src="/assets/img/sponsors/sae-international.png"
+              alt="SAE International"
+              className="footer__partner-logo footer__partner-logo--sae"
+              width="144"
+              height="88"
+            />
           </div>
 
           <nav className="footer__links" aria-label="Enlaces del pie de página">

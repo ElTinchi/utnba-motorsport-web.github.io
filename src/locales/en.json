@@ -296,13 +296,13 @@
       "kicker": "Now it is your turn to join the story",
       "arrival": "You made it this far.",
       "title": "Want to see your logo on the car?",
-      "text": "Upload your company's brand and preview it on the actual vehicle in three sizes. We define the commercial proposal and final placement together in a meeting.",
+      "text": "Upload your company's brand, choose its placement and preview it on the 3D car. We define the commercial proposal and final placement together in a meeting.",
       "sizes": ["Large", "Medium", "Small"],
       "badge": "Sponsor simulator",
       "imageAlt": "Render of UTN BA Motorsport's electric Formula SAE car",
       "button": "See my logo on the car",
-      "note": "The simulator is being integrated. In the meantime, we can prepare a custom preview.",
-      "pending": "Coming soon"
+      "note": "The simulator is now available. The preview is illustrative and does not reserve commercial space.",
+      "pending": "Available"
     },
     "ctaButton": "Schedule a meeting"
   },
@@ -394,11 +394,11 @@
     "viewer": {
       "kicker": "For sponsors",
       "title": "See your logo on the car before you decide",
-      "text": "We're building a viewer that takes the actual render of the car and applies your brand on top of it. Instead of imagining how your logo looks on the car, you see it.",
+      "text": "Use the car's 3D viewer to apply your brand to the bodywork and explore the result from different angles.",
       "bullets": [
         "On the real render of the car, not a generic drawing.",
         "Change the position and size and it updates instantly.",
-        "Take the image with you to show inside your company."
+        "Your logo is processed locally in the browser and is not sent to the team."
       ],
       "openButton": "Open the viewer",
       "pendingBadge": "In development",

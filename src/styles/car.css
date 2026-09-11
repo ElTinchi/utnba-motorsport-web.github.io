@@ -114,7 +114,8 @@
   border-radius: 12px;
   overflow: hidden;
   background: var(--color-black);
-  aspect-ratio: 16 / 10;
+  height: clamp(720px, 78vw, 900px);
+  border: 1px solid rgba(252, 246, 230, 0.1);
 }
 
 .car-viewer__frame iframe {
@@ -122,6 +123,17 @@
   height: 100%;
   border: 0;
   display: block;
+}
+
+@media (max-width: 760px) {
+  .car-viewer {
+    padding-inline: 1rem;
+  }
+
+  .car-viewer__frame {
+    height: 1160px;
+    margin-inline: -0.35rem;
+  }
 }
 
 /* ====== Ficha técnica ====== */

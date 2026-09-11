@@ -1,0 +1,20 @@
+.header,
+.viewer-heading,
+.viewer-foot,
+.skip {
+  display: none;
+}
+
+.viewer-page {
+  padding: 0;
+}
+
+.stage {
+  top: 0;
+}
+
+@media (max-width: 760px) {
+  .viewer-page {
+    padding: 0;
+  }
+}

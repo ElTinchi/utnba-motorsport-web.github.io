@@ -17,3 +17,7 @@ public/assets/img/sponsors/*.png
 public/assets/img/sponsors/*.jpg
 public/assets/img/sponsors/*.jpeg
 public/assets/img/sponsors/*.sh
+
+# Logos institucionales usados directamente por el footer
+!public/assets/img/sponsors/fsae-brasil.png
+!public/assets/img/sponsors/sae-international.png

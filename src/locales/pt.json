@@ -296,13 +296,13 @@
       "kicker": "Agora é sua vez de entrar na história",
       "arrival": "Você chegou até aqui.",
       "title": "Quer ver como fica seu logo no carro?",
-      "text": "Carregue a marca da sua empresa e visualize-a sobre o veículo real em três tamanhos. A proposta comercial e a posição final são definidas juntos em uma reunião.",
+      "text": "Carregue a marca da sua empresa, escolha a posição e visualize-a no monoposto 3D. A proposta comercial e a posição final são definidas juntos em uma reunião.",
       "sizes": ["Grande", "Médio", "Pequeno"],
       "badge": "Simulador de patrocinadores",
       "imageAlt": "Render do Fórmula SAE elétrico da UTN BA Motorsport",
       "button": "Ver meu logo no carro",
-      "note": "O simulador está sendo integrado. Enquanto isso, podemos preparar uma visualização personalizada.",
-      "pending": "Em breve"
+      "note": "O simulador já está disponível. A visualização é ilustrativa e não reserva um espaço comercial.",
+      "pending": "Disponível"
     },
     "ctaButton": "Agendar uma reunião"
   },
@@ -394,11 +394,11 @@
     "viewer": {
       "kicker": "Para patrocinadores",
       "title": "Veja a sua marca no carro antes de decidir",
-      "text": "Estamos desenvolvendo um visualizador que pega o render real do monoposto e aplica a sua marca em cima. Em vez de imaginar como fica o seu logo no carro, você vê.",
+      "text": "Use o visualizador 3D do monoposto para aplicar sua marca na carroceria e explorar o resultado de diferentes ângulos.",
       "bullets": [
         "Sobre o render real do carro, não sobre um desenho genérico.",
         "Você muda a posição e o tamanho e atualiza na hora.",
-        "Leva a imagem para mostrar dentro da sua empresa."
+        "Seu logo é processado localmente no navegador e não é enviado para a equipe."
       ],
       "openButton": "Abrir o visualizador",
       "pendingBadge": "Em desenvolvimento",
