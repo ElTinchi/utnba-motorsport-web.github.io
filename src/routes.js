@@ -4,7 +4,6 @@
 //   - /equipo y /sobre-nosotros contaban lo mismo -> se fusionaron en /el-equipo
 //   - /contacto se disolvió: el formulario vive en /sumate y en /sponsors, y
 //     los datos de contacto en el footer
-//   - /trabajo-con-jovenes pasó a ser una sección dentro de /sumate
 //   - /motorsport se renombró a /la-academia (el nombre viejo no decía nada)
 //   - /el-auto es nueva
 export const ROUTES = {
@@ -25,10 +24,6 @@ export const LEGACY_REDIRECTS = {
   '/equipo': ROUTES.team,
   '/motorsport': ROUTES.academy,
   '/contacto': ROUTES.joinUs,
-  '/trabajo-con-jovenes': ROUTES.joinUs,
 };
-
-// Ancla de la sección de trabajo con jóvenes dentro de /sumate.
-export const YOUTH_ANCHOR = 'trabajo-con-jovenes';
 
 export const CONTACT_EMAIL = 'motorsports@frba.utn.edu.ar';

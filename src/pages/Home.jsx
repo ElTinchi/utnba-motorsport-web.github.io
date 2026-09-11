@@ -6,6 +6,12 @@ import AreasGrid from '../components/AreasGrid';
 import SponsorsCarousel from '../components/SponsorsCarousel';
 import '../styles/home.css';
 
+const ACADEMY_LOGOS = [
+  '/assets/img/academy/rookie-utnba.png',
+  '/assets/img/academy/baja-utnba.png',
+  '/assets/img/logo.png',
+];
+
 // ============================================================
 // Circuito del hero — trazado y perfil de velocidad
 // ============================================================
@@ -152,9 +158,9 @@ export default function Home() {
             <p className="intro__description">{t('home.heroSubtitle')}</p>
 
             <div className="intro__actions">
-              <a href="mailto:motorsports@frba.utn.edu.ar" className="btn btn--primary">
+              <NavLink to={ROUTES.sponsors} className="btn btn--primary">
                 {t('home.heroCtaPrimary')}
-              </a>
+              </NavLink>
               <NavLink to={ROUTES.team} className="btn btn--secondary">
                 {t('home.heroCtaSecondary')}
               </NavLink>
@@ -211,11 +217,17 @@ export default function Home() {
             <p className="academy__intro">{t('home.academy.intro')}</p>
 
             <div className="academy__levels">
-              {academyLevels.map((level) => (
+              {academyLevels.map((level, index) => (
                 <article
                   key={level.title}
                   className={`academy-level${level.badge ? ' academy-level--parallel' : ''}`}
                 >
+                  <img
+                    className={`academy-level__logo academy-level__logo--${index + 1}`}
+                    src={ACADEMY_LOGOS[index]}
+                    alt={level.logoAlt}
+                    loading="lazy"
+                  />
                   {level.badge ? (
                     <span className="academy-level__badge">{level.badge}</span>
                   ) : (
@@ -246,9 +258,17 @@ export default function Home() {
 
         {/* ====== Sponsors: la misma banda blanca que la página de Sponsors ====== */}
         <section className="home-sponsors" aria-labelledby="home-sponsors-title">
-          <h2 id="home-sponsors-title" className="home-sponsors__title">
-            {t('home.sponsorsTitle')}
-          </h2>
+          <div className="home-sponsors__story">
+            <span className="home-sponsors__kicker">{t('home.sponsorsKicker')}</span>
+            <h2 id="home-sponsors-title" className="home-sponsors__headline">{t('home.sponsorsHeadline')}</h2>
+            <p>{t('home.sponsorsBody')}</p>
+            <div className="home-sponsors__figures">
+              <span><strong>USD 30.000</strong>{t('home.sponsorsInvested')}</span>
+              <span><strong>USD 20.000</strong>{t('home.sponsorsRemaining')}</span>
+            </div>
+            <NavLink to={ROUTES.sponsors} className="btn btn--primary">{t('home.sponsorsCta')}</NavLink>
+          </div>
+          <h3 className="home-sponsors__title">{t('home.sponsorsTitle')}</h3>
           <SponsorsCarousel speed={50} />
           <NavLink to={ROUTES.sponsors} className="home-sponsors__link">
             {t('home.sponsorsLink')}

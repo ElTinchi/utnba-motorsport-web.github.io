@@ -17,19 +17,19 @@
   "home": {
     "heroPlate": "UTN FRBA · Formula SAE",
     "heroTitle": "Our first electric Formula SAE car",
-    "heroSubtitle": "We design, build and race a 100% electric single-seater to compete at FSAE Brazil 2027.",
+    "heroSubtitle": "We are an integrated motorsport academy completing our first electric single-seater to compete at FSAE Brazil 2027.",
     "heroCtaPrimary": "Support the team",
     "heroCtaSecondary": "Meet the team",
     "motivationTitle": "What drives us",
     "motivationBody": "We believe the best way to learn engineering is by building it. Our mission is to design, manufacture and race a 100% electric single-seater, putting what we study at UTN Buenos Aires to work on a real, competitive project.",
     "aboutTitle": "About us",
-    "aboutBody": "We're an interdisciplinary team of students from UTN Buenos Aires. Mechanical, electronic, electrical, industrial, systems and chemical engineering come together on one project: our first electric Formula SAE car.",
+    "aboutBody": "We are an interdisciplinary team from UTN Buenos Aires. The journey begins by building a kart, continues through Baja SAE and brings every lesson together in our electric Formula SAE car.",
     "formulaStudentTitle": "What is Formula Student?",
     "formulaStudentBody": "An international competition where university teams design, build and race their own single-seater. It's not only about speed — engineering design, cost and a business case are judged too.",
     "formulaStudentLink": "Learn more",
     "joinTitle": "How to join",
-    "joinBody": "We welcome students from every engineering discipline all year round. If you're into motorsport and want to put your studies to work on a real project, get in touch.",
-    "joinLink": "I want to join",
+    "joinBody": "New members join only when an application round opens. Dates, requirements and every stage of the selection process are announced on Instagram.",
+    "joinLink": "See open calls",
     "areas": {
       "kicker": "How the team is organised",
       "title": "Six areas, one car",
@@ -38,19 +38,22 @@
     "academy": {
       "kicker": "The UTN BA Motorsport academy",
       "title": "Walk in knowing nothing. Walk out running a real project.",
-      "intro": "We're UTN BA's first Formula SAE generation, and we already run three fronts in parallel. You don't need to know how to weld or have touched a lathe before — the team is built for you to grow inside it.",
+      "intro": "Our training process connects three real projects. Every stage adds tools, technical judgement and experience working under a rulebook.",
       "levels": [
         {
+          "logoAlt": "Rookie UTNBA",
           "number": "Level 01",
           "title": "Rookie & Freshman",
           "body": "Your first contact with automotive engineering. You build a go-kart, learn to weld and use tools like the lathe, and get hands-on with the team's manufacturing processes."
         },
         {
+          "logoAlt": "Baja UTNBA",
           "badge": "Parallel track",
           "title": "Baja SAE",
-          "body": "Not a step up, a track of its own: a different SAE rulebook, the same engine for every car, so the competition comes down to design, not horsepower."
+          "body": "An off-road project under SAE rules: interpreting requirements, documenting decisions and passing inspections, including FIA/SFI safety requirements where applicable."
         },
         {
+          "logoAlt": "UTN BA Motorsport",
           "number": "Level 02",
           "title": "Formula SAE",
           "body": "Our flagship category. We design, build and race our own single-seater against teams from all over the world."
@@ -72,7 +75,13 @@
       ],
       "cta": "See the full program"
     },
-    "sponsorsTitle": "Supported by",
+    "sponsorsKicker": "The next stretch",
+    "sponsorsHeadline": "The car is close to the track.",
+    "sponsorsBody": "Thanks to our sponsors, close to USD 30,000 has already been invested in the prototype. Their trust turned an idea into a car in final assembly. We are now looking for new partners to finish and homologate it.",
+    "sponsorsInvested": "invested thanks to our sponsors",
+    "sponsorsRemaining": "to complete through cash and in-kind support",
+    "sponsorsCta": "Discover how to take part",
+    "sponsorsTitle": "Thank you to those already making it possible",
     "sponsorsLink": "Meet all our sponsors"
   },
   "fsPage": {
@@ -251,9 +260,9 @@
   "sponsorsPage": {
     "kicker": "Become a sponsor",
     "title": "We are not just building a car.",
-    "intro": "We are building the path that turns students into motorsport professionals. Today, that path is one final push away from reaching the track.",
+    "intro": "We are building the path that turns students into motorsport professionals. Thanks to those already supporting us, we have made it this far; today we are one final push away from the track.",
     "scrollCta": "Discover the story",
-    "proofLabel": "Companies already part of the journey",
+    "proofLabel": "Thank you to the companies already part of the journey",
     "journey": {
       "kicker": "One academy, three stages",
       "title": "Before Formula, there is a journey.",
@@ -267,8 +276,8 @@
     "investment": {
       "kicker": "The final stage",
       "title": "The car is no longer just an idea.",
-      "text": "We have invested close to USD 30,000 in the prototype and are completing final assembly. To finish it, put it on track and pass homologation, we need to complete the next stretch.",
-      "investedLabel": "Already invested in the prototype",
+      "text": "Thanks to the commitment of our sponsors, close to USD 30,000 has already been invested in the prototype and we are completing final assembly. To everyone who trusted us and brought us this far: thank you. To finish it, put it on track and pass homologation, we need to complete the next stretch.",
+      "investedLabel": "Invested thanks to our sponsors",
       "cashLabel": "Additional cash required",
       "exchangeLabel": "Additional in-kind support required"
     },
@@ -348,7 +357,7 @@
     "areasIntro": "Each area runs its own workstream, and the car is what comes out of all six together. Whatever engineering degree you're in, there's a place where what you study gets used.",
     "noPhotos": "We haven't uploaded photos of this area yet.",
     "ctaTitle": "Want to be part of it?",
-    "ctaText": "We take in students from every engineering degree all year round, and no previous experience is required.",
+    "ctaText": "Whenever an intake opens, we publish the target profiles, requirements and selection stages on Instagram.",
     "ctaButton": "I want to join"
   },
   "carPage": {
@@ -400,62 +409,27 @@
   "joinPage": {
     "kicker": "Join us",
     "title": "You come in knowing nothing. You leave running a real project.",
-    "intro": "We take in students from every engineering degree all year round. No previous experience needed, and you don't need to have touched a lathe: the team is set up for you to learn inside it.",
-    "expectationsTitle": "What you need (and what you don't)",
-    "expectations": [
-      {
-        "title": "No experience needed",
-        "body": "If you've never welded, never opened a CAD tool and have no idea what a skid pad is, you're in the right place. You learn by doing, alongside people who have been there."
-      },
-      {
-        "title": "Consistency does matter",
-        "body": "The car has a competition date. What counts is not how much you know on day one, but that you show up when you're needed."
-      },
-      {
-        "title": "Every degree counts",
-        "body": "Mechanical, electronic, electrical, industrial, systems, chemical. And also anyone who wants to take on communications, sponsors or project management."
-      }
-    ],
-    "stepsTitle": "How it works",
+    "intro": "Applications are not permanently open. Every intake has limited places, requirements and a selection process based on the current needs of each area.",
+    "status": "Applications announced on Instagram",
+    "calloutTitle": "The next intake will be announced on our social channels.",
+    "calloutText": "Whenever applications open, we publish the available positions, requirements and application instructions on Instagram. If there is no active announcement, the process is closed.",
+    "instagramButton": "Check Instagram",
+    "stepsTitle": "How to find out and apply",
     "steps": [
       {
-        "title": "Write to us",
-        "body": "Fill in the form below telling us what you study and what interests you. No CV required."
+        "title": "Follow the account",
+        "body": "Every official intake is announced on UTN BA Motorsport's Instagram account."
       },
       {
-        "title": "We meet",
-        "body": "We talk so we can get to know you, explain how the team works and figure out which area fits you."
+        "title": "Read the full announcement",
+        "body": "Every opening states the available areas, target profiles, requirements, expected availability and dates."
       },
       {
-        "title": "You join an area",
-        "body": "You start in the area you chose, with a concrete task and someone alongside you."
-      },
-      {
-        "title": "You grow inside",
-        "body": "From Rookie or Freshman to the car itself. The full path is on The academy page."
+        "title": "Apply through the stated channel",
+        "body": "The form and evaluation stages are shared only while an application round is active."
       }
     ],
-    "formTitle": "Write to us",
-    "formText": "Tell us who you are and what you'd like to get into. We reply by email.",
-    "form": {
-      "name": "Full name",
-      "email": "Email",
-      "career": "Degree and year",
-      "area": "Area you're interested in",
-      "areaAny": "Not sure yet / any",
-      "message": "Tell us about yourself",
-      "submit": "Send",
-      "sending": "Sending...",
-      "ok": "Done! We got your message and we'll reply by email.",
-      "error": "We couldn't send it. Try again or write to us at {{email}}.",
-      "noBackend": "The form isn't connected yet. In the meantime, write to us by email and we'll reply all the same."
-    },
-    "youth": {
-      "kicker": "Working with young people",
-      "title": "We also work with secondary schools",
-      "text": "We open the workshop to secondary school students to show them what applied engineering looks like: how a race car is thought through, designed and built. If you're a teacher or run a technical school and a visit or a talk sounds interesting, get in touch.",
-      "button": "Arrange a visit"
-    }
+    "selectionNote": "We do not accept applications outside an active intake."
   },
   "newsPage": {
     "kicker": "News",

@@ -17,19 +17,19 @@
   "home": {
     "heroPlate": "UTN FRBA · Fórmula SAE",
     "heroTitle": "Nosso primeiro Fórmula SAE elétrico",
-    "heroSubtitle": "Projetamos, fabricamos e colocamos na pista um monoposto 100% elétrico para competir na FSAE Brasil 2027.",
+    "heroSubtitle": "Somos uma academia integral de motorsport e estamos finalizando nosso primeiro monoposto elétrico para competir na FSAE Brasil 2027.",
     "heroCtaPrimary": "Apoie a equipe",
     "heroCtaSecondary": "Conheça a equipe",
     "motivationTitle": "O que nos motiva",
     "motivationBody": "Acreditamos que a melhor forma de aprender engenharia é construindo. Nossa missão é projetar, fabricar e competir com um monoposto 100% elétrico, aplicando em um projeto real o que estudamos na UTN Buenos Aires.",
     "aboutTitle": "Sobre nós",
-    "aboutBody": "Somos uma equipe interdisciplinar de estudantes da UTN Buenos Aires. Mecânica, eletrônica, elétrica, industrial, sistemas e química trabalham juntos em um mesmo projeto: nosso primeiro Fórmula SAE elétrico.",
+    "aboutBody": "Somos uma equipe interdisciplinar da UTN Buenos Aires. O caminho começa construindo um kart, continua no Baja SAE e reúne todo o aprendizado no nosso Fórmula SAE elétrico.",
     "formulaStudentTitle": "O que é a Fórmula Student?",
     "formulaStudentBody": "Uma competição internacional na qual equipes universitárias projetam, fabricam e competem com seu próprio monoposto. Não se avalia só a velocidade: também o projeto de engenharia, os custos e a apresentação para a indústria.",
     "formulaStudentLink": "Saiba mais",
     "joinTitle": "Como participar",
-    "joinBody": "Recebemos estudantes de todas as engenharias durante o ano todo. Se você gosta de automobilismo e quer aplicar o que estuda em um projeto real, fale com a gente.",
-    "joinLink": "Quero participar",
+    "joinBody": "A entrada acontece somente quando abrimos processos seletivos. Publicamos datas, requisitos e todas as etapas no nosso Instagram.",
+    "joinLink": "Ver processos seletivos",
     "areas": {
       "kicker": "Como o time se divide",
       "title": "Seis áreas, um só carro",
@@ -38,19 +38,22 @@
     "academy": {
       "kicker": "A academia UTN BA Motorsport",
       "title": "Você entra sem saber nada. Sai tocando um projeto real.",
-      "intro": "Somos a primeira geração de Fórmula SAE da UTN BA e já temos três frentes funcionando em paralelo. Não precisa saber soldar nem já ter usado um torno — a equipe está estruturada para você crescer dentro dela.",
+      "intro": "Nosso processo formativo conecta três projetos reais. Cada etapa acrescenta ferramentas, critério técnico e experiência trabalhando sob regulamento.",
       "levels": [
         {
+          "logoAlt": "Rookie UTNBA",
           "number": "Nível 01",
           "title": "Rookie & Freshman",
           "body": "Seu primeiro contato com a engenharia automotiva. Você monta um kart, aprende a soldar e a usar ferramentas como o torno, e entra de cabeça nos processos de fabricação da equipe."
         },
         {
+          "logoAlt": "Baja UTNBA",
           "badge": "Caminho paralelo",
           "title": "Baja SAE",
-          "body": "Não é um degrau, é um circuito próprio: regulamento de SAE diferente, mesmo motor para todos os carros, então a competição se define pelo projeto, não pela potência."
+          "body": "Um projeto todo-terreno sob regulamento SAE: interpretar requisitos, documentar decisões e passar nas inspeções, com exigências de segurança FIA/SFI quando aplicável."
         },
         {
+          "logoAlt": "UTN BA Motorsport",
           "number": "Nível 02",
           "title": "Fórmula SAE",
           "body": "Nossa categoria principal. Projetamos, fabricamos e competimos com nosso próprio monoposto contra equipes do mundo todo."
@@ -72,7 +75,13 @@
       ],
       "cta": "Conheça o programa completo"
     },
-    "sponsorsTitle": "Com o apoio de",
+    "sponsorsKicker": "O próximo trecho",
+    "sponsorsHeadline": "O carro está perto da pista.",
+    "sponsorsBody": "Graças aos nossos patrocinadores, cerca de USD 30.000 já foram investidos no protótipo. A confiança deles transformou uma ideia em um carro na etapa final de montagem. Agora buscamos novos parceiros para terminá-lo e homologá-lo.",
+    "sponsorsInvested": "investidos graças aos nossos patrocinadores",
+    "sponsorsRemaining": "para completar em dinheiro e permuta",
+    "sponsorsCta": "Saiba como fazer parte",
+    "sponsorsTitle": "Obrigado a quem já torna isso possível",
     "sponsorsLink": "Conheça todos os nossos patrocinadores"
   },
   "fsPage": {
@@ -251,9 +260,9 @@
   "sponsorsPage": {
     "kicker": "Quero ser patrocinador",
     "title": "Não estamos construindo apenas um carro.",
-    "intro": "Estamos construindo o caminho que transforma estudantes em profissionais do motorsport. Hoje, esse caminho está a um último impulso de chegar à pista.",
+    "intro": "Estamos construindo o caminho que transforma estudantes em profissionais do motorsport. Graças a quem já nos apoia, chegamos até aqui; hoje estamos a um último impulso de chegar à pista.",
     "scrollCta": "Conheça a história",
-    "proofLabel": "Empresas que já fazem parte da jornada",
+    "proofLabel": "Obrigado às empresas que já fazem parte da jornada",
     "journey": {
       "kicker": "Uma academia, três etapas",
       "title": "Antes do Fórmula, existe um caminho.",
@@ -267,8 +276,8 @@
     "investment": {
       "kicker": "A etapa final",
       "title": "O carro já deixou de ser apenas uma ideia.",
-      "text": "Investimos cerca de USD 30.000 no protótipo e estamos na etapa final de montagem. Para terminá-lo, colocá-lo na pista e passar pela homologação, precisamos completar o próximo trecho.",
-      "investedLabel": "Investimento realizado no protótipo",
+      "text": "Graças ao compromisso dos nossos patrocinadores, cerca de USD 30.000 já foram investidos no protótipo e estamos na etapa final de montagem. A todos que confiaram em nós e nos trouxeram até aqui: obrigado. Para terminá-lo, colocá-lo na pista e passar pela homologação, precisamos completar o próximo trecho.",
+      "investedLabel": "Investimento realizado graças aos patrocinadores",
       "cashLabel": "Necessidade adicional em dinheiro",
       "exchangeLabel": "Necessidade adicional em permuta"
     },
@@ -348,7 +357,7 @@
     "areasIntro": "Cada área tem a sua própria frente de trabalho, e o carro sai da soma das seis. Não importa de qual engenharia você vem: existe um lugar onde o que você estuda é aplicado.",
     "noPhotos": "Ainda não subimos fotos desta área.",
     "ctaTitle": "Quer fazer parte?",
-    "ctaText": "Recebemos estudantes de todas as engenharias o ano inteiro, e não é preciso experiência prévia.",
+    "ctaText": "Quando abrimos um processo seletivo, publicamos no Instagram os perfis buscados, requisitos e etapas de seleção.",
     "ctaButton": "Quero participar"
   },
   "carPage": {
@@ -400,62 +409,27 @@
   "joinPage": {
     "kicker": "Participe",
     "title": "Você entra sem saber nada. Sai tocando um projeto de verdade.",
-    "intro": "Recebemos estudantes de todas as engenharias o ano inteiro. Não é preciso experiência prévia nem ter mexido em um torno: o time é montado para você aprender por dentro.",
-    "expectationsTitle": "O que é preciso (e o que não é)",
-    "expectations": [
-      {
-        "title": "Não é preciso experiência",
-        "body": "Se você nunca soldou, nunca abriu um CAD e não sabe o que é um skid pad, está no lugar certo. Aprende-se fazendo, junto de quem já passou por isso."
-      },
-      {
-        "title": "Constância, sim",
-        "body": "O carro tem data de competição. O que mais pesa não é quanto você sabe ao entrar, mas estar presente quando é preciso."
-      },
-      {
-        "title": "Qualquer curso soma",
-        "body": "Mecânica, eletrônica, elétrica, industrial, sistemas, química. E também quem quiser cuidar de comunicação, patrocinadores ou gestão do projeto."
-      }
-    ],
-    "stepsTitle": "Como funciona",
+    "intro": "As inscrições não ficam abertas permanentemente. Cada processo tem vagas, requisitos e uma seleção de acordo com as necessidades atuais de cada área.",
+    "status": "Processos seletivos pelo Instagram",
+    "calloutTitle": "A próxima entrada será anunciada nas nossas redes.",
+    "calloutText": "Quando abrimos um processo, publicamos no Instagram as posições disponíveis, os requisitos e como se candidatar. Se não houver anúncio ativo, o processo está fechado.",
+    "instagramButton": "Verificar Instagram",
+    "stepsTitle": "Como saber e se candidatar",
     "steps": [
       {
-        "title": "Escreva para nós",
-        "body": "Preencha o formulário aqui embaixo contando o que você estuda e o que te interessa. Não precisa de currículo."
+        "title": "Siga a conta",
+        "body": "Todos os processos seletivos oficiais são publicados no Instagram da UTN BA Motorsport."
       },
       {
-        "title": "A gente se encontra",
-        "body": "Conversamos para te conhecer, explicar como o time funciona e ver em qual área você se encaixa."
+        "title": "Leia o anúncio completo",
+        "body": "Cada abertura informa áreas, perfis procurados, requisitos, disponibilidade esperada e datas."
       },
       {
-        "title": "Você entra em uma área",
-        "body": "Começa na área que escolheu, com uma tarefa concreta e alguém acompanhando."
-      },
-      {
-        "title": "Você cresce dentro",
-        "body": "De Rookie ou Freshman até o monoposto. O caminho completo está em A academia."
+        "title": "Candidate-se pelo canal indicado",
+        "body": "O formulário e as etapas de avaliação são compartilhados somente durante o período de inscrição."
       }
     ],
-    "formTitle": "Escreva para nós",
-    "formText": "Conte quem você é e no que gostaria de se meter. Respondemos por e-mail.",
-    "form": {
-      "name": "Nome completo",
-      "email": "E-mail",
-      "career": "Curso e ano",
-      "area": "Área que te interessa",
-      "areaAny": "Ainda não sei / qualquer uma",
-      "message": "Conte um pouco sobre você",
-      "submit": "Enviar",
-      "sending": "Enviando...",
-      "ok": "Pronto! Recebemos a sua mensagem e vamos responder por e-mail.",
-      "error": "Não conseguimos enviar. Tente de novo ou escreva direto para {{email}}.",
-      "noBackend": "O formulário ainda não está conectado. Enquanto isso, escreva por e-mail que respondemos do mesmo jeito."
-    },
-    "youth": {
-      "kicker": "Trabalho com jovens",
-      "title": "Também trabalhamos com escolas de ensino médio",
-      "text": "Abrimos a oficina para estudantes do ensino médio para mostrar o que é engenharia aplicada: como se pensa, se projeta e se fabrica um carro de corrida. Se você é professor ou coordena uma escola técnica e tem interesse em uma visita ou uma palestra, escreva para nós.",
-      "button": "Combinar uma visita"
-    }
+    "selectionNote": "Não recebemos candidaturas fora de um processo seletivo ativo."
   },
   "newsPage": {
     "kicker": "Novidades",

@@ -374,14 +374,14 @@
 .academy__levels {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
-  margin-bottom: 4rem;
+  gap: 1rem;
+  margin-bottom: 3rem;
 }
 
 @media (min-width: 900px) {
   .academy__levels {
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 1rem;
   }
 }
 
@@ -389,8 +389,19 @@
   background: rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(252, 246, 230, 0.08);
   border-radius: 16px;
-  padding: 2rem;
+  padding: 1.5rem;
 }
+
+.academy-level__logo {
+  width: auto;
+  max-width: 100%;
+  height: 72px;
+  margin-bottom: 1rem;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.academy-level__logo--3 { height: 72px; }
 
 .academy-level--parallel {
   border-style: dashed;
@@ -546,9 +557,73 @@
    Sponsors en el Home
    ======================================== */
 .home-sponsors {
-  padding: 4rem 0 5rem;
+  padding: clamp(5rem, 10vw, 9rem) 0 5rem;
   border-top: 1px solid rgba(252, 246, 230, 0.07);
   text-align: center;
+}
+
+.home-sponsors__story {
+  max-width: 980px;
+  margin: 0 auto clamp(5rem, 9vw, 8rem);
+  padding: 0 1.5rem;
+  text-align: left;
+}
+
+.home-sponsors__kicker {
+  display: block;
+  margin-bottom: 0.75rem;
+  color: var(--color-red);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.home-sponsors__headline {
+  max-width: 16ch;
+  margin-bottom: 1.25rem;
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 850;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+}
+
+.home-sponsors__story > p {
+  max-width: 68ch;
+  color: var(--color-white-muted);
+  line-height: 1.8;
+}
+
+.home-sponsors__figures {
+  display: grid;
+  gap: 1px;
+  overflow: hidden;
+  max-width: 720px;
+  margin: 2rem 0;
+  border: 1px solid rgba(252, 246, 230, 0.1);
+  border-radius: 14px;
+  background: rgba(252, 246, 230, 0.1);
+}
+
+.home-sponsors__figures span {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1.4rem;
+  background: var(--color-gray-dark);
+  color: var(--color-white-muted);
+  font-size: 0.76rem;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.home-sponsors__figures strong {
+  color: var(--color-white);
+  font-size: clamp(1.35rem, 3vw, 2rem);
+}
+
+@media (min-width: 640px) {
+  .home-sponsors__figures { grid-template-columns: repeat(2, 1fr); }
 }
 
 .home-sponsors__title {

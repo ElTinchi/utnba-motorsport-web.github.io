@@ -62,7 +62,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
-  padding: 2.5rem 0;
+  padding: 1.75rem 0;
   border-top: 1px solid rgba(252, 246, 230, 0.1);
 }
 
@@ -97,16 +97,14 @@
 
 .ms-section__logo {
   width: auto;
-  max-width: min(100%, 430px);
-  height: clamp(46px, 8vw, 76px);
-  margin-bottom: 1.75rem;
+  max-width: min(100%, 500px);
+  height: clamp(64px, 10vw, 96px);
+  margin-bottom: 1.1rem;
   object-fit: contain;
   object-position: left center;
 }
 
-.ms-section__logo--3 {
-  height: clamp(38px, 6vw, 58px);
-}
+.ms-section__logo--3 { height: clamp(64px, 10vw, 96px); }
 
 .ms-section__eyebrow {
   display: block;
