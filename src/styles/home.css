@@ -288,7 +288,7 @@
 }
 
 .home-highlight {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(var(--ink-rgb), 0.055);
   border: 1px solid rgba(var(--ink-rgb), 0.08);
   border-radius: 16px;
   padding: 2rem;
@@ -388,9 +388,11 @@
 }
 
 .academy-level {
-  background: rgba(0, 0, 0, 0.3);
+  --ink-rgb: 252, 246, 230;
+  background: #111115;
   border: 1px solid rgba(var(--ink-rgb), 0.08);
   border-radius: 16px;
+  color: #fcf6e6;
   padding: 1.5rem;
 }
 

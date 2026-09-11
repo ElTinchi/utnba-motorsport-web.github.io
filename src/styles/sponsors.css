@@ -29,7 +29,7 @@
 .sp-journey__steps::before { content: ''; position: absolute; top: 1rem; bottom: 1rem; left: 27px; width: 1px; background: linear-gradient(var(--color-red), rgba(var(--ink-rgb), .1)); }
 .sp-story { position: relative; display: grid; grid-template-columns: 56px 1fr; gap: 1.5rem; min-height: 42vh; padding-bottom: 3rem; }
 .sp-story__marker { position: sticky; top: calc(var(--header-height) + 2rem); z-index: 1; display: grid; place-items: center; align-self: start; width: 56px; height: 56px; border: 1px solid rgba(var(--ink-rgb), .2); border-radius: 50%; background: var(--color-black); color: var(--color-red); font-size: .72rem; font-weight: 800; }
-.sp-story__content { align-self: center; max-width: 740px; padding: clamp(1.25rem, 5vw, 3.5rem); border: 1px solid rgba(var(--ink-rgb), .08); border-radius: 20px; background: linear-gradient(135deg, rgba(var(--ink-rgb), .045), rgba(0, 0, 0, .2)); }
+.sp-story__content { align-self: center; max-width: 740px; padding: clamp(1.25rem, 5vw, 3.5rem); border: 1px solid rgba(var(--ink-rgb), .08); border-radius: 20px; background: linear-gradient(135deg, rgba(var(--ink-rgb), .065), rgba(var(--ink-rgb), .025)); }
 .sp-story__logo { width: auto; max-width: min(100%, 500px); height: clamp(64px, 10vw, 96px); margin-bottom: 1.1rem; object-fit: contain; object-position: left center; }
 .sp-story__logo--3 { height: clamp(64px, 10vw, 96px); }
 .sp-story__stage { display: block; margin-bottom: 1rem; color: var(--color-red); font-size: .75rem; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; }

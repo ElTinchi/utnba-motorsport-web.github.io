@@ -194,7 +194,7 @@ $('download-image').addEventListener('click',()=>{
 });
 $('viewer-theme').addEventListener('click',()=>{
  const next=document.documentElement.dataset.theme==='light'?'dark':'light';
- document.documentElement.dataset.theme=next;localStorage.setItem('utnba-theme',next);
+ document.documentElement.dataset.theme=next;localStorage.setItem('theme',next);
  document.querySelector('meta[name="theme-color"]').content=next==='light'?'#f7f3e9':'#151519';mark();
 });
 updateSteps();

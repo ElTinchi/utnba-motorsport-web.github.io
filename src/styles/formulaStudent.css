@@ -144,7 +144,7 @@
 }
 
 .fs-event {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(var(--ink-rgb), 0.055);
   border: 1px solid rgba(var(--ink-rgb), 0.08);
   border-radius: 14px;
   padding: 1.5rem;

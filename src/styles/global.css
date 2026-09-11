@@ -29,6 +29,7 @@
 [data-theme='light'] {
   --ink-rgb: 21, 21, 25;
   --surface-rgb: 252, 246, 230;
+  --red-rgb: 184, 11, 11;
   --color-red-text: #b80b0b;
 }
 
@@ -559,7 +560,7 @@ button {
 
 .btn--primary {
   background-color: var(--color-red);
-  color: var(--color-white);
+  color: #fcf6e6;
 }
 
 .btn--primary:hover {

@@ -3,7 +3,7 @@
   padding: clamp(1.75rem, 5vw, 3.5rem);
   border: 1px solid rgba(var(--red-rgb), 0.35);
   border-radius: 20px;
-  background: radial-gradient(circle at 90% 10%, rgba(var(--red-rgb), 0.18), transparent 42%), rgba(0, 0, 0, 0.35);
+  background: radial-gradient(circle at 90% 10%, rgba(var(--red-rgb), 0.18), transparent 42%), rgba(var(--ink-rgb), 0.055);
 }
 
 .join-callout__status {
