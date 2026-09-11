@@ -16,11 +16,20 @@ export const SPONSORS = [
   { name: 'MathWorks', href: 'https://www.mathworks.com/', logo: '/assets/img/sponsors/onwhite/mathworks.png' },
   { name: 'Bender', href: 'https://www.bender.de/', logo: '/assets/img/sponsors/onwhite/benderlogo.png' },
   { name: 'Grupo Paglia', href: 'https://www.instagram.com/grupopaglia_/', logo: '/assets/img/sponsors/onwhite/grupopaglia.png' },
+  { name: 'DSM Diesel Car S.A.', logo: '/assets/img/sponsors/onwhite/dsm-diesel-car.png' },
 ];
 
 // `duplicate` marca la copia visual del loop: no debe recibir foco de teclado
 // ni ser anunciada, para no repetir los mismos 12 links dos veces.
 function Logo({ sponsor, duplicate = false }) {
+  if (!sponsor.href) {
+    return (
+      <span className="sp-car__item" aria-hidden={duplicate || undefined}>
+        <img src={sponsor.logo} alt={duplicate ? '' : sponsor.name} loading="lazy" />
+      </span>
+    );
+  }
+
   return (
     <a
       className="sp-car__item"
