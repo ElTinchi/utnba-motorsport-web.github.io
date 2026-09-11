@@ -278,10 +278,13 @@
     "investment": {
       "kicker": "La última etapa",
       "title": "El auto ya dejó de ser una idea.",
-      "text": "Gracias al compromiso de nuestros sponsors ya invertimos cerca de USD 30.000 en el prototipo y estamos en la etapa final de ensamblaje. A quienes confiaron y nos trajeron hasta acá: gracias. Para terminarlo, ponerlo en pista y atravesar la homologación necesitamos completar el siguiente tramo.",
-      "investedLabel": "Inversión realizada gracias a nuestros sponsors",
-      "cashLabel": "Necesidad adicional en efectivo",
-      "exchangeLabel": "Necesidad adicional en canje"
+      "text": "Gracias al compromiso de nuestros sponsors, ya aseguramos recursos equivalentes al 60% del presupuesto y estamos en la etapa final de ensamblaje. Para terminar el auto, ponerlo en pista y atravesar la homologación necesitamos completar el siguiente tramo.",
+      "confirmedLabel": "del proyecto ya está cubierto gracias a nuestros sponsors",
+      "confirmedShort": "Recursos confirmados",
+      "materialsLabel": "Materiales y servicios",
+      "fundingLabel": "Aporte económico",
+      "progressAria": "60% del presupuesto cubierto, 20% pendiente en materiales y servicios, y 20% pendiente en aportes económicos",
+      "amountNote": "Referencia: presupuesto estimado USD 50.000 · necesidad pendiente equivalente USD 20.000"
     },
     "partnership": {
       "kicker": "Una forma concreta de acompañar",

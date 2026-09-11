@@ -257,10 +257,13 @@
     "investment": {
       "kicker": "The final stage",
       "title": "The car is no longer just an idea.",
-      "text": "Thanks to the commitment of our sponsors, close to USD 30,000 has already been invested in the prototype and we are completing final assembly. To everyone who trusted us and brought us this far: thank you. To finish it, put it on track and pass homologation, we need to complete the next stretch.",
-      "investedLabel": "Invested thanks to our sponsors",
-      "cashLabel": "Additional cash required",
-      "exchangeLabel": "Additional in-kind support required"
+      "text": "Thanks to the commitment of our sponsors, we have already secured resources equivalent to 60% of the budget and are completing final assembly. To finish the car, put it on track and pass homologation, we need to complete the next stretch.",
+      "confirmedLabel": "of the project is already covered thanks to our sponsors",
+      "confirmedShort": "Confirmed resources",
+      "materialsLabel": "Materials and services",
+      "fundingLabel": "Financial support",
+      "progressAria": "60% of the budget covered, 20% pending in materials and services, and 20% pending in financial support",
+      "amountNote": "Reference: estimated budget USD 50,000 · remaining need equivalent to USD 20,000"
     },
     "partnership": {
       "kicker": "A concrete way to contribute",

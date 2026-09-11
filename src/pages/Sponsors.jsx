@@ -77,11 +77,27 @@ export default function Sponsors() {
             <h2 id="investment-title">{t('sponsorsPage.investment.title')}</h2>
             <p>{t('sponsorsPage.investment.text')}</p>
           </div>
-          <dl className="sp-investment__figures">
-            <div className="sp-figure sp-figure--wide"><dt>{t('sponsorsPage.investment.investedLabel')}</dt><dd>USD 30.000</dd></div>
-            <div className="sp-figure"><dt>{t('sponsorsPage.investment.cashLabel')}</dt><dd>USD 10.000</dd></div>
-            <div className="sp-figure"><dt>{t('sponsorsPage.investment.exchangeLabel')}</dt><dd>USD 10.000</dd></div>
-          </dl>
+          <div className="sp-funding">
+            <div className="sp-funding__headline">
+              <strong>60%</strong>
+              <span>{t('sponsorsPage.investment.confirmedLabel')}</span>
+            </div>
+            <div
+              className="sp-funding__bar"
+              role="img"
+              aria-label={t('sponsorsPage.investment.progressAria')}
+            >
+              <span className="sp-funding__segment sp-funding__segment--confirmed" />
+              <span className="sp-funding__segment sp-funding__segment--materials" />
+              <span className="sp-funding__segment sp-funding__segment--funding" />
+            </div>
+            <dl className="sp-funding__legend">
+              <div><dt><i className="sp-funding__key sp-funding__key--confirmed" />60%</dt><dd>{t('sponsorsPage.investment.confirmedShort')}</dd></div>
+              <div><dt><i className="sp-funding__key sp-funding__key--materials" />20%</dt><dd>{t('sponsorsPage.investment.materialsLabel')}</dd></div>
+              <div><dt><i className="sp-funding__key sp-funding__key--funding" />20%</dt><dd>{t('sponsorsPage.investment.fundingLabel')}</dd></div>
+            </dl>
+            <small className="sp-funding__amount">{t('sponsorsPage.investment.amountNote')}</small>
+          </div>
         </section>
 
         <section className="sp-partnership" aria-labelledby="partnership-title">

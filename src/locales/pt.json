@@ -257,10 +257,13 @@
     "investment": {
       "kicker": "A etapa final",
       "title": "O carro já deixou de ser apenas uma ideia.",
-      "text": "Graças ao compromisso dos nossos patrocinadores, cerca de USD 30.000 já foram investidos no protótipo e estamos na etapa final de montagem. A todos que confiaram em nós e nos trouxeram até aqui: obrigado. Para terminá-lo, colocá-lo na pista e passar pela homologação, precisamos completar o próximo trecho.",
-      "investedLabel": "Investimento realizado graças aos patrocinadores",
-      "cashLabel": "Necessidade adicional em dinheiro",
-      "exchangeLabel": "Necessidade adicional em permuta"
+      "text": "Graças ao compromisso dos nossos patrocinadores, já garantimos recursos equivalentes a 60% do orçamento e estamos na etapa final de montagem. Para terminar o carro, colocá-lo na pista e passar pela homologação, precisamos completar o próximo trecho.",
+      "confirmedLabel": "do projeto já está coberto graças aos nossos patrocinadores",
+      "confirmedShort": "Recursos confirmados",
+      "materialsLabel": "Materiais e serviços",
+      "fundingLabel": "Apoio financeiro",
+      "progressAria": "60% do orçamento coberto, 20% pendente em materiais e serviços e 20% pendente em apoio financeiro",
+      "amountNote": "Referência: orçamento estimado USD 50.000 · necessidade pendente equivalente a USD 20.000"
     },
     "partnership": {
       "kicker": "Uma forma concreta de apoiar",

@@ -39,11 +39,24 @@
 
 .sp-investment, .sp-partnership, .sp-viewer { margin-top: clamp(5rem, 11vw, 10rem); }
 .sp-investment { --ink-rgb: 252, 246, 230; --surface-rgb: 21, 21, 25; display: grid; gap: 3rem; padding: clamp(2rem, 5vw, 4rem); border: 1px solid rgba(var(--red-rgb), .4); border-radius: 24px; background: radial-gradient(circle at 85% 15%, rgba(var(--red-rgb), .2), transparent 42%), #101013; color: rgb(var(--ink-rgb)); }
-.sp-investment__figures { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; overflow: hidden; border: 1px solid rgba(var(--ink-rgb), .12); border-radius: 14px; background: rgba(var(--ink-rgb), .12); }
-.sp-figure { padding: clamp(1.3rem, 3vw, 2rem); background: #17171b; }
-.sp-figure--wide { grid-column: 1 / -1; }
-.sp-figure dt { color: var(--color-white-subtle); font-size: .72rem; line-height: 1.5; text-transform: uppercase; }
-.sp-figure dd { margin-top: .5rem; color: var(--color-white); font-size: clamp(1.25rem, 3vw, 2rem); font-weight: 850; }
+.sp-funding { padding: clamp(1.4rem, 3vw, 2.25rem); border: 1px solid rgba(var(--ink-rgb), .14); border-radius: 18px; background: #17171b; }
+.sp-funding__headline { display: flex; align-items: end; gap: 1rem; margin-bottom: 1.6rem; }
+.sp-funding__headline strong { color: #fcf6e6; font-size: clamp(3.5rem, 8vw, 6.4rem); font-weight: 900; letter-spacing: -.075em; line-height: .78; }
+.sp-funding__headline span { max-width: 25ch; color: rgba(var(--ink-rgb), .72); font-size: .78rem; font-weight: 700; line-height: 1.45; }
+.sp-funding__bar { display: grid; grid-template-columns: 3fr 1fr 1fr; height: 22px; overflow: hidden; border: 1px solid rgba(var(--ink-rgb), .18); border-radius: 999px; background: #0f0f12; }
+.sp-funding__segment + .sp-funding__segment { border-left: 3px solid #17171b; }
+.sp-funding__segment--confirmed { background: var(--color-red); }
+.sp-funding__segment--materials { background: repeating-linear-gradient(135deg, rgba(var(--ink-rgb), .72) 0 5px, rgba(var(--ink-rgb), .26) 5px 10px); }
+.sp-funding__segment--funding { background: rgba(var(--ink-rgb), .08); }
+.sp-funding__legend { display: grid; grid-template-columns: 3fr 1fr 1fr; gap: 1rem; margin-top: 1.25rem; }
+.sp-funding__legend div { min-width: 0; }
+.sp-funding__legend dt { display: flex; align-items: center; gap: .45rem; color: #fcf6e6; font-size: .8rem; font-weight: 850; }
+.sp-funding__legend dd { margin: .35rem 0 0; color: rgba(var(--ink-rgb), .58); font-size: .65rem; line-height: 1.45; }
+.sp-funding__key { display: inline-block; width: 8px; height: 8px; flex: 0 0 auto; border-radius: 50%; }
+.sp-funding__key--confirmed { background: var(--color-red); }
+.sp-funding__key--materials { background: rgba(var(--ink-rgb), .72); }
+.sp-funding__key--funding { border: 1px solid rgba(var(--ink-rgb), .5); }
+.sp-funding__amount { display: block; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(var(--ink-rgb), .1); color: rgba(var(--ink-rgb), .42); font-size: .58rem; letter-spacing: .02em; line-height: 1.5; }
 
 .sp-partnership__head { max-width: 780px; }
 .sp-partnership__steps { display: grid; gap: 1rem; margin-top: 3rem; list-style: none; }
@@ -79,6 +92,8 @@
 
 @media (max-width: 479px) {
   .sp-story { gap: 1rem; }
-  .sp-investment__figures { grid-template-columns: 1fr; }
-  .sp-figure--wide { grid-column: auto; }
+  .sp-funding__headline { align-items: start; flex-direction: column; }
+  .sp-funding__legend { grid-template-columns: 1fr; gap: .8rem; }
+  .sp-funding__legend div { display: grid; grid-template-columns: 3.2rem 1fr; align-items: start; gap: .5rem; }
+  .sp-funding__legend dd { margin: 0; }
 }
