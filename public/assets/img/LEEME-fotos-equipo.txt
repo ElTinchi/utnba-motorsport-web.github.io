@@ -1,0 +1,31 @@
+FOTOS DE LAS GALERÍAS DE EQUIPO
+================================
+
+Van 3 fotos por área, acá mismo: assets/img/  (esta carpeta, la raíz de imágenes)
+Nombres (minúscula, sin acentos). Sirve .png o .jpg indistintamente.
+
+  Diseño        ->  diseno1        diseno2        diseno3
+  Química       ->  quimica1       quimica2       quimica3
+  Fabricación   ->  fabricacion1   fabricacion2   fabricacion3
+  Industrial    ->  industrial1    industrial2    industrial3
+  Electrónica   ->  electronica1   electronica2   electronica3
+  Comunicación  ->  comunicacion1  comunicacion2  comunicacion3
+
+ESTADO ACTUAL:
+  Diseño        -> COMPLETO (diseno1.png, diseno2.png, diseno3.png)
+  Industrial    -> COMPLETO (industrial1.png, industrial2.jpg, industrial3.png)
+  Electrónica   -> COMPLETO (electronica1.png, electronica2.png, electronica3.png)
+  Comunicación  -> FALTA la 3ra (subir comunicacion3)
+  Química       -> FALTAN las 3 (quimica1, quimica2, quimica3)
+  Fabricación   -> FALTAN las 3 (fabricacion1, fabricacion2, fabricacion3)
+
+OJO — el área de Simulación ya no existe: ahora es Química.
+Quedaron en la carpeta simulacion1.png y simulacion2.png, de cuando el área se
+llamaba así. Si esas fotos siguen sirviendo para Química, renombralas a
+quimica1 / quimica2 y listo; si no, se pueden borrar.
+
+Notas:
+- El código ya apunta a estos nombres. Al subir el archivo con el nombre
+  exacto, la foto aparece sola en la galería (no hay que tocar código).
+- Recomendado: fotos apaisadas (horizontal), ~1600px, y en .jpg pesan menos
+  que en .png (pero las dos andan).

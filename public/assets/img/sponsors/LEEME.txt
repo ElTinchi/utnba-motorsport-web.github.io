@@ -1,0 +1,30 @@
+LOGOS DE SPONSORS
+==================
+
+Los archivos actuales (utnba.png, cognitive.png, etc.) son PLACEHOLDERS
+temporales con el nombre del sponsor. Hay que reemplazarlos por los logos
+reales, MANTENIENDO EL MISMO NOMBRE DE ARCHIVO.
+
+Nombre exacto de cada archivo -> sponsor:
+  utnba.png         -> UTN BA
+  cognitive.png     -> Cognitive AI
+  emayer.png        -> Ernesto Mayer SA
+  polimetal.png     -> Polimetal Procesos
+  printalot.png     -> PrintALot
+  acerosmunro.png   -> Aceros Munro
+  ansys.png         -> Ansys
+  matlab.svg        -> MATLAB (MathWorks)
+  bender.svg        -> Bender
+
+DOS FORMAS DE HACERLO:
+
+1) Automático (si podés correr comandos): parado en la raíz del proyecto,
+   ejecutá:  bash assets/img/sponsors/descargar-logos.sh
+   Eso baja los logos reales con el nombre correcto. Después revisá que se
+   vean bien y volvé a subir la carpeta.
+
+2) Manual: descargá cada logo de la web del sponsor y guardalo con el
+   nombre exacto de la lista de arriba, en esta carpeta (assets/img/sponsors/).
+
+Recomendado: logos con fondo transparente o blanco (van sobre un tile blanco).
+Si alguno queda muy chico/grande, se ajusta solo (object-fit: contain).

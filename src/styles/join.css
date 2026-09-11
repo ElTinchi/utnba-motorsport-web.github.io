@@ -1,0 +1,222 @@
+/* ========================================
+   Página Sumate
+   ======================================== */
+.join-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  list-style: none;
+  padding: 0;
+  margin: 1.75rem 0 0;
+}
+
+@media (min-width: 760px) {
+  .join-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.join-list__item {
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(252, 246, 230, 0.07);
+  border-radius: 14px;
+}
+
+.join-list__item h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.join-list__item p {
+  font-size: 0.92rem;
+  color: var(--color-white-muted);
+  line-height: 1.65;
+}
+
+/* ====== Pasos ====== */
+.join-steps {
+  list-style: none;
+  padding: 0;
+  margin: 1.75rem 0 0;
+  display: grid;
+  gap: 1.5rem;
+  max-width: 72ch;
+}
+
+.join-step {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.join-step__number {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 900;
+  line-height: 1;
+  color: var(--color-red);
+  flex: 0 0 auto;
+  min-width: 2.2ch;
+}
+
+.join-step__title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.join-step__body {
+  font-size: 0.95rem;
+  color: var(--color-white-muted);
+  line-height: 1.7;
+}
+
+/* ====== Formulario ====== */
+.join-form-wrap {
+  padding: clamp(1.75rem, 4vw, 3rem);
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(252, 246, 230, 0.08);
+  border-radius: 18px;
+  max-width: 780px;
+}
+
+.join-form__title {
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  margin-bottom: 0.75rem;
+}
+
+.join-form__text {
+  font-size: 0.98rem;
+  color: var(--color-white-muted);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  max-width: 58ch;
+}
+
+.join-form {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.join-form__row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .join-form__row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.join-field {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.join-field > span {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-white-subtle);
+}
+
+.join-field input,
+.join-field select,
+.join-field textarea {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  font: inherit;
+  font-size: 0.95rem;
+  color: var(--color-white);
+  background: rgba(252, 246, 230, 0.04);
+  border: 1px solid rgba(252, 246, 230, 0.14);
+  border-radius: 9px;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.join-field textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.join-field input:focus,
+.join-field select:focus,
+.join-field textarea:focus {
+  outline: none;
+  border-color: var(--color-red);
+  background: rgba(252, 246, 230, 0.07);
+}
+
+/* El select hereda el fondo oscuro, pero sus opciones las pinta el sistema:
+   sin esto quedan texto claro sobre fondo claro en Windows. */
+.join-field select option {
+  color: #151519;
+  background: #fff;
+}
+
+.join-form button[type='submit'] {
+  justify-self: start;
+}
+
+.join-form button[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.join-form__status:empty {
+  display: none;
+}
+
+.join-form__status {
+  font-size: 0.92rem;
+  color: var(--color-white-muted);
+  line-height: 1.6;
+}
+
+.join-form__fallback p {
+  font-size: 0.95rem;
+  color: var(--color-white-muted);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  max-width: 58ch;
+}
+
+/* ====== Trabajo con jóvenes ====== */
+.join-youth {
+  padding: clamp(1.75rem, 4vw, 3rem);
+  border-left: 3px solid var(--color-red);
+  background: rgba(225, 6, 0, 0.06);
+  border-radius: 0 16px 16px 0;
+  max-width: 780px;
+}
+
+.join-youth__kicker {
+  display: block;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-red);
+  margin-bottom: 0.6rem;
+}
+
+.join-youth__title {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  margin-bottom: 0.9rem;
+}
+
+.join-youth__text {
+  font-size: 0.98rem;
+  color: var(--color-white-muted);
+  line-height: 1.75;
+  margin-bottom: 1.75rem;
+  max-width: 58ch;
+}

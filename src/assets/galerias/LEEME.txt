@@ -1,0 +1,25 @@
+GALERÍAS DE FOTOS POR ÁREA
+===========================
+
+Para agregar una foto: **tirá el archivo en la carpeta del área y listo.**
+No hay que renombrarlo ni tocar una sola línea de código — el componente
+Gallery.jsx lee la carpeta entera con import.meta.glob en el build.
+
+  src/assets/galerias/diseno/
+  src/assets/galerias/quimica/
+  src/assets/galerias/fabricacion/
+  src/assets/galerias/industrial/
+  src/assets/galerias/electronica/
+  src/assets/galerias/comunicacion/
+
+Se aceptan .jpg .jpeg .png .webp. Las fotos se ordenan alfabéticamente por
+nombre de archivo, así que si querés un orden puntual poné 01-, 02-, 03- adelante.
+
+POR QUÉ ACÁ Y NO EN public/
+Al estar dentro de src/, Vite las procesa: les pone un hash en el nombre (así
+el navegador puede cachearlas para siempre) y las sirve optimizadas. En public/
+se copiaban crudas — había PNGs de 1,7 MB descargándose enteros en cada visita.
+
+RECOMENDADO
+  - Apaisadas (horizontal), ~1600px de ancho.
+  - .webp o .jpg. Un .png de una foto pesa 5 veces más que el mismo .jpg.

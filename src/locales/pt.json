@@ -1,0 +1,475 @@
+{
+  "nav": {
+    "home": "Home",
+    "news": "Novidades",
+    "team": "O time",
+    "car": "O carro",
+    "academy": "A academia",
+    "aboutFormulaStudent": "O que é Fórmula Student",
+    "joinUs": "Participe",
+    "sponsors": "Patrocinadores"
+  },
+  "footer": {
+    "copyright": "© {{year}} UTN BA Motorsport · Universidad Tecnológica Nacional · Facultad Regional Buenos Aires",
+    "contactLabel": "Contato",
+    "address": "UTN FRBA · Buenos Aires, Argentina"
+  },
+  "home": {
+    "heroPlate": "UTN FRBA · Fórmula SAE",
+    "heroTitle": "Nosso primeiro Fórmula SAE elétrico",
+    "heroSubtitle": "Projetamos, fabricamos e colocamos na pista um monoposto 100% elétrico para competir na FSAE Brasil 2027.",
+    "heroCtaPrimary": "Apoie a equipe",
+    "heroCtaSecondary": "Conheça a equipe",
+    "motivationTitle": "O que nos motiva",
+    "motivationBody": "Acreditamos que a melhor forma de aprender engenharia é construindo. Nossa missão é projetar, fabricar e competir com um monoposto 100% elétrico, aplicando em um projeto real o que estudamos na UTN Buenos Aires.",
+    "aboutTitle": "Sobre nós",
+    "aboutBody": "Somos uma equipe interdisciplinar de estudantes da UTN Buenos Aires. Mecânica, eletrônica, elétrica, industrial, sistemas e química trabalham juntos em um mesmo projeto: nosso primeiro Fórmula SAE elétrico.",
+    "formulaStudentTitle": "O que é a Fórmula Student?",
+    "formulaStudentBody": "Uma competição internacional na qual equipes universitárias projetam, fabricam e competem com seu próprio monoposto. Não se avalia só a velocidade: também o projeto de engenharia, os custos e a apresentação para a indústria.",
+    "formulaStudentLink": "Saiba mais",
+    "joinTitle": "Como participar",
+    "joinBody": "Recebemos estudantes de todas as engenharias durante o ano todo. Se você gosta de automobilismo e quer aplicar o que estuda em um projeto real, fale com a gente.",
+    "joinLink": "Quero participar",
+    "areas": {
+      "kicker": "Como o time se divide",
+      "title": "Seis áreas, um só carro",
+      "intro": "Cada área tem a sua própria frente de trabalho, e o monoposto sai da soma das seis. Não importa de qual engenharia você vem: existe um lugar onde o que você estuda é aplicado."
+    },
+    "academy": {
+      "kicker": "A academia UTN BA Motorsport",
+      "title": "Você entra sem saber nada. Sai tocando um projeto real.",
+      "intro": "Somos a primeira geração de Fórmula SAE da UTN BA e já temos três frentes funcionando em paralelo. Não precisa saber soldar nem já ter usado um torno — a equipe está estruturada para você crescer dentro dela.",
+      "levels": [
+        {
+          "number": "Nível 01",
+          "title": "Rookie & Freshman",
+          "body": "Seu primeiro contato com a engenharia automotiva. Você monta um kart, aprende a soldar e a usar ferramentas como o torno, e entra de cabeça nos processos de fabricação da equipe."
+        },
+        {
+          "badge": "Caminho paralelo",
+          "title": "Baja SAE",
+          "body": "Não é um degrau, é um circuito próprio: regulamento de SAE diferente, mesmo motor para todos os carros, então a competição se define pelo projeto, não pela potência."
+        },
+        {
+          "number": "Nível 02",
+          "title": "Fórmula SAE",
+          "body": "Nossa categoria principal. Projetamos, fabricamos e competimos com nosso próprio monoposto contra equipes do mundo todo."
+        }
+      ],
+      "stats": [
+        {
+          "value": "600+",
+          "label": "equipes ativas de Fórmula SAE no mundo"
+        },
+        {
+          "value": "20.000+",
+          "label": "estudantes competindo por ano (estimado)"
+        },
+        {
+          "value": "1981",
+          "label": "o ano em que tudo começou, na Universidade do Texas"
+        }
+      ],
+      "cta": "Conheça o programa completo"
+    },
+    "sponsorsTitle": "Com o apoio de",
+    "sponsorsLink": "Conheça todos os nossos patrocinadores"
+  },
+  "fsPage": {
+    "kicker": "UTN BA Motorsport",
+    "title": "Sobre a Fórmula Student",
+    "adaptNotice": "Esta página descreve a competição de Fórmula Student de forma geral. Ainda precisamos ajustar os detalhes específicos ao regulamento da Fórmula SAE Brasil — vamos completar isso conforme o projeto avança.",
+    "sections": [
+      {
+        "number": "01",
+        "eyebrow": "Para estudantes",
+        "title": "O que é a Fórmula Student?",
+        "paragraphs": [
+          "A Fórmula Student é uma competição de projeto de engenharia em nível mundial, na qual estudantes de universidades do mundo todo desenvolvem e constroem seus próprios carros de corrida monopostos.",
+          "Mas vencer não é só ter o carro mais rápido. A vitória é da equipe que se destaca em todos os aspectos: projeto, desempenho, planejamento de custos e estratégia de negócio. As equipes são avaliadas por um júri de especialistas do motorsport, da indústria automotiva e de fornecedores, que analisam tanto a qualidade técnica do carro quanto a abordagem de negócio da equipe.",
+          "Cada país e organização define seu próprio regulamento dentro da Fórmula Student. Vamos competir seguindo as regras da Fórmula SAE Brasil — em breve vamos trazer aqui o detalhe específico desse regulamento."
+        ]
+      },
+      {
+        "number": "02",
+        "eyebrow": "Motivação",
+        "title": "Por que os estudantes constroem carros de fórmula?",
+        "paragraphs": [
+          "A Fórmula Student desafia os estudantes a ir além das matérias da faculdade e aplicar o que aprendem em um projeto real. Combina trabalho em equipe, gestão de tempo e de projetos, engenharia, fabricação e visão de negócio.",
+          "Participar traz experiências muito valiosas para o futuro como engenheiros. Também dá mais exposição à indústria automotiva, já que muitas empresas usam a Fórmula Student como plataforma para conhecer e recrutar novos talentos."
+        ]
+      },
+      {
+        "number": "03",
+        "eyebrow": "Valores",
+        "title": "Como as empresas e parceiros se beneficiam?",
+        "paragraphs": [
+          "A Fórmula Student oferece às empresas do motorsport, da indústria automotiva e de fornecedores uma forma única de avaliar as habilidades de futuros engenheiros. Ao patrocinar ou apoiar uma equipe, elas criam vínculos antecipados com estudantes muito motivados.",
+          "Participar como jurado, mentor ou patrocinador também dá uma visão valiosa sobre a próxima geração de talentos em engenharia."
+        ]
+      },
+      {
+        "number": "04",
+        "eyebrow": "Disciplinas",
+        "title": "As provas da competição",
+        "paragraphs": [
+          "Existem muitas competições de Fórmula Student ao redor do mundo todo ano. Cada uma tem suas particularidades, mas todas compartilham as mesmas disciplinas centrais: as provas nas quais as equipes competem. Elas se dividem em duas grandes categorias: dinâmicas e estáticas."
+        ]
+      }
+    ],
+    "dynamicTitle": "Provas dinâmicas",
+    "dynamicIntro": "As provas dinâmicas avaliam o desempenho dos carros na pista. Cada uma mede uma característica física diferente do veículo: aceleração, skid pad, autocross, eficiência e enduro.",
+    "dynamicEvents": [
+      {
+        "title": "Aceleração",
+        "body": "A capacidade de aceleração do carro é testada em um trecho reto de 75 metros. Além da tração, o projeto do powertrain tem papel fundamental, seja buscando potência máxima ou boa entrega de torque. Os carros mais rápidos completam a prova em menos de quatro segundos e ultrapassam 100 km/h antes da linha de chegada.",
+        "score": "Pontuação máxima: 90."
+      },
+      {
+        "title": "Skid Pad",
+        "body": "Cada carro percorre um circuito em forma de oito marcado por cones, completando duas voltas por círculo, das quais a segunda é registrada. O resultado é comparável à máxima aceleração lateral possível. Muitos projetos usam a aerodinâmica para aumentar a pressão de contato e ganhar velocidade lateral. Bater em um cone gera penalidade de tempo.",
+        "score": "Pontuação máxima: 75."
+      },
+      {
+        "title": "Autocross",
+        "body": "Os carros percorrem uma pista de aproximadamente um quilômetro que combina retas, curvas e chicanes fechadas. Uma boa volta reflete aceleração rápida, direção precisa e frenagem eficiente. Bater em cones gera penalidade de tempo. O resultado desta prova define a ordem de largada do enduro.",
+        "score": "Pontuação máxima: 120."
+      },
+      {
+        "title": "Eficiência",
+        "body": "Durante a prova de enduro, o consumo de energia de cada carro é medido com precisão. O que importa não é a quantidade de combustível ou eletricidade usada, mas o consumo em relação à velocidade. Isso evita que as equipes dirijam devagar demais só para ganhar vantagem.",
+        "score": "Pontuação máxima: 100."
+      },
+      {
+        "title": "Enduro (Endurance)",
+        "body": "É o desafio mais importante e o que mais pontua. Os carros precisam demonstrar sua durabilidade em um percurso longo. Velocidade, agilidade, consumo de energia e confiabilidade são avaliados. Os pilotos precisam de bom controle, já que vários carros dividem a pista ao mesmo tempo. Só é permitida uma tentativa, com troca obrigatória de piloto na metade da prova.",
+        "score": "Pontuação máxima: 230."
+      }
+    ],
+    "staticTitle": "Provas estáticas",
+    "staticIntro": "As provas estáticas avaliam a capacidade das equipes de lidar com os desafios reais das finanças, da estratégia de negócio e das boas práticas de engenharia.",
+    "staticEvents": [
+      {
+        "title": "Projeto",
+        "body": "Antes da competição, cada equipe apresenta uma descrição escrita e detalhada do seu carro, explicando o projeto e como ele foi aplicado na construção do veículo. Com base nessa submissão, os jurados avaliam o projeto técnico, a abordagem de design e o quanto o conceito foi bem implementado no carro final. Depois, a equipe se reúne pessoalmente com o júri para responder perguntas, defender suas decisões e mostrar a profundidade do seu conhecimento. A avaliação leva em conta não só a solução técnica em si, mas também o raciocínio por trás de cada decisão.",
+        "score": "Pontuação máxima: 180."
+      },
+      {
+        "title": "Custo",
+        "body": "Como o custo tem papel central no desenvolvimento de um produto, esta prova desafia as equipes a mostrar um detalhamento completo do seu protótipo. É preciso apresentar um relatório de custos que inclua peças, materiais e as etapas de fabricação envolvidas na produção. Depois do relatório há uma conversa com os jurados, na qual a equipe precisa explicar seus cálculos e demonstrar que entende os aspectos práticos de construir o carro. Tanto a clareza do relatório quanto a compreensão da equipe sobre os processos de produção são levadas em conta.",
+        "score": "Pontuação máxima: 120."
+      },
+      {
+        "title": "Apresentação",
+        "body": "Cada equipe apresenta um produto ou serviço relacionado diretamente ao carro construído naquela temporada, como se estivesse diante de investidores reais. O objetivo é convencer os jurados — atuando como uma empresa fictícia — de que a proposta atende às necessidades de um mercado-alvo e pode ter sucesso comercial. Depois da apresentação há uma rodada de perguntas, na qual a equipe precisa responder com segurança e capacidade de adaptação. Tanto o conteúdo e a estrutura da apresentação quanto o desempenho da equipe ao apresentá-la são avaliados.",
+        "score": "Pontuação máxima: 85."
+      }
+    ]
+  },
+  "motorsportPage": {
+    "kicker": "UTN BA Motorsport",
+    "title": "A academia: três categorias, uma só equipe",
+    "intro": "Somos a primeira geração de Fórmula SAE da UTN BA, e construímos com três frentes funcionando em paralelo. É assim que cada uma se organiza.",
+    "sections": [
+      {
+        "number": "01",
+        "logoAlt": "Rookie UTNBA",
+        "eyebrow": "O primeiro passo",
+        "title": "Rookie & Freshman",
+        "paragraphs": [
+          "Tudo começa aqui. Como Rookie, seu primeiro projeto na equipe é montar um kart — um desafio simples e concreto para começar a construir com as próprias mãos antes de entrar no monoposto.",
+          "Como Freshman, se você está no primeiro ou segundo ano, dá seus primeiros passos na engenharia automotiva: solda, uso de ferramentas como o torno, e o primeiro contato real com os processos de fabricação da equipe.",
+          "Não precisa de experiência prévia. Esta é a porta de entrada da equipe, pensada para que qualquer pessoa possa entrar e crescer."
+        ]
+      },
+      {
+        "number": "02",
+        "logoAlt": "Baja UTNBA",
+        "eyebrow": "Categoria paralela · Regulamento próprio",
+        "title": "Baja SAE",
+        "parallel": true,
+        "paragraphs": [
+          "Baja SAE não é um degrau na escada da Fórmula SAE: é uma competição com regulamento técnico próprio da SAE International, e nosso carro não é um monoposto de fórmula, e sim um veículo todo-terreno tipo buggy.",
+          "Aqui, os integrantes treinam para trabalhar como exige o automobilismo profissional: interpretar cada requisito, documentar decisões, projetar para passar nas inspeções e utilizar componentes homologados pela FIA/SFI quando exigido pelas regras de segurança.",
+          "Um detalhe que a diferencia de outras competições: todos os carros usam o mesmo motor, um Kohler Command Pro CH440 de aproximadamente 10 HP com placa restritora. Isso tira a potência da equação — a competição se define 100% pelo projeto.",
+          "As provas estáticas avaliam projeto, análise de custos e uma apresentação de venda diante de um júri, como se o carro fosse um produto real. As provas dinâmicas o testam em terreno todo-terreno: aceleração, subida de rampa (hill climb), manobrabilidade, rock crawl e resistência.",
+          "É uma competição internacional da SAE, com edições nos Estados Unidos, na Índia (Baja SAEINDIA) e em outros países."
+        ]
+      },
+      {
+        "number": "03",
+        "logoAlt": "UTN BA Motorsport",
+        "eyebrow": "Categoria principal",
+        "title": "Fórmula SAE",
+        "paragraphs": [
+          "É nossa categoria principal e a mais importante em nível mundial. É muito disputada no continente americano — Brasil, Estados Unidos — e também na Europa.",
+          "A Fórmula SAE nasceu em 1981 na Universidade do Texas, pelas mãos do professor Ron Matthews. A primeira edição teve apenas 6 equipes e 40 estudantes."
+        ]
+      }
+    ],
+    "statsTitle": "Fórmula SAE em números",
+    "stats": [
+      {
+        "value": "600+",
+        "label": "equipes ativas de Fórmula SAE em mais de 20 países"
+      },
+      {
+        "value": "120",
+        "label": "equipes e mais de 2.500 estudantes reunidos em um único evento: Michigan International Speedway"
+      },
+      {
+        "value": "~20.000",
+        "label": "estudantes que se estima formar a comunidade global a cada ano"
+      }
+    ],
+    "statsNote": "O número de estudantes por ano é uma estimativa própria (entre 15.000 e 25.000) baseada em dados públicos, não um dado oficial.",
+    "sourcesLabel": "Fontes",
+    "sources": [
+      {
+        "label": "Formula Student — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Formula_Student"
+      },
+      {
+        "label": "Formula SAE — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Formula_SAE"
+      },
+      {
+        "label": "Baja SAE — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Baja_SAE"
+      },
+      {
+        "label": "Red Bull — Global Formula Racing",
+        "url": "https://www.redbull.com/us-en/theredbulletin/global-formula-racing-formula-sae"
+      },
+      {
+        "label": "Wichita State University — Formula SAE",
+        "url": "https://www.wichita.edu/academics/engineering/mechanical_engineering/students/formula-sae/competition.php"
+      }
+    ],
+    "fsLink": "Conheça o regulamento e as provas em detalhe"
+  },
+  "sponsorsPage": {
+    "kicker": "Quero ser patrocinador",
+    "title": "Não estamos construindo apenas um carro.",
+    "intro": "Estamos construindo o caminho que transforma estudantes em profissionais do motorsport. Hoje, esse caminho está a um último impulso de chegar à pista.",
+    "scrollCta": "Conheça a história",
+    "proofLabel": "Empresas que já fazem parte da jornada",
+    "journey": {
+      "kicker": "Uma academia, três etapas",
+      "title": "Antes do Fórmula, existe um caminho.",
+      "intro": "A UTN BA Motorsport é uma academia integral: cada categoria acrescenta complexidade, responsabilidade e experiência real. Ninguém chega ao projeto mais exigente por acaso.",
+      "items": [
+        { "number": "01", "logoAlt": "Rookie UTNBA", "stage": "Rookies · Karting", "title": "Primeiro, aprender construindo.", "text": "Os novos integrantes projetam e constroem um kart. É a primeira experiência tomando decisões técnicas, fabricando peças e entendendo que cada milímetro tem uma consequência.", "outcome": "Fundamentos · Oficina · Trabalho em equipe" },
+        { "number": "02", "logoAlt": "Baja UTNBA", "stage": "Desenvolvimento · Baja SAE", "title": "Depois, engenharia sob pressão.", "text": "No Baja SAE o desafio cresce: um veículo mais complexo, condições extremas e um regulamento técnico rigoroso. Os estudantes treinam para interpretar cada requisito, documentar suas decisões e passar pelas inspeções; também trabalham com componentes de segurança sujeitos à homologação FIA/SFI quando exigido pelo regulamento.", "outcome": "Regulamento SAE · Segurança FIA/SFI · Inspeção" },
+        { "number": "03", "logoAlt": "UTN BA Motorsport", "stage": "Categoria principal · Fórmula SAE", "title": "Finalmente, construir o carro que nos representa.", "text": "O Fórmula SAE elétrico reúne tudo o que foi aprendido. É o nosso projeto mais ambicioso: um monoposto projetado, fabricado e montado por estudantes para competir no Brasil.", "outcome": "Tecnologia · Alto desempenho · Indústria" }
+      ]
+    },
+    "investment": {
+      "kicker": "A etapa final",
+      "title": "O carro já deixou de ser apenas uma ideia.",
+      "text": "Investimos cerca de USD 30.000 no protótipo e estamos na etapa final de montagem. Para terminá-lo, colocá-lo na pista e passar pela homologação, precisamos completar o próximo trecho.",
+      "investedLabel": "Investimento realizado no protótipo",
+      "cashLabel": "Necessidade adicional em dinheiro",
+      "exchangeLabel": "Necessidade adicional em permuta"
+    },
+    "partnership": {
+      "kicker": "Uma forma concreta de apoiar",
+      "title": "Sua contribuição se torna uma parte real do carro.",
+      "intro": "Trabalhamos com um modelo de gestão assistida para que cada empresa saiba exatamente qual necessidade está resolvendo.",
+      "steps": [
+        { "title": "Nos conhecemos", "text": "Conversamos sobre a empresa, seus objetivos e a forma de parceria que faça mais sentido." },
+        { "title": "Definimos a necessidade", "text": "Compartilhamos componentes específicos, fornecedores, links de compra ou uma fatura do projeto." },
+        { "title": "A empresa torna possível", "text": "Ela pode comprar e enviar o material ou pagar diretamente a fatura do fornecedor." }
+      ],
+      "note": "Não solicitamos transferências informais para contas pessoais. Cada colaboração é rastreável e formalizada por meio de um contrato simples de patrocínio."
+    },
+    "viewer": {
+      "kicker": "Agora é sua vez de entrar na história",
+      "arrival": "Você chegou até aqui.",
+      "title": "Quer ver como fica seu logo no carro?",
+      "text": "Carregue a marca da sua empresa e visualize-a sobre o veículo real em três tamanhos. A proposta comercial e a posição final são definidas juntos em uma reunião.",
+      "sizes": ["Grande", "Médio", "Pequeno"],
+      "badge": "Simulador de patrocinadores",
+      "imageAlt": "Render do Fórmula SAE elétrico da UTN BA Motorsport",
+      "button": "Ver meu logo no carro",
+      "note": "O simulador está sendo integrado. Enquanto isso, podemos preparar uma visualização personalizada.",
+      "pending": "Em breve"
+    },
+    "ctaButton": "Agendar uma reunião"
+  },
+  "common": {
+    "backLink": "Voltar ao início"
+  },
+  "areas": {
+    "items": {
+      "design": {
+        "title": "Design",
+        "subtitle": "CAD e engenharia",
+        "body": "Define a geometria do carro. Do chassi à suspensão, cada peça é modelada em CAD antes de existir: é aqui que o carro toma forma e onde se prepara tudo o que depois vai ser fabricado."
+      },
+      "chemistry": {
+        "title": "Química",
+        "subtitle": "Materiais e compostos",
+        "body": "Cuida dos materiais: qual composto vai em cada peça, como se comporta e como é tratado. É a área que responde do que o carro é feito."
+      },
+      "manufacturing": {
+        "title": "Fabricação",
+        "subtitle": "Construção e montagem",
+        "body": "Onde o projeto vira carro. Corte, solda, usinagem e montagem: é aqui que cada peça é construída fisicamente e o carro é montado."
+      },
+      "industrial": {
+        "title": "Industrial",
+        "subtitle": "Manufatura e processos",
+        "body": "Planeja como tudo acontece: prazos, processos, custos e fornecedores. É o que mantém o projeto dentro do calendário e do orçamento."
+      },
+      "electronics": {
+        "title": "Eletrônica",
+        "subtitle": "Hardware e firmware",
+        "body": "Tudo o que conduz corrente. Sensores, chicote, controle e o firmware que os faz funcionar: em um carro elétrico é o sistema nervoso do projeto."
+      },
+      "communication": {
+        "title": "Comunicação",
+        "subtitle": "Identidade visual e redes",
+        "body": "Conta o que o time faz. Identidade visual, redes, conteúdo e a relação com os patrocinadores: é a cara do projeto para fora."
+      }
+    }
+  },
+  "teamPage": {
+    "kicker": "O time",
+    "title": "Somos a primeira geração",
+    "intro": "Estudantes da UTN Buenos Aires construindo, do zero, o primeiro Fórmula SAE elétrico da faculdade.",
+    "storyTitle": "Quem somos",
+    "storyParagraphs": [
+      "UTN BA Motorsport é uma equipe interdisciplinar de estudantes da Universidad Tecnológica Nacional, Facultad Regional Buenos Aires. Mecânica, eletrônica, elétrica, industrial, sistemas e química trabalham no mesmo projeto: um monoposto 100% elétrico para competir na Fórmula SAE Brasil 2027.",
+      "Somos a primeira geração de Fórmula SAE da UTN BA. Isso quer dizer que não herdamos nem um carro nem um manual: estamos escrevendo os dois. Tudo o que se decide agora é o ponto de partida das equipes que vierem depois.",
+      "Acreditamos que a melhor forma de aprender engenharia é construindo. Aqui o que se estuda na faculdade é aplicado em uma peça real, com uma data de competição real e consequências reais se não funcionar."
+    ],
+    "areasTitle": "As seis áreas",
+    "areasIntro": "Cada área tem a sua própria frente de trabalho, e o carro sai da soma das seis. Não importa de qual engenharia você vem: existe um lugar onde o que você estuda é aplicado.",
+    "noPhotos": "Ainda não subimos fotos desta área.",
+    "ctaTitle": "Quer fazer parte?",
+    "ctaText": "Recebemos estudantes de todas as engenharias o ano inteiro, e não é preciso experiência prévia.",
+    "ctaButton": "Quero participar"
+  },
+  "carPage": {
+    "kicker": "O carro",
+    "title": "Nosso primeiro monoposto elétrico",
+    "intro": "Projetado, fabricado e levado à pista por estudantes da UTN Buenos Aires, para competir na Fórmula SAE Brasil 2027.",
+    "renderAlt": "Render do monoposto Fórmula SAE elétrico da UTN BA Motorsport",
+    "renderCaption": "Render de trabalho do monoposto. O projeto segue em evolução.",
+    "projectTitle": "O projeto",
+    "projectParagraphs": [
+      "É o primeiro carro do time, e começa do zero: não há uma temporada anterior de onde copiar um chassi ou reaproveitar um pacote de baterias. Cada decisão de projeto está sendo tomada pela primeira vez na UTN BA.",
+      "Escolhemos elétrico desde o início. É a categoria que mais cresceu na Fórmula Student na última década e a mais parecida com a indústria em que vai trabalhar quem passar pelo time."
+    ],
+    "specsTitle": "Ficha técnica",
+    "specs": {
+      "category": {
+        "label": "Categoria",
+        "value": "Fórmula SAE — monoposto elétrico"
+      },
+      "powertrain": {
+        "label": "Powertrain",
+        "value": "100% elétrico"
+      },
+      "competition": {
+        "label": "Competição",
+        "value": "Fórmula SAE Brasil 2027"
+      },
+      "generation": {
+        "label": "Geração",
+        "value": "A primeira do time"
+      }
+    },
+    "specsNote": "A ficha completa (massa, potência, bateria, suspensão, pneus) vai sendo publicada conforme o projeto é congelado. Não adiantamos números que ainda podem mudar.",
+    "viewer": {
+      "kicker": "Para patrocinadores",
+      "title": "Veja a sua marca no carro antes de decidir",
+      "text": "Estamos desenvolvendo um visualizador que pega o render real do monoposto e aplica a sua marca em cima. Em vez de imaginar como fica o seu logo no carro, você vê.",
+      "bullets": [
+        "Sobre o render real do carro, não sobre um desenho genérico.",
+        "Você muda a posição e o tamanho e atualiza na hora.",
+        "Leva a imagem para mostrar dentro da sua empresa."
+      ],
+      "openButton": "Abrir o visualizador",
+      "pendingBadge": "Em desenvolvimento",
+      "pendingText": "O visualizador está na última etapa de desenvolvimento. Se você está avaliando apoiar o time e quer vê-lo antes de publicarmos, escreva para nós e mostramos.",
+      "pendingButton": "Ver como apoiar"
+    }
+  },
+  "joinPage": {
+    "kicker": "Participe",
+    "title": "Você entra sem saber nada. Sai tocando um projeto de verdade.",
+    "intro": "Recebemos estudantes de todas as engenharias o ano inteiro. Não é preciso experiência prévia nem ter mexido em um torno: o time é montado para você aprender por dentro.",
+    "expectationsTitle": "O que é preciso (e o que não é)",
+    "expectations": [
+      {
+        "title": "Não é preciso experiência",
+        "body": "Se você nunca soldou, nunca abriu um CAD e não sabe o que é um skid pad, está no lugar certo. Aprende-se fazendo, junto de quem já passou por isso."
+      },
+      {
+        "title": "Constância, sim",
+        "body": "O carro tem data de competição. O que mais pesa não é quanto você sabe ao entrar, mas estar presente quando é preciso."
+      },
+      {
+        "title": "Qualquer curso soma",
+        "body": "Mecânica, eletrônica, elétrica, industrial, sistemas, química. E também quem quiser cuidar de comunicação, patrocinadores ou gestão do projeto."
+      }
+    ],
+    "stepsTitle": "Como funciona",
+    "steps": [
+      {
+        "title": "Escreva para nós",
+        "body": "Preencha o formulário aqui embaixo contando o que você estuda e o que te interessa. Não precisa de currículo."
+      },
+      {
+        "title": "A gente se encontra",
+        "body": "Conversamos para te conhecer, explicar como o time funciona e ver em qual área você se encaixa."
+      },
+      {
+        "title": "Você entra em uma área",
+        "body": "Começa na área que escolheu, com uma tarefa concreta e alguém acompanhando."
+      },
+      {
+        "title": "Você cresce dentro",
+        "body": "De Rookie ou Freshman até o monoposto. O caminho completo está em A academia."
+      }
+    ],
+    "formTitle": "Escreva para nós",
+    "formText": "Conte quem você é e no que gostaria de se meter. Respondemos por e-mail.",
+    "form": {
+      "name": "Nome completo",
+      "email": "E-mail",
+      "career": "Curso e ano",
+      "area": "Área que te interessa",
+      "areaAny": "Ainda não sei / qualquer uma",
+      "message": "Conte um pouco sobre você",
+      "submit": "Enviar",
+      "sending": "Enviando...",
+      "ok": "Pronto! Recebemos a sua mensagem e vamos responder por e-mail.",
+      "error": "Não conseguimos enviar. Tente de novo ou escreva direto para {{email}}.",
+      "noBackend": "O formulário ainda não está conectado. Enquanto isso, escreva por e-mail que respondemos do mesmo jeito."
+    },
+    "youth": {
+      "kicker": "Trabalho com jovens",
+      "title": "Também trabalhamos com escolas de ensino médio",
+      "text": "Abrimos a oficina para estudantes do ensino médio para mostrar o que é engenharia aplicada: como se pensa, se projeta e se fabrica um carro de corrida. Se você é professor ou coordena uma escola técnica e tem interesse em uma visita ou uma palestra, escreva para nós.",
+      "button": "Combinar uma visita"
+    }
+  },
+  "newsPage": {
+    "kicker": "Novidades",
+    "title": "O que está acontecendo no time",
+    "intro": "Avanços do carro, competições, novos patrocinadores e o que publicamos nas nossas redes.",
+    "loading": "Carregando novidades...",
+    "emptyBadge": "Em breve",
+    "emptyTitle": "Estamos montando esta seção",
+    "emptyText": "Enquanto isso, tudo o que fazemos a gente conta no Instagram: fotos da oficina, avanços do monoposto e o dia a dia do time.",
+    "emptyButton": "Siga a gente no Instagram"
+  },
+  "notFound": {
+    "title": "Esta página não existe",
+    "text": "Pode ser que o link esteja quebrado ou que a página tenha mudado de endereço. Estes dois sempre funcionam:",
+    "home": "Ir para o início"
+  }
+}

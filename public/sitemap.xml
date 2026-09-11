@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Las 8 páginas del sitio. Si se agrega o se saca una ruta en src/routes.js,
+  hay que reflejarlo acá. Las URLs viejas (/sobre-nosotros, /equipo,
+  /motorsport, /contacto, /trabajo-con-jovenes) no van: redirigen, y no se
+  declara en el sitemap algo que no es el destino final.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://utnbamotorsport.com.ar/</loc>
+    <priority>1.0</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://utnbamotorsport.com.ar/el-equipo</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://utnbamotorsport.com.ar/el-auto</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://utnbamotorsport.com.ar/sumate</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://utnbamotorsport.com.ar/sponsors</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://utnbamotorsport.com.ar/la-academia</loc>
+    <priority>0.7</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://utnbamotorsport.com.ar/formula-student</loc>
+    <priority>0.7</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://utnbamotorsport.com.ar/novedades</loc>
+    <priority>0.6</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+</urlset>

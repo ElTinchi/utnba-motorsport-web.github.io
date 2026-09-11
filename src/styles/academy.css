@@ -1,0 +1,205 @@
+.ms-page {
+  padding: 3.5rem 1.5rem 6rem;
+}
+
+@media (min-width: 1200px) {
+  .ms-page {
+    padding: 4rem 4rem 7rem;
+  }
+}
+
+.ms-page__container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.ms-page__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--color-white-muted);
+  margin-bottom: 2rem;
+  transition: color 0.2s ease;
+}
+
+.ms-page__back:hover {
+  color: var(--color-white);
+}
+
+.ms-page__back svg {
+  width: 18px;
+  height: 18px;
+}
+
+.ms-page__kicker {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-white-subtle);
+  margin-bottom: 0.75rem;
+}
+
+.ms-page__title {
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--color-red);
+  margin-bottom: 1.25rem;
+}
+
+.ms-page__intro {
+  font-size: 1rem;
+  color: var(--color-white-muted);
+  line-height: 1.7;
+  max-width: 68ch;
+  margin-bottom: 3.5rem;
+}
+
+.ms-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 2.5rem 0;
+  border-top: 1px solid rgba(252, 246, 230, 0.1);
+}
+
+@media (min-width: 700px) {
+  .ms-section {
+    grid-template-columns: 90px 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Baja SAE: no es continuación de la escalera, es un camino aparte */
+.ms-section--parallel {
+  border-top-style: dashed;
+  border-top-color: rgba(252, 246, 230, 0.25);
+  background: rgba(252, 246, 230, 0.02);
+  border-radius: 16px;
+  margin: 0.5rem 0;
+  padding: 2.5rem 1.5rem;
+}
+
+@media (min-width: 700px) {
+  .ms-section--parallel {
+    padding: 2.5rem 2rem;
+  }
+}
+
+.ms-section__index {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: rgba(252, 246, 230, 0.25);
+}
+
+.ms-section__logo {
+  width: auto;
+  max-width: min(100%, 430px);
+  height: clamp(46px, 8vw, 76px);
+  margin-bottom: 1.75rem;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.ms-section__logo--3 {
+  height: clamp(38px, 6vw, 58px);
+}
+
+.ms-section__eyebrow {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-red);
+  margin-bottom: 0.5rem;
+}
+
+.ms-section__title {
+  font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.ms-section__text {
+  font-size: 1rem;
+  color: var(--color-white-muted);
+  line-height: 1.75;
+  margin-bottom: 1rem;
+  max-width: 68ch;
+}
+
+.ms-section__text:last-of-type {
+  margin-bottom: 0;
+}
+
+.ms-section__link {
+  display: inline-flex;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-white);
+  border-bottom: 1px solid var(--color-red);
+  padding-bottom: 2px;
+  transition: color 0.2s ease;
+}
+
+.ms-section__link:hover {
+  color: var(--color-red);
+}
+
+/* ========================================
+   Fórmula SAE en números
+   ======================================== */
+.ms-stats {
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(252, 246, 230, 0.1);
+}
+
+.ms-stats__title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 1.75rem;
+}
+
+/* ========================================
+   Fuentes
+   ======================================== */
+.ms-sources {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(252, 246, 230, 0.1);
+}
+
+.ms-sources__title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-white-subtle);
+  margin-bottom: 0.9rem;
+}
+
+.ms-sources__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+}
+
+.ms-sources__link {
+  font-size: 0.85rem;
+  color: var(--color-white-muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.ms-sources__link:hover {
+  color: var(--color-white);
+}

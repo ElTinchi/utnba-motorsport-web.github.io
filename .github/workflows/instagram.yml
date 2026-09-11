@@ -1,0 +1,94 @@
+name: Traer publicaciones de Instagram
+
+# Deja los últimos posts en public/data/instagram.json y los commitea si cambiaron.
+# La página /novedades lee ese archivo — nunca llama a Instagram desde el navegador.
+#
+# POR QUÉ ASÍ: el sitio es estático, así que cualquier token que estuviera en el
+# código sería público. Acá el token vive en GitHub Secrets y solo lo ve el runner.
+# Además, si Instagram se cae, la página sigue mostrando los últimos posts traídos.
+#
+# ---------------------------------------------------------------------------
+# PUESTA EN MARCHA (una sola vez)
+#   1. La cuenta de Instagram tiene que ser Business o Creator.
+#      (La Instagram Basic Display API está dada de baja desde el 4/12/2024;
+#       esto usa la Instagram API with Instagram Login, que la reemplazó.)
+#   2. Crear una app en developers.facebook.com, agregarle el producto Instagram
+#      y generar un token de larga duración (dura 60 días).
+#   3. Guardarlo en el repo: Settings -> Secrets and variables -> Actions ->
+#      New repository secret, con el nombre IG_TOKEN.
+#   4. Listo. Mientras el secret no exista, el workflow no falla: se saltea.
+#
+# El paso de refresco extiende el token otros 60 días en cada corrida, así que
+# mientras el workflow corra al menos una vez cada dos meses no vence nunca.
+# ---------------------------------------------------------------------------
+
+on:
+  schedule:
+    - cron: '17 */6 * * *' # cada 6 horas
+  workflow_dispatch: # y a mano cuando se quiera forzar
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: ¿Está configurado el token?
+        id: check
+        run: |
+          if [ -z "${{ secrets.IG_TOKEN }}" ]; then
+            echo "IG_TOKEN no está configurado todavía — se saltea el resto."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Traer las publicaciones
+        if: steps.check.outputs.ready == 'true'
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+        run: |
+          set -euo pipefail
+          FIELDS='id,caption,media_type,media_url,thumbnail_url,permalink,timestamp'
+          curl -sfS --max-time 30 \
+            "https://graph.instagram.com/me/media?fields=$FIELDS&limit=12&access_token=$IG_TOKEN" \
+            -o /tmp/ig-raw.json
+
+          mkdir -p public/data
+          # Los videos no traen media_url usable como imagen: se usa el thumbnail.
+          # Se guarda solo lo que la página necesita, no la respuesta cruda.
+          jq '{
+            updatedAt: (now | todate),
+            posts: [ .data[] | {
+              id: .id,
+              caption: (.caption // ""),
+              mediaUrl: (if .media_type == "VIDEO" then (.thumbnail_url // .media_url) else .media_url end),
+              permalink: .permalink,
+              timestamp: .timestamp
+            } ]
+          }' /tmp/ig-raw.json > public/data/instagram.json
+
+      - name: Renovar el token por 60 días más
+        if: steps.check.outputs.ready == 'true'
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+        continue-on-error: true # que no falle la corrida si solo falla el refresco
+        run: |
+          curl -sfS --max-time 30 \
+            "https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&access_token=$IG_TOKEN" \
+            -o /dev/null
+          echo "Token renovado. Ojo: el secret IG_TOKEN sigue siendo el mismo string;"
+          echo "el refresco extiende su validez del lado de Meta, no lo reemplaza."
+
+      - name: Commitear si cambió
+        if: steps.check.outputs.ready == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data/instagram.json
+          git diff --staged --quiet || git commit -m "Novedades: actualizar feed de Instagram"
+          git push

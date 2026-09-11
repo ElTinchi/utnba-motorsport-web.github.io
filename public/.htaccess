@@ -1,0 +1,29 @@
+# Apache / cPanel — fallback de SPA.
+# Mismo motivo que public/_redirects: las rutas del sitio no son archivos en
+# disco. Si el pedido no coincide con un archivo o carpeta real, se sirve
+# index.html y React Router resuelve la ruta del lado del cliente.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>
+
+# Los assets van con hash en el nombre: se pueden cachear para siempre.
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType image/png "access plus 6 months"
+  ExpiresByType image/jpeg "access plus 6 months"
+  ExpiresByType image/webp "access plus 6 months"
+</IfModule>
+
+# index.html nunca se cachea, para que un deploy se vea al instante.
+<IfModule mod_headers.c>
+  <FilesMatch "index\.html$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>

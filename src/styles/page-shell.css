@@ -1,0 +1,117 @@
+/* ========================================
+   Cáscara común de las páginas internas
+   ======================================== */
+.shell {
+  padding: 3.5rem 0 6rem;
+}
+
+@media (min-width: 1200px) {
+  .shell {
+    padding: 4rem 0 7rem;
+  }
+}
+
+/* El padding lateral lo pone cada bloque (.shell__head, .shell-block), no la
+   sección: así un hijo puede sangrar a todo el ancho cuando hace falta. */
+.shell__head,
+.shell-block {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.shell--wide .shell__head,
+.shell--wide .shell-block {
+  max-width: 1320px;
+}
+
+@media (min-width: 1200px) {
+  .shell__head,
+  .shell-block {
+    padding: 0 4rem;
+  }
+}
+
+.shell__back {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--color-white-muted);
+  margin-bottom: 2rem;
+  transition: color 0.2s ease;
+}
+
+.shell__back:hover {
+  color: var(--color-white);
+}
+
+.shell__back svg {
+  width: 18px;
+  height: 18px;
+}
+
+.shell__kicker {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-white-subtle);
+  margin-bottom: 0.75rem;
+}
+
+.shell__title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.03;
+  color: var(--color-red);
+  margin-bottom: 1.25rem;
+  max-width: 18ch;
+}
+
+.shell__intro {
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  color: var(--color-white-muted);
+  line-height: 1.7;
+  max-width: 62ch;
+  margin-bottom: 3.5rem;
+}
+
+/* Bloques de contenido dentro de una página */
+.shell-block + .shell-block {
+  margin-top: 4rem;
+}
+
+.shell-block__title {
+  font-size: clamp(1.5rem, 3vw, 2.15rem);
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  margin-bottom: 1rem;
+}
+
+.shell-block__text {
+  font-size: 1rem;
+  color: var(--color-white-muted);
+  line-height: 1.75;
+  max-width: 68ch;
+}
+
+.shell-block__text + .shell-block__text {
+  margin-top: 1rem;
+}
+
+/* Aviso: "esta sección está en construcción / falta este dato" */
+.shell-note {
+  margin-top: 1.5rem;
+  padding: 1rem 1.25rem;
+  border-left: 3px solid var(--color-red);
+  background: rgba(225, 6, 0, 0.07);
+  border-radius: 0 8px 8px 0;
+  font-size: 0.92rem;
+  color: var(--color-white-muted);
+  line-height: 1.65;
+  max-width: 68ch;
+}

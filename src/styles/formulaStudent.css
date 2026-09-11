@@ -1,0 +1,171 @@
+.fs-page {
+  padding: 3.5rem 1.5rem 6rem;
+}
+
+@media (min-width: 1200px) {
+  .fs-page {
+    padding: 4rem 4rem 7rem;
+  }
+}
+
+.fs-page__container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.fs-page__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--color-white-muted);
+  margin-bottom: 2rem;
+  transition: color 0.2s ease;
+}
+
+.fs-page__back:hover {
+  color: var(--color-white);
+}
+
+.fs-page__back svg {
+  width: 18px;
+  height: 18px;
+}
+
+.fs-page__kicker {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-white-subtle);
+  margin-bottom: 0.75rem;
+}
+
+.fs-page__title {
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--color-red);
+  margin-bottom: 1.25rem;
+}
+
+.fs-page__notice {
+  font-size: 0.9rem;
+  color: var(--color-white-subtle);
+  background: rgba(221, 14, 14, 0.08);
+  border-left: 3px solid var(--color-red);
+  padding: 0.9rem 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 3.5rem;
+}
+
+.fs-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 2.5rem 0;
+  border-top: 1px solid rgba(252, 246, 230, 0.1);
+}
+
+@media (min-width: 700px) {
+  .fs-section {
+    grid-template-columns: 90px 1fr;
+    gap: 2rem;
+  }
+}
+
+.fs-section__index {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: rgba(252, 246, 230, 0.25);
+}
+
+.fs-section__eyebrow {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-red);
+  margin-bottom: 0.5rem;
+}
+
+.fs-section__title {
+  font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.fs-section__text {
+  font-size: 1rem;
+  color: var(--color-white-muted);
+  line-height: 1.75;
+  margin-bottom: 1rem;
+  max-width: 68ch;
+}
+
+.fs-section__text:last-of-type {
+  margin-bottom: 0;
+}
+
+/* ========================================
+   Pruebas dinámicas / estáticas
+   ======================================== */
+.fs-events {
+  margin-top: 2.5rem;
+}
+
+.fs-events__title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.fs-events__intro {
+  font-size: 0.95rem;
+  color: var(--color-white-muted);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  max-width: 68ch;
+}
+
+.fs-events__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .fs-events__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.fs-event {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(252, 246, 230, 0.08);
+  border-radius: 14px;
+  padding: 1.5rem;
+}
+
+.fs-event__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 0.6rem;
+}
+
+.fs-event__body {
+  font-size: 0.9rem;
+  color: var(--color-white-muted);
+  line-height: 1.65;
+  margin-bottom: 0.75rem;
+}
+
+.fs-event__score {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-white-subtle);
+}

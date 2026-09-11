@@ -1,0 +1,97 @@
+/* ========================================
+   Carrusel de sponsors — banda blanca a todo el ancho
+   Sin tiles, sin bordes, sin filtros: el logo sobre el blanco y listo.
+   ======================================== */
+.sp-car {
+  --sp-car-speed: 45s;
+  --sp-car-gap: clamp(2.25rem, 5vw, 4.5rem);
+
+  position: relative;
+  width: 100%;
+  background: #fff;
+  padding: clamp(1.75rem, 4vw, 2.75rem) 0;
+}
+
+/* Los logos se desvanecen contra el blanco al entrar y al salir, en vez de
+   cortarse de golpe. La máscara va acá y no en .sp-car para no volver
+   transparente también el fondo blanco de la banda. */
+.sp-car__viewport {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent);
+}
+
+.sp-car__track {
+  display: flex;
+  width: max-content;
+  animation: sp-car-scroll var(--sp-car-speed) linear infinite;
+}
+
+.sp-car:hover .sp-car__track,
+.sp-car:focus-within .sp-car__track {
+  animation-play-state: paused;
+}
+
+.sp-car__group {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-car-gap);
+  padding-right: var(--sp-car-gap);
+  flex: 0 0 auto;
+}
+
+/* La pista mide 2 grupos idénticos; correrla medio ancho deja la copia
+   exactamente donde arrancaba el original -> loop sin salto. */
+@keyframes sp-car-scroll {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
+}
+
+.sp-car__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  height: clamp(40px, 5vw, 62px);
+  transition: transform 0.25s ease;
+}
+
+.sp-car__item img {
+  height: 100%;
+  width: auto;
+  max-width: clamp(130px, 17vw, 215px);
+  object-fit: contain;
+  display: block;
+}
+
+.sp-car__item:hover,
+.sp-car__item:focus-visible {
+  transform: scale(1.06);
+}
+
+.sp-car__item:focus-visible {
+  outline: 2px solid var(--color-red);
+  outline-offset: 8px;
+  border-radius: 4px;
+}
+
+/* Sin movimiento: la banda pasa a ser una fila con scroll manual. */
+@media (prefers-reduced-motion: reduce) {
+  .sp-car__viewport {
+    overflow-x: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .sp-car__track {
+    animation: none;
+  }
+
+  .sp-car__item {
+    transition: none;
+  }
+
+  .sp-car__group:last-child {
+    display: none;
+  }
+}

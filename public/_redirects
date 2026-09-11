@@ -1,0 +1,5 @@
+# Cloudflare Pages / Netlify — fallback de SPA.
+# El sitio usa BrowserRouter: las rutas (/sponsors, /sumate, ...) no son
+# archivos reales. Sin esta regla, entrar directo a una URL o refrescarla
+# devuelve 404. El 200 es importante: reescribe, no redirige.
+/*  /index.html  200

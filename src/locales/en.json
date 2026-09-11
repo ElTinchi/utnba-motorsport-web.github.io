@@ -1,0 +1,475 @@
+{
+  "nav": {
+    "home": "Home",
+    "news": "News",
+    "team": "The team",
+    "car": "The car",
+    "academy": "The academy",
+    "aboutFormulaStudent": "What is Formula Student",
+    "joinUs": "Join us",
+    "sponsors": "Sponsors"
+  },
+  "footer": {
+    "copyright": "© {{year}} UTN BA Motorsport · Universidad Tecnológica Nacional · Facultad Regional Buenos Aires",
+    "contactLabel": "Contact",
+    "address": "UTN FRBA · Buenos Aires, Argentina"
+  },
+  "home": {
+    "heroPlate": "UTN FRBA · Formula SAE",
+    "heroTitle": "Our first electric Formula SAE car",
+    "heroSubtitle": "We design, build and race a 100% electric single-seater to compete at FSAE Brazil 2027.",
+    "heroCtaPrimary": "Support the team",
+    "heroCtaSecondary": "Meet the team",
+    "motivationTitle": "What drives us",
+    "motivationBody": "We believe the best way to learn engineering is by building it. Our mission is to design, manufacture and race a 100% electric single-seater, putting what we study at UTN Buenos Aires to work on a real, competitive project.",
+    "aboutTitle": "About us",
+    "aboutBody": "We're an interdisciplinary team of students from UTN Buenos Aires. Mechanical, electronic, electrical, industrial, systems and chemical engineering come together on one project: our first electric Formula SAE car.",
+    "formulaStudentTitle": "What is Formula Student?",
+    "formulaStudentBody": "An international competition where university teams design, build and race their own single-seater. It's not only about speed — engineering design, cost and a business case are judged too.",
+    "formulaStudentLink": "Learn more",
+    "joinTitle": "How to join",
+    "joinBody": "We welcome students from every engineering discipline all year round. If you're into motorsport and want to put your studies to work on a real project, get in touch.",
+    "joinLink": "I want to join",
+    "areas": {
+      "kicker": "How the team is organised",
+      "title": "Six areas, one car",
+      "intro": "Each area runs its own workstream, and the car is what comes out of all six together. Whatever engineering degree you're in, there's a place where what you study gets used."
+    },
+    "academy": {
+      "kicker": "The UTN BA Motorsport academy",
+      "title": "Walk in knowing nothing. Walk out running a real project.",
+      "intro": "We're UTN BA's first Formula SAE generation, and we already run three fronts in parallel. You don't need to know how to weld or have touched a lathe before — the team is built for you to grow inside it.",
+      "levels": [
+        {
+          "number": "Level 01",
+          "title": "Rookie & Freshman",
+          "body": "Your first contact with automotive engineering. You build a go-kart, learn to weld and use tools like the lathe, and get hands-on with the team's manufacturing processes."
+        },
+        {
+          "badge": "Parallel track",
+          "title": "Baja SAE",
+          "body": "Not a step up, a track of its own: a different SAE rulebook, the same engine for every car, so the competition comes down to design, not horsepower."
+        },
+        {
+          "number": "Level 02",
+          "title": "Formula SAE",
+          "body": "Our flagship category. We design, build and race our own single-seater against teams from all over the world."
+        }
+      ],
+      "stats": [
+        {
+          "value": "600+",
+          "label": "active Formula SAE teams worldwide"
+        },
+        {
+          "value": "20,000+",
+          "label": "students competing every year (estimate)"
+        },
+        {
+          "value": "1981",
+          "label": "the year it all started, at the University of Texas"
+        }
+      ],
+      "cta": "See the full program"
+    },
+    "sponsorsTitle": "Supported by",
+    "sponsorsLink": "Meet all our sponsors"
+  },
+  "fsPage": {
+    "kicker": "UTN BA Motorsport",
+    "title": "About Formula Student",
+    "adaptNotice": "This page describes the Formula Student competition in general. We still have to adapt the specifics to the Formula SAE Brazil rulebook — we'll fill that in as the project moves forward.",
+    "sections": [
+      {
+        "number": "01",
+        "eyebrow": "For students",
+        "title": "What is Formula Student?",
+        "paragraphs": [
+          "Formula Student is a global engineering design competition, where students from universities around the world develop and build their own single-seated racing cars.",
+          "However, winning is not all about building the fastest car. Victory belongs to the team which excels in all aspects: design, performance, cost planning, and business strategy. Teams are judged by experts from motorsport, automotive, and supplier industries, who assess both the technical quality of the car and the team's business approach.",
+          "Rules vary by country and organizing body within Formula Student. We'll be competing under the Formula SAE Brazil rulebook — we'll add the specific details here soon."
+        ]
+      },
+      {
+        "number": "02",
+        "eyebrow": "Motivation",
+        "title": "Why do students build Formula-style cars?",
+        "paragraphs": [
+          "Formula Student challenges students to go beyond their university coursework and apply their knowledge to a real-world project. It combines teamwork, time and project management, engineering, manufacturing, and business thinking.",
+          "By taking part, students gain valuable experience that's beneficial to them as future engineers. They also get more exposure to the automotive industry, since companies often use Formula Student as a platform to meet and recruit new talent."
+        ]
+      },
+      {
+        "number": "03",
+        "eyebrow": "Values",
+        "title": "How do businesses and partners benefit?",
+        "paragraphs": [
+          "Formula Student offers companies in the motorsport, automotive, and supplier industries a unique way to evaluate the skills of young engineers. By sponsoring or supporting teams, they can build early connections with highly motivated students.",
+          "Involvement as a judge, mentor, or sponsor also provides valuable insight into the next generation of engineering talent."
+        ]
+      },
+      {
+        "number": "04",
+        "eyebrow": "Fields",
+        "title": "The events of the competition",
+        "paragraphs": [
+          "There are many Formula Student competitions around the world each year. While each has its own specialties, they all share the same core disciplines — the events in which teams must compete. These are split into two major categories: dynamic and static."
+        ]
+      }
+    ],
+    "dynamicTitle": "Dynamic events",
+    "dynamicIntro": "Dynamic events test the performance of the cars on track. Each one evaluates a different physical feature of the vehicle: acceleration, skid pad, autocross, efficiency, and endurance.",
+    "dynamicEvents": [
+      {
+        "title": "Acceleration",
+        "body": "The car's ability to accelerate is tested on a straight 75-metre stretch. Besides traction, powertrain design plays a major role, whether aiming for maximum output or strong torque delivery. The fastest cars complete the run in under four seconds and surpass 100 km/h before the finish line.",
+        "score": "Maximum score: 90."
+      },
+      {
+        "title": "Skid Pad",
+        "body": "Each car navigates a figure-eight circuit marked by cones, completing two laps per circle, of which the second lap is recorded. The result is comparable to the highest possible lateral acceleration. Many designs rely on aerodynamics to increase contact pressure and raise lateral speed. Hitting a cone leads to a time penalty.",
+        "score": "Maximum score: 75."
+      },
+      {
+        "title": "Autocross",
+        "body": "Cars run a course of roughly one kilometre that combines straights, bends, and tight chicanes. A strong lap reflects quick acceleration, precise steering, and effective braking. Hitting cones adds time as a penalty. Results in this event determine the starting order for endurance.",
+        "score": "Maximum score: 120."
+      },
+      {
+        "title": "Efficiency",
+        "body": "During the endurance event, the energy consumption of each car is carefully measured. What counts is not the amount of fuel or electricity used, but the usage relative to speed. This prevents teams from driving overly slowly to gain an advantage.",
+        "score": "Maximum score: 100."
+      },
+      {
+        "title": "Endurance",
+        "body": "As the most important challenge, endurance carries the most points. Cars must demonstrate their durability over a long course. Speed, agility, energy usage, and reliability are all judged. Drivers need good control, since several cars share the circuit at once. Only one attempt is allowed, with a mandatory driver swap halfway through.",
+        "score": "Maximum score: 230."
+      }
+    ],
+    "staticTitle": "Static events",
+    "staticIntro": "Static events focus on the teams' ability to handle the real-world hurdles of finance, business strategy, and sound engineering practice.",
+    "staticEvents": [
+      {
+        "title": "Design",
+        "body": "Ahead of the competition, each team submits a detailed written description of their car, explaining its design and how it was applied in building the vehicle. Based on this submission, judges review the technical layout, design approach, and how effectively the concept was implemented in the final build. Afterwards, teams meet the panel in person to answer questions, defend their decisions, and show their depth of understanding. The evaluation considers not only the technical solution itself but also the reasoning behind it.",
+        "score": "Maximum score: 180."
+      },
+      {
+        "title": "Cost",
+        "body": "Since cost plays a central role in product development, this event challenges teams to show a full breakdown of their prototype. They must submit a cost report that includes parts, materials, and the manufacturing steps involved in production. The report is followed by a discussion with the judges, where teams explain their calculations and show they understand the practical aspects of building the car. Both the clarity of the report and the students' grasp of production processes are taken into account.",
+        "score": "Maximum score: 120."
+      },
+      {
+        "title": "Presentation",
+        "body": "Each team pitches a product or service directly related to the vehicle they built that season, as if presenting to potential investors. The goal is to convince the judges — acting as a fictitious company — that their concept meets the needs of a target market and could succeed commercially. The pitch is followed by a question round, where the team must respond confidently and adaptively. Both the content and structure of the presentation, as well as the team's delivery, are evaluated.",
+        "score": "Maximum score: 85."
+      }
+    ]
+  },
+  "motorsportPage": {
+    "kicker": "UTN BA Motorsport",
+    "title": "The academy: three categories, one team",
+    "intro": "We're UTN BA's first Formula SAE generation, and we built it with three fronts running in parallel. Here's how each one works.",
+    "sections": [
+      {
+        "number": "01",
+        "logoAlt": "Rookie UTNBA",
+        "eyebrow": "The first step",
+        "title": "Rookie & Freshman",
+        "paragraphs": [
+          "It all starts here. As a Rookie, your first project inside the team is building a go-kart — a simple, concrete challenge to start building with your hands before you get into the single-seater.",
+          "As a Freshman, if you're in your first or second year, you take your first steps into automotive engineering: welding, using tools like the lathe, and a first real look at the team's manufacturing processes.",
+          "No prior experience needed. This is the entry point to the team, built so anyone can join and grow."
+        ]
+      },
+      {
+        "number": "02",
+        "logoAlt": "Baja UTNBA",
+        "eyebrow": "Parallel category · Own rulebook",
+        "title": "Baja SAE",
+        "parallel": true,
+        "paragraphs": [
+          "Baja SAE isn't a rung on the Formula SAE ladder: it's a competition with its own SAE International technical rulebook, and our car isn't a formula single-seater but an off-road buggy-type vehicle.",
+          "Here, members train to work as professional motorsport demands: interpreting every requirement, documenting decisions, designing to pass inspections and using FIA/SFI-homologated components whenever required by the safety rules.",
+          "One detail that sets it apart from other competitions: every car uses the same engine, a Kohler Command Pro CH440 at roughly 10 HP with a restrictor plate. That takes horsepower out of the equation — the competition comes down 100% to design.",
+          "Static events judge design, cost analysis and a sales pitch in front of a panel, as if the car were a real product. Dynamic events put it to the test off-road: acceleration, hill climb, maneuverability, rock crawl and endurance.",
+          "It's an international SAE competition, with events in the United States, India (Baja SAEINDIA) and other countries."
+        ]
+      },
+      {
+        "number": "03",
+        "logoAlt": "UTN BA Motorsport",
+        "eyebrow": "Flagship category",
+        "title": "Formula SAE",
+        "paragraphs": [
+          "Our main category, and the biggest one worldwide. It's fiercely contested across the Americas — Brazil, the United States — and in Europe too.",
+          "Formula SAE was born in 1981 at the University of Texas, led by professor Ron Matthews. The first edition had just 6 teams and 40 students."
+        ]
+      }
+    ],
+    "statsTitle": "Formula SAE, by the numbers",
+    "stats": [
+      {
+        "value": "600+",
+        "label": "active Formula SAE teams across more than 20 countries"
+      },
+      {
+        "value": "120",
+        "label": "teams and 2,500+ students at a single event: Michigan International Speedway"
+      },
+      {
+        "value": "~20,000",
+        "label": "students estimated to make up the global community every year"
+      }
+    ],
+    "statsNote": "The students-per-year figure is our own estimate (between 15,000 and 25,000) based on public data, not an official number.",
+    "sourcesLabel": "Sources",
+    "sources": [
+      {
+        "label": "Formula Student — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Formula_Student"
+      },
+      {
+        "label": "Formula SAE — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Formula_SAE"
+      },
+      {
+        "label": "Baja SAE — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Baja_SAE"
+      },
+      {
+        "label": "Red Bull — Global Formula Racing",
+        "url": "https://www.redbull.com/us-en/theredbulletin/global-formula-racing-formula-sae"
+      },
+      {
+        "label": "Wichita State University — Formula SAE",
+        "url": "https://www.wichita.edu/academics/engineering/mechanical_engineering/students/formula-sae/competition.php"
+      }
+    ],
+    "fsLink": "See the full rulebook and events"
+  },
+  "sponsorsPage": {
+    "kicker": "Become a sponsor",
+    "title": "We are not just building a car.",
+    "intro": "We are building the path that turns students into motorsport professionals. Today, that path is one final push away from reaching the track.",
+    "scrollCta": "Discover the story",
+    "proofLabel": "Companies already part of the journey",
+    "journey": {
+      "kicker": "One academy, three stages",
+      "title": "Before Formula, there is a journey.",
+      "intro": "UTN BA Motorsport is an integrated academy: every category adds complexity, responsibility and real experience. Nobody reaches the toughest project by accident.",
+      "items": [
+        { "number": "01", "logoAlt": "Rookie UTNBA", "stage": "Rookies · Karting", "title": "First, learn by building.", "text": "New members design and build a kart. It is their first experience making technical decisions, manufacturing parts and understanding that every millimeter has a consequence.", "outcome": "Fundamentals · Workshop · Teamwork" },
+        { "number": "02", "logoAlt": "Baja UTNBA", "stage": "Development · Baja SAE", "title": "Then, engineer under pressure.", "text": "In Baja SAE the challenge grows: a more complex vehicle, extreme conditions and a strict technical rulebook. Students train to interpret every requirement, document their decisions and pass inspections; they also work with safety components subject to FIA/SFI homologation whenever required by the rules.", "outcome": "SAE rules · FIA/SFI safety · Inspection" },
+        { "number": "03", "logoAlt": "UTN BA Motorsport", "stage": "Top category · Formula SAE", "title": "Finally, build the car that represents us.", "text": "The electric Formula SAE car brings every lesson together. It is our most ambitious project: a single-seater designed, manufactured and assembled by students to compete in Brazil.", "outcome": "Technology · High performance · Industry" }
+      ]
+    },
+    "investment": {
+      "kicker": "The final stage",
+      "title": "The car is no longer just an idea.",
+      "text": "We have invested close to USD 30,000 in the prototype and are completing final assembly. To finish it, put it on track and pass homologation, we need to complete the next stretch.",
+      "investedLabel": "Already invested in the prototype",
+      "cashLabel": "Additional cash required",
+      "exchangeLabel": "Additional in-kind support required"
+    },
+    "partnership": {
+      "kicker": "A concrete way to contribute",
+      "title": "Your contribution becomes a real part of the car.",
+      "intro": "We use an assisted procurement model so every company knows exactly which need it is solving.",
+      "steps": [
+        { "title": "We meet", "text": "We discuss the company, its goals and the kind of partnership that makes the most sense." },
+        { "title": "We define the need", "text": "We share specific components, suppliers, purchase links or a project invoice." },
+        { "title": "The company makes it happen", "text": "It can purchase and ship the material or pay the supplier invoice directly." }
+      ],
+      "note": "We do not request informal transfers to personal accounts. Every contribution is traceable and formalized through a simple sponsorship agreement."
+    },
+    "viewer": {
+      "kicker": "Now it is your turn to join the story",
+      "arrival": "You made it this far.",
+      "title": "Want to see your logo on the car?",
+      "text": "Upload your company's brand and preview it on the actual vehicle in three sizes. We define the commercial proposal and final placement together in a meeting.",
+      "sizes": ["Large", "Medium", "Small"],
+      "badge": "Sponsor simulator",
+      "imageAlt": "Render of UTN BA Motorsport's electric Formula SAE car",
+      "button": "See my logo on the car",
+      "note": "The simulator is being integrated. In the meantime, we can prepare a custom preview.",
+      "pending": "Coming soon"
+    },
+    "ctaButton": "Schedule a meeting"
+  },
+  "common": {
+    "backLink": "Back to home"
+  },
+  "areas": {
+    "items": {
+      "design": {
+        "title": "Design",
+        "subtitle": "CAD and engineering",
+        "body": "Defines the geometry of the car. From the chassis to the suspension, every part is modelled in CAD before it exists: this is where the car takes shape and where everything that gets built later is prepared."
+      },
+      "chemistry": {
+        "title": "Chemistry",
+        "subtitle": "Materials and compounds",
+        "body": "Handles materials: which compound goes into each part, how it behaves and how it is treated. This is the area that answers what the car is made of."
+      },
+      "manufacturing": {
+        "title": "Manufacturing",
+        "subtitle": "Build and assembly",
+        "body": "Where the design becomes a car. Cutting, welding, machining and assembly: this is where every part is physically built and the car is put together."
+      },
+      "industrial": {
+        "title": "Industrial",
+        "subtitle": "Manufacturing and processes",
+        "body": "Plans how everything gets done: schedules, processes, costs and suppliers. It is what keeps the project inside the calendar and the budget."
+      },
+      "electronics": {
+        "title": "Electronics",
+        "subtitle": "Hardware and firmware",
+        "body": "Everything that carries current. Sensors, wiring, control and the firmware that runs them: in an electric car this is the nervous system of the project."
+      },
+      "communication": {
+        "title": "Communications",
+        "subtitle": "Visual identity and social",
+        "body": "Tells the story of what the team does. Visual identity, social media, content and the relationship with sponsors: it is the face of the project."
+      }
+    }
+  },
+  "teamPage": {
+    "kicker": "The team",
+    "title": "We are the first generation",
+    "intro": "Students at UTN Buenos Aires building, from scratch, the university's first electric Formula SAE car.",
+    "storyTitle": "Who we are",
+    "storyParagraphs": [
+      "UTN BA Motorsport is a multidisciplinary team of students from Universidad Tecnológica Nacional, Facultad Regional Buenos Aires. Mechanical, electronic, electrical, industrial, systems and chemical engineering all work on the same project: a fully electric car to compete at Formula SAE Brazil 2027.",
+      "We are the first Formula SAE generation at UTN BA. That means we inherited neither a car nor a manual: we are writing both. Everything decided now is the starting point for the teams that come after us.",
+      "We believe the best way to learn engineering is by building it. Here what you study at university gets applied to a real part, with a real competition date and real consequences if it does not work."
+    ],
+    "areasTitle": "The six areas",
+    "areasIntro": "Each area runs its own workstream, and the car is what comes out of all six together. Whatever engineering degree you're in, there's a place where what you study gets used.",
+    "noPhotos": "We haven't uploaded photos of this area yet.",
+    "ctaTitle": "Want to be part of it?",
+    "ctaText": "We take in students from every engineering degree all year round, and no previous experience is required.",
+    "ctaButton": "I want to join"
+  },
+  "carPage": {
+    "kicker": "The car",
+    "title": "Our first electric car",
+    "intro": "Designed, built and taken to the track by students at UTN Buenos Aires, to compete at Formula SAE Brazil 2027.",
+    "renderAlt": "Render of the UTN BA Motorsport electric Formula SAE car",
+    "renderCaption": "Working render of the car. The design is still evolving.",
+    "projectTitle": "The project",
+    "projectParagraphs": [
+      "This is the team's first car, and it starts from zero: there is no previous season to copy a chassis from or reuse a battery pack. Every design decision is being made for the first time at UTN BA.",
+      "We chose electric from the start. It is the fastest growing category in Formula Student over the last decade, and the closest to the industry the people on this team will work in."
+    ],
+    "specsTitle": "Specifications",
+    "specs": {
+      "category": {
+        "label": "Category",
+        "value": "Formula SAE — electric single-seater"
+      },
+      "powertrain": {
+        "label": "Powertrain",
+        "value": "Fully electric"
+      },
+      "competition": {
+        "label": "Competition",
+        "value": "Formula SAE Brazil 2027"
+      },
+      "generation": {
+        "label": "Generation",
+        "value": "The team's first"
+      }
+    },
+    "specsNote": "The full spec sheet (mass, power, battery, suspension, tyres) is published as the design gets frozen. We don't put out numbers that can still change.",
+    "viewer": {
+      "kicker": "For sponsors",
+      "title": "See your logo on the car before you decide",
+      "text": "We're building a viewer that takes the actual render of the car and applies your brand on top of it. Instead of imagining how your logo looks on the car, you see it.",
+      "bullets": [
+        "On the real render of the car, not a generic drawing.",
+        "Change the position and size and it updates instantly.",
+        "Take the image with you to show inside your company."
+      ],
+      "openButton": "Open the viewer",
+      "pendingBadge": "In development",
+      "pendingText": "The viewer is in its final stage of development. If you're considering supporting the team and want to see it before we publish it, get in touch and we'll show you.",
+      "pendingButton": "See how to support us"
+    }
+  },
+  "joinPage": {
+    "kicker": "Join us",
+    "title": "You come in knowing nothing. You leave running a real project.",
+    "intro": "We take in students from every engineering degree all year round. No previous experience needed, and you don't need to have touched a lathe: the team is set up for you to learn inside it.",
+    "expectationsTitle": "What you need (and what you don't)",
+    "expectations": [
+      {
+        "title": "No experience needed",
+        "body": "If you've never welded, never opened a CAD tool and have no idea what a skid pad is, you're in the right place. You learn by doing, alongside people who have been there."
+      },
+      {
+        "title": "Consistency does matter",
+        "body": "The car has a competition date. What counts is not how much you know on day one, but that you show up when you're needed."
+      },
+      {
+        "title": "Every degree counts",
+        "body": "Mechanical, electronic, electrical, industrial, systems, chemical. And also anyone who wants to take on communications, sponsors or project management."
+      }
+    ],
+    "stepsTitle": "How it works",
+    "steps": [
+      {
+        "title": "Write to us",
+        "body": "Fill in the form below telling us what you study and what interests you. No CV required."
+      },
+      {
+        "title": "We meet",
+        "body": "We talk so we can get to know you, explain how the team works and figure out which area fits you."
+      },
+      {
+        "title": "You join an area",
+        "body": "You start in the area you chose, with a concrete task and someone alongside you."
+      },
+      {
+        "title": "You grow inside",
+        "body": "From Rookie or Freshman to the car itself. The full path is on The academy page."
+      }
+    ],
+    "formTitle": "Write to us",
+    "formText": "Tell us who you are and what you'd like to get into. We reply by email.",
+    "form": {
+      "name": "Full name",
+      "email": "Email",
+      "career": "Degree and year",
+      "area": "Area you're interested in",
+      "areaAny": "Not sure yet / any",
+      "message": "Tell us about yourself",
+      "submit": "Send",
+      "sending": "Sending...",
+      "ok": "Done! We got your message and we'll reply by email.",
+      "error": "We couldn't send it. Try again or write to us at {{email}}.",
+      "noBackend": "The form isn't connected yet. In the meantime, write to us by email and we'll reply all the same."
+    },
+    "youth": {
+      "kicker": "Working with young people",
+      "title": "We also work with secondary schools",
+      "text": "We open the workshop to secondary school students to show them what applied engineering looks like: how a race car is thought through, designed and built. If you're a teacher or run a technical school and a visit or a talk sounds interesting, get in touch.",
+      "button": "Arrange a visit"
+    }
+  },
+  "newsPage": {
+    "kicker": "News",
+    "title": "What's happening at the team",
+    "intro": "Progress on the car, competitions, new sponsors and what we post on our channels.",
+    "loading": "Loading news...",
+    "emptyBadge": "Coming soon",
+    "emptyTitle": "We're putting this section together",
+    "emptyText": "In the meantime, we post everything we do on Instagram: workshop photos, progress on the car and the team's day to day.",
+    "emptyButton": "Follow us on Instagram"
+  },
+  "notFound": {
+    "title": "This page doesn't exist",
+    "text": "The link may be broken, or the page may have moved. These two always work:",
+    "home": "Go to home"
+  }
+}

@@ -1,0 +1,19 @@
+node_modules/
+dist/
+.DS_Store
+
+# Material de trabajo: no forma parte del sitio desplegable
+graphify/
+graphify-out/
+ilovepdf_split-range/
+ilovepdf_split-range.zip
+PROMPT-EJECUCION.md
+Presentacion_Final_UTNBAMOTORSPORT__*.md
+UTNBA_Motorsport_Propuesta_PWC.md
+
+# Versiones de trabajo de logos; el sitio usa únicamente sponsors/onwhite/
+public/assets/img/sponsors/transparent/
+public/assets/img/sponsors/*.png
+public/assets/img/sponsors/*.jpg
+public/assets/img/sponsors/*.jpeg
+public/assets/img/sponsors/*.sh
