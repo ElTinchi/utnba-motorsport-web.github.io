@@ -405,25 +405,6 @@
 
 .academy-level__logo--3 { height: 72px; }
 
-.academy-level--parallel {
-  border-style: dashed;
-  border-color: rgba(var(--ink-rgb), 0.25);
-  background: rgba(var(--ink-rgb), 0.03);
-}
-
-.academy-level__badge {
-  display: inline-block;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--color-white);
-  background: rgba(var(--ink-rgb), 0.1);
-  border-radius: 999px;
-  padding: 0.3rem 0.7rem;
-  margin-bottom: 1rem;
-}
-
 .academy-level__number {
   display: block;
   font-size: 0.85rem;

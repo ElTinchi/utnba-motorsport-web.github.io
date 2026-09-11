@@ -228,7 +228,7 @@ export default function Home() {
               {academyLevels.map((level, index) => (
                 <article
                   key={level.title}
-                  className={`academy-level${level.badge ? ' academy-level--parallel' : ''}`}
+                  className="academy-level"
                 >
                   <img
                     className={`academy-level__logo academy-level__logo--${index + 1}`}
@@ -236,11 +236,7 @@ export default function Home() {
                     alt={level.logoAlt}
                     loading="lazy"
                   />
-                  {level.badge ? (
-                    <span className="academy-level__badge">{level.badge}</span>
-                  ) : (
-                    <span className="academy-level__number">{level.number}</span>
-                  )}
+                  <span className="academy-level__number">{level.number || level.badge}</span>
                   <h3 className="academy-level__title">{level.title}</h3>
                   <p className="academy-level__body">{level.body}</p>
                 </article>
