@@ -81,7 +81,7 @@
     },
     "sponsorsKicker": "O próximo trecho",
     "sponsorsHeadline": "O carro está perto da pista.",
-    "sponsorsBody": "Graças aos nossos patrocinadores, cerca de USD 30.000 já foram investidos no protótipo. A confiança deles transformou uma ideia em um carro na etapa final de montagem. Agora buscamos novos parceiros para terminá-lo e homologá-lo.",
+    "sponsorsBody": "Graças aos nossos patrocinadores, já garantimos 62% dos recursos do projeto. A confiança deles transformou uma ideia em um carro na etapa final de montagem. Agora buscamos novos parceiros para terminá-lo e homologá-lo.",
     "sponsorsInvested": "investidos graças aos nossos patrocinadores",
     "sponsorsRemaining": "para completar em dinheiro e permuta",
     "sponsorsCta": "Saiba como fazer parte",
@@ -257,13 +257,13 @@
     "investment": {
       "kicker": "A etapa final",
       "title": "O carro já deixou de ser apenas uma ideia.",
-      "text": "Graças ao compromisso dos nossos patrocinadores, já garantimos recursos equivalentes a 60% do orçamento e estamos na etapa final de montagem. Para terminar o carro, colocá-lo na pista e passar pela homologação, precisamos completar o próximo trecho.",
-      "confirmedLabel": "do projeto já está coberto graças aos nossos patrocinadores",
+      "text": "Graças ao compromisso dos nossos patrocinadores, já garantimos 62% dos recursos do projeto e estamos na etapa final de montagem. Para terminar o carro, colocá-lo na pista e passar pela homologação, precisamos completar o próximo trecho.",
+      "confirmedLabel": "dos recursos do projeto já estão cobertos graças aos nossos patrocinadores",
       "confirmedShort": "Recursos confirmados",
-      "materialsLabel": "Materiais e serviços",
-      "fundingLabel": "Apoio financeiro",
-      "progressAria": "60% do orçamento coberto, 20% pendente em materiais e serviços e 20% pendente em apoio financeiro",
-      "amountNote": "Referência: orçamento estimado USD 50.000 · necessidade pendente equivalente a USD 20.000"
+      "materialsShort": "Materiais e serviços",
+      "fundingShort": "Apoio financeiro",
+      "progressAria": "62% dos recursos cobertos, 18% pendente em materiais e serviços e 20% pendente em apoio financeiro",
+      "amountNote": "Valores de referência: USD 31.780 confirmados · USD 9.450 em materiais e serviços · USD 10.000 em apoio financeiro"
     },
     "partnership": {
       "kicker": "Uma forma concreta de apoiar",

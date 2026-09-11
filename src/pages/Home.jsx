@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { ROUTES } from '../routes';
 import AreasGrid from '../components/AreasGrid';
 import SponsorsCarousel from '../components/SponsorsCarousel';
+import FundingProgress from '../components/FundingProgress';
 import '../styles/home.css';
 
 const ACADEMY_LOGOS = [
@@ -266,10 +267,7 @@ export default function Home() {
             <span className="home-sponsors__kicker">{t('home.sponsorsKicker')}</span>
             <h2 id="home-sponsors-title" className="home-sponsors__headline">{t('home.sponsorsHeadline')}</h2>
             <p>{t('home.sponsorsBody')}</p>
-            <div className="home-sponsors__figures">
-              <span><strong>USD 30.000</strong>{t('home.sponsorsInvested')}</span>
-              <span><strong>USD 20.000</strong>{t('home.sponsorsRemaining')}</span>
-            </div>
+            <FundingProgress compact />
             <NavLink to={ROUTES.sponsors} className="btn btn--primary">{t('home.sponsorsCta')}</NavLink>
           </div>
           <h3 className="home-sponsors__title">{t('home.sponsorsTitle')}</h3>

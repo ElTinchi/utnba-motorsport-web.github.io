@@ -81,7 +81,7 @@
     },
     "sponsorsKicker": "The next stretch",
     "sponsorsHeadline": "The car is close to the track.",
-    "sponsorsBody": "Thanks to our sponsors, close to USD 30,000 has already been invested in the prototype. Their trust turned an idea into a car in final assembly. We are now looking for new partners to finish and homologate it.",
+    "sponsorsBody": "Thanks to our sponsors, we have already secured 62% of the project's resources. Their trust turned an idea into a car in final assembly. We are now looking for new partners to finish and homologate it.",
     "sponsorsInvested": "invested thanks to our sponsors",
     "sponsorsRemaining": "to complete through cash and in-kind support",
     "sponsorsCta": "Discover how to take part",
@@ -257,13 +257,13 @@
     "investment": {
       "kicker": "The final stage",
       "title": "The car is no longer just an idea.",
-      "text": "Thanks to the commitment of our sponsors, we have already secured resources equivalent to 60% of the budget and are completing final assembly. To finish the car, put it on track and pass homologation, we need to complete the next stretch.",
-      "confirmedLabel": "of the project is already covered thanks to our sponsors",
+      "text": "Thanks to the commitment of our sponsors, we have already secured 62% of the project's resources and are completing final assembly. To finish the car, put it on track and pass homologation, we need to complete the next stretch.",
+      "confirmedLabel": "of the project's resources are already covered thanks to our sponsors",
       "confirmedShort": "Confirmed resources",
-      "materialsLabel": "Materials and services",
-      "fundingLabel": "Financial support",
-      "progressAria": "60% of the budget covered, 20% pending in materials and services, and 20% pending in financial support",
-      "amountNote": "Reference: estimated budget USD 50,000 · remaining need equivalent to USD 20,000"
+      "materialsShort": "Materials and services",
+      "fundingShort": "Financial support",
+      "progressAria": "62% of resources covered, 18% pending in materials and services, and 20% pending in financial support",
+      "amountNote": "Reference values: USD 31,780 confirmed · USD 9,450 in materials and services · USD 10,000 in financial support"
     },
     "partnership": {
       "kicker": "A concrete way to contribute",
