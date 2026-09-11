@@ -1,5 +1,5 @@
 .sp-page { padding: 3.5rem 0 7rem; overflow: hidden; }
-.sp-page__container { width: min(100%, 1180px); margin: 0 auto; padding: 0 1.5rem; }
+.sp-page__container { width: min(100%, 1380px); margin: 0 auto; padding: 0 clamp(1.5rem, 4vw, 3.5rem); }
 
 @media (min-width: 1200px) {
   .sp-page { padding-top: 4rem; }
@@ -64,7 +64,6 @@
   .sp-story { grid-template-columns: 72px 1fr; gap: clamp(2rem, 6vw, 6rem); }
   .sp-journey__steps::before { left: 35px; }
   .sp-story__marker { width: 72px; height: 72px; }
-  .sp-investment { grid-template-columns: minmax(0, 1fr) minmax(330px, .85fr); align-items: center; }
   .sp-partnership__steps { grid-template-columns: repeat(3, 1fr); }
   .sp-viewer { grid-template-columns: 1.1fr .9fr; align-items: stretch; }
   .sp-viewer__visual { min-height: 540px; }
@@ -74,4 +73,8 @@
 
 @media (max-width: 479px) {
   .sp-story { gap: 1rem; }
+}
+
+@media (min-width: 1000px) {
+  .sp-investment { grid-template-columns: minmax(360px, .78fr) minmax(560px, 1.22fr); align-items: center; gap: clamp(3rem, 6vw, 6rem); }
 }
