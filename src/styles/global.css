@@ -41,6 +41,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -60,7 +61,12 @@ body {
   color: var(--color-white);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
 }
+
+main, section, article, div { min-width: 0; }
+
+h1, h2, h3, p, a { overflow-wrap: break-word; }
 
 body,
 .header,
@@ -419,8 +425,18 @@ button {
 /* Menos padding lateral del header en mobile para dar aire */
 @media (max-width: 767px) {
   .header__container {
-    padding: 0 1rem;
+    padding: 0 .85rem;
   }
+
+  .header__logo-img { height: 25px; }
+  .header__actions { gap: .45rem; }
+  .btn--small { padding-inline: .8rem; }
+}
+
+@media (max-width: 380px) {
+  :root { --header-height: 64px; }
+  html { font-size: 15px; }
+  .header__logo-img { height: 22px; }
 }
 
 /* Show desktop nav, hide hamburger on larger screens */

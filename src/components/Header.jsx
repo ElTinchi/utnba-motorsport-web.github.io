@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ROUTES } from '../routes';
 import LanguageSwitcher from './LanguageSwitcher.jsx';
-import ThemeToggle from './ThemeToggle.jsx';
 
 export default function Header() {
   const { t } = useTranslation();
@@ -98,7 +97,6 @@ export default function Header() {
         </nav>
 
         <div className="header__actions">
-          <ThemeToggle />
           <LanguageSwitcher />
           <NavLink to={ROUTES.joinUs} className="btn btn--primary btn--small header__cta" onClick={closeAll}>
             {t('nav.joinUs')}

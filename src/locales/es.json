@@ -36,7 +36,7 @@
     "joinLink": "Ver convocatorias",
     "areas": {
       "kicker": "Cómo se divide el equipo",
-      "title": "Siete áreas, un solo auto",
+      "title": "Nuestras 7 áreas",
       "intro": "Cada área tiene su propio frente de trabajo, y el monoplaza sale de la suma de las siete. No importa de qué ingeniería vengas: hay un lugar donde lo que estudiás se aplica."
     },
     "academy": {
@@ -241,6 +241,7 @@
   "sponsorsPage": {
     "kicker": "Quiero ser sponsor",
     "title": "No construimos solamente un auto.",
+    "logoCta": "Poné tu logo en el auto",
     "intro": "Construimos el recorrido que transforma estudiantes en profesionales del motorsport. Gracias a quienes ya nos acompañan llegamos hasta acá; hoy estamos a un último impulso de llegar a la pista.",
     "scrollCta": "Conocé la historia",
     "proofLabel": "Gracias a las empresas que ya son parte del recorrido",
@@ -372,10 +373,10 @@
       "Somos la primera generación de Fórmula SAE de la UTN BA. Eso quiere decir que no heredamos un auto ni un manual: estamos escribiendo los dos. Todo lo que se decide ahora es el punto de partida de los equipos que vengan después.",
       "Creemos que la mejor forma de aprender ingeniería es construyéndola. Acá lo que se estudia en la facultad se aplica sobre una pieza real, con una fecha de competencia real y consecuencias reales si no funciona."
     ],
-    "areasTitle": "Las siete áreas",
+    "areasTitle": "Nuestras 7 áreas",
     "areasIntro": "Cada área tiene su propio frente de trabajo, y el auto sale de la suma de las siete. No importa de qué ingeniería vengas: hay un lugar donde lo que estudiás se aplica.",
     "noPhotos": "Todavía no subimos fotos de esta área.",
-    "ctaTitle": "¿Querés ser parte?",
+    "ctaTitle": "¿Querés ser parte del equipo?",
     "ctaText": "Cuando abrimos una convocatoria, publicamos en Instagram los perfiles buscados, requisitos y etapas de selección.",
     "ctaButton": "Quiero sumarme"
   },

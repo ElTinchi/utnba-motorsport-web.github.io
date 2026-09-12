@@ -192,11 +192,6 @@ $('download-image').addEventListener('click',()=>{
   setTimeout(()=>URL.revokeObjectURL(url),1000);message('Imagen descargada.');
  },'image/png');
 });
-$('viewer-theme').addEventListener('click',()=>{
- const next=document.documentElement.dataset.theme==='light'?'dark':'light';
- document.documentElement.dataset.theme=next;localStorage.setItem('theme',next);
- document.querySelector('meta[name="theme-color"]').content=next==='light'?'#f7f3e9':'#151519';mark();
-});
 updateSteps();
 window.addEventListener('pagehide',()=>{cancelAnimationFrame(frame);loadController?.abort();renderer?.dispose();if(logoURL)URL.revokeObjectURL(logoURL);});
 window.addEventListener('pageshow',event=>{if(event.persisted)location.reload();});

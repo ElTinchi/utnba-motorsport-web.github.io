@@ -36,7 +36,7 @@
     "joinLink": "Ver processos seletivos",
     "areas": {
       "kicker": "Como o time se divide",
-      "title": "Sete áreas, um só carro",
+      "title": "Nossas 7 áreas",
       "intro": "Cada área tem a sua própria frente de trabalho, e o monoposto sai da soma das sete. Não importa de qual engenharia você vem: existe um lugar onde o que você estuda é aplicado."
     },
     "academy": {
@@ -241,6 +241,7 @@
   "sponsorsPage": {
     "kicker": "Quero ser patrocinador",
     "title": "Não estamos construindo apenas um carro.",
+    "logoCta": "Coloque sua marca no carro",
     "intro": "Estamos construindo o caminho que transforma estudantes em profissionais do motorsport. Graças a quem já nos apoia, chegamos até aqui; hoje estamos a um último impulso de chegar à pista.",
     "scrollCta": "Conheça a história",
     "proofLabel": "Obrigado às empresas que já fazem parte da jornada",
@@ -342,10 +343,10 @@
       "Somos a primeira geração de Fórmula SAE da UTN BA. Isso quer dizer que não herdamos nem um carro nem um manual: estamos escrevendo os dois. Tudo o que se decide agora é o ponto de partida das equipes que vierem depois.",
       "Acreditamos que a melhor forma de aprender engenharia é construindo. Aqui o que se estuda na faculdade é aplicado em uma peça real, com uma data de competição real e consequências reais se não funcionar."
     ],
-    "areasTitle": "As sete áreas",
+    "areasTitle": "Nossas 7 áreas",
     "areasIntro": "Cada área tem a sua própria frente de trabalho, e o carro sai da soma das sete. Não importa de qual engenharia você vem: existe um lugar onde o que você estuda é aplicado.",
     "noPhotos": "Ainda não subimos fotos desta área.",
-    "ctaTitle": "Quer fazer parte?",
+    "ctaTitle": "Quer fazer parte da equipe?",
     "ctaText": "Quando abrimos um processo seletivo, publicamos no Instagram os perfis buscados, requisitos e etapas de seleção.",
     "ctaButton": "Quero participar"
   },

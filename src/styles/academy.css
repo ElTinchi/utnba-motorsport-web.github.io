@@ -75,18 +75,7 @@
 
 /* Baja SAE: no es continuación de la escalera, es un camino aparte */
 .ms-section--parallel {
-  border-top-style: dashed;
-  border-top-color: rgba(var(--ink-rgb), 0.25);
-  background: rgba(var(--ink-rgb), 0.02);
-  border-radius: 16px;
-  margin: 0.5rem 0;
-  padding: 2.5rem 1.5rem;
-}
-
-@media (min-width: 700px) {
-  .ms-section--parallel {
-    padding: 2.5rem 2rem;
-  }
+  /* Baja usa el mismo tratamiento que las demás etapas. */
 }
 
 .ms-section__index {

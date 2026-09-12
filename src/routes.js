@@ -27,3 +27,4 @@ export const LEGACY_REDIRECTS = {
 };
 
 export const CONTACT_EMAIL = 'motorsports@frba.utn.edu.ar';
+export const CONTACT_HREF = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(CONTACT_EMAIL)}`;

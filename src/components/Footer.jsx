@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ROUTES, CONTACT_EMAIL } from '../routes';
+import { ROUTES, CONTACT_EMAIL, CONTACT_HREF } from '../routes';
 
 const SOCIALS = [
   {
@@ -57,7 +57,7 @@ export default function Footer() {
               /contacto: se ven en todas las páginas, no en una sola. */}
           <address className="footer__contact">
             <span className="footer__contact-label">{t('footer.contactLabel')}</span>
-            <a href={`mailto:${CONTACT_EMAIL}`} className="footer__contact-link">{CONTACT_EMAIL}</a>
+            <a href={CONTACT_HREF} target="_blank" rel="noopener noreferrer" className="footer__contact-link">{CONTACT_EMAIL}</a>
             <span className="footer__contact-place">{t('footer.address')}</span>
           </address>
         </div>

@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ROUTES, CONTACT_EMAIL } from '../routes';
+import { ROUTES, CONTACT_HREF } from '../routes';
 import SponsorsCarousel from '../components/SponsorsCarousel';
 import FundingProgress from '../components/FundingProgress';
 import '../styles/sponsors.css';
@@ -31,6 +31,9 @@ export default function Sponsors() {
           <span className="sp-page__kicker">{t('sponsorsPage.kicker')}</span>
           <h1 className="sp-page__title">{t('sponsorsPage.title')}</h1>
           <p className="sp-page__intro">{t('sponsorsPage.intro')}</p>
+          <a href="#tu-logo" className="btn btn--primary">
+            {t('sponsorsPage.logoCta')}
+          </a>
           <a href="#recorrido" className="sp-hero__scroll">
             <span>{t('sponsorsPage.scrollCta')}</span>
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
@@ -99,7 +102,7 @@ export default function Sponsors() {
           <p className="sp-partnership__note">{t('sponsorsPage.partnership.note')}</p>
         </section>
 
-        <section className="sp-viewer" aria-labelledby="viewer-title">
+        <section className="sp-viewer" id="tu-logo" aria-labelledby="viewer-title">
           <div className="sp-viewer__visual">
             <img src="/assets/img/render_fsae.jpg" alt={t('sponsorsPage.viewer.imageAlt')} width="1920" height="1080" loading="lazy" />
             <span className="sp-viewer__badge">{t('sponsorsPage.viewer.badge')}</span>
@@ -114,7 +117,7 @@ export default function Sponsors() {
             <p>{t('sponsorsPage.viewer.text')}</p>
             <div className="sp-viewer__actions">
               <a href="/visor/visor.html" className="btn btn--primary">{t('sponsorsPage.viewer.button')}</a>
-              <a href={`mailto:${CONTACT_EMAIL}`} className="btn btn--secondary">{t('sponsorsPage.ctaButton')}</a>
+              <a href={CONTACT_HREF} target="_blank" rel="noopener noreferrer" className="btn btn--secondary">{t('sponsorsPage.ctaButton')}</a>
             </div>
             <small>{t('sponsorsPage.viewer.note')}</small>
           </div>

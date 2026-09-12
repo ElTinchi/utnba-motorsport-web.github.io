@@ -25,9 +25,7 @@
   <meta name="twitter:image" content="https://utnbamotorsport.com.ar/assets/img/og-cover.jpg">
   <script>
     try {
-      const saved = localStorage.getItem('theme');
-      const dark = matchMedia('(prefers-color-scheme: dark)').matches;
-      document.documentElement.dataset.theme = saved || (dark ? 'dark' : 'light');
+      document.documentElement.dataset.theme = 'dark';
     } catch { document.documentElement.dataset.theme = 'dark'; }
   </script>
   <link rel="stylesheet" href="style.css">
@@ -40,7 +38,6 @@
   <header class="header viewer-header">
     <a class="brand" href="/"><img src="assets/logo.png" alt="UTN BA Motorsport" width="205" height="45"></a>
     <div class="viewer-header__actions">
-      <button id="viewer-theme" class="icon-button" type="button" aria-label="Cambiar tema" title="Cambiar tema"><span aria-hidden="true">◐</span></button>
       <a class="back-site" href="/sponsors">← Volver a sponsors</a>
     </div>
   </header>

@@ -36,7 +36,7 @@
     "joinLink": "See open calls",
     "areas": {
       "kicker": "How the team is organised",
-      "title": "Seven areas, one car",
+      "title": "Our 7 areas",
       "intro": "Each area runs its own workstream, and the car is what comes out of all seven together. Whatever engineering degree you're in, there's a place where what you study gets used."
     },
     "academy": {
@@ -241,6 +241,7 @@
   "sponsorsPage": {
     "kicker": "Become a sponsor",
     "title": "We are not just building a car.",
+    "logoCta": "Put your logo on the car",
     "intro": "We are building the path that turns students into motorsport professionals. Thanks to those already supporting us, we have made it this far; today we are one final push away from the track.",
     "scrollCta": "Discover the story",
     "proofLabel": "Thank you to the companies already part of the journey",
@@ -342,10 +343,10 @@
       "We are the first Formula SAE generation at UTN BA. That means we inherited neither a car nor a manual: we are writing both. Everything decided now is the starting point for the teams that come after us.",
       "We believe the best way to learn engineering is by building it. Here what you study at university gets applied to a real part, with a real competition date and real consequences if it does not work."
     ],
-    "areasTitle": "The seven areas",
+    "areasTitle": "Our 7 areas",
     "areasIntro": "Each area runs its own workstream, and the car is what comes out of all seven together. Whatever engineering degree you're in, there's a place where what you study gets used.",
     "noPhotos": "We haven't uploaded photos of this area yet.",
-    "ctaTitle": "Want to be part of it?",
+    "ctaTitle": "Want to join the team?",
     "ctaText": "Whenever an intake opens, we publish the target profiles, requirements and selection stages on Instagram.",
     "ctaButton": "I want to join"
   },
