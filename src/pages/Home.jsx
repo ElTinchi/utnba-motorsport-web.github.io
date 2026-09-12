@@ -127,6 +127,21 @@ export default function Home() {
               <path d={TRACK_PATH} className="hero__track-line" />
             </g>
 
+            {/* Línea de largada: queda sobre el tramo que pasa por debajo del
+                isotipo, en el punto elegido como inicio visual de la vuelta. */}
+            <g className="hero__start-line" transform="translate(462 363) rotate(49)">
+              {Array.from({ length: 8 }, (_, index) => (
+                <rect
+                  key={index}
+                  x={index % 2 === 0 ? -22 : 0}
+                  y={-12 + Math.floor(index / 2) * 6}
+                  width="22"
+                  height="6"
+                  className={index % 4 === 0 || index % 4 === 3 ? 'hero__start-tile--light' : 'hero__start-tile--dark'}
+                />
+              ))}
+            </g>
+
             {/* Recorrido del auto: mismo trazado, sin pintar */}
             <path id="hero-track-line" d={TRACK_PATH} fill="none" stroke="none" />
 
@@ -146,9 +161,10 @@ export default function Home() {
               <path d="M-10,-4 C-5,-5 0,-3.5 3,0 C0,3.5 -5,5 -10,4 Z" className="hero__car-glass" />
               <path d="M-8,-5.2 L-2,-8 M-8,5.2 L-2,8 M7,-4 L11,-8 M7,4 L11,8" className="hero__car-suspension" />
               <animateMotion
-                dur="26s"
+                dur="38.04s"
+                begin="-19.77s"
                 repeatCount="indefinite"
-                rotate="auto"
+                rotate="auto-reverse"
                 calcMode="linear"
                 keyPoints={CAR_KEY_POINTS}
                 keyTimes={CAR_KEY_TIMES}

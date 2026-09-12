@@ -131,6 +131,14 @@
   stroke-linecap: round;
 }
 
+.hero__start-line {
+  opacity: .72;
+  filter: drop-shadow(0 0 3px rgba(21, 21, 25, .8));
+}
+
+.hero__start-tile--light { fill: rgba(var(--ink-rgb), .9); }
+.hero__start-tile--dark { fill: rgba(21, 21, 25, .95); }
+
 .hero__car {
   opacity: 1;
 }
