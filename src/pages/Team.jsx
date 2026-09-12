@@ -16,6 +16,16 @@ export default function Team() {
       title={t('teamPage.title')}
       intro={t('teamPage.intro')}
     >
+      <figure className="shell-block team-photo">
+        <img
+          src="/assets/img/Nosotros.jpg"
+          alt={t('teamPage.photoAlt')}
+          width="3869"
+          height="1419"
+          loading="eager"
+        />
+      </figure>
+
       <div className="shell-block">
         <h2 className="shell-block__title">{t('teamPage.storyTitle')}</h2>
         {story.map((paragraph, i) => (

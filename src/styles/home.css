@@ -330,9 +330,10 @@
 }
 
 .home-highlight__body {
-  font-size: 0.98rem;
+  font-size: clamp(0.9rem, 1vw, 0.98rem);
   color: var(--color-white-muted);
-  line-height: 1.7;
+  line-height: 1.75;
+  text-wrap: pretty;
 }
 
 .home-highlight__link {

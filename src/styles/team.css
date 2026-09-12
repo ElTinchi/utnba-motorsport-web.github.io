@@ -1,3 +1,14 @@
+.team-photo {
+  margin-top: 0;
+}
+
+.team-photo img {
+  width: 100%;
+  border: 1px solid rgba(var(--ink-rgb), 0.09);
+  border-radius: clamp(12px, 2vw, 20px);
+  background: rgba(var(--ink-rgb), 0.04);
+}
+
 .team-area {
   padding: 2.5rem 0;
   border-bottom: 1px solid rgba(var(--ink-rgb), 0.07);
