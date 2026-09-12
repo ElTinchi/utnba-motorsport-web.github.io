@@ -59,11 +59,11 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -47%) rotate(-12deg);
   z-index: 1;
   /* Grande, pero acotado también por la altura para que no se corte por arriba
      y por abajo en pantallas apaisadas. */
-  width: min(1253px, 113vw, 130vh);
+  width: min(1220px, 108vw, 124vh);
   aspect-ratio: 10 / 7;
   pointer-events: none;
   opacity: 0.32;
@@ -141,8 +141,28 @@
 }
 
 .hero__car-glass {
-  fill: var(--color-white);
-  opacity: 0.85;
+  fill: #151519;
+  stroke: rgba(var(--ink-rgb), .8);
+  stroke-width: 1;
+}
+
+.hero__car-wheel {
+  fill: #09090b;
+  stroke: rgba(var(--ink-rgb), .45);
+  stroke-width: .8;
+}
+
+.hero__car-aero {
+  fill: var(--color-red);
+  stroke: rgba(var(--ink-rgb), .55);
+  stroke-width: .7;
+}
+
+.hero__car-suspension {
+  fill: none;
+  stroke: rgba(var(--ink-rgb), .72);
+  stroke-width: 1;
+  stroke-linecap: round;
 }
 
 /* Scrim suave detrás del logo: separa el logo del circuito difuminado
