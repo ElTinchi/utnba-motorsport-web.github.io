@@ -16,7 +16,19 @@
   "footer": {
     "copyright": "© {{year}} UTN BA Motorsport · Universidad Tecnológica Nacional · Facultad Regional Buenos Aires",
     "contactLabel": "Contact",
-    "address": "UTN FRBA · Buenos Aires, Argentina"
+    "address": "UTN FRBA · Buenos Aires, Argentina",
+    "ctaEyebrow": "The next lap starts here",
+    "ctaTitle": "Let's build the future of Argentine motorsport.",
+    "sponsorCta": "Support the team",
+    "joinCta": "Join the team",
+    "description": "UTN Buenos Aires students designing, manufacturing and taking the university's first electric Formula SAE car to the track.",
+    "exploreLabel": "Explore",
+    "connectLabel": "Get involved",
+    "navLabel": "Footer navigation",
+    "socialLabel": "Social media",
+    "followOn": "Follow us on",
+    "aiInfo": "Information for AI",
+    "backToTop": "Back to top"
   },
   "home": {
     "heroPlate": "UTN FRBA · Formula SAE",

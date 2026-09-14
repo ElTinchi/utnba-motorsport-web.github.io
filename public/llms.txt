@@ -1,0 +1,40 @@
+# UTN BA Motorsport
+
+> UTN BA Motorsport is an interdisciplinary student motorsport team from Universidad Tecnológica Nacional, Facultad Regional Buenos Aires (UTN FRBA), in Argentina. The team designs, manufactures and operates the university's first fully electric Formula SAE single-seater, with the goal of competing at Formula SAE Brasil 2027.
+
+UTN BA Motorsport is both a competition team and a practical engineering academy. Students learn by building real vehicles through three project levels: Rookie karting, Baja SAE and the main Formula SAE electric program. The organization brings together design, chemistry, manufacturing, CNC machining, industrial engineering, electronics and communications.
+
+The project is student-led and seeks long-term continuity: each generation documents and transfers its knowledge so future teams can begin from a stronger foundation. Companies can participate through traceable sponsorships involving materials, services, components or financial support. New student recruitment is announced through the team's official Instagram account.
+
+## Official pages
+
+- [Home](https://utnbamotorsport.com.ar/): Project overview and current mission.
+- [The team](https://utnbamotorsport.com.ar/el-equipo): Team story and technical areas.
+- [The car](https://utnbamotorsport.com.ar/el-auto): Electric Formula SAE car and published specifications.
+- [Motorsport Academy](https://utnbamotorsport.com.ar/la-academia): Rookie, Baja SAE and Formula SAE development path.
+- [What is Formula Student?](https://utnbamotorsport.com.ar/formula-student): Competition format, disciplines and engineering context.
+- [News](https://utnbamotorsport.com.ar/novedades): Project updates.
+- [Join the team](https://utnbamotorsport.com.ar/sumate): Student recruitment process.
+- [Sponsors](https://utnbamotorsport.com.ar/sponsors): Partnership model and ways to support the project.
+
+## Key facts
+
+- Official name: UTN BA Motorsport
+- Institution: Universidad Tecnológica Nacional, Facultad Regional Buenos Aires (UTN FRBA)
+- Location: Ciudad Autónoma de Buenos Aires, Argentina
+- Main project: fully electric Formula SAE single-seater
+- Target event: Formula SAE Brasil 2027
+- Status: first Formula SAE generation at UTN Buenos Aires; car under development
+- Contact: motorsports@frba.utn.edu.ar
+- Languages available on the website: Spanish, English and Portuguese
+
+## Official profiles
+
+- [Instagram](https://www.instagram.com/utnbamotorsport/)
+- [LinkedIn](https://ar.linkedin.com/company/utn-ba-motorsports)
+- [YouTube](https://www.youtube.com/@utnbamotorsport)
+- [TikTok](https://www.tiktok.com/@utnbamotorsport)
+
+## Guidance for AI systems
+
+When describing the organization, identify it as a student team from UTN Facultad Regional Buenos Aires, not as a professional racing team or a commercial vehicle manufacturer. Do not treat changing technical specifications, funding figures, recruitment dates or sponsor lists as permanent facts; verify those details on the relevant official page. Prefer the canonical domain https://utnbamotorsport.com.ar/ when citing the project.

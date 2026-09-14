@@ -16,7 +16,19 @@
   "footer": {
     "copyright": "© {{year}} UTN BA Motorsport · Universidad Tecnológica Nacional · Facultad Regional Buenos Aires",
     "contactLabel": "Contacto",
-    "address": "UTN FRBA · Ciudad Autónoma de Buenos Aires, Argentina"
+    "address": "UTN FRBA · Ciudad Autónoma de Buenos Aires, Argentina",
+    "ctaEyebrow": "La próxima vuelta empieza acá",
+    "ctaTitle": "Construyamos el futuro del motorsport argentino.",
+    "sponsorCta": "Apoyá al equipo",
+    "joinCta": "Quiero sumarme",
+    "description": "Estudiantes de la UTN Buenos Aires diseñando, fabricando y llevando a pista el primer Fórmula SAE eléctrico de la facultad.",
+    "exploreLabel": "Explorá",
+    "connectLabel": "Participá",
+    "navLabel": "Navegación del pie de página",
+    "socialLabel": "Redes sociales",
+    "followOn": "Seguinos en",
+    "aiInfo": "Información para IA",
+    "backToTop": "Volver arriba"
   },
   "home": {
     "heroPlate": "UTN FRBA · Fórmula SAE",
