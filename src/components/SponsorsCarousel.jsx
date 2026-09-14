@@ -17,7 +17,7 @@ export const SPONSORS = [
   { name: 'Bender', href: 'https://www.bender.de/', logo: '/assets/img/sponsors/onwhite/benderlogo.png' },
   { name: 'Grupo Paglia', href: 'https://www.instagram.com/grupopaglia_/', logo: '/assets/img/sponsors/onwhite/grupopaglia.png' },
   { name: 'DSM Diesel Car S.A.', href: 'https://www.dsmdieselcar.com.ar/', logo: '/assets/img/sponsors/onwhite/dsm-diesel-car.png' },
-  { name: 'GMG Neumáticos de Competición', logo: '/assets/img/sponsors/onwhite/gmg-neumaticos.png' },
+  { name: 'GMG Neumáticos de Competición', href: 'https://www.instagram.com/neumaticosgmg/?hl=es', logo: '/assets/img/sponsors/onwhite/gmg-neumaticos.png' },
 ];
 
 // `duplicate` marca la copia visual del loop: no debe recibir foco de teclado
