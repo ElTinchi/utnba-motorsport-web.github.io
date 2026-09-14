@@ -5,6 +5,18 @@ export const scale=(a,s)=>a.map(v=>v*s);
 export const dot=(a,b)=>a.reduce((s,v,i)=>s+v*b[i],0);
 export const cross=(a,b)=>[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]];
 export const norm=a=>scale(a,1/(Math.hypot(...a)||1));
+export async function decodeImage(blob,options) {
+  if('createImageBitmap' in window){
+    try{return await createImageBitmap(blob,options);}
+    catch{try{return await createImageBitmap(blob);}catch{ /* fallback below */ }}
+  }
+  const url=URL.createObjectURL(blob);
+  try{
+    const image=new Image();image.decoding='async';
+    await new Promise((resolve,reject)=>{image.onload=resolve;image.onerror=()=>reject(Error('No pudimos decodificar la imagen.'));image.src=url;});
+    image.close=()=>{};return image;
+  }finally{URL.revokeObjectURL(url);}
+}
 export function rotation(q=[0,0,0,1]) {
   const [x,y,z,w]=norm(q);
   return [1-2*y*y-2*z*z,2*x*y-2*z*w,2*x*z+2*y*w,
@@ -190,13 +202,14 @@ export class CarRenderer {
     this.textures=[];this.logoTexture=null;this.reservationTexture=null;this.numberTexture=null;this.institutionTexture=null;this.institutionBoxes=new Float32Array(8);this.numberBoxes=new Float32Array(12);this.anisotropy=gl.getExtension('EXT_texture_filter_anisotropic');gl.bindVertexArray(null);gl.enable(gl.DEPTH_TEST);gl.clearColor(0,0,0,0);
   }
   texture(image){const gl=this.gl,t=gl.createTexture();gl.bindTexture(gl.TEXTURE_2D,t);gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL,false);gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,gl.RGBA,gl.UNSIGNED_BYTE,image);gl.generateMipmap(gl.TEXTURE_2D);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR_MIPMAP_LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);if(this.anisotropy)gl.texParameterf(gl.TEXTURE_2D,this.anisotropy.TEXTURE_MAX_ANISOTROPY_EXT,Math.min(16,gl.getParameter(this.anisotropy.MAX_TEXTURE_MAX_ANISOTROPY_EXT)));return t;}
-  async initTextures(){for(const blob of this.model.imageBlobs){const im=await createImageBitmap(blob,{imageOrientation:'none',premultiplyAlpha:'none'});this.textures.push(this.texture(im));im.close();}this.logoTexture=this.texture(new ImageData(new Uint8ClampedArray([255,255,255,0]),1,1));}
+  async initTextures(){for(const blob of this.model.imageBlobs){const im=await decodeImage(blob,{imageOrientation:'none',premultiplyAlpha:'none'});this.textures.push(this.texture(im));im.close();}this.logoTexture=this.texture(new ImageData(new Uint8ClampedArray([255,255,255,0]),1,1));}
   setReservations(image){if(this.reservationTexture)this.gl.deleteTexture(this.reservationTexture);this.reservationTexture=this.texture(image);}
   setInstitution(image,boxes){if(this.institutionTexture)this.gl.deleteTexture(this.institutionTexture);this.institutionTexture=this.texture(image);this.institutionBoxes=new Float32Array(boxes.flat());}
   setNumbers(image,boxes){if(this.numberTexture)this.gl.deleteTexture(this.numberTexture);this.numberTexture=this.texture(image);this.numberBoxes=new Float32Array(boxes.flat());}
   setLogo(image){const next=this.texture(image);if(this.logoTexture)this.gl.deleteTexture(this.logoTexture);this.logoTexture=next;}
   render(camera,logo){
-    const gl=this.gl,c=this.canvas,u=this.uniforms,dpr=Math.min(Math.max(devicePixelRatio||1,2),2.5);
+    const gl=this.gl,c=this.canvas,u=this.uniforms,mobile=matchMedia('(pointer: coarse)').matches||innerWidth<800;
+    const dpr=mobile?Math.min(devicePixelRatio||1,1.35):Math.min(Math.max(devicePixelRatio||1,1.5),2.25);
     const w=Math.max(1,Math.round(c.clientWidth*dpr)),h=Math.max(1,Math.round(c.clientHeight*dpr));
     if(c.width!==w||c.height!==h){c.width=w;c.height=h;}
     gl.viewport(0,0,w,h);gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);gl.useProgram(this.program);

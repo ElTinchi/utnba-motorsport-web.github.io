@@ -53,7 +53,7 @@
     },
     "academy": {
       "kicker": "The UTN BA Motorsport academy",
-      "title": "Walk in knowing nothing. Walk out running a real project.",
+      "title": "Walk in with no experience. Walk out running a real project.",
       "intro": "Our training process connects three real projects. Every stage adds tools, technical judgement and experience working under a rulebook.",
       "levels": [
         {
@@ -64,13 +64,13 @@
         },
         {
           "logoAlt": "Baja UTNBA",
-          "badge": "Parallel track",
+          "number": "Level 02",
           "title": "Baja SAE",
           "body": "An off-road project under SAE rules: interpreting requirements, documenting decisions and passing inspections, including FIA/SFI safety requirements where applicable."
         },
         {
           "logoAlt": "UTN BA Motorsport",
-          "number": "Level 02",
+          "number": "Level 03",
           "title": "Formula SAE",
           "body": "Our flagship category. We design, build and race our own single-seater against teams from all over the world."
         }
@@ -110,9 +110,9 @@
         "eyebrow": "For students",
         "title": "What is Formula Student?",
         "paragraphs": [
-          "Formula Student is a global engineering design competition, where students from universities around the world develop and build their own single-seated racing cars.",
-          "However, winning is not all about building the fastest car. Victory belongs to the team which excels in all aspects: design, performance, cost planning, and business strategy. Teams are judged by experts from motorsport, automotive, and supplier industries, who assess both the technical quality of the car and the team's business approach.",
-          "Rules vary by country and organizing body within Formula Student. We'll be competing under the Formula SAE Brazil rulebook — we'll add the specific details here soon."
+          "Formula SAE is an international engineering competition in which university teams design, manufacture and compete with a single-seater developed by the students themselves.",
+          "It is not only about which car is the fastest. The competition includes different events that evaluate the design and engineering decisions, the car's performance, costs and the presentation of the project.",
+          "Formula SAE events are held in different countries around the world. We are preparing to compete at Formula SAE Brazil under its specific rules and events."
         ]
       },
       {
@@ -194,12 +194,12 @@
   "motorsportPage": {
     "kicker": "UTN BA Motorsport",
     "title": "The academy: three categories, one team",
-    "intro": "We're UTN BA's first Formula SAE generation, and we built it with three fronts running in parallel. Here's how each one works.",
+    "intro": "We are UTN BA's first Formula SAE generation and train through three levels of increasing complexity. This is the path that leads to the single-seater.",
     "sections": [
       {
         "number": "01",
         "logoAlt": "Rookie UTNBA",
-        "eyebrow": "The first step",
+        "eyebrow": "Level 1 · The first step",
         "title": "Rookie",
         "paragraphs": [
           "It all starts here: your first project inside the team is building a go-kart — a simple, concrete challenge to start building with your hands before you get into the single-seater.",
@@ -210,11 +210,10 @@
       {
         "number": "02",
         "logoAlt": "Baja UTNBA",
-        "eyebrow": "Parallel category · Own rulebook",
+        "eyebrow": "Level 2 · Development",
         "title": "Baja SAE",
-        "parallel": true,
         "paragraphs": [
-          "Baja SAE isn't a rung on the Formula SAE ladder: it's a competition with its own SAE International technical rulebook, and our car isn't a formula single-seater but an off-road buggy-type vehicle.",
+          "Baja SAE is the second level of our Motorsport Academy. The challenge grows through a competition with its own SAE International technical rulebook and an off-road buggy-type vehicle.",
           "Here, members train to work as professional motorsport demands: interpreting every requirement, documenting decisions, designing to pass inspections and using FIA/SFI-homologated components whenever required by the safety rules.",
           "One detail that sets it apart from other competitions: every car uses the same engine, a Kohler Command Pro CH440 at roughly 10 HP with a restrictor plate. That takes horsepower out of the equation — the competition comes down 100% to design.",
           "Static events judge design, cost analysis and a sales pitch in front of a panel, as if the car were a real product. Dynamic events put it to the test off-road: acceleration, hill climb, maneuverability, rock crawl and endurance.",
@@ -224,7 +223,7 @@
       {
         "number": "03",
         "logoAlt": "UTN BA Motorsport",
-        "eyebrow": "Flagship category",
+        "eyebrow": "Level 3 · Flagship category",
         "title": "Formula SAE",
         "paragraphs": [
           "Our main category, and the biggest one worldwide. It's fiercely contested across the Americas — Brazil, the United States — and in Europe too.",
@@ -326,7 +325,7 @@
       "cnc": {
         "title": "CNC",
         "subtitle": "Precision machining",
-        "body": "Makes the parts that leave no room for error. Uprights, hubs, bushings and suspension clamps come out of here: the components that hold the wheel and feed its loads into the chassis, machined under numerical control from the Design team's models. A tenth of a millimetre out of tolerance gets paid for on track."
+        "body": "Makes the parts that leave no room for error. Uprights, hubs and bushings come out of here: components that support the wheel and transfer its loads to the chassis, CNC-machined from the Design team's models. A tenth of a millimetre out of tolerance is paid for on track."
       },
       "industrial": {
         "title": "Industrial",
@@ -336,7 +335,7 @@
       "electronics": {
         "title": "Electronics",
         "subtitle": "Hardware and firmware",
-        "body": "Everything that carries current. Sensors, wiring, control and the firmware that runs them: in an electric car this is the nervous system of the project."
+        "body": "Designs and integrates the electrical and electronic systems that store, distribute and control the car's energy. Batteries, BMS, power unit, high- and low-voltage wiring, sensors, control units and firmware work together to deliver power safely, measure what is happening and control the vehicle. In an electric single-seater, Electronics connects the energy, control and information that make the car work."
       },
       "communication": {
         "title": "Communications",
@@ -352,7 +351,7 @@
     "photoAlt": "UTN BA Motorsport members with the single-seater chassis",
     "storyTitle": "Who we are",
     "storyParagraphs": [
-      "UTN BA Motorsport is a multidisciplinary team of students from Universidad Tecnológica Nacional, Facultad Regional Buenos Aires. Mechanical, electronic, electrical, industrial, systems and chemical engineering all work on the same project: a fully electric car to compete at Formula SAE Brazil 2027.",
+      "UTN BA Motorsport is a multidisciplinary team of students from Universidad Tecnológica Nacional, Facultad Regional Buenos Aires. Mechanical, electronic, electrical, industrial, systems, chemical and naval engineering all work on the same project: a fully electric single-seater to compete at Formula SAE Brazil 2027.",
       "We are the first Formula SAE generation at UTN BA. That means we inherited neither a car nor a manual: we are writing both. Everything decided now is the starting point for the teams that come after us.",
       "We believe the best way to learn engineering is by building it. Here what you study at university gets applied to a real part, with a real competition date and real consequences if it does not work."
     ],

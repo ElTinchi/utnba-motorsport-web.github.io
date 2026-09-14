@@ -53,7 +53,7 @@
     },
     "academy": {
       "kicker": "La academia UTN BA Motorsport",
-      "title": "Entrás sin saber nada. Salís manejando un proyecto real.",
+      "title": "Entrás sin experiencia. Salís manejando un proyecto real.",
       "intro": "Nuestro proceso formativo conecta tres proyectos reales. Cada etapa suma herramientas, criterio técnico y experiencia trabajando bajo reglamento.",
       "levels": [
         {
@@ -64,13 +64,13 @@
         },
         {
           "logoAlt": "Baja UTNBA",
-          "badge": "Camino paralelo",
+          "number": "Nivel 02",
           "title": "Baja SAE",
           "body": "Un proyecto todoterreno bajo reglamento SAE: interpretar requisitos, documentar decisiones y superar inspecciones con exigencias de seguridad FIA/SFI cuando corresponde."
         },
         {
           "logoAlt": "UTN BA Motorsport",
-          "number": "Nivel 02",
+          "number": "Nivel 03",
           "title": "Fórmula SAE",
           "body": "Nuestra categoría insignia. Diseñamos, fabricamos y competimos con un monoplaza propio contra equipos de todo el mundo."
         }
@@ -110,9 +110,9 @@
         "eyebrow": "Para estudiantes",
         "title": "¿Qué es Fórmula Student?",
         "paragraphs": [
-          "Fórmula Student es una competencia de diseño de ingeniería a nivel mundial, donde estudiantes de universidades de todo el planeta diseñan y construyen sus propios autos de carrera monoplaza.",
-          "Pero ganar no es solo cuestión de tener el auto más rápido. La victoria es para el equipo que se destaca en todos los aspectos: diseño, desempeño, planificación de costos y estrategia de negocio. Un panel de jueces —expertos de la industria del motorsport, automotriz y de proveedores— evalúa tanto la calidad técnica del auto como el enfoque de negocio del equipo.",
-          "Cada país y organización define su propio reglamento dentro de Fórmula Student. Nosotros vamos a competir bajo las reglas de Fórmula SAE Brasil — más adelante vamos a sumar acá el detalle específico de ese reglamento."
+          "Fórmula SAE es una competencia internacional de ingeniería en la que equipos universitarios diseñan, fabrican y compiten con un monoplaza desarrollado por ellos mismos.",
+          "No se trata solamente de qué auto es más rápido. La competencia incluye distintas pruebas en las que se evalúan el diseño y las decisiones de ingeniería, el desempeño del auto, los costos y la presentación del proyecto.",
+          "Fórmula SAE se realiza en distintos países alrededor del mundo. Nosotros nos estamos preparando para competir en Fórmula SAE Brasil, bajo su reglamento y sus pruebas específicas."
         ]
       },
       {
@@ -194,12 +194,12 @@
   "motorsportPage": {
     "kicker": "UTN BA Motorsport",
     "title": "La academia: tres categorías, un solo equipo",
-    "intro": "Somos la primera generación de Fórmula SAE de la UTN BA, y la construimos con tres frentes funcionando en paralelo. Así se arma cada uno.",
+    "intro": "Somos la primera generación de Fórmula SAE de la UTN BA y nos formamos a través de tres niveles de complejidad creciente. Así se construye el camino hasta el monoplaza.",
     "sections": [
       {
         "number": "01",
         "logoAlt": "Rookie UTNBA",
-        "eyebrow": "El primer paso",
+        "eyebrow": "Nivel 1 · El primer paso",
         "title": "Rookie",
         "paragraphs": [
           "Todo arranca acá: tu primer proyecto dentro del equipo es armar un karting — un desafío simple y concreto para empezar a construir con las manos antes de meterte con el monoplaza.",
@@ -210,11 +210,10 @@
       {
         "number": "02",
         "logoAlt": "Baja UTNBA",
-        "eyebrow": "Categoría paralela · Reglamento propio",
+        "eyebrow": "Nivel 2 · Desarrollo",
         "title": "Baja SAE",
-        "parallel": true,
         "paragraphs": [
-          "Baja SAE no es un escalón dentro de la escalera de Fórmula SAE: es una competencia con reglamento técnico propio de SAE International, y nuestro auto no es un monoplaza de fórmula, sino un vehículo todoterreno tipo buggy.",
+          "Baja SAE es el segundo nivel de nuestra Academia Motorsport. El desafío crece con una competencia de reglamento técnico propio de SAE International y un vehículo todoterreno tipo buggy.",
           "Acá los integrantes se entrenan para trabajar como lo exige el automovilismo profesional: interpretar cada requisito, documentar decisiones, diseñar para superar inspecciones y utilizar componentes con homologaciones FIA/SFI cuando el reglamento de seguridad lo exige.",
           "Un detalle que la distingue de otras competencias: todos los autos usan el mismo motor, un Kohler Command Pro CH440 de aproximadamente 10 HP con placa restrictora. Eso saca la potencia de la ecuación — la competencia se define 100% por el diseño.",
           "Las pruebas estáticas evalúan diseño, análisis de costos y una presentación de venta ante un jurado, como si el auto fuera un producto real. Las pruebas dinámicas lo ponen a prueba en terreno todoterreno: aceleración, subida de pendiente (hill climb), maniobrabilidad, rock crawl y resistencia.",
@@ -224,7 +223,7 @@
       {
         "number": "03",
         "logoAlt": "UTN BA Motorsport",
-        "eyebrow": "Categoría insignia",
+        "eyebrow": "Nivel 3 · Categoría insignia",
         "title": "Fórmula SAE",
         "paragraphs": [
           "Es nuestra categoría principal y la más importante a nivel mundial. Se compite fuerte en el continente americano — Brasil, Estados Unidos — y también en Europa.",
@@ -356,7 +355,7 @@
       "cnc": {
         "title": "CNC",
         "subtitle": "Mecanizado de precisión",
-        "body": "Fabrica las piezas que no toleran error. Portamazas, mazas, bujes y abrazaderas de suspensión salen de acá: los componentes que sostienen la rueda y bajan los esfuerzos al chasis, mecanizados por control numérico a partir de los modelos de Diseño. Una décima fuera de tolerancia se paga en pista."
+        "body": "Fabrica las piezas que no toleran error. Portamazas, mazas y bujes salen de acá: componentes que sostienen la rueda y transmiten los esfuerzos al chasis, mecanizados por control numérico a partir de los modelos de Diseño. Una décima fuera de tolerancia se paga en pista."
       },
       "industrial": {
         "title": "Industrial",
@@ -366,7 +365,7 @@
       "electronics": {
         "title": "Electrónica",
         "subtitle": "Hardware y firmware",
-        "body": "Todo lo que lleva corriente. Sensores, cableado, control y el firmware que los hace funcionar: en un auto eléctrico es el sistema nervioso del proyecto."
+        "body": "Diseña e integra los sistemas eléctricos y electrónicos que almacenan, distribuyen y controlan la energía del auto. Baterías, BMS, unidad de potencia, cableado de alta y baja tensión, sensores, unidades de control y firmware trabajan en conjunto para entregar potencia de forma segura, medir lo que sucede y controlar el vehículo. En un monoplaza eléctrico, Electrónica conecta la energía, el control y la información que hacen posible que el auto funcione."
       },
       "communication": {
         "title": "Comunicación",
@@ -382,7 +381,7 @@
     "photoAlt": "Integrantes de UTN BA Motorsport junto al chasis del monoplaza",
     "storyTitle": "Quiénes somos",
     "storyParagraphs": [
-      "UTN BA Motorsport es un equipo interdisciplinario de estudiantes de la Universidad Tecnológica Nacional, Facultad Regional Buenos Aires. Mecánica, electrónica, eléctrica, industrial, sistemas y química trabajan sobre un mismo proyecto: un monoplaza 100% eléctrico para competir en Fórmula SAE Brasil 2027.",
+      "UTN BA Motorsport es un equipo interdisciplinario de estudiantes de la Universidad Tecnológica Nacional, Facultad Regional Buenos Aires. Mecánica, electrónica, eléctrica, industrial, sistemas, química y naval trabajan sobre un mismo proyecto: un monoplaza 100% eléctrico para competir en Fórmula SAE Brasil 2027.",
       "Somos la primera generación de Fórmula SAE de la UTN BA. Eso quiere decir que no heredamos un auto ni un manual: estamos escribiendo los dos. Todo lo que se decide ahora es el punto de partida de los equipos que vengan después.",
       "Creemos que la mejor forma de aprender ingeniería es construyéndola. Acá lo que se estudia en la facultad se aplica sobre una pieza real, con una fecha de competencia real y consecuencias reales si no funciona."
     ],

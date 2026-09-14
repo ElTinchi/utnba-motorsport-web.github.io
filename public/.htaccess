@@ -26,4 +26,7 @@
   <FilesMatch "index\.html$">
     Header set Cache-Control "no-cache, must-revalidate"
   </FilesMatch>
+  <FilesMatch "^(visor\.html|visor\.js|engine\.js|undertray\.js|zones\.js)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
 </IfModule>

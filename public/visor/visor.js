@@ -1,6 +1,6 @@
 import {cleanUnderbody} from './undertray.js?v=side-rail-20';
 import {reserved} from './zones.js?v=no-sae-20';
-import {CarRenderer,parseGLB,cameraBasis,rayDirection,raycast,norm,cross,dot,scale,add} from './engine.js?v=utn-right-19';
+import {CarRenderer,parseGLB,cameraBasis,rayDirection,raycast,norm,cross,dot,scale,add,decodeImage} from './engine.js?v=mobile-memory-21';
 const $=id=>document.getElementById(id),canvas=$('car-canvas');
 const camera={yaw:.72,pitch:.23,distance:9.5};
 const presets={three:[.72,.23],side:[Math.PI/2,.1],other:[-Math.PI/2,.1],front:[0,.09],rear:[Math.PI,.12],top:[0,Math.PI/2-.001]};
@@ -33,14 +33,20 @@ function decal(){
 async function reservations(){
  const response=await fetch('assets/sae-monochrome.png');
  if(!response.ok)throw Error('No se pudo cargar el logo SAE. Volvé a intentar.');
- const markCanvas=await createImageBitmap(await response.blob(),180,174,720,472);
+ const markSource=await decodeImage(await response.blob());
+ const markCanvas=document.createElement('canvas');markCanvas.width=720;markCanvas.height=472;
+ markCanvas.getContext('2d').drawImage(markSource,180,174,720,472,0,0,720,472);markSource.close();
  const utnResponse=await fetch('assets/utn-ba-white.png');
  if(!utnResponse.ok)throw Error('No se pudo cargar el logo UTN. Volvé a intentar.');
- const utnMark=await createImageBitmap(await utnResponse.blob(),95,51,2880,788);
- const texture=document.createElement('canvas');texture.width=texture.height=4096;
+ const utnSource=await decodeImage(await utnResponse.blob());
+ const utnMark=document.createElement('canvas');utnMark.width=2880;utnMark.height=788;
+ utnMark.getContext('2d').drawImage(utnSource,95,51,2880,788,0,0,2880,788);utnSource.close();
+ const mobile=matchMedia('(pointer: coarse)').matches||innerWidth<800;
+ const atlasSize=mobile?2048:4096,badgeSize=mobile?512:1024;
+ const texture=document.createElement('canvas');texture.width=texture.height=atlasSize;
  const ctx=texture.getContext('2d');
  for(const zone of reserved){
-  const [u,v,w,h]=zone.box,x=u*4096,y=v*4096,width=w*4096,height=h*4096;
+  const [u,v,w,h]=zone.box,x=u*atlasSize,y=v*atlasSize,width=w*atlasSize,height=h*atlasSize;
   if(zone.kind==='number'||zone.kind==='utn')continue;
   const fit=Math.min(width/markCanvas.width,height/markCanvas.height);
   const dw=markCanvas.width*fit,dh=markCanvas.height*fit;
@@ -50,24 +56,25 @@ async function reservations(){
  }
  renderer.setReservations(texture);
  renderer.setInstitution(utnMark,reserved.filter(z=>z.kind==='utn').map(z=>z.box));
- markCanvas.close();utnMark.close();
- // Each badge uses the full 1024px texture, instead of ~37px on the nose atlas.
- const badge=document.createElement('canvas');badge.width=badge.height=1024;
- const badgeCtx=badge.getContext('2d'),diameter=1024*.92;
- badgeCtx.fillStyle='#ffffff';badgeCtx.beginPath();badgeCtx.arc(512,512,diameter/2,0,Math.PI*2);badgeCtx.fill();
+ markCanvas.width=markCanvas.height=0;utnMark.width=utnMark.height=0;texture.width=texture.height=0;
+ // Separate badge texture; mobile uses half resolution to avoid exhausting GPU memory.
+ const badge=document.createElement('canvas');badge.width=badge.height=badgeSize;
+ const badgeCtx=badge.getContext('2d'),diameter=badgeSize*.92,center=badgeSize/2;
+ badgeCtx.fillStyle='#ffffff';badgeCtx.beginPath();badgeCtx.arc(center,center,diameter/2,0,Math.PI*2);badgeCtx.fill();
  // Draw the border inside the approved circle footprint, without enlarging it.
  const borderWidth=diameter*.035;
  badgeCtx.strokeStyle='#000000';badgeCtx.lineWidth=borderWidth;
- badgeCtx.beginPath();badgeCtx.arc(512,512,(diameter-borderWidth)/2,0,Math.PI*2);badgeCtx.stroke();
+ badgeCtx.beginPath();badgeCtx.arc(center,center,(diameter-borderWidth)/2,0,Math.PI*2);badgeCtx.stroke();
  badgeCtx.fillStyle='#000000';badgeCtx.textAlign='center';badgeCtx.textBaseline='middle';
  badgeCtx.font=`${Math.floor(diameter*.78)}px Arial`;
- badgeCtx.fillText('7',512,512+diameter*.04,diameter*.65);
+ badgeCtx.fillText('7',center,center+diameter*.04,diameter*.65);
  const boxes=reserved.filter(z=>z.kind==='number').map(z=>{
   if(z.uvAspectCorrection)return z.box;
   const [x,y,w,h]=z.box,side=Math.min(w,h);
   return [x+(w-side)/2,y+(h-side)/2,side,side];
  });
  renderer.setNumbers(badge,boxes);
+ badge.width=badge.height=0;
 }
 function placeAt(x,y){
  const rect=canvas.getBoundingClientRect(),basis=cameraBasis(camera.yaw,camera.pitch,camera.distance);
@@ -161,10 +168,11 @@ for(const id of ['logo-size','logo-angle','show-logo'])$(id).addEventListener('i
 $('logo-file').addEventListener('change',async event=>{
   const file=event.target.files[0];if(!file)return;
   const serial=++uploadSerial;
+  if(/image\/(heic|heif)/i.test(file.type)){message('El formato HEIC/HEIF no es compatible. Exportá el logo como PNG, JPG o WebP.');event.target.value='';return;}
   if(!['image/png','image/jpeg','image/webp'].includes(file.type)||file.size>10*1024*1024){message('Elegí un PNG, JPG o WebP de hasta 10 MB.');event.target.value='';return;}
   let url=null;
   try{
-    const bitmap=await createImageBitmap(file,{imageOrientation:'from-image',premultiplyAlpha:'none'});
+    const bitmap=await decodeImage(file,{imageOrientation:'from-image',premultiplyAlpha:'none'});
     if(serial!==uploadSerial){bitmap.close();return;}
     if(bitmap.width<1||bitmap.height<1||bitmap.width*bitmap.height>36000000){bitmap.close();throw Error('La imagen es demasiado grande. Exportala con hasta 6000 × 6000 píxeles.');}
     const max=2048,factor=Math.min(1,max/Math.max(bitmap.width,bitmap.height)),scratch=document.createElement('canvas');

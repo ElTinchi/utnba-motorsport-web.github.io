@@ -1,0 +1,81 @@
+/* UTN BA Motorsport — CSS encapsulado para la página institucional */
+.utnba-landing {
+  --u-red: #d90d16;
+  --u-red-dark: #ad0810;
+  --u-black: #101014;
+  --u-paper: #f4f1e9;
+  --u-muted: #a9a8ad;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  overflow: hidden;
+  background: var(--u-black);
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.utnba-landing *, .utnba-landing *::before, .utnba-landing *::after { box-sizing: border-box; }
+.utnba-landing h1, .utnba-landing h2, .utnba-landing h3, .utnba-landing p { margin-top: 0; }
+.utnba-landing a { text-decoration: none; }
+.utnba-wrap { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
+.utnba-kicker { margin-bottom: 18px !important; color: var(--u-red); font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+.utnba-hero { position: relative; min-height: min(780px, 82vh); display: flex; align-items: center; isolation: isolate; }
+.utnba-hero__media { position: absolute; inset: 0; z-index: -2; background: url('https://utnbamotorsport.com.ar/assets/img/render_fsae.jpg') center 56% / cover no-repeat; transform: scale(1.01); }
+.utnba-hero__shade { position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(8,8,11,.97) 0%, rgba(8,8,11,.84) 42%, rgba(8,8,11,.12) 78%), linear-gradient(0deg, var(--u-black), transparent 28%); }
+.utnba-hero__content { padding: 110px 0 72px; }
+.utnba-hero h1 { max-width: 920px; margin-bottom: 26px; color: #fff; font-size: clamp(48px, 7.2vw, 104px); font-weight: 900; line-height: .93; letter-spacing: -.055em; text-transform: uppercase; }
+.utnba-hero h1 em { color: var(--u-red); font-style: normal; }
+.utnba-hero__lead { max-width: 650px; margin-bottom: 34px !important; color: #d6d5d8; font-size: clamp(17px, 2vw, 22px); line-height: 1.6; }
+.utnba-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.utnba-button { display: inline-flex; justify-content: center; align-items: center; gap: 10px; min-height: 52px; padding: 13px 22px; border: 1px solid transparent; border-radius: 4px; font-size: 14px; font-weight: 800; transition: transform .2s ease, background .2s ease, border-color .2s ease; }
+.utnba-button:hover { transform: translateY(-2px); }
+.utnba-button--primary { background: var(--u-red); color: #fff !important; }
+.utnba-button--primary:hover { background: var(--u-red-dark); }
+.utnba-button--ghost { border-color: rgba(255,255,255,.35); color: #fff !important; }
+.utnba-button--ghost:hover { border-color: #fff; }
+.utnba-scroll { display: inline-flex; gap: 10px; margin-top: 62px; color: #a9a8ad !important; font-size: 12px; font-weight: 700; letter-spacing: .05em; }
+.utnba-intro, .utnba-principles, .utnba-academy, .utnba-final { padding: clamp(80px, 10vw, 140px) 0; }
+.utnba-intro__grid, .utnba-academy__grid, .utnba-final__grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(48px, 8vw, 110px); align-items: start; }
+.utnba-landing h2 { margin-bottom: 0; color: #fff; font-size: clamp(34px, 4.4vw, 62px); font-weight: 850; line-height: 1.06; letter-spacing: -.04em; }
+.utnba-copy p, .utnba-academy__content > p, .utnba-final__grid > div > p { color: var(--u-muted); font-size: 17px; line-height: 1.8; }
+.utnba-copy p + p { margin-top: 20px; }
+.utnba-inline-link { display: inline-flex; gap: 14px; margin-top: 22px; padding-bottom: 5px; border-bottom: 2px solid var(--u-red); color: #fff !important; font-size: 14px; font-weight: 800; }
+.utnba-principles { background: var(--u-paper); color: var(--u-black); }
+.utnba-principles h2 { max-width: 760px; color: var(--u-black); }
+.utnba-card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin-top: 64px; background: #d4d0c8; border: 1px solid #d4d0c8; }
+.utnba-card { min-height: 330px; padding: 38px; background: var(--u-paper); }
+.utnba-card__number { display: block; margin-bottom: 76px; color: var(--u-red); font-size: 12px; font-weight: 900; }
+.utnba-card h3 { margin-bottom: 15px; color: var(--u-black); font-size: 23px; line-height: 1.2; }
+.utnba-card p { margin-bottom: 0; color: #5e5c61; font-size: 15px; line-height: 1.7; }
+.utnba-academy { background: #17171c; }
+.utnba-academy__grid { align-items: center; }
+.utnba-academy__image { position: relative; }
+.utnba-academy__image::before { content: ''; position: absolute; inset: -14px 14px 14px -14px; border: 1px solid var(--u-red); }
+.utnba-academy__image img { position: relative; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; filter: saturate(.72) contrast(1.08); }
+.utnba-academy__content > p { margin: 28px 0 32px; }
+.utnba-steps { margin: 0; padding: 0; list-style: none; border-top: 1px solid rgba(255,255,255,.12); }
+.utnba-steps li { display: grid; grid-template-columns: 44px 1fr auto; gap: 14px; align-items: center; padding: 17px 0; border-bottom: 1px solid rgba(255,255,255,.12); }
+.utnba-steps span { color: var(--u-red); font-size: 11px; font-weight: 900; }
+.utnba-steps strong { color: #fff; font-size: 15px; }
+.utnba-steps small { color: var(--u-muted); font-size: 12px; }
+.utnba-final { background: var(--u-red); }
+.utnba-final .utnba-kicker { color: rgba(255,255,255,.72); }
+.utnba-final h2 { max-width: 760px; }
+.utnba-final__grid > div > p { color: rgba(255,255,255,.78); }
+.utnba-button--light { background: #fff; color: var(--u-black) !important; }
+.utnba-button--line { border-color: rgba(255,255,255,.5); color: #fff !important; }
+
+@media (max-width: 800px) {
+  .utnba-hero { min-height: 680px; }
+  .utnba-hero__shade { background: linear-gradient(90deg, rgba(8,8,11,.94), rgba(8,8,11,.45)), linear-gradient(0deg, var(--u-black), transparent 40%); }
+  .utnba-intro__grid, .utnba-academy__grid, .utnba-final__grid { grid-template-columns: 1fr; }
+  .utnba-card-grid { grid-template-columns: 1fr; }
+  .utnba-card { min-height: auto; }
+  .utnba-card__number { margin-bottom: 42px; }
+}
+@media (max-width: 520px) {
+  .utnba-wrap { width: min(100% - 28px, 1180px); }
+  .utnba-hero__content { padding-top: 82px; }
+  .utnba-actions, .utnba-button { width: 100%; }
+  .utnba-steps li { grid-template-columns: 34px 1fr; }
+  .utnba-steps small { grid-column: 2; }
+}
+@media (prefers-reduced-motion: reduce) { .utnba-button { transition: none; } .utnba-button:hover { transform: none; } }
