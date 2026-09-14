@@ -1,28 +1,17 @@
 name: Deploy a cPanel (FTP)
 
-# ---------------------------------------------------------------------------
-# ESTE WORKFLOW ES EL CAMINO VIEJO / DE RESPALDO.
-#
-# El destino de producción pasó a ser Cloudflare Pages (o Vercel) sobre
-# utnbamotorsport.com.ar. Ninguno de los dos necesita este workflow: se conectan
-# al repo de GitHub y buildean solos en cada push, con preview por rama y
-# rollback a un click. Ver PROMPT-EJECUCION.md, sección "Hosting".
-#
-# Se deja acá porque:
-#   - hasta que el DNS esté apuntado, el cPanel sigue siendo el que sirve;
-#   - si alguna vez hay que volver, ya está andando.
-#
-# Cuando Cloudflare/Vercel esté funcionando y el cPanel no se use más, se borra.
-#
-# OJO si se sigue usando: el sitio necesita el fallback de SPA para que las
-# rutas no tiren 404. Eso lo resuelve public/.htaccess, que se copia a dist/ en
-# el build. Si el cPanel tiene AllowOverride en None, el .htaccess se ignora y
-# hay que pedirle al hosting que lo habilite.
-# ---------------------------------------------------------------------------
-
-# Deploy MANUAL: se dispara desde la pestaña Actions -> "Deploy a cPanel (FTP)" -> Run workflow.
+# Producción: https://utnbamotorsport.com.ar
+# Deploy manual desde Actions -> "Deploy a cPanel (FTP)" -> Run workflow.
+# La cuenta FTP se guarda en los Actions Secrets FTP_USERNAME y FTP_PASSWORD.
 on:
   workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cpanel-production
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -42,9 +31,9 @@ jobs:
           npm run build
 
       - name: Subir por FTP a public_html
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
-          server: ${{ secrets.FTP_SERVER }}
+          server: ftp.utnbamotorsport.com.ar
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
