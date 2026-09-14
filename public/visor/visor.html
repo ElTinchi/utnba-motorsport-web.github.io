@@ -37,6 +37,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+  <section class="orientation-hint" id="orientation-hint" role="dialog" aria-modal="true" aria-labelledby="orientation-title" hidden>
+    <div class="orientation-hint__card">
+      <div class="orientation-hint__icon" aria-hidden="true">
+        <span class="orientation-hint__phone"></span>
+        <svg viewBox="0 0 64 64"><path d="M15 23A22 22 0 0 1 48 14l4 4M49 41A22 22 0 0 1 16 50l-4-4M52 8v10H42M12 56V46h10" /></svg>
+      </div>
+      <p class="orientation-hint__eyebrow">MEJOR EXPERIENCIA 3D</p>
+      <h1 id="orientation-title">Gir&aacute; el celular</h1>
+      <p>Us&aacute; el visor en horizontal para ver el auto completo y ubicar tu logo con mayor precisi&oacute;n.</p>
+      <small>Tambi&eacute;n pod&eacute;s abrir esta experiencia desde una computadora.</small>
+      <button type="button" id="continue-portrait">Continuar en vertical</button>
+    </div>
+  </section>
   <a class="skip" href="#visor">Saltar al visualizador</a>
   <header class="header viewer-header">
     <a class="brand" href="/"><img src="assets/logo.png" alt="UTN BA Motorsport" width="205" height="45"></a>
@@ -82,6 +95,6 @@
     </div>
     <div class="viewer-foot"><span>INGENIERÍA PÚBLICA ARGENTINA.</span><a href="/sponsors">Conocé a quienes ya nos acompañan ↗</a></div>
   </main>
-  <script type="module" src="visor.js?v=mobile-memory-21"></script>
+  <script type="module" src="visor.js?v=mobile-orientation-22"></script>
 </body>
 </html>

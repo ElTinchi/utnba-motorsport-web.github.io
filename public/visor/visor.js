@@ -129,7 +129,18 @@ async function load(){
     mark();
   }catch(error){if(error.name!=='AbortError'){console.error(error);showError(error.message||'Ocurrió un problema al cargar el auto.');}}
 }
-load();
+const portraitQuery=matchMedia('(max-width: 760px) and (orientation: portrait) and (pointer: coarse)');
+const orientationHint=$('orientation-hint');
+let portraitOverride=false,loadStarted=false;
+function startWhenReady(){
+  if(portraitQuery.matches&&!portraitOverride){orientationHint.hidden=false;return;}
+  orientationHint.hidden=true;
+  if(!loadStarted){loadStarted=true;load();}
+}
+$('continue-portrait').addEventListener('click',()=>{portraitOverride=true;startWhenReady();});
+if(portraitQuery.addEventListener)portraitQuery.addEventListener('change',startWhenReady);
+else portraitQuery.addListener(startWhenReady);
+startWhenReady();
 document.querySelectorAll('[data-view]').forEach(button=>button.addEventListener('click',()=>chooseView(button.dataset.view)));
 $('zoom-in').addEventListener('click',()=>zoom(.88));$('zoom-out').addEventListener('click',()=>zoom(1.14));$('reset-view').addEventListener('click',()=>chooseView('three'));
 $('rotate').addEventListener('click',()=>{auto=!auto;if(auto){setPlacing(false);clearPreset();}$('rotate').setAttribute('aria-pressed',String(auto));mark();});
