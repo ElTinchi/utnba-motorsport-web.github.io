@@ -101,7 +101,7 @@ export default function Home() {
       {/* ====== HERO - Auto difuminado de fondo + logo ====== */}
       <section className="hero" aria-label="UTN BA Motorsport">
         <div className="hero__bg">
-          <img
+          <img draggable={false}
             src="/assets/img/render_fsae.jpg"
             alt="Monoplaza Fórmula SAE eléctrico de UTN BA Motorsport"
             className="hero__bg-img"
@@ -176,7 +176,7 @@ export default function Home() {
         </div>
 
         <div className="hero__content">
-          <img src="/assets/img/logo.png" alt="UTN BA Motorsport" className="hero__logo" width="440" height="86" />
+          <img draggable={false} src="/assets/img/logo.png" alt="UTN BA Motorsport" className="hero__logo" width="440" height="86" />
           <span className="hero__tagline">{t('home.heroPlate')}</span>
         </div>
       </section>
@@ -256,7 +256,7 @@ export default function Home() {
                   key={level.title}
                   className="academy-level"
                 >
-                  <img
+                  <img draggable={false}
                     className={`academy-level__logo academy-level__logo--${index + 1}`}
                     src={ACADEMY_LOGOS[index]}
                     alt={level.logoAlt}

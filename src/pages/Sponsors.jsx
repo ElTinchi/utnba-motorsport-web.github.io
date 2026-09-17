@@ -59,7 +59,7 @@ export default function Sponsors() {
               <li className="sp-story" key={step.number}>
                 <div className="sp-story__marker" aria-hidden="true"><span>{step.number}</span></div>
                 <div className="sp-story__content">
-                  <img
+                  <img draggable={false}
                     className={`sp-story__logo sp-story__logo--${index + 1}`}
                     src={JOURNEY_LOGOS[index]}
                     alt={step.logoAlt}
@@ -104,7 +104,7 @@ export default function Sponsors() {
 
         <section className="sp-viewer" id="tu-logo" aria-labelledby="viewer-title">
           <div className="sp-viewer__visual">
-            <img src="/assets/img/render_fsae.jpg" alt={t('sponsorsPage.viewer.imageAlt')} width="1920" height="1080" loading="lazy" />
+            <img draggable={false} src="/assets/img/render_fsae.jpg" alt={t('sponsorsPage.viewer.imageAlt')} width="1920" height="1080" loading="lazy" />
             <span className="sp-viewer__badge">{t('sponsorsPage.viewer.badge')}</span>
             <div className="sp-viewer__sizes" aria-hidden="true">
               {sizes.map((size) => <span key={size}>{size}</span>)}

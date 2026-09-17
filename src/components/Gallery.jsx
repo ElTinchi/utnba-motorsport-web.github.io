@@ -33,7 +33,7 @@ export default function Gallery({ area, label }) {
     <ul className="gallery" role="list">
       {photos.map((src, i) => (
         <li key={src} className="gallery__item">
-          <img src={src} alt={`${label} — foto ${i + 1}`} loading="lazy" />
+          <img draggable={false} src={src} alt={`${label} — foto ${i + 1}`} loading="lazy" />
         </li>
       ))}
     </ul>

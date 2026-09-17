@@ -35,7 +35,7 @@ export default function Academy() {
           >
             <div className="ms-section__index">{section.number}</div>
             <div className="ms-section__content">
-              <img
+              <img draggable={false}
                 className={`ms-section__logo ms-section__logo--${index + 1}`}
                 src={CATEGORY_LOGOS[index]}
                 alt={section.logoAlt}

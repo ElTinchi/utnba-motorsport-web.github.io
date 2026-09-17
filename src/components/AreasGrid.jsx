@@ -42,7 +42,7 @@ export default function AreasGrid() {
       {AREAS.map((area) => (
         <li key={area.id}>
           <NavLink to={`${ROUTES.team}#${area.id}`} className="area-card">
-            <img
+            <img draggable={false}
               src={area.icon}
               alt=""
               className="area-card__icon"

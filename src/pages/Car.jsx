@@ -23,7 +23,7 @@ export default function Car() {
     >
       <div className="shell-block">
         <figure className="car-hero">
-          <img
+          <img draggable={false}
             src="/assets/img/render_fsae.jpg"
             alt={t('carPage.renderAlt')}
             width="1920"
@@ -55,7 +55,7 @@ export default function Car() {
           </ul>
 
           <a className="car-viewer__preview" href={RENDER_APP_URL} aria-label={t('carPage.viewer.openButton')}>
-            <img src="/assets/img/render_fsae.jpg" alt="" loading="lazy" />
+            <img draggable={false} src="/assets/img/render_fsae.jpg" alt="" loading="lazy" />
             <span>{t('carPage.viewer.openButton')} <span aria-hidden="true">↗</span></span>
           </a>
           <a

@@ -22,7 +22,7 @@ export default function Footer() {
 
       <div className="footer__main">
         <div className="footer__identity">
-          <NavLink to={ROUTES.home} className="footer__brand" aria-label="UTN BA Motorsport"><picture><source srcSet="/assets/img/logo-light.png" media="(prefers-color-scheme: light)" /><img src="/assets/img/logo.png" alt="UTN BA Motorsport" className="footer__logo" width="215" height="45" /></picture></NavLink>
+          <NavLink to={ROUTES.home} className="footer__brand" aria-label="UTN BA Motorsport"><picture><source srcSet="/assets/img/logo-light.png" media="(prefers-color-scheme: light)" /><img draggable={false} src="/assets/img/logo.png" alt="UTN BA Motorsport" className="footer__logo" width="215" height="45" /></picture></NavLink>
           <p className="footer__manifesto">{t('footer.description')}</p>
           <div className="footer__social" aria-label={t('footer.socialLabel')}>{SOCIALS.map(([label, href, path]) => <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="footer__social-link" aria-label={`${t('footer.followOn')} ${label}`}><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d={path} /></svg></a>)}</div>
         </div>

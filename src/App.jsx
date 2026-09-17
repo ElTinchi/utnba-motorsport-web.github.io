@@ -42,6 +42,21 @@ function ScrollToTop() {
 }
 
 export default function App() {
+  useEffect(() => {
+    // Discourage casual image copying without blocking text or normal navigation.
+    const protectImage = (event) => {
+      if (event.target instanceof Element && event.target.closest('img, picture')) {
+        event.preventDefault();
+      }
+    };
+    document.addEventListener('contextmenu', protectImage);
+    document.addEventListener('dragstart', protectImage);
+    return () => {
+      document.removeEventListener('contextmenu', protectImage);
+      document.removeEventListener('dragstart', protectImage);
+    };
+  }, []);
+
   return (
     <>
       <ScrollToTop />

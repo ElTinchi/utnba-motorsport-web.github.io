@@ -1,0 +1,404 @@
+{
+  "es": {
+    "labels": {
+      "kicker": "Novedades",
+      "title": "Nuestra historia, en marcha.",
+      "intro": "Del primer encuentro al chasis terminado. Los avances, las experiencias y los momentos que construyen UTN BA Motorsport.",
+      "latest": "Lo más reciente",
+      "archive": "Los hitos del equipo",
+      "socialTitle": "El día a día también corre.",
+      "socialText": "Más momentos del taller y del equipo en nuestro Instagram.",
+      "socialButton": "Seguinos en Instagram",
+      "gallery": "Más fotos",
+      "source": "Leer en Carburando",
+      "instagram": "Ver en Instagram",
+      "share": "Compartir",
+      "copied": "¡Enlace copiado!",
+      "manualCopy": "Copiá este enlace para compartir la nota.",
+      "copyLink": "Enlace de la nota"
+    },
+    "posts": [
+      {
+        "id": "expo-carreras-2026",
+        "dateTime": "2026-09-16",
+        "mark": "16.09",
+        "year": "2026",
+        "date": "16 de septiembre de 2026",
+        "category": "Eventos",
+        "title": "Llevamos el proyecto a la Expo Carreras de UTN",
+        "paragraphs": [
+          "Participamos de la Expo Carreras de UTN con nuestro proyecto de automovilismo universitario. Una nueva oportunidad para acercar UTN BA Motorsport a la comunidad y compartir el trabajo que venimos realizando.",
+          "Desde el inicio del proyecto en 2025, cada encuentro nos permite contar cómo llevamos la ingeniería del aula a un desafío en equipo."
+        ],
+        "image": null
+      },
+      {
+        "id": "circuito-virtual-campus",
+        "dateTime": "2026-08-21",
+        "mark": "21.08",
+        "year": "2026",
+        "date": "21 de agosto de 2026",
+        "category": "Comunidad",
+        "title": "El Campus se convirtió en un circuito virtual",
+        "paragraphs": [
+          "Compartimos una jornada de simulación en el Campus de UTN Buenos Aires. Los asistentes pudieron recorrer un circuito virtual inspirado en nuestra facultad y conocer el proyecto de Fórmula SAE.",
+          "La actividad acercó el trabajo del equipo a la comunidad universitaria y contó con la participación del decano Guillermo Oliveto."
+        ],
+        "image": "/assets/img/news/campus-01.webp",
+        "imageAlt": "Integrantes del equipo conversan con visitantes en el Campus.",
+        "gallery": [
+          {
+            "src": "/assets/img/news/campus-02.webp",
+            "alt": "El equipo comparte material del proyecto con los visitantes."
+          },
+          {
+            "src": "/assets/img/news/campus-03.webp",
+            "alt": "Una conversación sobre el proyecto durante la jornada del Campus."
+          }
+        ],
+        "instagramUrl": "https://www.instagram.com/reel/DccDFyuvX3o/"
+      },
+      {
+        "id": "chasis-presentacion",
+        "dateTime": "2026-07-28",
+        "mark": "28.07",
+        "year": "2026",
+        "date": "28 de julio de 2026",
+        "category": "Desarrollo",
+        "title": "Terminamos el chasis y lo presentamos ante las autoridades",
+        "paragraphs": [
+          "Terminamos el chasis de nuestro monoplaza. Un hito técnico que convirtió parte del trabajo de diseño y fabricación en una estructura concreta para seguir construyendo el vehículo.",
+          "Ese mismo día lo expusimos ante las autoridades de UTN Buenos Aires y compartimos los avances del proyecto."
+        ],
+        "image": "/assets/img/news/chasis-equipo.webp",
+        "imageAlt": "El equipo completo reunido junto al chasis del monoplaza.",
+        "instagramUrl": "https://www.instagram.com/p/DbbG_oSkc2T/",
+        "instagramLabel": "Ver el proyecto institucional en Instagram",
+        "gallery": [
+          {
+            "src": "/assets/img/news/autoridades-exposicion.webp",
+            "alt": "Integrantes del equipo exponen el proyecto junto al chasis."
+          },
+          {
+            "src": "/assets/img/news/autoridades-presentacion.webp",
+            "alt": "Vista general de la presentación del equipo ante las autoridades."
+          }
+        ]
+      },
+      {
+        "id": "carburando-2026",
+        "dateTime": "2026-05-07",
+        "mark": "07.05",
+        "year": "2026",
+        "date": "7 de mayo de 2026",
+        "category": "Prensa",
+        "title": "Compartimos nuestro proyecto en Carburando",
+        "paragraphs": [
+          "Compartimos con Carburando el proyecto de UTN BA Motorsport y el trabajo que venimos realizando para desarrollar nuestro monoplaza.",
+          "La cobertura acercó nuestro objetivo de participar en Fórmula SAE Brasil 2027 al público del automovilismo."
+        ],
+        "image": "/assets/img/news/carburando.webp",
+        "imageAlt": "Un integrante del equipo durante la entrevista de Carburando.",
+        "sourceUrl": "https://www.carburando.com/notas/utn-ba-motorsport-el-equipo-de-estudiantes-argentinos-que-correran-la-formula-sae-2027-en-brasil",
+        "instagramUrl": "https://www.instagram.com/reel/DYVWCrIpAit/"
+      },
+      {
+        "id": "road-show-colapinto",
+        "dateTime": "2026-04-26",
+        "mark": "26.04",
+        "year": "2026",
+        "date": "26 de abril de 2026",
+        "category": "Eventos",
+        "title": "Estuvimos en el Road Show de Franco Colapinto",
+        "paragraphs": [
+          "Participamos del Road Show de Franco Colapinto con un stand y dos simuladores para compartir nuestro proyecto con el público.",
+          "Quienes se acercaron pudieron probar el modelo virtual de nuestro auto en un circuito ambientado en el Campus de UTN Buenos Aires."
+        ],
+        "image": "/assets/img/news/colapinto.webp",
+        "imageAlt": "Integrantes de UTN BA Motorsport en su stand del Road Show de Franco Colapinto.",
+        "instagramUrl": "https://www.instagram.com/p/DXpf5P3iQg0/"
+      },
+      {
+        "id": "nace-utnba-motorsport",
+        "mark": "2025",
+        "year": "UTN BA",
+        "date": "Octubre–noviembre de 2025",
+        "category": "Equipo",
+        "title": "Así comenzó UTN BA Motorsport",
+        "paragraphs": [
+          "Entre octubre y noviembre de 2025 pusimos en marcha UTN BA Motorsport. Comenzaba el desafío de diseñar y construir un vehículo de competición universitario.",
+          "Ese fue el punto de partida del trabajo del equipo y de nuestro camino hacia Fórmula SAE Brasil 2027."
+        ],
+        "image": null
+      }
+    ]
+  },
+  "en": {
+    "labels": {
+      "kicker": "News",
+      "title": "Our story, in motion.",
+      "intro": "From our first meeting to a completed chassis. The progress, experiences and moments that shape UTN BA Motorsport.",
+      "latest": "Latest news",
+      "archive": "Team milestones",
+      "socialTitle": "Follow our everyday progress.",
+      "socialText": "More from the workshop and the team on Instagram.",
+      "socialButton": "Follow us on Instagram",
+      "gallery": "More photos",
+      "source": "Read on Carburando",
+      "instagram": "View on Instagram",
+      "share": "Share",
+      "copied": "Link copied!",
+      "manualCopy": "Copy this link to share the story.",
+      "copyLink": "Story link"
+    },
+    "posts": [
+      {
+        "id": "expo-carreras-2026",
+        "dateTime": "2026-09-16",
+        "mark": "16.09",
+        "year": "2026",
+        "date": "September 16, 2026",
+        "category": "Events",
+        "title": "Our project at UTN's degree fair",
+        "paragraphs": [
+          "We took part in UTN's degree fair with our university motorsport project. It was another opportunity to introduce UTN BA Motorsport to the community and share our progress.",
+          "Since the project began in 2025, these gatherings have helped us explain how we turn classroom engineering into a team challenge."
+        ],
+        "image": null
+      },
+      {
+        "id": "circuito-virtual-campus",
+        "dateTime": "2026-08-21",
+        "mark": "21.08",
+        "year": "2026",
+        "date": "August 21, 2026",
+        "category": "Community",
+        "title": "Turning our campus into a virtual circuit",
+        "paragraphs": [
+          "We hosted a simulation event at UTN Buenos Aires. Visitors explored a virtual circuit inspired by our campus and learned about our Formula SAE project.",
+          "The event brought the team's work closer to the university community, with Dean Guillermo Oliveto also attending."
+        ],
+        "image": "/assets/img/news/campus-01.webp",
+        "imageAlt": "Team members speak with visitors on campus.",
+        "gallery": [
+          {
+            "src": "/assets/img/news/campus-02.webp",
+            "alt": "The team shares project materials with visitors."
+          },
+          {
+            "src": "/assets/img/news/campus-03.webp",
+            "alt": "Discussing the project during the campus event."
+          }
+        ],
+        "instagramUrl": "https://www.instagram.com/reel/DccDFyuvX3o/"
+      },
+      {
+        "id": "chasis-presentacion",
+        "dateTime": "2026-07-28",
+        "mark": "28.07",
+        "year": "2026",
+        "date": "July 28, 2026",
+        "category": "Development",
+        "title": "Chassis complete: presenting our progress to university authorities",
+        "paragraphs": [
+          "We completed our single-seater's chassis. This technical milestone turned part of our design and manufacturing work into a physical structure for the vehicle.",
+          "On the same day, we presented it to UTN Buenos Aires authorities and shared the project's progress."
+        ],
+        "image": "/assets/img/news/chasis-equipo.webp",
+        "imageAlt": "The full team gathered alongside the car chassis.",
+        "instagramUrl": "https://www.instagram.com/p/DbbG_oSkc2T/",
+        "instagramLabel": "View the institutional project on Instagram",
+        "gallery": [
+          {
+            "src": "/assets/img/news/autoridades-exposicion.webp",
+            "alt": "Team members present the project alongside the chassis."
+          },
+          {
+            "src": "/assets/img/news/autoridades-presentacion.webp",
+            "alt": "A wide view of the team presentation to university authorities."
+          }
+        ]
+      },
+      {
+        "id": "carburando-2026",
+        "dateTime": "2026-05-07",
+        "mark": "07.05",
+        "year": "2026",
+        "date": "May 7, 2026",
+        "category": "Press",
+        "title": "Sharing our project with Carburando",
+        "paragraphs": [
+          "We shared the UTN BA Motorsport project and our work on the single-seater with Carburando.",
+          "The coverage introduced our goal of taking part in Formula SAE Brazil 2027 to a wider motorsport audience."
+        ],
+        "image": "/assets/img/news/carburando.webp",
+        "imageAlt": "A team member during the Carburando interview.",
+        "sourceUrl": "https://www.carburando.com/notas/utn-ba-motorsport-el-equipo-de-estudiantes-argentinos-que-correran-la-formula-sae-2027-en-brasil",
+        "instagramUrl": "https://www.instagram.com/reel/DYVWCrIpAit/"
+      },
+      {
+        "id": "road-show-colapinto",
+        "dateTime": "2026-04-26",
+        "mark": "26.04",
+        "year": "2026",
+        "date": "April 26, 2026",
+        "category": "Events",
+        "title": "At Franco Colapinto's Road Show",
+        "paragraphs": [
+          "We attended Franco Colapinto's Road Show with a stand and two simulators to share our project with visitors.",
+          "Visitors tried the virtual model of our car on a circuit set within the UTN Buenos Aires campus."
+        ],
+        "image": "/assets/img/news/colapinto.webp",
+        "imageAlt": "UTN BA Motorsport members at their stand at Franco Colapinto's Road Show.",
+        "instagramUrl": "https://www.instagram.com/p/DXpf5P3iQg0/"
+      },
+      {
+        "id": "nace-utnba-motorsport",
+        "mark": "2025",
+        "year": "UTN BA",
+        "date": "October–November 2025",
+        "category": "Team",
+        "title": "How UTN BA Motorsport began",
+        "paragraphs": [
+          "We launched UTN BA Motorsport between October and November 2025, taking on the challenge of designing and building a university competition car.",
+          "This marked the beginning of our teamwork and our journey towards Formula SAE Brazil 2027."
+        ],
+        "image": null
+      }
+    ]
+  },
+  "pt": {
+    "labels": {
+      "kicker": "Novidades",
+      "title": "Nossa história, em movimento.",
+      "intro": "Do primeiro encontro ao chassi concluído. Os avanços, as experiências e os momentos que constroem a UTN BA Motorsport.",
+      "latest": "Mais recente",
+      "archive": "Marcos da equipe",
+      "socialTitle": "Acompanhe nosso dia a dia.",
+      "socialText": "Mais momentos da oficina e da equipe no Instagram.",
+      "socialButton": "Siga-nos no Instagram",
+      "gallery": "Mais fotos",
+      "source": "Leia no Carburando",
+      "instagram": "Ver no Instagram",
+      "share": "Compartilhar",
+      "copied": "Link copiado!",
+      "manualCopy": "Copie este link para compartilhar a notícia.",
+      "copyLink": "Link da notícia"
+    },
+    "posts": [
+      {
+        "id": "expo-carreras-2026",
+        "dateTime": "2026-09-16",
+        "mark": "16.09",
+        "year": "2026",
+        "date": "16 de setembro de 2026",
+        "category": "Eventos",
+        "title": "Nosso projeto na Expo Carreras da UTN",
+        "paragraphs": [
+          "Participamos da Expo Carreras da UTN com nosso projeto de automobilismo universitário. Uma nova oportunidade de apresentar a UTN BA Motorsport à comunidade e compartilhar nossos avanços.",
+          "Desde o início do projeto em 2025, cada encontro nos permite mostrar como levamos a engenharia da sala de aula a um desafio em equipe."
+        ],
+        "image": null
+      },
+      {
+        "id": "circuito-virtual-campus",
+        "dateTime": "2026-08-21",
+        "mark": "21.08",
+        "year": "2026",
+        "date": "21 de agosto de 2026",
+        "category": "Comunidade",
+        "title": "O Campus virou um circuito virtual",
+        "paragraphs": [
+          "Realizamos uma atividade de simulação no Campus da UTN Buenos Aires. Os visitantes puderam percorrer um circuito virtual inspirado na faculdade e conhecer o projeto de Fórmula SAE.",
+          "A atividade aproximou o trabalho da equipe da comunidade universitária e contou com a presença do decano Guillermo Oliveto."
+        ],
+        "image": "/assets/img/news/campus-01.webp",
+        "imageAlt": "Integrantes da equipe conversam com visitantes no Campus.",
+        "gallery": [
+          {
+            "src": "/assets/img/news/campus-02.webp",
+            "alt": "A equipe compartilha materiais do projeto com visitantes."
+          },
+          {
+            "src": "/assets/img/news/campus-03.webp",
+            "alt": "Uma conversa sobre o projeto durante o evento no Campus."
+          }
+        ],
+        "instagramUrl": "https://www.instagram.com/reel/DccDFyuvX3o/"
+      },
+      {
+        "id": "chasis-presentacion",
+        "dateTime": "2026-07-28",
+        "mark": "28.07",
+        "year": "2026",
+        "date": "28 de julho de 2026",
+        "category": "Desenvolvimento",
+        "title": "Chassi concluído e apresentado às autoridades",
+        "paragraphs": [
+          "Concluímos o chassi do nosso monoposto. Um marco técnico que transformou parte do trabalho de projeto e fabricação em uma estrutura concreta para continuar construindo o veículo.",
+          "No mesmo dia, apresentamos o chassi às autoridades da UTN Buenos Aires e compartilhamos os avanços do projeto."
+        ],
+        "image": "/assets/img/news/chasis-equipo.webp",
+        "imageAlt": "A equipe completa reunida ao lado do chassi do monoposto.",
+        "instagramUrl": "https://www.instagram.com/p/DbbG_oSkc2T/",
+        "instagramLabel": "Ver o projeto institucional no Instagram",
+        "gallery": [
+          {
+            "src": "/assets/img/news/autoridades-exposicion.webp",
+            "alt": "Integrantes da equipe apresentam o projeto ao lado do chassi."
+          },
+          {
+            "src": "/assets/img/news/autoridades-presentacion.webp",
+            "alt": "Vista geral da apresentação da equipe às autoridades."
+          }
+        ]
+      },
+      {
+        "id": "carburando-2026",
+        "dateTime": "2026-05-07",
+        "mark": "07.05",
+        "year": "2026",
+        "date": "7 de maio de 2026",
+        "category": "Imprensa",
+        "title": "Compartilhamos nosso projeto com o Carburando",
+        "paragraphs": [
+          "Apresentamos ao Carburando o projeto da UTN BA Motorsport e o trabalho no desenvolvimento do nosso monoposto.",
+          "A cobertura levou nosso objetivo de participar da Fórmula SAE Brasil 2027 ao público do automobilismo."
+        ],
+        "image": "/assets/img/news/carburando.webp",
+        "imageAlt": "Um integrante da equipe durante a entrevista do Carburando.",
+        "sourceUrl": "https://www.carburando.com/notas/utn-ba-motorsport-el-equipo-de-estudiantes-argentinos-que-correran-la-formula-sae-2027-en-brasil",
+        "instagramUrl": "https://www.instagram.com/reel/DYVWCrIpAit/"
+      },
+      {
+        "id": "road-show-colapinto",
+        "dateTime": "2026-04-26",
+        "mark": "26.04",
+        "year": "2026",
+        "date": "26 de abril de 2026",
+        "category": "Eventos",
+        "title": "No Road Show de Franco Colapinto",
+        "paragraphs": [
+          "Participamos do Road Show de Franco Colapinto com um estande e dois simuladores para compartilhar nosso projeto com o público.",
+          "Os visitantes puderam experimentar o modelo virtual do nosso carro em um circuito ambientado no Campus da UTN Buenos Aires."
+        ],
+        "image": "/assets/img/news/colapinto.webp",
+        "imageAlt": "Integrantes da UTN BA Motorsport no estande do Road Show de Franco Colapinto.",
+        "instagramUrl": "https://www.instagram.com/p/DXpf5P3iQg0/"
+      },
+      {
+        "id": "nace-utnba-motorsport",
+        "mark": "2025",
+        "year": "UTN BA",
+        "date": "Outubro–novembro de 2025",
+        "category": "Equipe",
+        "title": "O início da UTN BA Motorsport",
+        "paragraphs": [
+          "Entre outubro e novembro de 2025, iniciamos a UTN BA Motorsport com o desafio de projetar e construir um veículo de competição universitário.",
+          "Esse foi o ponto de partida do trabalho da equipe e do nosso caminho rumo à Fórmula SAE Brasil 2027."
+        ],
+        "image": null
+      }
+    ]
+  }
+}

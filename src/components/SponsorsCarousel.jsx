@@ -26,7 +26,7 @@ function Logo({ sponsor, duplicate = false }) {
   if (!sponsor.href) {
     return (
       <span className="sp-car__item" aria-hidden={duplicate || undefined}>
-        <img src={sponsor.logo} alt={duplicate ? '' : sponsor.name} loading="lazy" />
+        <img draggable={false} src={sponsor.logo} alt={duplicate ? '' : sponsor.name} loading="lazy" />
       </span>
     );
   }
@@ -40,7 +40,7 @@ function Logo({ sponsor, duplicate = false }) {
       tabIndex={duplicate ? -1 : undefined}
       aria-hidden={duplicate || undefined}
     >
-      <img src={sponsor.logo} alt={duplicate ? '' : sponsor.name} loading="lazy" />
+      <img draggable={false} src={sponsor.logo} alt={duplicate ? '' : sponsor.name} loading="lazy" />
     </a>
   );
 }

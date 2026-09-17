@@ -1,104 +1,90 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import PageShell from '../components/PageShell.jsx';
+import content from '../data/news.json';
 import '../styles/news.css';
 
-const INSTAGRAM_URL = 'https://www.instagram.com/utnbamotorsport/';
+function NewsArticle({ post, labels, featured = false }) {
+  const [shareStatus, setShareStatus] = useState('');
+  const [manualUrl, setManualUrl] = useState('');
+  const [sharing, setSharing] = useState(false);
 
-// El feed no se pide a Instagram desde el navegador: eso lo bloquea CORS y
-// además obligaría a exponer el token en el bundle, que es público. En su
-// lugar, un workflow de GitHub Actions llama a la API con el token guardado en
-// Secrets y deja el resultado en public/data/instagram.json. Acá solo se lee
-// ese archivo propio: rápido, sin terceros, y si Instagram se cae la página
-// sigue mostrando los últimos posts que se hayan traído.
-// Ver .github/workflows/instagram.yml
-const FEED_URL = '/data/instagram.json';
-
-function formatDate(iso, locale) {
-  if (!iso) return '';
-  try {
-    return new Date(iso).toLocaleDateString(locale, {
-      day: 'numeric',
-      month: 'long',
-      year: 'numeric',
-    });
-  } catch {
-    return '';
+  async function sharePost() {
+    const url = new URL(window.location.pathname, window.location.origin);
+    url.hash = post.id;
+    const link = url.href;
+    setShareStatus('');
+    setManualUrl('');
+    setSharing(true);
+    try {
+      if (navigator.share) {
+        try {
+          await navigator.share({ title: post.title, url: link });
+          return;
+        } catch (error) {
+          if (error.name === 'AbortError') return;
+        }
+      }
+      try {
+        await navigator.clipboard.writeText(link);
+        setShareStatus('copied');
+      } catch {
+        setManualUrl(link);
+        setShareStatus('manualCopy');
+      }
+    } finally {
+      setSharing(false);
+    }
   }
+
+  return (
+    <article id={post.id} className={`news-story${featured ? ' news-story--featured' : ''}`} aria-labelledby={`${post.id}-title`}>
+      <div className={`news-story__visual${post.image ? " news-story__visual--photo" : ""}`} aria-hidden={post.image ? undefined : true}>
+        {post.image ? <img draggable={false} src={post.image} alt={post.imageAlt || ""} loading={featured ? 'eager' : 'lazy'} decoding="async" /> : <>
+          <span className="news-story__edition">UTN BA / MOTORSPORT</span>
+          <strong className="news-story__number">{post.mark}</strong>
+          <span className="news-story__year">{post.year}</span>
+        </>}
+      </div>
+      <div className="news-story__body">
+        <div className="news-story__meta">
+          <span>{featured ? labels.latest : post.category}</span>
+          {post.dateTime ? <time dateTime={post.dateTime}>{post.date}</time> : <span>{post.date}</span>}
+        </div>
+        <h2 id={`${post.id}-title`}><a href={`#${post.id}`}>{post.title}</a></h2>
+        {post.gallery?.length > 0 && <div className="news-story__gallery" role="group" aria-label={labels.gallery}>
+          {post.gallery.map(photo => <div key={photo.src}><img draggable={false} src={photo.src} alt={photo.alt} loading="lazy" decoding="async" /></div>)}
+        </div>}
+        {post.paragraphs.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
+        {post.instagramUrl && <a className="news-story__source" href={post.instagramUrl} target="_blank" rel="noopener noreferrer">{post.instagramLabel || labels.instagram} <span aria-hidden="true">↗</span></a>}
+        {post.sourceUrl && <a className="news-story__source" href={post.sourceUrl} target="_blank" rel="noopener noreferrer">{labels.source} ↗</a>}
+        <div className="news-story__sharing">
+          <button type="button" className="news-story__share" onClick={sharePost} disabled={sharing} aria-label={`${labels.share}: ${post.title}`}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg>
+            {labels.share}
+          </button>
+          <span role="status" className="news-story__share-status">{shareStatus ? labels[shareStatus] : ''}</span>
+          {manualUrl && <input className="news-story__share-url" aria-label={labels.copyLink} value={manualUrl} readOnly onFocus={event => event.target.select()} />}
+        </div>
+      </div>
+    </article>
+  );
 }
 
 export default function News() {
-  const { t, i18n } = useTranslation();
-  // idle -> loading -> ready | empty
-  const [state, setState] = useState('loading');
-  const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
-    let cancelled = false;
-
-    fetch(FEED_URL)
-      .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
-      .then((data) => {
-        if (cancelled) return;
-        const list = Array.isArray(data?.posts) ? data.posts : [];
-        setPosts(list);
-        setState(list.length ? 'ready' : 'empty');
-      })
-      .catch(() => {
-        // Sin feed todavía: no es un error que le importe al visitante,
-        // simplemente mostramos el bloque que invita a seguir la cuenta.
-        if (!cancelled) setState('empty');
-      });
-
-    return () => {
-      cancelled = true;
-    };
-  }, []);
-
+  const { i18n } = useTranslation();
+  const language = (i18n.resolvedLanguage || 'es').split('-')[0];
+  const { labels, posts } = content[language] || content.es;
   return (
-    <PageShell
-      kicker={t('newsPage.kicker')}
-      title={t('newsPage.title')}
-      intro={t('newsPage.intro')}
-    >
-      <div className="shell-block">
-        {state === 'loading' && <p className="news-status">{t('newsPage.loading')}</p>}
-
-        {state === 'ready' && (
-          <ul className="news-grid" role="list">
-            {posts.map((post) => (
-              <li key={post.id} className="news-card">
-                <a href={post.permalink} target="_blank" rel="noopener noreferrer">
-                  {post.mediaUrl && (
-                    <img src={post.mediaUrl} alt="" loading="lazy" className="news-card__img" />
-                  )}
-                  <div className="news-card__body">
-                    <time className="news-card__date" dateTime={post.timestamp}>
-                      {formatDate(post.timestamp, i18n.language)}
-                    </time>
-                    {post.caption && <p className="news-card__caption">{post.caption}</p>}
-                  </div>
-                </a>
-              </li>
-            ))}
-          </ul>
-        )}
-
-        {state === 'empty' && (
-          <div className="news-empty">
-            <span className="news-empty__badge">{t('newsPage.emptyBadge')}</span>
-            <h2 className="news-empty__title">{t('newsPage.emptyTitle')}</h2>
-            <p className="news-empty__text">{t('newsPage.emptyText')}</p>
-            <a
-              className="btn btn--primary"
-              href={INSTAGRAM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {t('newsPage.emptyButton')}
-            </a>
-          </div>
-        )}
+    <PageShell wide kicker={labels.kicker} title={labels.title} intro={labels.intro}>
+      <div className="shell-block news-journal">
+        <NewsArticle post={posts[0]} labels={labels} featured />
+        <div className="news-journal__heading"><h2>{labels.archive}</h2><span>2025 — 2026</span></div>
+        <div className="news-grid">{posts.slice(1).map(post => <NewsArticle key={post.id} post={post} labels={labels} />)}</div>
+        <aside className="news-social">
+          <div><span className="news-social__label">PADDOCK / UTN BA</span><h2>{labels.socialTitle}</h2><p>{labels.socialText}</p></div>
+          <a className="btn btn--primary" href="https://www.instagram.com/utnbamotorsport/" target="_blank" rel="noopener noreferrer">{labels.socialButton} <span aria-hidden="true">↗</span></a>
+        </aside>
       </div>
     </PageShell>
   );

@@ -40,7 +40,7 @@ export default function Header() {
         <NavLink to={ROUTES.home} className="header__logo" aria-label="UTN BA Motorsport" onClick={closeAll}>
           <picture>
             <source srcSet="/assets/img/logo-light.png" media="(prefers-color-scheme: light)" />
-            <img src="/assets/img/logo.png" alt="UTN BA Motorsport" className="header__logo-img" width="215" height="45" />
+            <img draggable={false} src="/assets/img/logo.png" alt="UTN BA Motorsport" className="header__logo-img" width="215" height="45" />
           </picture>
         </NavLink>
 

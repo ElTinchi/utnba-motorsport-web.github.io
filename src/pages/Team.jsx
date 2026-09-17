@@ -17,7 +17,7 @@ export default function Team() {
       intro={t('teamPage.intro')}
     >
       <figure className="shell-block team-photo">
-        <img
+        <img draggable={false}
           src="/assets/img/Nosotros.jpg"
           alt={t('teamPage.photoAlt')}
           width="3869"
@@ -40,7 +40,7 @@ export default function Team() {
         {AREAS.map((area) => (
           <article key={area.id} className="team-area" id={area.id}>
             <header className="team-area__head">
-              <img src={area.icon} alt="" className="team-area__icon" width="64" height="64" loading="lazy" />
+              <img draggable={false} src={area.icon} alt="" className="team-area__icon" width="64" height="64" loading="lazy" />
               <div>
                 <h3 className="team-area__title">{t(`areas.items.${area.id}.title`)}</h3>
                 <span className="team-area__subtitle">{t(`areas.items.${area.id}.subtitle`)}</span>
