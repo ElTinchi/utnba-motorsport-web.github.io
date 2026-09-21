@@ -43,7 +43,7 @@ export default function Sponsors() {
 
       <div className="sp-proof" aria-label={t('sponsorsPage.proofLabel')}>
         <p className="sp-proof__label">{t('sponsorsPage.proofLabel')}</p>
-        <SponsorsCarousel speed={45} />
+        <SponsorsCarousel />
       </div>
 
       <div className="sp-page__container" id="recorrido">

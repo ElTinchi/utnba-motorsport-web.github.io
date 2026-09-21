@@ -296,7 +296,7 @@ export default function Home() {
             <NavLink to={ROUTES.sponsors} className="btn btn--primary">{t('home.sponsorsCta')}</NavLink>
           </div>
           <h3 className="home-sponsors__title">{t('home.sponsorsTitle')}</h3>
-          <SponsorsCarousel speed={50} />
+          <SponsorsCarousel />
           <NavLink to={ROUTES.sponsors} className="home-sponsors__link">
             {t('home.sponsorsLink')}
           </NavLink>

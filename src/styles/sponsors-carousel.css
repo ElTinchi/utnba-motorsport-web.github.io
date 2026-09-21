@@ -3,7 +3,7 @@
    Sin tiles, sin bordes, sin filtros: el logo sobre el blanco y listo.
    ======================================== */
 .sp-car {
-  --sp-car-speed: 45s;
+  --sp-car-speed: 35s;
   --sp-car-gap: clamp(2.25rem, 5vw, 4.5rem);
 
   position: relative;

@@ -58,7 +58,7 @@ function Logo({ sponsor, duplicate = false }) {
  *
  * @param {number} speed  Segundos que tarda una vuelta completa.
  */
-export default function SponsorsCarousel({ speed = 45 }) {
+export default function SponsorsCarousel({ speed = 35 }) {
   return (
     <div className="sp-car" style={{ '--sp-car-speed': `${speed}s` }}>
       {/* El viewport lleva el recorte y el desvanecido de los bordes. Va como
