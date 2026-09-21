@@ -15,7 +15,9 @@ export const SPONSORS = [
   { name: 'Ansys', href: 'https://www.ansys.com/', logo: '/assets/img/sponsors/onwhite/ansys.png' },
   { name: 'MathWorks', href: 'https://www.mathworks.com/', logo: '/assets/img/sponsors/onwhite/mathworks.png' },
   { name: 'Bender', href: 'https://www.bender.de/', logo: '/assets/img/sponsors/onwhite/benderlogo.png' },
-  { name: 'Grupo Paglia', href: 'https://www.instagram.com/grupopaglia_/', logo: '/assets/img/sponsors/onwhite/grupopaglia.png' },
+  // Inactivo temporalmente; conservar para una futura reactivación.
+  // { name: 'Grupo Paglia', href: 'https://www.instagram.com/grupopaglia_/', logo: '/assets/img/sponsors/onwhite/grupopaglia.png' },
+  { name: 'SIN PAR', href: 'https://sinpar.com.ar/', logo: '/assets/img/sponsors/onwhite/sin-par.png', logoClass: 'sp-car__item--sin-par' },
   { name: 'DSM Diesel Car S.A.', href: 'https://www.dsmdieselcar.com.ar/', logo: '/assets/img/sponsors/onwhite/dsm-diesel-car.png' },
   { name: 'GMG Neumáticos de Competición', href: 'https://www.instagram.com/neumaticosgmg/?hl=es', logo: '/assets/img/sponsors/onwhite/gmg-neumaticos.png' },
 ];
@@ -25,7 +27,7 @@ export const SPONSORS = [
 function Logo({ sponsor, duplicate = false }) {
   if (!sponsor.href) {
     return (
-      <span className="sp-car__item" aria-hidden={duplicate || undefined}>
+      <span className={['sp-car__item', sponsor.logoClass].filter(Boolean).join(' ')} aria-hidden={duplicate || undefined}>
         <img draggable={false} src={sponsor.logo} alt={duplicate ? '' : sponsor.name} loading="lazy" />
       </span>
     );
@@ -33,7 +35,7 @@ function Logo({ sponsor, duplicate = false }) {
 
   return (
     <a
-      className="sp-car__item"
+      className={['sp-car__item', sponsor.logoClass].filter(Boolean).join(' ')}
       href={sponsor.href}
       target="_blank"
       rel="noopener noreferrer"

@@ -109,3 +109,23 @@
     display: none;
   }
 }
+
+/* Encuadre del archivo oficial de SIN PAR (1200 x 900): el logo ocupa
+   x=104..1104, y=329..563. Se conserva el archivo original. */
+.sp-car__item--sin-par {
+  position: relative;
+  width: clamp(130px, 17vw, 215px);
+  height: auto;
+  aspect-ratio: 1000 / 234;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.sp-car__item--sin-par img {
+  position: absolute;
+  width: 120%;
+  max-width: none;
+  height: auto;
+  left: -10.4%;
+  top: -140.5983%;
+}
