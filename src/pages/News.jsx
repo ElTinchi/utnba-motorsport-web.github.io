@@ -79,7 +79,7 @@ export default function News() {
   return (
     <PageShell wide kicker={labels.kicker} title={labels.title} intro={labels.intro}>
       <div className="shell-block news-journal">
-        <EditorialReveal mask="horizontal"><NewsArticle post={posts[0]} labels={labels} featured /></EditorialReveal>
+        <EditorialReveal className="news-featured-reveal"><NewsArticle post={posts[0]} labels={labels} featured /></EditorialReveal>
         <div className="news-journal__heading"><h2>{labels.archive}</h2><span>2025 — 2026</span></div>
         <div className="news-grid">{posts.slice(1).map(post => <EditorialReveal key={post.id}><NewsArticle post={post} labels={labels} /></EditorialReveal>)}</div>
         <aside className="news-social">

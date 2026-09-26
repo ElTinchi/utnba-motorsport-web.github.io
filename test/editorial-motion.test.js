@@ -245,3 +245,31 @@ test('team photo keeps its observed surface unclipped so the reveal can start', 
     await server.close();
   }
 });
+
+test('featured news and car hero keep their observed surfaces unclipped', async () => {
+  const root = fileURLToPath(new URL('..', import.meta.url));
+  const server = await createServer({ root, appType: 'custom', server: { middlewareMode: true }, logLevel: 'silent' });
+  try {
+    const [{ default: News }, { default: Car }, localeSource] = await Promise.all([
+      server.ssrLoadModule('/src/pages/News.jsx'),
+      server.ssrLoadModule('/src/pages/Car.jsx'),
+      readFile(new URL('../src/locales/es.json', import.meta.url), 'utf8'),
+    ]);
+    const instance = i18next.createInstance();
+    await instance.init({ lng: 'es', initImmediate: false, resources: { es: { translation: JSON.parse(localeSource) } } });
+    const render = (Page, location) => renderToStaticMarkup(createElement(
+      I18nextProvider,
+      { i18n: instance },
+      createElement(StaticRouter, { location }, createElement(Page)),
+    ));
+    const news = render(News, '/novedades');
+    const car = render(Car, '/el-auto');
+
+    assert.match(news, /news-featured-reveal/);
+    assert.match(car, /car-hero-reveal/);
+    assert.doesNotMatch(news, /editorial-reveal--mask-horizontal[^"]*news-featured-reveal/);
+    assert.doesNotMatch(car, /editorial-reveal--mask-horizontal[^"]*car-hero-reveal/);
+  } finally {
+    await server.close();
+  }
+});

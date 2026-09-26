@@ -3,6 +3,13 @@
    ======================================== */
 .car-hero {
   margin: 0 0 1rem;
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path var(--motion-duration-deliberate) var(--motion-ease-out);
+}
+
+.editorial-reveal--visible.car-hero-reveal .car-hero,
+.car-hero-reveal:focus-within .car-hero {
+  clip-path: inset(0);
 }
 
 .car-hero img {
@@ -192,4 +199,11 @@
   font-size: 1.05rem;
   color: var(--color-white);
   line-height: 1.6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .car-hero {
+    clip-path: none;
+    transition: none;
+  }
 }

@@ -23,7 +23,7 @@ export default function Car() {
       intro={t('carPage.intro')}
       wide
     >
-      <EditorialReveal className="shell-block" mask="horizontal">
+      <EditorialReveal className="shell-block car-hero-reveal">
         <figure className="car-hero">
           <img draggable={false}
             src="/assets/img/render_fsae.jpg"
