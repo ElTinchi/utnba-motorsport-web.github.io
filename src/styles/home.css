@@ -685,7 +685,7 @@
   transition: opacity .42s var(--area-delay) ease, transform .52s var(--area-delay) cubic-bezier(.22, 1, .36, 1);
 }
 
-.areas__grid > li.stagger-item--visible { opacity: 1; transform: translateY(0); }
+.areas__grid > li.area-card--visible { opacity: 1; transform: translateY(0); }
 
 @media (min-width: 640px) {
   .areas__grid {

@@ -173,7 +173,6 @@ test('narrative routes use shared motion while sober routes remain static', asyn
 
   try {
     const narrativeRoutes = [
-      ['/src/pages/Home.jsx', '/'],
       ['/src/pages/Academy.jsx', '/la-academia'],
       ['/src/pages/FormulaStudent.jsx', '/formula-student'],
       ['/src/pages/Car.jsx', '/el-auto'],
@@ -190,6 +189,30 @@ test('narrative routes use shared motion while sober routes remain static', asyn
     const notFound = await renderPage('/src/pages/NotFound.jsx', '/ruta-inexistente');
     assert.doesNotMatch(legal, /data-motion="editorial-reveal"|stagger-item/);
     assert.doesNotMatch(notFound, /data-motion="editorial-reveal"|stagger-item/);
+  } finally {
+    await server.close();
+  }
+});
+
+test('home preserves its tuned highlight and seven-area choreography', async () => {
+  const root = fileURLToPath(new URL('..', import.meta.url));
+  const server = await createServer({ root, appType: 'custom', server: { middlewareMode: true }, logLevel: 'silent' });
+  try {
+    const [{ default: Home }, localeSource] = await Promise.all([
+      server.ssrLoadModule('/src/pages/Home.jsx'),
+      readFile(new URL('../src/locales/es.json', import.meta.url), 'utf8'),
+    ]);
+    const instance = i18next.createInstance();
+    await instance.init({ lng: 'es', initImmediate: false, resources: { es: { translation: JSON.parse(localeSource) } } });
+    const html = renderToStaticMarkup(createElement(
+      I18nextProvider,
+      { i18n: instance },
+      createElement(StaticRouter, { location: '/' }, createElement(Home)),
+    ));
+
+    assert.doesNotMatch(html, /home-highlight[^\"]*home-highlight--visible/);
+    assert.match(html, /--area-delay:0ms/);
+    assert.match(html, /--area-delay:390ms/);
   } finally {
     await server.close();
   }
