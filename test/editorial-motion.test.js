@@ -36,12 +36,17 @@ test('visibility fallback exposes content without IntersectionObserver or with r
   assert.equal(getVisibilityFallback({ hasObserver: true, reducedMotion: false }), false);
 });
 
-test('visibility threshold stays reachable for content taller than a mobile viewport', () => {
+test('tall sections reveal after at most one fifth of the viewport is exposed', () => {
   assert.equal(getEffectiveEnterThreshold({
     requestedThreshold: 0.2,
     elementHeight: 5115,
     viewportHeight: 568,
-  }), 0.0889);
+  }), 0.0223);
+  assert.equal(getEffectiveEnterThreshold({
+    requestedThreshold: 0.2,
+    elementHeight: 2232,
+    viewportHeight: 774,
+  }), 0.0694);
   assert.equal(getEffectiveEnterThreshold({
     requestedThreshold: 0.2,
     elementHeight: 400,

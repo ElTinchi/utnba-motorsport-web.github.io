@@ -21,7 +21,7 @@ export function getEffectiveEnterThreshold({
   viewportHeight,
 }) {
   if (!elementHeight || elementHeight <= viewportHeight) return requestedThreshold;
-  const reachableThreshold = (viewportHeight / elementHeight) * 0.8;
+  const reachableThreshold = (viewportHeight / elementHeight) * 0.2;
   return Math.min(requestedThreshold, Math.ceil(reachableThreshold * 10000) / 10000);
 }
 
