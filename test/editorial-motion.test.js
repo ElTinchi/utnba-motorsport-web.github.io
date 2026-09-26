@@ -1,11 +1,20 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
+import { createElement } from 'react';
+import { renderToStaticMarkup } from 'react-dom/server';
+import { I18nextProvider } from 'react-i18next';
+import i18next from 'i18next';
+import { StaticRouter } from 'react-router-dom/server.js';
+import { createServer } from 'vite';
 
 import {
   deriveVisibilityState,
   getVisibilityFallback,
 } from '../src/hooks/useInView.js';
 import { getReducedMotionPreference } from '../src/hooks/useReducedMotion.js';
+import { buildCommercialContactHref } from '../src/routes.js';
 import {
   formatAnimatedValue,
   getEditorialRevealProps,
@@ -63,4 +72,57 @@ test('editorial reveal properties preserve semantic elements and expose state', 
     className: 'editorial-reveal editorial-reveal--left editorial-reveal--mask-horizontal editorial-reveal--visible story',
     'data-motion': 'editorial-reveal',
   });
+});
+
+test('commercial contact encodes the requested subject and short handoff body', () => {
+  const contact = new URL(buildCommercialContactHref());
+
+  assert.equal(contact.protocol, 'mailto:');
+  assert.equal(contact.pathname, 'motorsports@frba.utn.edu.ar');
+  assert.equal(contact.searchParams.get('subject'), 'Alianza con UTN BA Motorsport');
+  assert.equal(
+    contact.searchParams.get('body'),
+    'Hola, les escribo de [empresa]. ¿Me pasan un WhatsApp para conversar?',
+  );
+  assert.equal(contact.href.includes('wa.me'), false);
+});
+
+test('commercial contact accepts a company name without changing the message contract', () => {
+  const contact = new URL(buildCommercialContactHref({ company: 'Acme & Cía' }));
+  assert.equal(
+    contact.searchParams.get('body'),
+    'Hola, les escribo de Acme & Cía. ¿Me pasan un WhatsApp para conversar?',
+  );
+});
+
+test('sponsor journey offers contact after evidence, value, and at the close', async () => {
+  const root = fileURLToPath(new URL('..', import.meta.url));
+  const server = await createServer({ root, appType: 'custom', server: { middlewareMode: true }, logLevel: 'silent' });
+
+  try {
+    const [{ default: Sponsors }, localeSource] = await Promise.all([
+      server.ssrLoadModule('/src/pages/Sponsors.jsx'),
+      readFile(new URL('../src/locales/es.json', import.meta.url), 'utf8'),
+    ]);
+    const instance = i18next.createInstance();
+    await instance.init({
+      lng: 'es',
+      fallbackLng: 'es',
+      initImmediate: false,
+      resources: { es: { translation: JSON.parse(localeSource) } },
+    });
+
+    const html = renderToStaticMarkup(createElement(
+      I18nextProvider,
+      { i18n: instance },
+      createElement(StaticRouter, { location: '/sponsors' }, createElement(Sponsors)),
+    ));
+
+    assert.equal((html.match(/data-contact-opportunity=/g) || []).length, 3);
+    assert.equal((html.match(/href="mailto:/g) || []).length, 3);
+    assert.match(html, /id="alianza"/);
+    assert.match(html, /Conversemos sobre una alianza/);
+  } finally {
+    await server.close();
+  }
 });

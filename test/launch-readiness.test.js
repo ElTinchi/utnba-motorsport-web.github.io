@@ -83,17 +83,6 @@ test('hero uses an ignition sequence with a single primary action', async () => 
   assert.match(styles, /prefers-reduced-motion: reduce/);
 });
 
-test('sponsor motion is triggered once as sections enter the viewport', async () => {
-  const [sponsors, funding] = await Promise.all([
-    readFile(new URL('../src/pages/Sponsors.jsx', import.meta.url), 'utf8'),
-    readFile(new URL('../src/components/FundingProgress.jsx', import.meta.url), 'utf8'),
-  ]);
-
-  assert.match(sponsors, /useInViewOnce/);
-  assert.match(sponsors, /sp-viewer--visible/);
-  assert.match(funding, /requestAnimationFrame/);
-});
-
 test('home reading animations guide each section in sequence', async () => {
   const [home, areas, styles] = await Promise.all([
     readFile(new URL('../src/pages/Home.jsx', import.meta.url), 'utf8'),

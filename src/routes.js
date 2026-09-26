@@ -30,3 +30,12 @@ export const LEGACY_REDIRECTS = {
 
 export const CONTACT_EMAIL = 'motorsports@frba.utn.edu.ar';
 export const CONTACT_HREF = `mailto:${CONTACT_EMAIL}`;
+
+const COMMERCIAL_SUBJECT = 'Alianza con UTN BA Motorsport';
+
+export function buildCommercialContactHref({ company = '[empresa]' } = {}) {
+  const body = `Hola, les escribo de ${company}. ¿Me pasan un WhatsApp para conversar?`;
+  return `${CONTACT_HREF}?subject=${encodeURIComponent(COMMERCIAL_SUBJECT)}&body=${encodeURIComponent(body)}`;
+}
+
+export const COMMERCIAL_CONTACT_HREF = buildCommercialContactHref();

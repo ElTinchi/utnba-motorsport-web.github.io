@@ -212,7 +212,7 @@ export default function Home() {
           <span className="hero__tagline">{t('home.heroPlate')}</span>
           <h1 className="hero__title">{t('home.heroTitle')}</h1>
           <div className="hero__actions">
-            <NavLink to={ROUTES.sponsors} className="btn btn--primary">{t('home.heroCtaPrimary')}</NavLink>
+            <NavLink to={`${ROUTES.sponsors}#alianza`} className="btn btn--primary">{t('sponsorsPage.secondaryCta')}</NavLink>
           </div>
         </div>
       </section>
@@ -228,8 +228,8 @@ export default function Home() {
             <p className="intro__description">{t('home.heroSubtitle')}</p>
 
             <div className="intro__actions">
-              <NavLink to={ROUTES.sponsors} className="btn btn--primary">
-                {t('home.heroCtaPrimary')}
+              <NavLink to={`${ROUTES.sponsors}#alianza`} className="btn btn--primary">
+                {t('sponsorsPage.secondaryCta')}
               </NavLink>
               <NavLink to={ROUTES.team} className="btn btn--secondary">
                 {t('home.heroCtaSecondary')}
