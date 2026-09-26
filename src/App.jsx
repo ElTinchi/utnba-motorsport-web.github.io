@@ -11,6 +11,8 @@ import JoinUs from './pages/JoinUs.jsx';
 import Sponsors from './pages/Sponsors.jsx';
 import News from './pages/News.jsx';
 import NotFound from './pages/NotFound.jsx';
+import PolicyPage from './pages/PolicyPage.jsx';
+import Seo from './components/Seo.jsx';
 import { ROUTES, LEGACY_REDIRECTS } from './routes';
 
 // Al navegar entre páginas el scroll se queda donde estaba: con React Router
@@ -60,6 +62,7 @@ export default function App() {
   return (
     <>
       <ScrollToTop />
+      <Seo />
       <Header />
       <main className="main">
         <Routes>
@@ -71,6 +74,8 @@ export default function App() {
           <Route path={ROUTES.aboutFormulaStudent} element={<FormulaStudent />} />
           <Route path={ROUTES.joinUs} element={<JoinUs />} />
           <Route path={ROUTES.sponsors} element={<Sponsors />} />
+          <Route path={ROUTES.legal} element={<PolicyPage type="legal" />} />
+          <Route path={ROUTES.privacy} element={<PolicyPage type="privacy" />} />
 
           {/* URLs viejas -> destino nuevo, con replace para no ensuciar el historial */}
           {Object.entries(LEGACY_REDIRECTS).map(([from, to]) => (

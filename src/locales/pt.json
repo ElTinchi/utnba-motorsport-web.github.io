@@ -28,6 +28,8 @@
     "socialLabel": "Redes sociais",
     "followOn": "Siga-nos no",
     "aiInfo": "Informações para IA",
+    "legal": "Aviso legal",
+    "privacy": "Privacidade",
     "backToTop": "Voltar ao topo"
   },
   "home": {
@@ -36,6 +38,7 @@
     "heroSubtitle": "Somos uma academia integral de motorsport e estamos finalizando nosso primeiro monoposto elétrico para competir na FSAE Brasil 2027.",
     "heroCtaPrimary": "Apoie a equipe",
     "heroCtaSecondary": "Conheça a equipe",
+    "heroCtaCar": "Conheça o carro",
     "motivationTitle": "O que nos motiva",
     "motivationBody": "Não queremos construir um carro, competir uma vez e deixar que tudo termine ali. A UTN BA Motorsport nasceu com o desafio de desenvolver nosso primeiro Fórmula SAE 100% elétrico e competir no Brasil em 2027, mas desde o início entendemos que queríamos criar algo que durasse muito além desse carro. Por isso criamos nossa Academia Motorsport: um caminho para que mais estudantes possam se aproximar do automobilismo desde os primeiros anos da graduação, aprender fazendo, adquirir experiência em projetos cada vez mais complexos e, futuramente, fazer parte dos próximos Fórmula SAE da UTN. Queremos competir em 2027, sim, mas também queremos que exista uma equipe em 2028, 2030 e por muitos anos. O carro é uma parte do projeto; o que realmente queremos construir é algo que permaneça.",
     "aboutTitle": "Sobre nós",

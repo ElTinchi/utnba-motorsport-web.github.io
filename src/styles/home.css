@@ -213,6 +213,47 @@
   letter-spacing: 0.15em;
 }
 
+.hero__title {
+  max-width: 18ch;
+  margin: .15rem 0 0;
+  color: #fcf6e6;
+  font-size: clamp(1.65rem, 3.2vw, 3.25rem);
+  line-height: 1.08;
+  letter-spacing: -.04em;
+}
+
+.hero__description {
+  max-width: 50rem;
+  color: rgba(252, 246, 230, .78);
+  font-size: clamp(.88rem, 1.4vw, 1.05rem);
+  line-height: 1.65;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .8rem;
+  margin-top: .4rem;
+}
+
+.btn--hero-secondary {
+  color: #fcf6e6;
+  border: 1px solid rgba(252, 246, 230, .45);
+  background: rgba(21, 21, 25, .45);
+  backdrop-filter: blur(8px);
+}
+
+.btn--hero-secondary:hover { border-color: #fcf6e6; background: rgba(252, 246, 230, .1); }
+
+@media (max-width: 520px) {
+  .hero__content { gap: .85rem; }
+  .hero__logo { width: min(360px, 78vw); }
+  .hero__description { max-width: 34ch; }
+  .hero__actions { width: min(100%, 22rem); }
+  .hero__actions .btn { flex: 1 1 9rem; padding-inline: .9rem; }
+}
+
 /* Wrapper del contenido: arranca 100vh abajo (para ver el hero
    primero) y al subir tapa el hero fijo con su fondo negro */
 .page {

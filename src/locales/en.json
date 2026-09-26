@@ -28,6 +28,8 @@
     "socialLabel": "Social media",
     "followOn": "Follow us on",
     "aiInfo": "Information for AI",
+    "legal": "Legal notice",
+    "privacy": "Privacy",
     "backToTop": "Back to top"
   },
   "home": {
@@ -36,6 +38,7 @@
     "heroSubtitle": "We are an integrated motorsport academy completing our first electric single-seater to compete at FSAE Brazil 2027.",
     "heroCtaPrimary": "Support the team",
     "heroCtaSecondary": "Meet the team",
+    "heroCtaCar": "Discover the car",
     "motivationTitle": "What drives us",
     "motivationBody": "We do not want to build one car, compete once and have everything end there. UTN BA Motorsport was born from the challenge of developing our first fully electric Formula SAE car and competing in Brazil in 2027, but from the beginning we knew we wanted to create something that would last far beyond that car. That is why we created our Motorsport Academy: a path for more students to approach motorsport from the first years of their degree, learn by doing, gain experience through increasingly complex projects and eventually become part of UTN's future Formula SAE cars. We want to compete in 2027, but we also want there to be a team in 2028, 2030 and for many years to come. The car is one part of the project; what we truly want to build is something that lasts.",
     "aboutTitle": "About us",

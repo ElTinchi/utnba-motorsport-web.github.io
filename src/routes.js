@@ -15,6 +15,8 @@ export const ROUTES = {
   aboutFormulaStudent: '/formula-student',
   joinUs: '/sumate',
   sponsors: '/sponsors',
+  legal: '/aviso-legal',
+  privacy: '/privacidad',
 };
 
 // URLs viejas que ya se compartieron o que puede tener indexadas Google.
@@ -27,4 +29,4 @@ export const LEGACY_REDIRECTS = {
 };
 
 export const CONTACT_EMAIL = 'motorsports@frba.utn.edu.ar';
-export const CONTACT_HREF = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(CONTACT_EMAIL)}`;
+export const CONTACT_HREF = `mailto:${CONTACT_EMAIL}`;
