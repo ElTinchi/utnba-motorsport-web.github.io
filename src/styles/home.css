@@ -427,7 +427,13 @@
   border: 1px solid rgba(var(--ink-rgb), 0.08);
   border-radius: 16px;
   padding: 2rem;
+  opacity: 0;
+  transition: opacity .5s ease, transform .58s cubic-bezier(.22, 1, .36, 1);
 }
+
+.home-highlight--left { transform: translateX(-24px); }
+.home-highlight--right { transform: translateX(24px); }
+.home-highlight--visible { opacity: 1; transform: translateX(0); }
 
 @media (min-width: 1200px) {
   .home-highlight {
@@ -435,11 +441,32 @@
   }
 }
 
-.home-highlight__title {
-  font-size: 1.3rem;
-  font-weight: 700;
+.home-highlight__eyebrow {
+  display: block;
+  margin-bottom: .75rem;
   color: var(--color-red);
-  margin-bottom: 0.9rem;
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.home-highlight__title {
+  max-width: 20ch;
+  font-size: clamp(1.35rem, 2.2vw, 2rem);
+  font-weight: 700;
+  line-height: 1.12;
+  margin-bottom: .8rem;
+}
+
+.home-highlight__subtitle {
+  margin-bottom: 1.25rem;
+  padding-left: .9rem;
+  border-left: 2px solid var(--color-red);
+  color: var(--color-white);
+  font-size: .95rem;
+  font-weight: 650;
+  line-height: 1.55;
 }
 
 .home-highlight__body {
@@ -653,7 +680,12 @@
   flex: 0 1 calc((100% - 1.25rem) / 2); /* 2 por fila */
   display: flex;
   min-width: 0;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .42s var(--area-delay) ease, transform .52s var(--area-delay) cubic-bezier(.22, 1, .36, 1);
 }
+
+.areas__grid > li.area-card--visible { opacity: 1; transform: translateY(0); }
 
 @media (min-width: 640px) {
   .areas__grid {
@@ -710,6 +742,11 @@
   color: var(--color-white-subtle);
   line-height: 1.5;
   text-wrap: balance;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-highlight,
+  .areas__grid > li { opacity: 1; transform: none; transition: none; }
 }
 
 /* Solo en la fila única: cada tarjeta mide ~1/7 del ancho y el título más largo
