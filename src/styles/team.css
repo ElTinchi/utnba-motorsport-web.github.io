@@ -7,6 +7,13 @@
   border: 1px solid rgba(var(--ink-rgb), 0.09);
   border-radius: clamp(12px, 2vw, 20px);
   background: rgba(var(--ink-rgb), 0.04);
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path var(--motion-duration-deliberate) var(--motion-ease-out);
+}
+
+.editorial-reveal--visible.team-photo img,
+.team-photo:focus-within img {
+  clip-path: inset(0);
 }
 
 .team-area {
@@ -80,4 +87,11 @@
   color: var(--color-white-muted);
   line-height: 1.7;
   margin-bottom: 1.75rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .team-photo img {
+    clip-path: none;
+    transition: none;
+  }
 }

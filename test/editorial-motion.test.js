@@ -222,3 +222,26 @@ test('home preserves its tuned highlight and seven-area choreography', async () 
     await server.close();
   }
 });
+
+test('team photo keeps its observed surface unclipped so the reveal can start', async () => {
+  const root = fileURLToPath(new URL('..', import.meta.url));
+  const server = await createServer({ root, appType: 'custom', server: { middlewareMode: true }, logLevel: 'silent' });
+  try {
+    const [{ default: Team }, localeSource] = await Promise.all([
+      server.ssrLoadModule('/src/pages/Team.jsx'),
+      readFile(new URL('../src/locales/es.json', import.meta.url), 'utf8'),
+    ]);
+    const instance = i18next.createInstance();
+    await instance.init({ lng: 'es', initImmediate: false, resources: { es: { translation: JSON.parse(localeSource) } } });
+    const html = renderToStaticMarkup(createElement(
+      I18nextProvider,
+      { i18n: instance },
+      createElement(StaticRouter, { location: '/el-equipo' }, createElement(Team)),
+    ));
+
+    assert.match(html, /class="[^"]*team-photo[^"]*"/);
+    assert.doesNotMatch(html, /class="[^"]*editorial-reveal--mask-horizontal[^"]*team-photo/);
+  } finally {
+    await server.close();
+  }
+});

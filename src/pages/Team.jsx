@@ -17,7 +17,7 @@ export default function Team() {
       title={t('teamPage.title')}
       intro={t('teamPage.intro')}
     >
-      <EditorialReveal as="figure" className="shell-block team-photo" mask="horizontal">
+      <EditorialReveal as="figure" className="shell-block team-photo">
         <img draggable={false}
           src="/assets/img/Nosotros.jpg"
           alt={t('teamPage.photoAlt')}
