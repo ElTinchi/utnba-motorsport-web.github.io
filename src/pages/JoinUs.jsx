@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import PageShell from '../components/PageShell.jsx';
+import StaggerList from '../components/StaggerList.jsx';
 import '../styles/join.css';
 
 const INSTAGRAM_URL = 'https://www.instagram.com/utnbamotorsport/';
@@ -27,17 +28,15 @@ export default function JoinUs() {
 
       <div className="shell-block">
         <h2 className="shell-block__title">{t('joinPage.stepsTitle')}</h2>
-        <ol className="join-steps">
-          {steps.map((step, index) => (
-            <li key={step.title} className="join-step">
+        <StaggerList as="ol" className="join-steps" itemClassName="join-step" items={steps} renderItem={(step, index) => (
+            <>
               <span className="join-step__number">{String(index + 1).padStart(2, '0')}</span>
               <div>
                 <h3 className="join-step__title">{step.title}</h3>
                 <p className="join-step__body">{step.body}</p>
               </div>
-            </li>
-          ))}
-        </ol>
+            </>
+          )} />
         <p className="join-selection-note">{t('joinPage.selectionNote')}</p>
       </div>
     </PageShell>

@@ -10,7 +10,7 @@ export default function PolicyPage({ type }) {
   const content = languageContent[type];
 
   return (
-    <PageShell kicker={content.kicker} title={content.title} intro={content.intro}>
+    <PageShell kicker={content.kicker} title={content.title} intro={content.intro} motion={false}>
       <div className="policy" aria-label={content.title}>
         <p className="policy__updated">{languageContent.updated}</p>
         {content.sections.map((section) => (

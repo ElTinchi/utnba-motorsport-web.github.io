@@ -126,3 +126,46 @@ test('sponsor journey offers contact after evidence, value, and at the close', a
     await server.close();
   }
 });
+
+test('narrative routes use shared motion while sober routes remain static', async () => {
+  const root = fileURLToPath(new URL('..', import.meta.url));
+  const server = await createServer({ root, appType: 'custom', server: { middlewareMode: true }, logLevel: 'silent' });
+  const localeSource = await readFile(new URL('../src/locales/es.json', import.meta.url), 'utf8');
+  const instance = i18next.createInstance();
+  await instance.init({
+    lng: 'es', fallbackLng: 'es', initImmediate: false,
+    resources: { es: { translation: JSON.parse(localeSource) } },
+  });
+
+  async function renderPage(modulePath, location, props) {
+    const { default: Page } = await server.ssrLoadModule(modulePath);
+    return renderToStaticMarkup(createElement(
+      I18nextProvider,
+      { i18n: instance },
+      createElement(StaticRouter, { location }, createElement(Page, props)),
+    ));
+  }
+
+  try {
+    const narrativeRoutes = [
+      ['/src/pages/Home.jsx', '/'],
+      ['/src/pages/Academy.jsx', '/la-academia'],
+      ['/src/pages/FormulaStudent.jsx', '/formula-student'],
+      ['/src/pages/Car.jsx', '/el-auto'],
+      ['/src/pages/Team.jsx', '/el-equipo'],
+      ['/src/pages/News.jsx', '/novedades'],
+      ['/src/pages/JoinUs.jsx', '/sumate'],
+    ];
+    for (const [modulePath, location] of narrativeRoutes) {
+      const html = await renderPage(modulePath, location);
+      assert.match(html, /data-motion="editorial-reveal"|class="[^"]*stagger-item/, location);
+    }
+
+    const legal = await renderPage('/src/pages/PolicyPage.jsx', '/privacidad', { type: 'privacy' });
+    const notFound = await renderPage('/src/pages/NotFound.jsx', '/ruta-inexistente');
+    assert.doesNotMatch(legal, /data-motion="editorial-reveal"|stagger-item/);
+    assert.doesNotMatch(notFound, /data-motion="editorial-reveal"|stagger-item/);
+  } finally {
+    await server.close();
+  }
+});

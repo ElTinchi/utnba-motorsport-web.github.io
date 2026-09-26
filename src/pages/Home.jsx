@@ -6,7 +6,7 @@ import AreasGrid from '../components/AreasGrid';
 import SponsorsCarousel from '../components/SponsorsCarousel';
 import FundingProgress from '../components/FundingProgress';
 import AnimatedNumber from '../components/AnimatedNumber';
-import useInView from '../hooks/useInView';
+import EditorialReveal from '../components/EditorialReveal';
 import '../styles/home.css';
 
 const ACADEMY_LOGOS = [
@@ -24,12 +24,12 @@ const HIGHLIGHTS = [
 
 function ReadingHighlight({ highlight, index }) {
   const { t } = useTranslation();
-  const [ref, isVisible] = useInView({ threshold: 0.22 });
 
   return (
-    <article
-      ref={ref}
-      className={`home-highlight home-highlight--${index % 2 === 0 ? 'left' : 'right'}${isVisible ? ' home-highlight--visible' : ''}`}
+    <EditorialReveal
+      as="article"
+      direction={index % 2 === 0 ? 'left' : 'right'}
+      className={`home-highlight home-highlight--${index % 2 === 0 ? 'left' : 'right'} home-highlight--visible`}
     >
       <span className="home-highlight__eyebrow">{t(highlight.titleKey)}</span>
       <h2 className="home-highlight__title">{t(highlight.hookKey)}</h2>
@@ -40,7 +40,7 @@ function ReadingHighlight({ highlight, index }) {
           {t(highlight.linkKey)}
         </NavLink>
       )}
-    </article>
+    </EditorialReveal>
   );
 }
 

@@ -2,7 +2,7 @@
   "es": {
     "labels": {
       "kicker": "Novedades",
-      "title": "Nuestra historia, en marcha.",
+      "title": "El proyecto avanza. Acá están las pruebas.",
       "intro": "Del primer encuentro al chasis terminado. Los avances, las experiencias y los momentos que construyen UTN BA Motorsport.",
       "latest": "Lo más reciente",
       "archive": "Los hitos del equipo",
@@ -136,7 +136,7 @@
   "en": {
     "labels": {
       "kicker": "News",
-      "title": "Our story, in motion.",
+      "title": "The project is moving forward. Here is the evidence.",
       "intro": "From our first meeting to a completed chassis. The progress, experiences and moments that shape UTN BA Motorsport.",
       "latest": "Latest news",
       "archive": "Team milestones",
@@ -270,7 +270,7 @@
   "pt": {
     "labels": {
       "kicker": "Novidades",
-      "title": "Nossa história, em movimento.",
+      "title": "O projeto avança. Aqui estão as provas.",
       "intro": "Do primeiro encontro ao chassi concluído. Os avanços, as experiências e os momentos que constroem a UTN BA Motorsport.",
       "latest": "Mais recente",
       "archive": "Marcos da equipe",

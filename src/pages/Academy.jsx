@@ -1,6 +1,8 @@
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ROUTES } from '../routes';
+import EditorialReveal from '../components/EditorialReveal';
+import AnimatedNumber from '../components/AnimatedNumber';
 import '../styles/academy.css';
 
 const CATEGORY_LOGOS = [
@@ -24,12 +26,16 @@ export default function Academy() {
           {t('common.backLink')}
         </NavLink>
 
-        <span className="ms-page__kicker">{t('motorsportPage.kicker')}</span>
-        <h1 className="ms-page__title">{t('motorsportPage.title')}</h1>
-        <p className="ms-page__intro">{t('motorsportPage.intro')}</p>
+        <EditorialReveal direction="left">
+          <span className="ms-page__kicker">{t('motorsportPage.kicker')}</span>
+          <h1 className="ms-page__title">{t('motorsportPage.title')}</h1>
+          <p className="ms-page__intro">{t('motorsportPage.intro')}</p>
+        </EditorialReveal>
 
         {sections.map((section, index) => (
-          <article
+          <EditorialReveal
+            as="article"
+            direction={index % 2 === 0 ? 'left' : 'right'}
             key={section.number}
             className={`ms-section${section.parallel ? ' ms-section--parallel' : ''}`}
           >
@@ -54,7 +60,7 @@ export default function Academy() {
                     <div className="stat-grid">
                       {stats.map((stat) => (
                         <div key={stat.label} className="stat-item">
-                          <span className="stat-value">{stat.value}</span>
+                          <AnimatedNumber value={stat.value} />
                           <span className="stat-label">{stat.label}</span>
                         </div>
                       ))}
@@ -68,7 +74,7 @@ export default function Academy() {
                 </>
               )}
             </div>
-          </article>
+          </EditorialReveal>
         ))}
       </div>
     </section>

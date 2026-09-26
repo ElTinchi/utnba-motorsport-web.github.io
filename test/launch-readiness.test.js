@@ -82,16 +82,3 @@ test('hero uses an ignition sequence with a single primary action', async () => 
   assert.match(styles, /@keyframes hero-ignition-sweep/);
   assert.match(styles, /prefers-reduced-motion: reduce/);
 });
-
-test('home reading animations guide each section in sequence', async () => {
-  const [home, areas, styles] = await Promise.all([
-    readFile(new URL('../src/pages/Home.jsx', import.meta.url), 'utf8'),
-    readFile(new URL('../src/components/AreasGrid.jsx', import.meta.url), 'utf8'),
-    readFile(new URL('../src/styles/home.css', import.meta.url), 'utf8'),
-  ]);
-
-  assert.match(home, /home\.motivationHook/);
-  assert.match(home, /AnimatedNumber/);
-  assert.match(areas, /area-card--visible/);
-  assert.match(styles, /--area-delay/);
-});

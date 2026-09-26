@@ -113,7 +113,7 @@
   },
   "fsPage": {
     "kicker": "UTN BA Motorsport",
-    "title": "About Formula Student",
+    "title": "A competition where the car is the exam.",
     "adaptNotice": "This page describes the Formula Student competition in general. We still have to adapt the specifics to the Formula SAE Brazil rulebook — we'll fill that in as the project moves forward.",
     "sections": [
       {
@@ -204,7 +204,7 @@
   },
   "motorsportPage": {
     "kicker": "UTN BA Motorsport",
-    "title": "The academy: three categories, one team",
+    "title": "You arrive without experience. You leave running a real project.",
     "intro": "We are UTN BA's first Formula SAE generation and train through three levels of increasing complexity. This is the path that leads to the single-seater.",
     "sections": [
       {
@@ -262,7 +262,7 @@
   },
   "sponsorsPage": {
     "kicker": "Become a sponsor",
-    "title": "We are not just building a car.",
+    "title": "You are not funding a promise: you are accelerating a project already in motion.",
     "logoCta": "Put your logo on the car",
     "intro": "We are building the path that turns students into motorsport professionals. Thanks to those already supporting us, we have made it this far; today we are one final push away from the track.",
     "scrollCta": "Discover the story",
@@ -360,7 +360,7 @@
   },
   "teamPage": {
     "kicker": "The team",
-    "title": "We are the first generation",
+    "title": "We are not a student group. We operate as a racing team.",
     "intro": "Students at UTN Buenos Aires building, from scratch, the university's first electric Formula SAE car.",
     "photoAlt": "UTN BA Motorsport members with the single-seater chassis",
     "storyTitle": "Who we are",
@@ -378,7 +378,7 @@
   },
   "carPage": {
     "kicker": "The car",
-    "title": "Our first electric car",
+    "title": "Our knowledge turned into a machine.",
     "intro": "Designed, built and taken to the track by students at UTN Buenos Aires, to compete at Formula SAE Brazil 2027.",
     "renderAlt": "Render of the UTN BA Motorsport electric Formula SAE car",
     "renderCaption": "Working render of the car. The design is still evolving.",

@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ROUTES } from '../routes';
-import useInView from '../hooks/useInView';
+import StaggerList from './StaggerList.jsx';
 
 // Las 7 áreas del equipo. Los íconos salen del manual de marca
 // (assets/Recursos Gráficos/Logos por Area/SVG/): un círculo de color por área
@@ -33,16 +33,10 @@ export const AREAS = [
   { id: 'communication', folder: 'comunicacion', icon: '/assets/img/comunicacion.svg' },
 ];
 
-function AreaItem({ area, index }) {
+function AreaItem({ area }) {
   const { t } = useTranslation();
-  const [ref, isVisible] = useInView({ threshold: 0.45 });
 
   return (
-    <li
-      ref={ref}
-      className={isVisible ? 'area-card--visible' : ''}
-      style={{ '--area-delay': `${index * 65}ms` }}
-    >
       <NavLink to={`${ROUTES.team}#${area.id}`} className="area-card">
         <img draggable={false}
           src={area.icon}
@@ -55,7 +49,6 @@ function AreaItem({ area, index }) {
         <h3 className="area-card__title">{t(`areas.items.${area.id}.title`)}</h3>
         <p className="area-card__subtitle">{t(`areas.items.${area.id}.subtitle`)}</p>
       </NavLink>
-    </li>
   );
 }
 
@@ -64,10 +57,6 @@ export default function AreasGrid() {
   // Cada tarjeta linkea al ancla de su área dentro de /el-equipo, que es donde
   // está la descripción larga y la galería de fotos.
   return (
-    <ul className="areas__grid" role="list">
-      {AREAS.map((area, index) => (
-        <AreaItem key={area.id} area={area} index={index} />
-      ))}
-    </ul>
+    <StaggerList as="ul" className="areas__grid" items={AREAS} renderItem={(area) => <AreaItem area={area} />} />
   );
 }

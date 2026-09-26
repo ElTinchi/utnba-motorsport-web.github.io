@@ -113,7 +113,7 @@
   },
   "fsPage": {
     "kicker": "UTN BA Motorsport",
-    "title": "Qué es Fórmula Student",
+    "title": "Una competencia donde el auto es el examen.",
     "adaptNotice": "Esta página describe la competencia de Fórmula Student en general. Todavía nos falta ajustar los detalles específicos al reglamento de Fórmula SAE Brasil — lo vamos completando a medida que avanza el proyecto.",
     "sections": [
       {
@@ -204,7 +204,7 @@
   },
   "motorsportPage": {
     "kicker": "UTN BA Motorsport",
-    "title": "La academia: tres categorías, un solo equipo",
+    "title": "Entrás sin experiencia. Salís manejando un proyecto real.",
     "intro": "Somos la primera generación de Fórmula SAE de la UTN BA y nos formamos a través de tres niveles de complejidad creciente. Así se construye el camino hasta el monoplaza.",
     "sections": [
       {
@@ -262,7 +262,7 @@
   },
   "sponsorsPage": {
     "kicker": "Quiero ser sponsor",
-    "title": "No construimos solamente un auto.",
+    "title": "No financiás una promesa: acelerás un proyecto que ya está en marcha.",
     "logoCta": "Poné tu logo en el auto",
     "intro": "Construimos el recorrido que transforma estudiantes en profesionales del motorsport. Gracias a quienes ya nos acompañan llegamos hasta acá; hoy estamos a un último impulso de llegar a la pista.",
     "scrollCta": "Conocé la historia",
@@ -390,7 +390,7 @@
   },
   "teamPage": {
     "kicker": "El equipo",
-    "title": "Somos la primera generación",
+    "title": "No somos un grupo de alumnos. Funcionamos como una escudería.",
     "intro": "Estudiantes de la UTN Buenos Aires construyendo, desde cero, el primer Fórmula SAE eléctrico de la facultad.",
     "photoAlt": "Integrantes de UTN BA Motorsport junto al chasis del monoplaza",
     "storyTitle": "Quiénes somos",
@@ -408,7 +408,7 @@
   },
   "carPage": {
     "kicker": "El auto",
-    "title": "Nuestro primer monoplaza eléctrico",
+    "title": "Nuestro conocimiento convertido en una máquina.",
     "intro": "Diseñado, fabricado y puesto en pista por estudiantes de la UTN Buenos Aires, para competir en Fórmula SAE Brasil 2027.",
     "renderAlt": "Render del monoplaza Fórmula SAE eléctrico de UTN BA Motorsport",
     "renderCaption": "Render de trabajo del monoplaza. El diseño sigue en evolución.",
