@@ -36,6 +36,13 @@
   clip-path: inset(0);
 }
 
+.editorial-reveal:focus-within,
+.stagger-item:focus-within {
+  transition: none;
+  transition-delay: 0ms;
+  will-change: auto;
+}
+
 .stagger-item {
   transition-delay: var(--stagger-delay, 0ms);
 }

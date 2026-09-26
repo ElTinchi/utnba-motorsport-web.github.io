@@ -11,6 +11,7 @@ import { createServer } from 'vite';
 
 import {
   deriveVisibilityState,
+  getEffectiveEnterThreshold,
   getVisibilityFallback,
 } from '../src/hooks/useInView.js';
 import { getReducedMotionPreference } from '../src/hooks/useReducedMotion.js';
@@ -33,6 +34,19 @@ test('visibility fallback exposes content without IntersectionObserver or with r
   assert.equal(getVisibilityFallback({ hasObserver: false, reducedMotion: false }), true);
   assert.equal(getVisibilityFallback({ hasObserver: true, reducedMotion: true }), true);
   assert.equal(getVisibilityFallback({ hasObserver: true, reducedMotion: false }), false);
+});
+
+test('visibility threshold stays reachable for content taller than a mobile viewport', () => {
+  assert.equal(getEffectiveEnterThreshold({
+    requestedThreshold: 0.2,
+    elementHeight: 5115,
+    viewportHeight: 568,
+  }), 0.0889);
+  assert.equal(getEffectiveEnterThreshold({
+    requestedThreshold: 0.2,
+    elementHeight: 400,
+    viewportHeight: 568,
+  }), 0.2);
 });
 
 test('reduced motion defaults safely when matchMedia is unavailable', () => {
@@ -72,6 +86,17 @@ test('editorial reveal properties preserve semantic elements and expose state', 
     className: 'editorial-reveal editorial-reveal--left editorial-reveal--mask-horizontal editorial-reveal--visible story',
     'data-motion': 'editorial-reveal',
   });
+});
+
+test('keyboard focus exposes controls immediately including nested sponsor content', async () => {
+  const [motionCss, sponsorCss] = await Promise.all([
+    readFile(new URL('../src/styles/editorial-motion.css', import.meta.url), 'utf8'),
+    readFile(new URL('../src/styles/sponsors.css', import.meta.url), 'utf8'),
+  ]);
+
+  assert.match(motionCss, /\.editorial-reveal:focus-within,[^{]*\.stagger-item:focus-within\s*\{[^}]*transition:\s*none/);
+  assert.match(sponsorCss, /\.sp-viewer:focus-within \.sp-viewer__visual[^}]*clip-path:\s*inset\(0\)/);
+  assert.match(sponsorCss, /\.sp-viewer:focus-within \.sp-viewer__copy[^}]*opacity:\s*1[^}]*transform:\s*translateX\(0\)[^}]*transition:\s*none/);
 });
 
 test('commercial contact encodes the requested subject and short handoff body', () => {

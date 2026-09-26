@@ -15,6 +15,16 @@ export function getVisibilityFallback({ hasObserver, reducedMotion }) {
   return !hasObserver || reducedMotion;
 }
 
+export function getEffectiveEnterThreshold({
+  requestedThreshold,
+  elementHeight,
+  viewportHeight,
+}) {
+  if (!elementHeight || elementHeight <= viewportHeight) return requestedThreshold;
+  const reachableThreshold = (viewportHeight / elementHeight) * 0.8;
+  return Math.min(requestedThreshold, Math.ceil(reachableThreshold * 10000) / 10000);
+}
+
 export default function useInView({
   rootMargin = '-8% 0px -8% 0px',
   threshold = 0.2,
@@ -32,12 +42,18 @@ export default function useInView({
       return undefined;
     }
 
+    const requestedThreshold = Array.isArray(threshold) ? Math.max(...threshold) : threshold;
+    const enterThreshold = getEffectiveEnterThreshold({
+      requestedThreshold,
+      elementHeight: ref.current.getBoundingClientRect().height,
+      viewportHeight: window.innerHeight,
+    });
     const observer = new IntersectionObserver(([entry]) => {
       setIsVisible((current) => deriveVisibilityState(current, entry, {
-        enterThreshold: Array.isArray(threshold) ? Math.max(...threshold) : threshold,
+        enterThreshold,
         exitThreshold,
       }));
-    }, { rootMargin, threshold: [exitThreshold, ...(Array.isArray(threshold) ? threshold : [threshold])] });
+    }, { rootMargin, threshold: [exitThreshold, enterThreshold] });
 
     observer.observe(ref.current);
     return () => observer.disconnect();
