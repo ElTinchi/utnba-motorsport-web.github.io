@@ -1,0 +1,55 @@
+:root {
+  --motion-distance-compact: 16px;
+  --motion-distance-standard: 20px;
+  --motion-distance-expressive: 24px;
+  --motion-duration-quick: 450ms;
+  --motion-duration-standard: 550ms;
+  --motion-duration-deliberate: 650ms;
+  --motion-ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.editorial-reveal,
+.stagger-item {
+  opacity: 0;
+  transition:
+    opacity var(--motion-duration-standard) var(--motion-ease-out),
+    transform var(--motion-duration-standard) var(--motion-ease-out),
+    clip-path var(--motion-duration-deliberate) var(--motion-ease-out);
+  will-change: opacity, transform;
+}
+
+.editorial-reveal--left { transform: translate3d(calc(-1 * var(--motion-distance-standard)), 0, 0); }
+.editorial-reveal--right { transform: translate3d(var(--motion-distance-standard), 0, 0); }
+.editorial-reveal--up,
+.stagger-item { transform: translate3d(0, var(--motion-distance-standard), 0); }
+.editorial-reveal--quick { transition-duration: var(--motion-duration-quick); }
+.editorial-reveal--deliberate { transition-duration: var(--motion-duration-deliberate); }
+.editorial-reveal--mask-horizontal { clip-path: inset(0 100% 0 0); }
+.editorial-reveal--mask-vertical { clip-path: inset(100% 0 0); }
+
+.editorial-reveal--visible,
+.editorial-reveal:focus-within,
+.stagger-item--visible,
+.stagger-item:focus-within {
+  opacity: 1;
+  transform: none;
+  clip-path: inset(0);
+}
+
+.stagger-item {
+  transition-delay: var(--stagger-delay, 0ms);
+}
+
+.stagger-item:focus-within {
+  transition-delay: 0ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .editorial-reveal,
+  .stagger-item {
+    opacity: 1;
+    transform: none;
+    clip-path: none;
+    transition: none;
+  }
+}

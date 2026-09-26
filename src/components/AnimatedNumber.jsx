@@ -1,36 +1,28 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import useInView from '../hooks/useInView';
+import useReducedMotion from '../hooks/useReducedMotion';
+import { formatAnimatedValue, parseAnimatedValue } from '../utils/editorialMotion';
 
-function splitValue(value) {
-  const firstDigit = value.search(/\d/);
-  const lastDigit = Math.max(...Array.from(value, (_, index) => /\d/.test(value[index]) ? index : -1));
-  return {
-    target: Number(value.replace(/\D/g, '')),
-    prefix: value.slice(0, firstDigit),
-    suffix: value.slice(lastDigit + 1),
-    grouped: /[.,]/.test(value),
-  };
-}
-
-export default function AnimatedNumber({ value }) {
+export default function AnimatedNumber({ value, duration = 1200, className = 'stat-value' }) {
   const { i18n } = useTranslation();
   const [ref, isVisible] = useInView({ threshold: 0.6 });
   const [current, setCurrent] = useState(0);
-  const { target, prefix, suffix, grouped } = splitValue(value);
+  const reducedMotion = useReducedMotion();
+  const parsed = parseAnimatedValue(value);
+  const { target } = parsed;
 
   useEffect(() => {
     if (!isVisible) {
       setCurrent(0);
       return undefined;
     }
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    if (reducedMotion) {
       setCurrent(target);
       return undefined;
     }
 
     let frameId;
-    const duration = 1200;
     const startedAt = performance.now();
     const tick = (now) => {
       const progress = Math.min((now - startedAt) / duration, 1);
@@ -39,11 +31,7 @@ export default function AnimatedNumber({ value }) {
     };
     frameId = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(frameId);
-  }, [isVisible, target]);
+  }, [duration, isVisible, reducedMotion, target]);
 
-  const number = grouped
-    ? new Intl.NumberFormat(i18n.language).format(current)
-    : String(current);
-
-  return <span ref={ref} className="stat-value">{prefix}{number}{suffix}</span>;
+  return <span ref={ref} className={className}>{formatAnimatedValue(parsed, current, i18n.language)}</span>;
 }

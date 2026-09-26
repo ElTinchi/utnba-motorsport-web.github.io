@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import './i18n';
 import './styles/global.css';
+import './styles/editorial-motion.css';
 import App from './App.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
