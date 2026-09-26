@@ -59,7 +59,10 @@ export default function Academy() {
                     <h3 className="ms-stats__title">{t('motorsportPage.statsTitle')}</h3>
                     <div className="stat-grid">
                       {stats.map((stat) => (
-                        <div key={stat.label} className="stat-item">
+                        <div
+                          key={stat.label}
+                          className={`stat-item${String(stat.value).replace(/\D/g, '').length >= 5 ? ' stat-item--wide' : ''}`}
+                        >
                           <AnimatedNumber value={stat.value} />
                           <span className="stat-label">{stat.label}</span>
                         </div>

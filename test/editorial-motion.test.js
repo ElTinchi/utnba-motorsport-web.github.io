@@ -273,3 +273,25 @@ test('featured news and car hero keep their observed surfaces unclipped', async 
     await server.close();
   }
 });
+
+test('academy gives long statistics a fitting typography variant', async () => {
+  const root = fileURLToPath(new URL('..', import.meta.url));
+  const server = await createServer({ root, appType: 'custom', server: { middlewareMode: true }, logLevel: 'silent' });
+  try {
+    const [{ default: Academy }, localeSource] = await Promise.all([
+      server.ssrLoadModule('/src/pages/Academy.jsx'),
+      readFile(new URL('../src/locales/es.json', import.meta.url), 'utf8'),
+    ]);
+    const instance = i18next.createInstance();
+    await instance.init({ lng: 'es', initImmediate: false, resources: { es: { translation: JSON.parse(localeSource) } } });
+    const html = renderToStaticMarkup(createElement(
+      I18nextProvider,
+      { i18n: instance },
+      createElement(StaticRouter, { location: '/la-academia' }, createElement(Academy)),
+    ));
+
+    assert.equal((html.match(/stat-item--wide/g) || []).length, 1);
+  } finally {
+    await server.close();
+  }
+});
