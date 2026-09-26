@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { ROUTES, CONTACT_HREF } from '../routes';
 import SponsorsCarousel from '../components/SponsorsCarousel';
 import FundingProgress from '../components/FundingProgress';
+import useInViewOnce from '../hooks/useInViewOnce';
 import '../styles/sponsors.css';
 
 const JOURNEY_LOGOS = [
@@ -16,6 +17,10 @@ export default function Sponsors() {
   const journey = t('sponsorsPage.journey.items', { returnObjects: true });
   const partnershipSteps = t('sponsorsPage.partnership.steps', { returnObjects: true });
   const sizes = t('sponsorsPage.viewer.sizes', { returnObjects: true });
+  const [proofRef, proofVisible] = useInViewOnce({ threshold: 0.25 });
+  const [journeyRef, journeyVisible] = useInViewOnce();
+  const [investmentRef, investmentVisible] = useInViewOnce({ threshold: 0.2 });
+  const [viewerRef, viewerVisible] = useInViewOnce({ threshold: 0.2 });
 
   return (
     <section className="sp-page">
@@ -41,13 +46,13 @@ export default function Sponsors() {
         </header>
       </div>
 
-      <div className="sp-proof" aria-label={t('sponsorsPage.proofLabel')}>
+      <div ref={proofRef} className={`sp-proof${proofVisible ? ' sp-proof--visible' : ''}`} aria-label={t('sponsorsPage.proofLabel')}>
         <p className="sp-proof__label">{t('sponsorsPage.proofLabel')}</p>
         <SponsorsCarousel />
       </div>
 
       <div className="sp-page__container" id="recorrido">
-        <section className="sp-journey" aria-labelledby="journey-title">
+        <section ref={journeyRef} className={`sp-journey${journeyVisible ? ' sp-journey--visible' : ''}`} aria-labelledby="journey-title">
           <div className="sp-journey__intro">
             <span className="sp-section-kicker">{t('sponsorsPage.journey.kicker')}</span>
             <h2 id="journey-title">{t('sponsorsPage.journey.title')}</h2>
@@ -75,7 +80,7 @@ export default function Sponsors() {
           </ol>
         </section>
 
-        <section className="sp-investment" aria-labelledby="investment-title">
+        <section ref={investmentRef} className={`sp-investment${investmentVisible ? ' sp-investment--visible' : ''}`} aria-labelledby="investment-title">
           <div className="sp-investment__copy">
             <span className="sp-section-kicker">{t('sponsorsPage.investment.kicker')}</span>
             <h2 id="investment-title">{t('sponsorsPage.investment.title')}</h2>
@@ -102,7 +107,7 @@ export default function Sponsors() {
           <p className="sp-partnership__note">{t('sponsorsPage.partnership.note')}</p>
         </section>
 
-        <section className="sp-viewer" id="tu-logo" aria-labelledby="viewer-title">
+        <section ref={viewerRef} className={`sp-viewer${viewerVisible ? ' sp-viewer--visible' : ''}`} id="tu-logo" aria-labelledby="viewer-title">
           <div className="sp-viewer__visual">
             <img draggable={false} src="/assets/img/render_fsae.jpg" alt={t('sponsorsPage.viewer.imageAlt')} width="1920" height="1080" loading="lazy" />
             <span className="sp-viewer__badge">{t('sponsorsPage.viewer.badge')}</span>

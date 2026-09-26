@@ -70,3 +70,26 @@ test('Vercel serves the site with baseline security headers', async () => {
   assert.equal(headers['X-Content-Type-Options'], 'nosniff');
   assert.equal(headers['Referrer-Policy'], 'strict-origin-when-cross-origin');
 });
+
+test('hero uses an ignition sequence with a single primary action', async () => {
+  const [home, styles] = await Promise.all([
+    readFile(new URL('../src/pages/Home.jsx', import.meta.url), 'utf8'),
+    readFile(new URL('../src/styles/home.css', import.meta.url), 'utf8'),
+  ]);
+
+  assert.match(home, /hero__ignition/);
+  assert.equal((home.match(/hero__actions/g) || []).length, 1);
+  assert.match(styles, /@keyframes hero-ignition-sweep/);
+  assert.match(styles, /prefers-reduced-motion: reduce/);
+});
+
+test('sponsor motion is triggered once as sections enter the viewport', async () => {
+  const [sponsors, funding] = await Promise.all([
+    readFile(new URL('../src/pages/Sponsors.jsx', import.meta.url), 'utf8'),
+    readFile(new URL('../src/components/FundingProgress.jsx', import.meta.url), 'utf8'),
+  ]);
+
+  assert.match(sponsors, /useInViewOnce/);
+  assert.match(sponsors, /sp-viewer--visible/);
+  assert.match(funding, /requestAnimationFrame/);
+});

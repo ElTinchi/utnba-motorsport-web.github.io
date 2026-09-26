@@ -1,4 +1,6 @@
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import useInViewOnce from '../hooks/useInViewOnce';
 import '../styles/funding-progress.css';
 
 const FUNDING_SEGMENTS = [
@@ -9,11 +11,33 @@ const FUNDING_SEGMENTS = [
 
 export default function FundingProgress({ compact = false }) {
   const { t } = useTranslation();
+  const [progressRef, isVisible] = useInViewOnce({ threshold: 0.35 });
+  const [displayPercent, setDisplayPercent] = useState(0);
+
+  useEffect(() => {
+    if (!isVisible) return undefined;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setDisplayPercent(62);
+      return undefined;
+    }
+
+    let frameId;
+    const duration = 1100;
+    const startedAt = performance.now();
+    const tick = (now) => {
+      const progress = Math.min((now - startedAt) / duration, 1);
+      const eased = 1 - ((1 - progress) ** 3);
+      setDisplayPercent(Math.round(62 * eased));
+      if (progress < 1) frameId = requestAnimationFrame(tick);
+    };
+    frameId = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(frameId);
+  }, [isVisible]);
 
   return (
-    <div className={`funding-progress${compact ? ' funding-progress--compact' : ''}`}>
+    <div ref={progressRef} className={`funding-progress${compact ? ' funding-progress--compact' : ''}${isVisible ? ' funding-progress--visible' : ''}`}>
       <div className="funding-progress__headline">
-        <strong>62%</strong>
+        <strong>{displayPercent}%</strong>
         <span>{t('sponsorsPage.investment.confirmedLabel')}</span>
       </div>
       <div
