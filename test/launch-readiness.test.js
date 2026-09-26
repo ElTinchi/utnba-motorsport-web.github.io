@@ -94,17 +94,15 @@ test('sponsor motion is triggered once as sections enter the viewport', async ()
   assert.match(funding, /requestAnimationFrame/);
 });
 
-test('home reading animations reset and guide each section in sequence', async () => {
-  const [home, areas, inView, styles] = await Promise.all([
+test('home reading animations guide each section in sequence', async () => {
+  const [home, areas, styles] = await Promise.all([
     readFile(new URL('../src/pages/Home.jsx', import.meta.url), 'utf8'),
     readFile(new URL('../src/components/AreasGrid.jsx', import.meta.url), 'utf8'),
-    readFile(new URL('../src/hooks/useInView.js', import.meta.url), 'utf8'),
     readFile(new URL('../src/styles/home.css', import.meta.url), 'utf8'),
   ]);
 
   assert.match(home, /home\.motivationHook/);
   assert.match(home, /AnimatedNumber/);
   assert.match(areas, /area-card--visible/);
-  assert.match(inView, /setIsVisible\(entry\.isIntersecting\)/);
   assert.match(styles, /--area-delay/);
 });
