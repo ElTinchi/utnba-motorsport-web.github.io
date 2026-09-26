@@ -175,14 +175,13 @@ export default function Home() {
           </svg>
         </div>
 
+        <span className="hero__ignition" aria-hidden="true" />
         <div className="hero__content">
           <img draggable={false} src="/assets/img/logo.png" alt="UTN BA Motorsport" className="hero__logo" width="440" height="86" />
           <span className="hero__tagline">{t('home.heroPlate')}</span>
           <h1 className="hero__title">{t('home.heroTitle')}</h1>
-          <p className="hero__description">{t('home.heroSubtitle')}</p>
           <div className="hero__actions">
             <NavLink to={ROUTES.sponsors} className="btn btn--primary">{t('home.heroCtaPrimary')}</NavLink>
-            <NavLink to={ROUTES.car} className="btn btn--hero-secondary">{t('home.heroCtaCar')}</NavLink>
           </div>
         </div>
       </section>
