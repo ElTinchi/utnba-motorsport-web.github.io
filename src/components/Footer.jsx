@@ -32,7 +32,7 @@ export default function Footer() {
           <div className="footer__column"><span className="footer__heading">{t('footer.connectLabel')}</span><NavLink to={ROUTES.news} className="footer__link">{t('nav.news')}</NavLink><NavLink to={ROUTES.joinUs} className="footer__link">{t('nav.joinUs')}</NavLink><NavLink to={ROUTES.sponsors} className="footer__link">{t('nav.sponsors')}</NavLink><a href="/llms.txt" className="footer__link">{t('footer.aiInfo')}</a></div>
         </nav>
 
-        <address className="footer__contact"><span className="footer__heading">{t('footer.contactLabel')}</span><a href={CONTACT_HREF} target="_blank" rel="noopener noreferrer" className="footer__contact-link">{CONTACT_EMAIL}</a><span className="footer__contact-place">{t('footer.address')}</span></address>
+        <address className="footer__contact"><span className="footer__heading">{t('footer.contactLabel')}</span><a href={CONTACT_HREF} className="footer__contact-link">{CONTACT_EMAIL}</a><span className="footer__contact-place">{t('footer.address')}</span><NavLink to={ROUTES.legal} className="footer__link">{t('footer.legal')}</NavLink><NavLink to={ROUTES.privacy} className="footer__link">{t('footer.privacy')}</NavLink></address>
       </div>
 
       <div className="footer__bottom"><p className="footer__copyright">{t('footer.copyright', { year })}</p><button type="button" className="footer__back-top" onClick={() => window.scrollTo({ top: 0 })}>{t('footer.backToTop')} <span aria-hidden="true">↑</span></button></div>

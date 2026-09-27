@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import PageShell from '../components/PageShell.jsx';
+import EditorialReveal from '../components/EditorialReveal.jsx';
 import content from '../data/news.json';
 import '../styles/news.css';
 
@@ -78,9 +79,9 @@ export default function News() {
   return (
     <PageShell wide kicker={labels.kicker} title={labels.title} intro={labels.intro}>
       <div className="shell-block news-journal">
-        <NewsArticle post={posts[0]} labels={labels} featured />
+        <EditorialReveal className="news-featured-reveal"><NewsArticle post={posts[0]} labels={labels} featured /></EditorialReveal>
         <div className="news-journal__heading"><h2>{labels.archive}</h2><span>2025 — 2026</span></div>
-        <div className="news-grid">{posts.slice(1).map(post => <NewsArticle key={post.id} post={post} labels={labels} />)}</div>
+        <div className="news-grid">{posts.slice(1).map(post => <EditorialReveal key={post.id}><NewsArticle post={post} labels={labels} /></EditorialReveal>)}</div>
         <aside className="news-social">
           <div><span className="news-social__label">PADDOCK / UTN BA</span><h2>{labels.socialTitle}</h2><p>{labels.socialText}</p></div>
           <a className="btn btn--primary" href="https://www.instagram.com/utnbamotorsport/" target="_blank" rel="noopener noreferrer">{labels.socialButton} <span aria-hidden="true">↗</span></a>

@@ -5,6 +5,8 @@ import { ROUTES } from '../routes';
 import AreasGrid from '../components/AreasGrid';
 import SponsorsCarousel from '../components/SponsorsCarousel';
 import FundingProgress from '../components/FundingProgress';
+import AnimatedNumber from '../components/AnimatedNumber';
+import useInView from '../hooks/useInView';
 import '../styles/home.css';
 
 const ACADEMY_LOGOS = [
@@ -12,6 +14,35 @@ const ACADEMY_LOGOS = [
   '/assets/img/academy/baja-utnba.png',
   '/assets/img/logo.png',
 ];
+
+const HIGHLIGHTS = [
+  { id: 'motivation', titleKey: 'home.motivationTitle', hookKey: 'home.motivationHook', subtitleKey: 'home.motivationSubtitle', bodyKey: 'home.motivationBody' },
+  { id: 'about', titleKey: 'home.aboutTitle', hookKey: 'home.aboutHook', subtitleKey: 'home.aboutSubtitle', bodyKey: 'home.aboutBody' },
+  { id: 'formulaStudent', titleKey: 'home.formulaStudentTitle', hookKey: 'home.formulaStudentHook', subtitleKey: 'home.formulaStudentSubtitle', bodyKey: 'home.formulaStudentBody', link: ROUTES.aboutFormulaStudent, linkKey: 'home.formulaStudentLink' },
+  { id: 'join', titleKey: 'home.joinTitle', hookKey: 'home.joinHook', subtitleKey: 'home.joinSubtitle', bodyKey: 'home.joinBody', link: ROUTES.joinUs, linkKey: 'home.joinLink' },
+];
+
+function ReadingHighlight({ highlight, index }) {
+  const { t } = useTranslation();
+  const [ref, isVisible] = useInView({ threshold: 0.22 });
+
+  return (
+    <article
+      ref={ref}
+      className={`home-highlight home-highlight--${index % 2 === 0 ? 'left' : 'right'}${isVisible ? ' home-highlight--visible' : ''}`}
+    >
+      <span className="home-highlight__eyebrow">{t(highlight.titleKey)}</span>
+      <h2 className="home-highlight__title">{t(highlight.hookKey)}</h2>
+      <p className="home-highlight__subtitle">{t(highlight.subtitleKey)}</p>
+      <p className="home-highlight__body">{t(highlight.bodyKey)}</p>
+      {highlight.link && (
+        <NavLink to={highlight.link} className="home-highlight__link">
+          {t(highlight.linkKey)}
+        </NavLink>
+      )}
+    </article>
+  );
+}
 
 // ============================================================
 // Circuito del hero — trazado y perfil de velocidad
@@ -175,9 +206,14 @@ export default function Home() {
           </svg>
         </div>
 
+        <span className="hero__ignition" aria-hidden="true" />
         <div className="hero__content">
           <img draggable={false} src="/assets/img/logo.png" alt="UTN BA Motorsport" className="hero__logo" width="440" height="86" />
           <span className="hero__tagline">{t('home.heroPlate')}</span>
+          <h1 className="hero__title">{t('home.heroTitle')}</h1>
+          <div className="hero__actions">
+            <NavLink to={`${ROUTES.sponsors}#alianza`} className="btn btn--primary">{t('sponsorsPage.secondaryCta')}</NavLink>
+          </div>
         </div>
       </section>
 
@@ -186,14 +222,14 @@ export default function Home() {
         <section className="intro" aria-labelledby="intro-title">
           <div className="intro__glow" aria-hidden="true"></div>
           <div className="intro__container">
-            <h1 id="intro-title" className="intro__title">
+            <h2 id="intro-title" className="intro__title">
               {t('home.heroTitle')}
-            </h1>
+            </h2>
             <p className="intro__description">{t('home.heroSubtitle')}</p>
 
             <div className="intro__actions">
-              <NavLink to={ROUTES.sponsors} className="btn btn--primary">
-                {t('home.heroCtaPrimary')}
+              <NavLink to={`${ROUTES.sponsors}#alianza`} className="btn btn--primary">
+                {t('sponsorsPage.secondaryCta')}
               </NavLink>
               <NavLink to={ROUTES.team} className="btn btn--secondary">
                 {t('home.heroCtaSecondary')}
@@ -205,31 +241,9 @@ export default function Home() {
         {/* ====== Mini-secciones: motivación, sobre nosotros, Fórmula Student, cómo unirte ====== */}
         <section className="home-highlights" aria-label="Quiénes somos y qué es Fórmula Student">
           <div className="home-highlights__container">
-            <article className="home-highlight">
-              <h2 className="home-highlight__title">{t('home.motivationTitle')}</h2>
-              <p className="home-highlight__body">{t('home.motivationBody')}</p>
-            </article>
-
-            <article className="home-highlight">
-              <h2 className="home-highlight__title">{t('home.aboutTitle')}</h2>
-              <p className="home-highlight__body">{t('home.aboutBody')}</p>
-            </article>
-
-            <article className="home-highlight">
-              <h2 className="home-highlight__title">{t('home.formulaStudentTitle')}</h2>
-              <p className="home-highlight__body">{t('home.formulaStudentBody')}</p>
-              <NavLink to={ROUTES.aboutFormulaStudent} className="home-highlight__link">
-                {t('home.formulaStudentLink')}
-              </NavLink>
-            </article>
-
-            <article className="home-highlight">
-              <h2 className="home-highlight__title">{t('home.joinTitle')}</h2>
-              <p className="home-highlight__body">{t('home.joinBody')}</p>
-              <NavLink to={ROUTES.joinUs} className="home-highlight__link">
-                {t('home.joinLink')}
-              </NavLink>
-            </article>
+            {HIGHLIGHTS.map((highlight, index) => (
+              <ReadingHighlight key={highlight.id} highlight={highlight} index={index} />
+            ))}
           </div>
         </section>
 
@@ -273,7 +287,7 @@ export default function Home() {
               <div className="stat-grid">
                 {academyStats.map((stat) => (
                   <div key={stat.label} className="stat-item">
-                    <span className="stat-value">{stat.value}</span>
+                    <AnimatedNumber value={stat.value} />
                     <span className="stat-label">{stat.label}</span>
                   </div>
                 ))}

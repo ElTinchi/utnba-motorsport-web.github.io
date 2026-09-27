@@ -1,6 +1,8 @@
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ROUTES } from '../routes';
+import EditorialReveal from '../components/EditorialReveal';
+import StaggerList from '../components/StaggerList';
 import '../styles/formulaStudent.css';
 
 export default function FormulaStudent() {
@@ -19,12 +21,14 @@ export default function FormulaStudent() {
           {t('common.backLink')}
         </NavLink>
 
-        <span className="fs-page__kicker">{t('fsPage.kicker')}</span>
-        <h1 className="fs-page__title">{t('fsPage.title')}</h1>
-        <p className="fs-page__notice">{t('fsPage.adaptNotice')}</p>
+        <EditorialReveal direction="left">
+          <span className="fs-page__kicker">{t('fsPage.kicker')}</span>
+          <h1 className="fs-page__title">{t('fsPage.title')}</h1>
+          <p className="fs-page__notice">{t('fsPage.adaptNotice')}</p>
+        </EditorialReveal>
 
-        {sections.map((section) => (
-          <article key={section.number} className="fs-section">
+        {sections.map((section, sectionIndex) => (
+          <EditorialReveal as="article" direction={sectionIndex % 2 === 0 ? 'left' : 'right'} key={section.number} className="fs-section">
             <div className="fs-section__index">{section.number}</div>
             <div className="fs-section__content">
               <span className="fs-section__eyebrow">{section.eyebrow}</span>
@@ -38,34 +42,30 @@ export default function FormulaStudent() {
                   <div className="fs-events">
                     <h3 className="fs-events__title">{t('fsPage.dynamicTitle')}</h3>
                     <p className="fs-events__intro">{t('fsPage.dynamicIntro')}</p>
-                    <div className="fs-events__grid">
-                      {dynamicEvents.map((ev) => (
-                        <article key={ev.title} className="fs-event">
+                    <StaggerList as="div" itemAs="article" className="fs-events__grid" itemClassName="fs-event" items={dynamicEvents} renderItem={(ev) => (
+                        <>
                           <h4 className="fs-event__title">{ev.title}</h4>
                           <p className="fs-event__body">{ev.body}</p>
                           <p className="fs-event__score">{ev.score}</p>
-                        </article>
-                      ))}
-                    </div>
+                        </>
+                      )} />
                   </div>
 
                   <div className="fs-events">
                     <h3 className="fs-events__title">{t('fsPage.staticTitle')}</h3>
                     <p className="fs-events__intro">{t('fsPage.staticIntro')}</p>
-                    <div className="fs-events__grid">
-                      {staticEvents.map((ev) => (
-                        <article key={ev.title} className="fs-event">
+                    <StaggerList as="div" itemAs="article" className="fs-events__grid" itemClassName="fs-event" items={staticEvents} renderItem={(ev) => (
+                        <>
                           <h4 className="fs-event__title">{ev.title}</h4>
                           <p className="fs-event__body">{ev.body}</p>
                           <p className="fs-event__score">{ev.score}</p>
-                        </article>
-                      ))}
-                    </div>
+                        </>
+                      )} />
                   </div>
                 </>
               )}
             </div>
-          </article>
+          </EditorialReveal>
         ))}
       </div>
     </section>

@@ -28,6 +28,8 @@
     "socialLabel": "Social media",
     "followOn": "Follow us on",
     "aiInfo": "Information for AI",
+    "legal": "Legal notice",
+    "privacy": "Privacy",
     "backToTop": "Back to top"
   },
   "home": {
@@ -36,14 +38,23 @@
     "heroSubtitle": "We are an integrated motorsport academy completing our first electric single-seater to compete at FSAE Brazil 2027.",
     "heroCtaPrimary": "Support the team",
     "heroCtaSecondary": "Meet the team",
+    "heroCtaCar": "Discover the car",
     "motivationTitle": "What drives us",
+    "motivationHook": "Competing in 2027 is only the beginning.",
+    "motivationSubtitle": "We want the team to continue in 2028, 2029 and for many years to come.",
     "motivationBody": "We do not want to build one car, compete once and have everything end there. UTN BA Motorsport was born from the challenge of developing our first fully electric Formula SAE car and competing in Brazil in 2027, but from the beginning we knew we wanted to create something that would last far beyond that car. That is why we created our Motorsport Academy: a path for more students to approach motorsport from the first years of their degree, learn by doing, gain experience through increasingly complex projects and eventually become part of UTN's future Formula SAE cars. We want to compete in 2027, but we also want there to be a team in 2028, 2030 and for many years to come. The car is one part of the project; what we truly want to build is something that lasts.",
     "aboutTitle": "About us",
+    "aboutHook": "Every generation should start a little further ahead.",
+    "aboutSubtitle": "We are designing a car, but building a team that lasts.",
     "aboutBody": "We are UTN BA Motorsport, an interdisciplinary team of students from Universidad Tecnológica Nacional – Facultad Regional Buenos Aires. We work like a real racing team, with students from different engineering disciplines and areas designing, manufacturing, managing and delivering every project. Our greatest challenge today is developing a fully electric Formula SAE single-seater, but around it we are building a much larger structure: a Motorsport Academy with projects of different levels of complexity, designed so that students can join, learn, grow within the team and pass what they have learned on to those who follow. The idea is simple: each generation should start a little further ahead than the previous one.",
     "formulaStudentTitle": "What is Formula Student?",
+    "formulaStudentHook": "It is not simply about being the fastest.",
+    "formulaStudentSubtitle": "Engineering, manufacturing, costs and the ability to defend the project are evaluated too.",
     "formulaStudentBody": "Formula Student, also known as Formula SAE, is one of the world's most important university engineering competitions, promoted by SAE International. Events are held across the United States, Europe, Asia and Oceania, with Brazil hosting one of Latin America's leading competitions. University teams from around the world design, manufacture and compete with their own single-seater, but it is not simply about who is fastest: engineering design and decisions, costs, manufacturing, reliability and the team's ability to present and defend its project are all evaluated. The experience demands working with real problems, schedules, resources and responsibilities, which is why Formula SAE experience is highly valued in demanding industries such as automotive, motorsport and aerospace.",
     "formulaStudentLink": "Learn more",
     "joinTitle": "How to join",
+    "joinHook": "Your first project can begin a career in motorsport.",
+    "joinSubtitle": "Join, learn by doing and grow with the team.",
     "joinBody": "We want UTN BA Motorsport to be a place where students can begin training in motorsport and grow from project to project. New members join when we open recruitment, when we publish the dates, requirements and different stages of the selection process. We share all news and upcoming opportunities to join through our Instagram.",
     "joinLink": "See open calls",
     "areas": {
@@ -102,7 +113,7 @@
   },
   "fsPage": {
     "kicker": "UTN BA Motorsport",
-    "title": "About Formula Student",
+    "title": "A competition where the car is the exam.",
     "adaptNotice": "This page describes the Formula Student competition in general. We still have to adapt the specifics to the Formula SAE Brazil rulebook — we'll fill that in as the project moves forward.",
     "sections": [
       {
@@ -193,7 +204,7 @@
   },
   "motorsportPage": {
     "kicker": "UTN BA Motorsport",
-    "title": "The academy: three categories, one team",
+    "title": "You arrive without experience. You leave running a real project.",
     "intro": "We are UTN BA's first Formula SAE generation and train through three levels of increasing complexity. This is the path that leads to the single-seater.",
     "sections": [
       {
@@ -251,11 +262,14 @@
   },
   "sponsorsPage": {
     "kicker": "Become a sponsor",
-    "title": "We are not just building a car.",
+    "title": "You are not funding a promise: you are accelerating a project already in motion.",
     "logoCta": "Put your logo on the car",
     "intro": "We are building the path that turns students into motorsport professionals. Thanks to those already supporting us, we have made it this far; today we are one final push away from the track.",
     "scrollCta": "Discover the story",
     "proofLabel": "Thank you to the companies already part of the journey",
+    "primaryCta": "Let's discuss a partnership",
+    "secondaryCta": "See how your company can participate",
+    "contactPrompt": "If this progress aligns with your company's goals, let's talk directly without forms or intermediaries.",
     "journey": {
       "kicker": "One academy, three stages",
       "title": "Before Formula, there is a journey.",
@@ -346,7 +360,7 @@
   },
   "teamPage": {
     "kicker": "The team",
-    "title": "We are the first generation",
+    "title": "We are not a student group. We operate as a racing team.",
     "intro": "Students at UTN Buenos Aires building, from scratch, the university's first electric Formula SAE car.",
     "photoAlt": "UTN BA Motorsport members with the single-seater chassis",
     "storyTitle": "Who we are",
@@ -364,7 +378,7 @@
   },
   "carPage": {
     "kicker": "The car",
-    "title": "Our first electric car",
+    "title": "Our knowledge turned into a machine.",
     "intro": "Designed, built and taken to the track by students at UTN Buenos Aires, to compete at Formula SAE Brazil 2027.",
     "renderAlt": "Render of the UTN BA Motorsport electric Formula SAE car",
     "renderCaption": "Working render of the car. The design is still evolving.",

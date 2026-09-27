@@ -2,14 +2,19 @@
 .funding-progress__headline { display: flex; align-items: end; gap: 1rem; margin-bottom: 1.6rem; }
 .funding-progress__headline strong { color: #fcf6e6; font-size: clamp(3.5rem, 8vw, 6.4rem); font-weight: 900; letter-spacing: -.075em; line-height: .78; }
 .funding-progress__headline span { max-width: 36ch; color: rgba(var(--ink-rgb), .72); font-size: .78rem; font-weight: 700; line-height: 1.45; }
-.funding-progress__bar { display: flex; height: 22px; overflow: hidden; border: 1px solid rgba(var(--ink-rgb), .18); border-radius: 999px; background: #0f0f12; }
+.funding-progress__bar { display: flex; height: 22px; overflow: hidden; border: 1px solid rgba(var(--ink-rgb), .18); border-radius: 999px; background: #0f0f12; transform: scaleX(0); transform-origin: left; transition: transform 1.05s .12s cubic-bezier(.22, 1, .36, 1); }
+.funding-progress--visible .funding-progress__bar { transform: scaleX(1); }
 .funding-progress__segment { min-width: 0; }
 .funding-progress__segment + .funding-progress__segment { border-left: 3px solid #17171b; }
 .funding-progress__segment--confirmed { background: #dd0e0e; }
 .funding-progress__segment--materials { background: repeating-linear-gradient(135deg, rgba(var(--ink-rgb), .72) 0 5px, rgba(var(--ink-rgb), .26) 5px 10px); }
 .funding-progress__segment--funding { background: rgba(var(--ink-rgb), .08); }
 .funding-progress__legend { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 1.25rem; }
-.funding-progress__legend div { min-width: 0; }
+.funding-progress__legend div { min-width: 0; opacity: 0; transform: translateY(8px); transition: opacity .4s ease, transform .4s ease; }
+.funding-progress--visible .funding-progress__legend div { opacity: 1; transform: translateY(0); }
+.funding-progress--visible .funding-progress__legend div:nth-child(1) { transition-delay: .38s; }
+.funding-progress--visible .funding-progress__legend div:nth-child(2) { transition-delay: .48s; }
+.funding-progress--visible .funding-progress__legend div:nth-child(3) { transition-delay: .58s; }
 .funding-progress__legend dt { display: flex; align-items: center; gap: .45rem; color: #fcf6e6; font-size: .8rem; font-weight: 850; }
 .funding-progress__legend dd { margin: .35rem 0 0; color: rgba(var(--ink-rgb), .58); font-size: .65rem; line-height: 1.45; overflow-wrap: anywhere; }
 .funding-progress__key { display: inline-block; width: 8px; height: 8px; flex: 0 0 auto; border-radius: 50%; }
@@ -24,4 +29,8 @@
   .funding-progress__legend { grid-template-columns: 1fr; gap: .8rem; }
   .funding-progress__legend div { display: grid; grid-template-columns: 3.2rem minmax(0, 1fr); align-items: start; gap: .5rem; }
   .funding-progress__legend dd { margin: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .funding-progress__bar,
+  .funding-progress__legend div { opacity: 1; transform: none; transition: none; }
 }

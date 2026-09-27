@@ -1,5 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import PageShell from '../components/PageShell.jsx';
+import EditorialReveal from '../components/EditorialReveal.jsx';
+import StaggerList from '../components/StaggerList.jsx';
 import '../styles/car.css';
 
 const RENDER_APP_URL = '/visor/visor.html';
@@ -21,7 +23,7 @@ export default function Car() {
       intro={t('carPage.intro')}
       wide
     >
-      <div className="shell-block">
+      <EditorialReveal className="shell-block car-hero-reveal">
         <figure className="car-hero">
           <img draggable={false}
             src="/assets/img/render_fsae.jpg"
@@ -32,17 +34,17 @@ export default function Car() {
           />
           <figcaption>{t('carPage.renderCaption')}</figcaption>
         </figure>
-      </div>
+      </EditorialReveal>
 
-      <div className="shell-block">
+      <EditorialReveal className="shell-block" direction="left">
         <h2 className="shell-block__title">{t('carPage.projectTitle')}</h2>
         {projectParagraphs.map((paragraph, i) => (
           <p key={i} className="shell-block__text">{paragraph}</p>
         ))}
-      </div>
+      </EditorialReveal>
 
       {/* ====== Visor de sponsors ====== */}
-      <div className="shell-block">
+      <EditorialReveal className="shell-block" direction="right">
         <div className="car-viewer">
           <span className="car-viewer__kicker">{t('carPage.viewer.kicker')}</span>
           <h2 className="car-viewer__title">{t('carPage.viewer.title')}</h2>
@@ -65,21 +67,19 @@ export default function Car() {
             {t('carPage.viewer.openButton')}
           </a>
         </div>
-      </div>
+      </EditorialReveal>
 
       {/* ====== Ficha técnica ====== */}
-      <div className="shell-block">
+      <EditorialReveal className="shell-block">
         <h2 className="shell-block__title">{t('carPage.specsTitle')}</h2>
-        <dl className="car-specs">
-          {SPECS.map((spec) => (
-            <div key={spec} className="car-specs__row">
+        <StaggerList as="dl" itemAs="div" className="car-specs" itemClassName="car-specs__row" items={SPECS} renderItem={(spec) => (
+            <>
               <dt>{t(`carPage.specs.${spec}.label`)}</dt>
               <dd>{t(`carPage.specs.${spec}.value`)}</dd>
-            </div>
-          ))}
-        </dl>
+            </>
+          )} />
         <p className="shell-note">{t('carPage.specsNote')}</p>
-      </div>
+      </EditorialReveal>
     </PageShell>
   );
 }

@@ -98,8 +98,8 @@ export default function Header() {
 
         <div className="header__actions">
           <LanguageSwitcher />
-          <NavLink to={ROUTES.joinUs} className="btn btn--primary btn--small header__cta" onClick={closeAll}>
-            {t('nav.joinUs')}
+          <NavLink to={ROUTES.sponsors} className="btn btn--primary btn--small header__cta" onClick={closeAll}>
+            {t('home.heroCtaPrimary')}
           </NavLink>
         </div>
       </div>

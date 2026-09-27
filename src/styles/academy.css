@@ -143,13 +143,37 @@
    Fórmula SAE en números
    ======================================== */
 .ms-stats {
-  margin-top: 2.5rem;
-  padding-top: 2.5rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
   border-top: 1px solid rgba(var(--ink-rgb), 0.1);
 }
 
 .ms-stats__title {
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 700;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.ms-stats .stat-grid {
+  gap: 1.25rem;
+}
+
+.ms-stats .stat-value {
+  font-size: clamp(2.25rem, 4.5vw, 4rem);
+}
+
+.ms-stats .stat-item--wide .stat-value {
+  font-size: clamp(2.1rem, 3.5vw, 3rem);
+  letter-spacing: -0.04em;
+}
+
+.ms-stats .stat-label {
+  margin-top: 0.45rem;
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.ms-stats .stat-note {
+  margin-top: 1.5rem;
+  font-size: 0.75rem;
 }

@@ -4,6 +4,7 @@ import { ROUTES } from '../routes';
 import PageShell from '../components/PageShell.jsx';
 import Gallery, { PHOTOS_BY_AREA } from '../components/Gallery.jsx';
 import { AREAS } from '../components/AreasGrid.jsx';
+import EditorialReveal from '../components/EditorialReveal.jsx';
 import '../styles/team.css';
 
 export default function Team() {
@@ -16,7 +17,7 @@ export default function Team() {
       title={t('teamPage.title')}
       intro={t('teamPage.intro')}
     >
-      <figure className="shell-block team-photo">
+      <EditorialReveal as="figure" className="shell-block team-photo">
         <img draggable={false}
           src="/assets/img/Nosotros.jpg"
           alt={t('teamPage.photoAlt')}
@@ -24,7 +25,7 @@ export default function Team() {
           height="1419"
           loading="eager"
         />
-      </figure>
+      </EditorialReveal>
 
       <div className="shell-block">
         <h2 className="shell-block__title">{t('teamPage.storyTitle')}</h2>
@@ -38,7 +39,7 @@ export default function Team() {
         <p className="shell-block__text">{t('teamPage.areasIntro')}</p>
 
         {AREAS.map((area) => (
-          <article key={area.id} className="team-area" id={area.id}>
+          <EditorialReveal as="article" key={area.id} className="team-area" id={area.id}>
             <header className="team-area__head">
               <img draggable={false} src={area.icon} alt="" className="team-area__icon" width="64" height="64" loading="lazy" />
               <div>
@@ -55,7 +56,7 @@ export default function Team() {
             {!PHOTOS_BY_AREA[area.folder] && (
               <p className="team-area__nophotos">{t('teamPage.noPhotos')}</p>
             )}
-          </article>
+          </EditorialReveal>
         ))}
       </div>
 
