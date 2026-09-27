@@ -88,7 +88,7 @@ function placeAt(x,y){
   hit={...centerHit,point:[0,centerHit.point[1],centerHit.point[2]],normal:norm([0,centerHit.normal[1],centerHit.normal[2]])};
  }
  if(!hit||!hit.body){message('Elegí una superficie de la carrocería.');return;}
- if(hit.uv&&reserved.some(z=>hit.uv[0]>=z.box[0]&&hit.uv[0]<=z.box[0]+z.box[2]&&hit.uv[1]>=z.box[1]&&hit.uv[1]<=z.box[1]+z.box[3])){message('Ese espacio está reservado para la identidad reglamentaria o el número del auto.');return;}
+ if(hit.uv&&reserved.some(({box})=>hit.uv[0]>=box[0]&&hit.uv[0]<=box[0]+box[2]&&hit.uv[1]>=box[1]&&hit.uv[1]<=box[1]+box[3])){message('Ese espacio está reservado para la identidad reglamentaria o el número del auto.');return;}
  let right=centered?[1,0,0]:norm(cross([0,1,0],hit.normal));
  if(!centered&&Math.abs(dot(hit.normal,[0,1,0]))>.92)right=norm(cross([0,0,-1],hit.normal));
  placement={point:hit.point,normal:hit.normal,right,up:norm(cross(hit.normal,right)),mirror:!centered};

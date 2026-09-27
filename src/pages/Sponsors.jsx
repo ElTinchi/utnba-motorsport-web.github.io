@@ -44,9 +44,14 @@ export default function Sponsors() {
           <span className="sp-page__kicker">{t('sponsorsPage.kicker')}</span>
           <h1 className="sp-page__title">{t('sponsorsPage.title')}</h1>
           <p className="sp-page__intro">{t('sponsorsPage.intro')}</p>
-          <a href="#alianza" className="btn btn--primary">
-            {t('sponsorsPage.secondaryCta')}
-          </a>
+          <div className="sp-hero__actions">
+            <a href="#alianza" className="btn btn--primary">
+              {t('sponsorsPage.secondaryCta')}
+            </a>
+            <a href="/visor/visor.html" className="btn btn--secondary">
+              {t('sponsorsPage.viewer.button')}
+            </a>
+          </div>
           <a href="#recorrido" className="sp-hero__scroll">
             <span>{t('sponsorsPage.scrollCta')}</span>
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
