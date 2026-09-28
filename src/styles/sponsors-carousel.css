@@ -121,11 +121,15 @@
   mix-blend-mode: multiply;
 }
 
+/* aspect-ratio reserva el alto antes de que cargue: sin él, la imagen lazy
+   mide 0px, queda fuera del recorte del contenedor y el navegador puede no
+   descargarla nunca. */
 .sp-car__item--sin-par img {
   position: absolute;
   width: 120%;
   max-width: none;
   height: auto;
+  aspect-ratio: 1200 / 900;
   left: -10.4%;
   top: -140.5983%;
 }

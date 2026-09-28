@@ -295,3 +295,28 @@ test('academy gives long statistics a fitting typography variant', async () => {
     await server.close();
   }
 });
+
+test('sponsors proof band keeps its observed surface unclipped', async () => {
+  const root = fileURLToPath(new URL('..', import.meta.url));
+  const server = await createServer({ root, appType: 'custom', server: { middlewareMode: true }, logLevel: 'silent' });
+  try {
+    const [{ default: Sponsors }, localeSource, sponsorsCss] = await Promise.all([
+      server.ssrLoadModule('/src/pages/Sponsors.jsx'),
+      readFile(new URL('../src/locales/es.json', import.meta.url), 'utf8'),
+      readFile(new URL('../src/styles/sponsors.css', import.meta.url), 'utf8'),
+    ]);
+    const instance = i18next.createInstance();
+    await instance.init({ lng: 'es', initImmediate: false, resources: { es: { translation: JSON.parse(localeSource) } } });
+    const html = renderToStaticMarkup(createElement(
+      I18nextProvider,
+      { i18n: instance },
+      createElement(StaticRouter, { location: '/sponsors' }, createElement(Sponsors)),
+    ));
+
+    assert.match(html, /sp-proof-reveal/);
+    assert.doesNotMatch(html, /class="[^"]*editorial-reveal[^"]*\bsp-proof\b(?!-)/);
+    assert.doesNotMatch(sponsorsCss, /\.sp-proof-reveal\s*\{[^}]*clip-path/);
+  } finally {
+    await server.close();
+  }
+});

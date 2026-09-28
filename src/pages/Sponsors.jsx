@@ -59,9 +59,11 @@ export default function Sponsors() {
         </header>
       </div>
 
-      <EditorialReveal className="sp-proof" mask="horizontal" aria-label={t('sponsorsPage.proofLabel')}>
-        <p className="sp-proof__label">{t('sponsorsPage.proofLabel')}</p>
-        <SponsorsCarousel />
+      <EditorialReveal className="sp-proof-reveal" aria-label={t('sponsorsPage.proofLabel')}>
+        <div className="sp-proof">
+          <p className="sp-proof__label">{t('sponsorsPage.proofLabel')}</p>
+          <SponsorsCarousel />
+        </div>
       </EditorialReveal>
 
       <div className="sp-page__container" id="recorrido">
