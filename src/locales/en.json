@@ -50,7 +50,7 @@
     "formulaStudentTitle": "What is Formula Student?",
     "formulaStudentHook": "It is not simply about being the fastest.",
     "formulaStudentSubtitle": "Engineering, manufacturing, costs and the ability to defend the project are evaluated too.",
-    "formulaStudentBody": "Formula Student, also known as Formula SAE, is one of the world's most important university engineering competitions, promoted by SAE International. Events are held across the United States, Europe, Asia and Oceania, with Brazil hosting one of Latin America's leading competitions. University teams from around the world design, manufacture and compete with their own single-seater, but it is not simply about who is fastest: engineering design and decisions, costs, manufacturing, reliability and the team's ability to present and defend its project are all evaluated. The experience demands working with real problems, schedules, resources and responsibilities, which is why Formula SAE experience is highly valued in demanding industries such as automotive, motorsport and aerospace.",
+    "formulaStudentBody": "Formula Student, also known as Formula SAE, is one of the world's most important university engineering competitions, promoted by SAE International. Events are held across the United States, Europe, Asia and Oceania, with Brazil hosting the only competition in Latin America. University teams from around the world design, manufacture and compete with their own single-seater, but it is not simply about who is fastest: engineering design and decisions, costs, manufacturing, reliability and the team's ability to present and defend its project are all evaluated. The experience demands working with real problems, schedules, resources and responsibilities, which is why Formula SAE experience is highly valued in demanding industries such as automotive, motorsport and aerospace.",
     "formulaStudentLink": "Learn more",
     "joinTitle": "How to join",
     "joinHook": "Your first project can begin a career in motorsport.",
@@ -343,8 +343,8 @@
       },
       "industrial": {
         "title": "Industrial",
-        "subtitle": "Manufacturing and processes",
-        "body": "Plans how everything gets done: schedules, processes, costs and suppliers. It is what keeps the project inside the calendar and the budget."
+        "subtitle": "Systems and processes",
+        "body": "Coordinates sponsor search and relations, manages the team's budget and connects the work of every area. It also formalizes the team's procedures on its own digital systems."
       },
       "electronics": {
         "title": "Electronics",

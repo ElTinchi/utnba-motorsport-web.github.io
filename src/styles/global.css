@@ -437,6 +437,11 @@ button {
   :root { --header-height: 64px; }
   html { font-size: 15px; }
   .header__logo-img { height: 22px; }
+  .header__actions { gap: .35rem; }
+  .btn--small { padding-inline: .65rem; }
+  .lang-switch__toggle { gap: .2rem; padding: .3rem .4rem; font-size: .74rem; }
+  .lang-switch__toggle svg { width: 10px; height: 10px; }
+  .lang-switch__toggle .flag-icon { width: 16px; height: 11px; }
 }
 
 /* Show desktop nav, hide hamburger on larger screens */

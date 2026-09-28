@@ -50,7 +50,7 @@
     "formulaStudentTitle": "¿Qué es Fórmula Student?",
     "formulaStudentHook": "No se trata solamente de ser el más rápido.",
     "formulaStudentSubtitle": "También se evalúan la ingeniería, la fabricación, los costos y la capacidad de defender el proyecto.",
-    "formulaStudentBody": "Fórmula Student, también conocida como Fórmula SAE, es una de las competencias universitarias de ingeniería más importantes del mundo, impulsada por SAE International. Se realiza en Estados Unidos, Europa, Asia y Oceanía, y tiene en Brasil una de sus principales competencias de Latinoamérica. Equipos universitarios de todo el mundo diseñan, fabrican y compiten con un monoplaza propio, pero no se trata solamente de ver quién es más rápido: se evalúan el diseño y las decisiones de ingeniería, los costos, la fabricación, la confiabilidad y la capacidad del equipo para presentar y defender su proyecto. La experiencia obliga a trabajar con problemas, tiempos, recursos y responsabilidades reales, y por eso haber pasado por Fórmula SAE es una experiencia muy valorada en industrias de alta exigencia como la automotriz, el motorsport y la aeroespacial.",
+    "formulaStudentBody": "Fórmula Student, también conocida como Fórmula SAE, es una de las competencias universitarias de ingeniería más importantes del mundo, impulsada por SAE International. Se realiza en Estados Unidos, Europa, Asia y Oceanía, y tiene en Brasil su única competencia en Latinoamérica. Equipos universitarios de todo el mundo diseñan, fabrican y compiten con un monoplaza propio, pero no se trata solamente de ver quién es más rápido: se evalúan el diseño y las decisiones de ingeniería, los costos, la fabricación, la confiabilidad y la capacidad del equipo para presentar y defender su proyecto. La experiencia obliga a trabajar con problemas, tiempos, recursos y responsabilidades reales, y por eso haber pasado por Fórmula SAE es una experiencia muy valorada en industrias de alta exigencia como la automotriz, el motorsport y la aeroespacial.",
     "formulaStudentLink": "Conocé más",
     "joinTitle": "¿Cómo unirte?",
     "joinHook": "Tu primer proyecto puede ser el comienzo de una carrera en motorsport.",
@@ -373,8 +373,8 @@
       },
       "industrial": {
         "title": "Industrial",
-        "subtitle": "Manufactura y procesos",
-        "body": "Planifica cómo se hace todo: tiempos, procesos, costos y proveedores. Es la que hace que el proyecto entre en el calendario y en el presupuesto."
+        "subtitle": "Sistemas y procesos",
+        "body": "Coordina la búsqueda y la relación con sponsors, administra el presupuesto del equipo y articula el trabajo entre todas las áreas. Además, formaliza los procedimientos del equipo sobre sistemas digitales propios."
       },
       "electronics": {
         "title": "Electrónica",

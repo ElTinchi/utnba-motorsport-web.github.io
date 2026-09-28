@@ -1,4 +1,5 @@
-.policy { max-width: 54rem; padding-bottom: clamp(3rem, 8vw, 7rem); }
+.policy { padding-bottom: clamp(3rem, 8vw, 7rem); }
+.policy__updated, .policy__section h2, .policy__section p { max-width: 70ch; }
 .policy__updated { margin-bottom: 2rem; color: var(--color-white-subtle); font-size: .78rem; }
 .policy__section { padding: 2rem 0; border-top: 1px solid rgba(var(--ink-rgb), .12); }
 .policy__section h2 { margin-bottom: .8rem; font-size: clamp(1.15rem, 2vw, 1.45rem); }

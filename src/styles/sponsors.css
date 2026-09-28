@@ -12,7 +12,7 @@
 
 .sp-hero { min-height: min(680px, calc(100vh - 150px)); display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding-bottom: clamp(4rem, 9vw, 8rem); }
 .sp-page__kicker, .sp-section-kicker { display: block; margin-bottom: .85rem; color: var(--color-red); font-size: .75rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
-.sp-page__title { max-width: 13ch; margin-bottom: 1.5rem; color: var(--color-white); font-size: clamp(2.45rem, 7.5vw, 6rem); font-weight: 900; letter-spacing: -.045em; line-height: .98; }
+.sp-page__title { max-width: 13ch; margin-bottom: 1.5rem; color: var(--color-white); font-size: clamp(2.3rem, 6vw, 4.5rem); font-weight: 900; letter-spacing: -.045em; line-height: .98; }
 .sp-page__intro { max-width: 64ch; margin-bottom: 2.25rem; color: var(--color-white-muted); font-size: clamp(1rem, 1.5vw, 1.2rem); line-height: 1.75; }
 .sp-hero__actions { display: flex; flex-wrap: wrap; gap: .75rem; }
 .sp-hero__scroll { display: inline-flex; align-items: center; gap: .65rem; margin-top: 1.25rem; color: var(--color-white); font-size: .78rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
