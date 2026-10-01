@@ -89,6 +89,12 @@
   border-radius: 4px;
 }
 
+/* MGB integra una bajada dentro del archivo; necesita más altura total para
+   que la marca principal conserve el mismo peso visual que los demás logos. */
+.sp-car__item--mgb {
+  height: clamp(70px, 8vw, 88px);
+}
+
 /* Sin movimiento: la banda pasa a ser una fila con scroll manual. */
 @media (prefers-reduced-motion: reduce) {
   .sp-car__viewport {

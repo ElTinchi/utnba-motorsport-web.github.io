@@ -20,7 +20,7 @@ export const SPONSORS = [
   { name: 'SIN PAR', href: 'https://sinpar.com.ar/', logo: '/assets/img/sponsors/onwhite/sin-par.png', logoClass: 'sp-car__item--sin-par' },
   { name: 'DSM Diesel Car S.A.', href: 'https://www.dsmdieselcar.com.ar/', logo: '/assets/img/sponsors/onwhite/dsm-diesel-car.png' },
   { name: 'GMG Neumáticos de Competición', href: 'https://www.instagram.com/neumaticosgmg/?hl=es', logo: '/assets/img/sponsors/onwhite/gmg-neumaticos.png' },
-  { name: 'MGB Mecánica & Electromovilidad', href: 'https://www.instagram.com/gncbahia/?hl=es-la', logo: '/assets/img/sponsors/onwhite/mgb-bahia.png' },
+  { name: 'MGB Mecánica & Electromovilidad', href: 'https://www.instagram.com/gncbahia/?hl=es-la', logo: '/assets/img/sponsors/onwhite/mgb-bahia.png?v=2', logoClass: 'sp-car__item--mgb' },
 ];
 
 // `duplicate` marca la copia visual del loop: no debe recibir foco de teclado
