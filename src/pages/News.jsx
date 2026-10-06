@@ -41,7 +41,7 @@ function NewsArticle({ post, labels, featured = false }) {
   }
 
   return (
-    <article id={post.id} className={`news-story${featured ? ' news-story--featured' : ''}`} aria-labelledby={`${post.id}-title`}>
+    <article id={post.id} className={`news-story${featured ? ' news-story--featured' : ''}${featured && post.gallery?.length ? ' news-story--gallery' : ''}`} aria-labelledby={`${post.id}-title`}>
       <div className={`news-story__visual${post.image ? " news-story__visual--photo" : ""}`} aria-hidden={post.image ? undefined : true}>
         {post.image ? <img draggable={false} src={post.image} alt={post.imageAlt || ""} loading={featured ? 'eager' : 'lazy'} decoding="async" /> : <>
           <span className="news-story__edition">UTN BA / MOTORSPORT</span>
@@ -55,10 +55,10 @@ function NewsArticle({ post, labels, featured = false }) {
           {post.dateTime ? <time dateTime={post.dateTime}>{post.date}</time> : <span>{post.date}</span>}
         </div>
         <h2 id={`${post.id}-title`}><a href={`#${post.id}`}>{post.title}</a></h2>
+        {post.paragraphs.map((paragraph, index) => <p key={index}>{paragraph.split(/(ABB|UTN Buenos Aires)/g).map((part, partIndex) => part === 'ABB' ? <a key={partIndex} href="https://www.linkedin.com/company/abb/" target="_blank" rel="noopener noreferrer"><strong>ABB</strong></a> : part === 'UTN Buenos Aires' ? <a key={partIndex} href="https://www.linkedin.com/company/utn--regional-ba/" target="_blank" rel="noopener noreferrer"><strong>UTN Buenos Aires</strong></a> : part)}</p>)}
         {post.gallery?.length > 0 && <div className="news-story__gallery" role="group" aria-label={labels.gallery}>
           {post.gallery.map(photo => <div key={photo.src}><img draggable={false} src={photo.src} alt={photo.alt} loading="lazy" decoding="async" /></div>)}
         </div>}
-        {post.paragraphs.map((paragraph, index) => <p key={index}>{paragraph.split(/(ABB|UTN Buenos Aires)/g).map((part, partIndex) => part === 'ABB' ? <a key={partIndex} href="https://www.linkedin.com/company/abb/" target="_blank" rel="noopener noreferrer"><strong>ABB</strong></a> : part === 'UTN Buenos Aires' ? <a key={partIndex} href="https://www.linkedin.com/company/utn--regional-ba/" target="_blank" rel="noopener noreferrer"><strong>UTN Buenos Aires</strong></a> : part)}</p>)}
         {post.instagramUrl && <a className="news-story__source" href={post.instagramUrl} target="_blank" rel="noopener noreferrer">{post.instagramLabel || labels.instagram} <span aria-hidden="true">↗</span></a>}
         {post.sourceUrl && <a className="news-story__source" href={post.sourceUrl} target="_blank" rel="noopener noreferrer">{labels.source} ↗</a>}
         <div className="news-story__sharing">

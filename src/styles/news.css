@@ -56,3 +56,34 @@
 .news-story__share:disabled { opacity: .6; cursor: wait; }
 .news-story__share-status { color: var(--color-white-muted); font-size: .7rem; }
 .news-story__share-url { width: 100%; padding: .7rem; border: 1px solid var(--news-border); border-radius: 6px; background: var(--color-black); color: var(--color-white); font: inherit; font-size: .7rem; }
+
+/* The latest ABB story has enough photos to read as a single editorial feature. */
+.news-story--featured.news-story--gallery { grid-template-columns: minmax(0, 1fr); }
+.news-story--featured.news-story--gallery .news-story__visual--photo {
+  aspect-ratio: 16 / 9;
+  min-height: 0;
+  max-height: 680px;
+  border-right: 0;
+  border-bottom: 1px solid var(--news-border);
+}
+.news-story--featured.news-story--gallery .news-story__visual--photo img { object-fit: cover; object-position: center 42%; }
+.news-story--featured.news-story--gallery .news-story__body { align-self: stretch; }
+.news-story--featured.news-story--gallery .news-story__gallery {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(.75rem, 2vw, 1.25rem);
+  margin: 1.75rem 0 0;
+}
+.news-story--featured.news-story--gallery .news-story__gallery > div {
+  border: 1px solid var(--news-border);
+  border-radius: 10px;
+  background: rgba(var(--ink-rgb), .04);
+}
+.news-story--featured.news-story--gallery .news-story__gallery img {
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+@media (max-width: 700px) {
+  .news-story--featured.news-story--gallery .news-story__visual--photo { aspect-ratio: 4 / 3; }
+  .news-story--featured.news-story--gallery .news-story__gallery { grid-template-columns: 1fr; }
+}
