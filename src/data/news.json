@@ -19,20 +19,6 @@
     },
     "posts": [
       {
-        "id": "expo-carreras-2026",
-        "dateTime": "2026-09-16",
-        "mark": "16.09",
-        "year": "2026",
-        "date": "16 de septiembre de 2026",
-        "category": "Eventos",
-        "title": "Llevamos el proyecto a la Expo Carreras de UTN",
-        "paragraphs": [
-          "Participamos de la Expo Carreras de UTN con nuestro proyecto de automovilismo universitario. Una nueva oportunidad para acercar UTN BA Motorsport a la comunidad y compartir el trabajo que venimos realizando.",
-          "Desde el inicio del proyecto en 2025, cada encuentro nos permite contar c\u00f3mo llevamos la ingenier\u00eda del aula a un desaf\u00edo en equipo."
-        ],
-        "image": null
-      },
-      {
         "id": "visita-abb-2026",
         "dateTime": "2026-09-28",
         "mark": "28.09",
@@ -52,15 +38,25 @@
             "alt": "Tableros de distribuci\u00f3n el\u00e9ctrica ABB."
           },
           {
-            "src": "/assets/img/news/ABB-2026/abb-selfie.webp",
-            "alt": "Tres integrantes del equipo durante la visita a ABB."
-          },
-          {
             "src": "/assets/img/news/ABB-2026/abb-recorrido.webp",
             "alt": "El equipo recorre el espacio de ABB durante la visita."
           }
         ],
         "imageAlt": "El equipo de UTN BA Motorsport y ABB reunido durante la visita."
+      },
+      {
+        "id": "expo-carreras-2026",
+        "dateTime": "2026-09-16",
+        "mark": "16.09",
+        "year": "2026",
+        "date": "16 de septiembre de 2026",
+        "category": "Eventos",
+        "title": "Llevamos el proyecto a la Expo Carreras de UTN",
+        "paragraphs": [
+          "Participamos de la Expo Carreras de UTN con nuestro proyecto de automovilismo universitario. Una nueva oportunidad para acercar UTN BA Motorsport a la comunidad y compartir el trabajo que venimos realizando.",
+          "Desde el inicio del proyecto en 2025, cada encuentro nos permite contar c\u00f3mo llevamos la ingenier\u00eda del aula a un desaf\u00edo en equipo."
+        ],
+        "image": null
       },
       {
         "id": "circuito-virtual-campus",
@@ -183,20 +179,6 @@
     },
     "posts": [
       {
-        "id": "expo-carreras-2026",
-        "dateTime": "2026-09-16",
-        "mark": "16.09",
-        "year": "2026",
-        "date": "September 16, 2026",
-        "category": "Events",
-        "title": "Our project at UTN's degree fair",
-        "paragraphs": [
-          "We took part in UTN's degree fair with our university motorsport project. It was another opportunity to introduce UTN BA Motorsport to the community and share our progress.",
-          "Since the project began in 2025, these gatherings have helped us explain how we turn classroom engineering into a team challenge."
-        ],
-        "image": null
-      },
-      {
         "id": "visita-abb-2026",
         "dateTime": "2026-09-28",
         "mark": "28.09",
@@ -216,15 +198,25 @@
             "alt": "ABB electrical distribution panels."
           },
           {
-            "src": "/assets/img/news/ABB-2026/abb-selfie.webp",
-            "alt": "Three team members during the ABB visit."
-          },
-          {
             "src": "/assets/img/news/ABB-2026/abb-recorrido.webp",
             "alt": "The team tours ABB\u2019s space during the visit."
           }
         ],
         "imageAlt": "The UTN BA Motorsport and ABB teams together during the visit."
+      },
+      {
+        "id": "expo-carreras-2026",
+        "dateTime": "2026-09-16",
+        "mark": "16.09",
+        "year": "2026",
+        "date": "September 16, 2026",
+        "category": "Events",
+        "title": "Our project at UTN's degree fair",
+        "paragraphs": [
+          "We took part in UTN's degree fair with our university motorsport project. It was another opportunity to introduce UTN BA Motorsport to the community and share our progress.",
+          "Since the project began in 2025, these gatherings have helped us explain how we turn classroom engineering into a team challenge."
+        ],
+        "image": null
       },
       {
         "id": "circuito-virtual-campus",
@@ -347,20 +339,6 @@
     },
     "posts": [
       {
-        "id": "expo-carreras-2026",
-        "dateTime": "2026-09-16",
-        "mark": "16.09",
-        "year": "2026",
-        "date": "16 de setembro de 2026",
-        "category": "Eventos",
-        "title": "Nosso projeto na Expo Carreras da UTN",
-        "paragraphs": [
-          "Participamos da Expo Carreras da UTN com nosso projeto de automobilismo universit\u00e1rio. Uma nova oportunidade de apresentar a UTN BA Motorsport \u00e0 comunidade e compartilhar nossos avan\u00e7os.",
-          "Desde o in\u00edcio do projeto em 2025, cada encontro nos permite mostrar como levamos a engenharia da sala de aula a um desafio em equipe."
-        ],
-        "image": null
-      },
-      {
         "id": "visita-abb-2026",
         "dateTime": "2026-09-28",
         "mark": "28.09",
@@ -380,15 +358,25 @@
             "alt": "Pain\u00e9is de distribui\u00e7\u00e3o el\u00e9trica da ABB."
           },
           {
-            "src": "/assets/img/news/ABB-2026/abb-selfie.webp",
-            "alt": "Tr\u00eas integrantes da equipe durante a visita \u00e0 ABB."
-          },
-          {
             "src": "/assets/img/news/ABB-2026/abb-recorrido.webp",
             "alt": "A equipe conhece o espa\u00e7o da ABB durante a visita."
           }
         ],
         "imageAlt": "As equipes da UTN BA Motorsport e da ABB reunidas durante a visita."
+      },
+      {
+        "id": "expo-carreras-2026",
+        "dateTime": "2026-09-16",
+        "mark": "16.09",
+        "year": "2026",
+        "date": "16 de setembro de 2026",
+        "category": "Eventos",
+        "title": "Nosso projeto na Expo Carreras da UTN",
+        "paragraphs": [
+          "Participamos da Expo Carreras da UTN com nosso projeto de automobilismo universit\u00e1rio. Uma nova oportunidade de apresentar a UTN BA Motorsport \u00e0 comunidade e compartilhar nossos avan\u00e7os.",
+          "Desde o in\u00edcio do projeto em 2025, cada encontro nos permite mostrar como levamos a engenharia da sala de aula a um desafio em equipe."
+        ],
+        "image": null
       },
       {
         "id": "circuito-virtual-campus",
