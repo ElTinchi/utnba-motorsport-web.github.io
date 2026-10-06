@@ -1,20 +1,24 @@
 import { ROUTES } from './routes.js';
 
-const SITE_NAME = 'UTN BA Motorsport';
-const SITE_URL = 'https://utnbamotorsport.com.ar';
+export const SITE_NAME = 'UTN BA Motorsport';
+export const SITE_URL = 'https://utnbamotorsport.com.ar';
+export const DEFAULT_OG_IMAGE = `${SITE_URL}/assets/img/og-cover.jpg`;
+
+// This catalog is shared by the browser, the prerender build and sitemap.
+export const INDEXABLE_PATHS = Object.values(ROUTES);
 
 const SEO_BY_PATH = {
   [ROUTES.home]: {
-    title: `${SITE_NAME} — Fórmula SAE eléctrico de UTN Buenos Aires`,
-    description: 'Estudiantes de UTN Buenos Aires diseñan y fabrican el primer monoplaza eléctrico de la facultad para competir en Fórmula SAE Brasil 2027.',
+    title: `${SITE_NAME} — Ingeniería y Fórmula SAE eléctrica`,
+    description: 'Conocé UTN BA Motorsport, el equipo de estudiantes de UTN Buenos Aires que desarrolla un monoplaza eléctrico para competir en Fórmula SAE.',
   },
   [ROUTES.news]: {
     title: `Novedades | ${SITE_NAME}`,
     description: 'Conocé los avances, actividades y apariciones de UTN BA Motorsport mientras construimos nuestro monoplaza eléctrico de Fórmula SAE.',
   },
   [ROUTES.team]: {
-    title: `El equipo | ${SITE_NAME}`,
-    description: 'Conocé las siete áreas de estudiantes de UTN Buenos Aires que diseñan, fabrican, gestionan y comunican nuestro proyecto de Fórmula SAE.',
+    title: `El equipo y nuestro proyecto | ${SITE_NAME}`,
+    description: 'Conocé a los estudiantes y las áreas de UTN BA Motorsport que transforman conocimientos de ingeniería en un monoplaza eléctrico de Fórmula SAE.',
   },
   [ROUTES.car]: {
     title: `El monoplaza eléctrico | ${SITE_NAME}`,
@@ -34,7 +38,7 @@ const SEO_BY_PATH = {
   },
   [ROUTES.sponsors]: {
     title: `Sponsors y alianzas | ${SITE_NAME}`,
-    description: 'Acompañá a estudiantes de UTN Buenos Aires rumbo a Fórmula SAE Brasil 2027 mediante aportes, materiales, servicios o conocimiento técnico.',
+    description: 'Impulsá el proyecto de UTN BA Motorsport con aportes, materiales, servicios o conocimiento técnico. Conocé cómo acompañar al equipo.',
   },
   [ROUTES.legal]: {
     title: `Aviso legal | ${SITE_NAME}`,
@@ -46,22 +50,49 @@ const SEO_BY_PATH = {
   },
 };
 
-const NOT_FOUND_SEO = {
+export const NOT_FOUND_SEO = {
   title: `Página no encontrada | ${SITE_NAME}`,
   description: 'La página solicitada no existe o cambió de dirección. Volvé al inicio de UTN BA Motorsport para continuar navegando.',
-  canonical: null,
+  canonical: undefined,
   robots: 'noindex, nofollow',
 };
 
 export function getSeoForPath(pathname) {
-  const routeSeo = SEO_BY_PATH[pathname];
-  if (!routeSeo) return NOT_FOUND_SEO;
+  const normalizedPath = pathname === '/' ? '/' : pathname.replace(/\/+$/, '');
+  const routeSeo = SEO_BY_PATH[normalizedPath];
+  if (!routeSeo) return { ...NOT_FOUND_SEO, pathname: normalizedPath, locale: 'es_AR' };
 
+  const canonical = `${SITE_URL}${normalizedPath === '/' ? '/' : normalizedPath}`;
   return {
     ...routeSeo,
-    canonical: `${SITE_URL}${pathname === '/' ? '/' : pathname}`,
+    pathname: normalizedPath,
+    canonical,
     robots: 'index, follow',
+    ogType: 'website',
+    siteName: SITE_NAME,
+    ogTitle: routeSeo.title,
+    ogDescription: routeSeo.description,
+    ogUrl: canonical,
+    ogImage: DEFAULT_OG_IMAGE,
+    ogImageAlt: 'Monoplaza eléctrico de Fórmula SAE de UTN BA Motorsport',
+    ogLocale: 'es_AR',
+    twitterCard: 'summary_large_image',
+    twitterTitle: routeSeo.title,
+    twitterDescription: routeSeo.description,
+    twitterImage: DEFAULT_OG_IMAGE,
+    twitterImageAlt: 'Monoplaza eléctrico de Fórmula SAE de UTN BA Motorsport',
   };
 }
 
-export { SITE_NAME, SITE_URL };
+export function createSitemapXml(paths = INDEXABLE_PATHS) {
+  const uniquePaths = [...new Set(paths)];
+  const urls = uniquePaths
+    .filter((path) => SEO_BY_PATH[path])
+    .map((path) => `  <url><loc>${escapeXml(getSeoForPath(path).canonical)}</loc></url>`)
+    .join('\n');
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
+}
+
+function escapeXml(value) {
+  return value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&apos;');
+}

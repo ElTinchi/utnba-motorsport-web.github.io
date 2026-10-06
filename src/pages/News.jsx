@@ -2,8 +2,10 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import PageShell from '../components/PageShell.jsx';
 import EditorialReveal from '../components/EditorialReveal.jsx';
-import content from '../data/news.json';
+import contentJson from '../data/news.json?raw';
 import '../styles/news.css';
+
+const content = JSON.parse(contentJson.replace(/^\uFEFF/, ''));
 
 function NewsArticle({ post, labels, featured = false }) {
   const [shareStatus, setShareStatus] = useState('');
@@ -56,7 +58,7 @@ function NewsArticle({ post, labels, featured = false }) {
         {post.gallery?.length > 0 && <div className="news-story__gallery" role="group" aria-label={labels.gallery}>
           {post.gallery.map(photo => <div key={photo.src}><img draggable={false} src={photo.src} alt={photo.alt} loading="lazy" decoding="async" /></div>)}
         </div>}
-        {post.paragraphs.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
+        {post.paragraphs.map((paragraph, index) => <p key={index}>{paragraph.split(/(ABB|UTN Buenos Aires)/g).map((part, partIndex) => part === 'ABB' ? <a key={partIndex} href="https://www.linkedin.com/company/abb/" target="_blank" rel="noopener noreferrer"><strong>ABB</strong></a> : part === 'UTN Buenos Aires' ? <a key={partIndex} href="https://www.linkedin.com/company/utn--regional-ba/" target="_blank" rel="noopener noreferrer"><strong>UTN Buenos Aires</strong></a> : part)}</p>)}
         {post.instagramUrl && <a className="news-story__source" href={post.instagramUrl} target="_blank" rel="noopener noreferrer">{post.instagramLabel || labels.instagram} <span aria-hidden="true">↗</span></a>}
         {post.sourceUrl && <a className="news-story__source" href={post.sourceUrl} target="_blank" rel="noopener noreferrer">{labels.source} ↗</a>}
         <div className="news-story__sharing">

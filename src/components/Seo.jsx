@@ -1,33 +1,36 @@
-import { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
-import { getSeoForPath, SITE_NAME } from '../seo.js';
+import { useTranslation } from 'react-i18next';
+import { getSeoForPath } from '../seo.js';
 
-function setMeta(selector, value) {
-  const element = document.head.querySelector(selector);
-  if (element) element.setAttribute('content', value);
-}
+const HTML_LANG = { es: 'es-AR', en: 'en', pt: 'pt-BR' };
 
 export default function Seo() {
   const { pathname } = useLocation();
+  const { i18n } = useTranslation();
+  const seo = getSeoForPath(pathname);
+  const language = (i18n.resolvedLanguage || 'es').split('-')[0];
 
-  useEffect(() => {
-    const seo = getSeoForPath(pathname);
-    document.title = seo.title;
-    setMeta('meta[name="description"]', seo.description);
-    setMeta('meta[name="robots"]', seo.robots);
-    setMeta('meta[property="og:title"]', seo.title);
-    setMeta('meta[property="og:description"]', seo.description);
-    setMeta('meta[property="og:url"]', seo.canonical || window.location.href);
-    setMeta('meta[name="twitter:title"]', seo.title);
-    setMeta('meta[name="twitter:description"]', seo.description);
-    setMeta('meta[property="og:site_name"]', SITE_NAME);
-
-    const canonical = document.head.querySelector('link[rel="canonical"]');
-    if (canonical) {
-      if (seo.canonical) canonical.setAttribute('href', seo.canonical);
-      else canonical.removeAttribute('href');
-    }
-  }, [pathname]);
-
-  return null;
+  return (
+    <Helmet>
+      <html lang={HTML_LANG[language] || HTML_LANG.es} />
+      <title>{seo.title}</title>
+      <meta name="description" content={seo.description} />
+      <meta name="robots" content={seo.robots} />
+      {seo.canonical && <link rel="canonical" href={seo.canonical} />}
+      <meta property="og:type" content={seo.ogType || 'website'} />
+      <meta property="og:site_name" content={seo.siteName} />
+      <meta property="og:title" content={seo.ogTitle || seo.title} />
+      <meta property="og:description" content={seo.ogDescription || seo.description} />
+      {seo.ogUrl && <meta property="og:url" content={seo.ogUrl} />}
+      {seo.ogImage && <meta property="og:image" content={seo.ogImage} />}
+      {seo.ogImageAlt && <meta property="og:image:alt" content={seo.ogImageAlt} />}
+      <meta property="og:locale" content={language === 'en' ? 'en_US' : language === 'pt' ? 'pt_BR' : 'es_AR'} />
+      <meta name="twitter:card" content={seo.twitterCard || 'summary_large_image'} />
+      <meta name="twitter:title" content={seo.twitterTitle || seo.title} />
+      <meta name="twitter:description" content={seo.twitterDescription || seo.description} />
+      {seo.twitterImage && <meta name="twitter:image" content={seo.twitterImage} />}
+      {seo.twitterImageAlt && <meta name="twitter:image:alt" content={seo.twitterImageAlt} />}
+    </Helmet>
+  );
 }

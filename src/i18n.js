@@ -2,9 +2,14 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
-import es from './locales/es.json';
-import en from './locales/en.json';
-import pt from './locales/pt.json';
+import esJson from './locales/es.json?raw';
+import enJson from './locales/en.json?raw';
+import ptJson from './locales/pt.json?raw';
+
+const parseLocale = (locale) => JSON.parse(locale.replace(/^\uFEFF/, ''));
+const es = parseLocale(esJson);
+const en = parseLocale(enJson);
+const pt = parseLocale(ptJson);
 
 export const SUPPORTED_LANGUAGES = [
   { code: 'es', label: 'Español' },

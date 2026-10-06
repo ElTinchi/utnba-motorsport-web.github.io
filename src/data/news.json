@@ -2,19 +2,19 @@
   "es": {
     "labels": {
       "kicker": "Novedades",
-      "title": "El proyecto avanza. Acá están las pruebas.",
+      "title": "El proyecto avanza. Ac\u00e1 est\u00e1n las pruebas.",
       "intro": "Del primer encuentro al chasis terminado. Los avances, las experiencias y los momentos que construyen UTN BA Motorsport.",
-      "latest": "Lo más reciente",
+      "latest": "Lo m\u00e1s reciente",
       "archive": "Los hitos del equipo",
-      "socialTitle": "El día a día también corre.",
-      "socialText": "Más momentos del taller y del equipo en nuestro Instagram.",
+      "socialTitle": "El d\u00eda a d\u00eda tambi\u00e9n corre.",
+      "socialText": "M\u00e1s momentos del taller y del equipo en nuestro Instagram.",
       "socialButton": "Seguinos en Instagram",
-      "gallery": "Más fotos",
+      "gallery": "M\u00e1s fotos",
       "source": "Leer en Carburando",
       "instagram": "Ver en Instagram",
       "share": "Compartir",
-      "copied": "¡Enlace copiado!",
-      "manualCopy": "Copiá este enlace para compartir la nota.",
+      "copied": "\u00a1Enlace copiado!",
+      "manualCopy": "Copi\u00e1 este enlace para compartir la nota.",
       "copyLink": "Enlace de la nota"
     },
     "posts": [
@@ -28,9 +28,39 @@
         "title": "Llevamos el proyecto a la Expo Carreras de UTN",
         "paragraphs": [
           "Participamos de la Expo Carreras de UTN con nuestro proyecto de automovilismo universitario. Una nueva oportunidad para acercar UTN BA Motorsport a la comunidad y compartir el trabajo que venimos realizando.",
-          "Desde el inicio del proyecto en 2025, cada encuentro nos permite contar cómo llevamos la ingeniería del aula a un desafío en equipo."
+          "Desde el inicio del proyecto en 2025, cada encuentro nos permite contar c\u00f3mo llevamos la ingenier\u00eda del aula a un desaf\u00edo en equipo."
         ],
         "image": null
+      },
+      {
+        "id": "visita-abb-2026",
+        "dateTime": "2026-09-28",
+        "mark": "28.09",
+        "year": "2026",
+        "date": "28 de septiembre de 2026",
+        "category": "Eventos",
+        "title": "Visitamos ABB para conocer sus proyectos de automatizaci\u00f3n y electrificaci\u00f3n",
+        "paragraphs": [
+          "Ayer, parte del equipo tuvo la oportunidad de visitar ABB. La empresa nos abri\u00f3 un espacio para conocer de cerca algunas de las tecnolog\u00edas y los proyectos en los que trabajan, especialmente en automatizaci\u00f3n y electrificaci\u00f3n.",
+          "Tambi\u00e9n pudimos entender c\u00f3mo trabaja y gestiona sus negocios una empresa l\u00edder en su mercado. Fue una muy buena experiencia para seguir sumando a todo lo que hacemos en F\u00f3rmula SAE con aplicaciones reales de ingenier\u00eda.",
+          "Muchas gracias a todo el equipo de ABB. Agradecemos tambi\u00e9n a UTN Buenos Aires por seguir ayud\u00e1ndonos a abrir esta clase de puertas."
+        ],
+        "image": "/assets/img/news/ABB-2026/abb-equipo.webp",
+        "gallery": [
+          {
+            "src": "/assets/img/news/ABB-2026/abb-tableros.webp",
+            "alt": "Tableros de distribuci\u00f3n el\u00e9ctrica ABB."
+          },
+          {
+            "src": "/assets/img/news/ABB-2026/abb-selfie.webp",
+            "alt": "Tres integrantes del equipo durante la visita a ABB."
+          },
+          {
+            "src": "/assets/img/news/ABB-2026/abb-recorrido.webp",
+            "alt": "El equipo recorre el espacio de ABB durante la visita."
+          }
+        ],
+        "imageAlt": "El equipo de UTN BA Motorsport y ABB reunido durante la visita."
       },
       {
         "id": "circuito-virtual-campus",
@@ -39,10 +69,10 @@
         "year": "2026",
         "date": "21 de agosto de 2026",
         "category": "Comunidad",
-        "title": "El Campus se convirtió en un circuito virtual",
+        "title": "El Campus se convirti\u00f3 en un circuito virtual",
         "paragraphs": [
-          "Compartimos una jornada de simulación en el Campus de UTN Buenos Aires. Los asistentes pudieron recorrer un circuito virtual inspirado en nuestra facultad y conocer el proyecto de Fórmula SAE.",
-          "La actividad acercó el trabajo del equipo a la comunidad universitaria y contó con la participación del decano Guillermo Oliveto."
+          "Compartimos una jornada de simulaci\u00f3n en el Campus de UTN Buenos Aires. Los asistentes pudieron recorrer un circuito virtual inspirado en nuestra facultad y conocer el proyecto de F\u00f3rmula SAE.",
+          "La actividad acerc\u00f3 el trabajo del equipo a la comunidad universitaria y cont\u00f3 con la participaci\u00f3n del decano Guillermo Oliveto."
         ],
         "image": "/assets/img/news/campus-01.webp",
         "imageAlt": "Integrantes del equipo conversan con visitantes en el Campus.",
@@ -53,7 +83,7 @@
           },
           {
             "src": "/assets/img/news/campus-03.webp",
-            "alt": "Una conversación sobre el proyecto durante la jornada del Campus."
+            "alt": "Una conversaci\u00f3n sobre el proyecto durante la jornada del Campus."
           }
         ],
         "instagramUrl": "https://www.instagram.com/reel/DccDFyuvX3o/"
@@ -67,8 +97,8 @@
         "category": "Desarrollo",
         "title": "Terminamos el chasis y lo presentamos ante las autoridades",
         "paragraphs": [
-          "Terminamos el chasis de nuestro monoplaza. Un hito técnico que convirtió parte del trabajo de diseño y fabricación en una estructura concreta para seguir construyendo el vehículo.",
-          "Ese mismo día lo expusimos ante las autoridades de UTN Buenos Aires y compartimos los avances del proyecto."
+          "Terminamos el chasis de nuestro monoplaza. Un hito t\u00e9cnico que convirti\u00f3 parte del trabajo de dise\u00f1o y fabricaci\u00f3n en una estructura concreta para seguir construyendo el veh\u00edculo.",
+          "Ese mismo d\u00eda lo expusimos ante las autoridades de UTN Buenos Aires y compartimos los avances del proyecto."
         ],
         "image": "/assets/img/news/chasis-equipo.webp",
         "imageAlt": "El equipo completo reunido junto al chasis del monoplaza.",
@@ -81,7 +111,7 @@
           },
           {
             "src": "/assets/img/news/autoridades-presentacion.webp",
-            "alt": "Vista general de la presentación del equipo ante las autoridades."
+            "alt": "Vista general de la presentaci\u00f3n del equipo ante las autoridades."
           }
         ]
       },
@@ -95,7 +125,7 @@
         "title": "Compartimos nuestro proyecto en Carburando",
         "paragraphs": [
           "Compartimos con Carburando el proyecto de UTN BA Motorsport y el trabajo que venimos realizando para desarrollar nuestro monoplaza.",
-          "La cobertura acercó nuestro objetivo de participar en Fórmula SAE Brasil 2027 al público del automovilismo."
+          "La cobertura acerc\u00f3 nuestro objetivo de participar en F\u00f3rmula SAE Brasil 2027 al p\u00fablico del automovilismo."
         ],
         "image": "/assets/img/news/carburando.webp",
         "imageAlt": "Un integrante del equipo durante la entrevista de Carburando.",
@@ -111,7 +141,7 @@
         "category": "Eventos",
         "title": "Estuvimos en el Road Show de Franco Colapinto",
         "paragraphs": [
-          "Participamos del Road Show de Franco Colapinto con un stand y dos simuladores para compartir nuestro proyecto con el público.",
+          "Participamos del Road Show de Franco Colapinto con un stand y dos simuladores para compartir nuestro proyecto con el p\u00fablico.",
           "Quienes se acercaron pudieron probar el modelo virtual de nuestro auto en un circuito ambientado en el Campus de UTN Buenos Aires."
         ],
         "image": "/assets/img/news/colapinto.webp",
@@ -122,12 +152,12 @@
         "id": "nace-utnba-motorsport",
         "mark": "2025",
         "year": "UTN BA",
-        "date": "Octubre–noviembre de 2025",
+        "date": "Octubre\u2013noviembre de 2025",
         "category": "Equipo",
-        "title": "Así comenzó UTN BA Motorsport",
+        "title": "As\u00ed comenz\u00f3 UTN BA Motorsport",
         "paragraphs": [
-          "Entre octubre y noviembre de 2025 pusimos en marcha UTN BA Motorsport. Comenzaba el desafío de diseñar y construir un vehículo de competición universitario.",
-          "Ese fue el punto de partida del trabajo del equipo y de nuestro camino hacia Fórmula SAE Brasil 2027."
+          "Entre octubre y noviembre de 2025 pusimos en marcha UTN BA Motorsport. Comenzaba el desaf\u00edo de dise\u00f1ar y construir un veh\u00edculo de competici\u00f3n universitario.",
+          "Ese fue el punto de partida del trabajo del equipo y de nuestro camino hacia F\u00f3rmula SAE Brasil 2027."
         ],
         "image": null
       }
@@ -165,6 +195,36 @@
           "Since the project began in 2025, these gatherings have helped us explain how we turn classroom engineering into a team challenge."
         ],
         "image": null
+      },
+      {
+        "id": "visita-abb-2026",
+        "dateTime": "2026-09-28",
+        "mark": "28.09",
+        "year": "2026",
+        "date": "September 28, 2026",
+        "category": "Events",
+        "title": "We visited ABB to learn about its automation and electrification projects",
+        "paragraphs": [
+          "Part of our team had the opportunity to visit ABB. The company welcomed us and gave us a closer look at some of the technologies and projects they work on, especially in automation and electrification.",
+          "We also learned how a company that leads its market works and manages its business. It was a great experience that adds real world engineering applications to everything we do in Formula SAE.",
+          "Many thanks to the entire ABB team. We also thank UTN Buenos Aires for continuing to help us open doors like this."
+        ],
+        "image": "/assets/img/news/ABB-2026/abb-equipo.webp",
+        "gallery": [
+          {
+            "src": "/assets/img/news/ABB-2026/abb-tableros.webp",
+            "alt": "ABB electrical distribution panels."
+          },
+          {
+            "src": "/assets/img/news/ABB-2026/abb-selfie.webp",
+            "alt": "Three team members during the ABB visit."
+          },
+          {
+            "src": "/assets/img/news/ABB-2026/abb-recorrido.webp",
+            "alt": "The team tours ABB\u2019s space during the visit."
+          }
+        ],
+        "imageAlt": "The UTN BA Motorsport and ABB teams together during the visit."
       },
       {
         "id": "circuito-virtual-campus",
@@ -256,7 +316,7 @@
         "id": "nace-utnba-motorsport",
         "mark": "2025",
         "year": "UTN BA",
-        "date": "October–November 2025",
+        "date": "October\u2013November 2025",
         "category": "Team",
         "title": "How UTN BA Motorsport began",
         "paragraphs": [
@@ -270,8 +330,8 @@
   "pt": {
     "labels": {
       "kicker": "Novidades",
-      "title": "O projeto avança. Aqui estão as provas.",
-      "intro": "Do primeiro encontro ao chassi concluído. Os avanços, as experiências e os momentos que constroem a UTN BA Motorsport.",
+      "title": "O projeto avan\u00e7a. Aqui est\u00e3o as provas.",
+      "intro": "Do primeiro encontro ao chassi conclu\u00eddo. Os avan\u00e7os, as experi\u00eancias e os momentos que constroem a UTN BA Motorsport.",
       "latest": "Mais recente",
       "archive": "Marcos da equipe",
       "socialTitle": "Acompanhe nosso dia a dia.",
@@ -282,8 +342,8 @@
       "instagram": "Ver no Instagram",
       "share": "Compartilhar",
       "copied": "Link copiado!",
-      "manualCopy": "Copie este link para compartilhar a notícia.",
-      "copyLink": "Link da notícia"
+      "manualCopy": "Copie este link para compartilhar a not\u00edcia.",
+      "copyLink": "Link da not\u00edcia"
     },
     "posts": [
       {
@@ -295,10 +355,40 @@
         "category": "Eventos",
         "title": "Nosso projeto na Expo Carreras da UTN",
         "paragraphs": [
-          "Participamos da Expo Carreras da UTN com nosso projeto de automobilismo universitário. Uma nova oportunidade de apresentar a UTN BA Motorsport à comunidade e compartilhar nossos avanços.",
-          "Desde o início do projeto em 2025, cada encontro nos permite mostrar como levamos a engenharia da sala de aula a um desafio em equipe."
+          "Participamos da Expo Carreras da UTN com nosso projeto de automobilismo universit\u00e1rio. Uma nova oportunidade de apresentar a UTN BA Motorsport \u00e0 comunidade e compartilhar nossos avan\u00e7os.",
+          "Desde o in\u00edcio do projeto em 2025, cada encontro nos permite mostrar como levamos a engenharia da sala de aula a um desafio em equipe."
         ],
         "image": null
+      },
+      {
+        "id": "visita-abb-2026",
+        "dateTime": "2026-09-28",
+        "mark": "28.09",
+        "year": "2026",
+        "date": "28 de setembro de 2026",
+        "category": "Eventos",
+        "title": "Visitamos a ABB para conhecer seus projetos de automa\u00e7\u00e3o e eletrifica\u00e7\u00e3o",
+        "paragraphs": [
+          "Parte da nossa equipe teve a oportunidade de visitar a ABB. A empresa nos recebeu e nos permitiu conhecer de perto algumas das tecnologias e dos projetos em que trabalha, especialmente em automa\u00e7\u00e3o e eletrifica\u00e7\u00e3o.",
+          "Tamb\u00e9m pudemos entender como trabalha e administra seus neg\u00f3cios uma empresa l\u00edder em seu mercado. Foi uma \u00f3tima experi\u00eancia para continuar somando aplica\u00e7\u00f5es reais de engenharia a tudo o que fazemos na F\u00f3rmula SAE.",
+          "Muito obrigado a toda a equipe da ABB. Agradecemos tamb\u00e9m \u00e0 UTN Buenos Aires por continuar nos ajudando a abrir portas como essa."
+        ],
+        "image": "/assets/img/news/ABB-2026/abb-equipo.webp",
+        "gallery": [
+          {
+            "src": "/assets/img/news/ABB-2026/abb-tableros.webp",
+            "alt": "Pain\u00e9is de distribui\u00e7\u00e3o el\u00e9trica da ABB."
+          },
+          {
+            "src": "/assets/img/news/ABB-2026/abb-selfie.webp",
+            "alt": "Tr\u00eas integrantes da equipe durante a visita \u00e0 ABB."
+          },
+          {
+            "src": "/assets/img/news/ABB-2026/abb-recorrido.webp",
+            "alt": "A equipe conhece o espa\u00e7o da ABB durante a visita."
+          }
+        ],
+        "imageAlt": "As equipes da UTN BA Motorsport e da ABB reunidas durante a visita."
       },
       {
         "id": "circuito-virtual-campus",
@@ -309,8 +399,8 @@
         "category": "Comunidade",
         "title": "O Campus virou um circuito virtual",
         "paragraphs": [
-          "Realizamos uma atividade de simulação no Campus da UTN Buenos Aires. Os visitantes puderam percorrer um circuito virtual inspirado na faculdade e conhecer o projeto de Fórmula SAE.",
-          "A atividade aproximou o trabalho da equipe da comunidade universitária e contou com a presença do decano Guillermo Oliveto."
+          "Realizamos uma atividade de simula\u00e7\u00e3o no Campus da UTN Buenos Aires. Os visitantes puderam percorrer um circuito virtual inspirado na faculdade e conhecer o projeto de F\u00f3rmula SAE.",
+          "A atividade aproximou o trabalho da equipe da comunidade universit\u00e1ria e contou com a presen\u00e7a do decano Guillermo Oliveto."
         ],
         "image": "/assets/img/news/campus-01.webp",
         "imageAlt": "Integrantes da equipe conversam com visitantes no Campus.",
@@ -333,10 +423,10 @@
         "year": "2026",
         "date": "28 de julho de 2026",
         "category": "Desenvolvimento",
-        "title": "Chassi concluído e apresentado às autoridades",
+        "title": "Chassi conclu\u00eddo e apresentado \u00e0s autoridades",
         "paragraphs": [
-          "Concluímos o chassi do nosso monoposto. Um marco técnico que transformou parte do trabalho de projeto e fabricação em uma estrutura concreta para continuar construindo o veículo.",
-          "No mesmo dia, apresentamos o chassi às autoridades da UTN Buenos Aires e compartilhamos os avanços do projeto."
+          "Conclu\u00edmos o chassi do nosso monoposto. Um marco t\u00e9cnico que transformou parte do trabalho de projeto e fabrica\u00e7\u00e3o em uma estrutura concreta para continuar construindo o ve\u00edculo.",
+          "No mesmo dia, apresentamos o chassi \u00e0s autoridades da UTN Buenos Aires e compartilhamos os avan\u00e7os do projeto."
         ],
         "image": "/assets/img/news/chasis-equipo.webp",
         "imageAlt": "A equipe completa reunida ao lado do chassi do monoposto.",
@@ -349,7 +439,7 @@
           },
           {
             "src": "/assets/img/news/autoridades-presentacion.webp",
-            "alt": "Vista geral da apresentação da equipe às autoridades."
+            "alt": "Vista geral da apresenta\u00e7\u00e3o da equipe \u00e0s autoridades."
           }
         ]
       },
@@ -363,7 +453,7 @@
         "title": "Compartilhamos nosso projeto com o Carburando",
         "paragraphs": [
           "Apresentamos ao Carburando o projeto da UTN BA Motorsport e o trabalho no desenvolvimento do nosso monoposto.",
-          "A cobertura levou nosso objetivo de participar da Fórmula SAE Brasil 2027 ao público do automobilismo."
+          "A cobertura levou nosso objetivo de participar da F\u00f3rmula SAE Brasil 2027 ao p\u00fablico do automobilismo."
         ],
         "image": "/assets/img/news/carburando.webp",
         "imageAlt": "Um integrante da equipe durante a entrevista do Carburando.",
@@ -379,7 +469,7 @@
         "category": "Eventos",
         "title": "No Road Show de Franco Colapinto",
         "paragraphs": [
-          "Participamos do Road Show de Franco Colapinto com um estande e dois simuladores para compartilhar nosso projeto com o público.",
+          "Participamos do Road Show de Franco Colapinto com um estande e dois simuladores para compartilhar nosso projeto com o p\u00fablico.",
           "Os visitantes puderam experimentar o modelo virtual do nosso carro em um circuito ambientado no Campus da UTN Buenos Aires."
         ],
         "image": "/assets/img/news/colapinto.webp",
@@ -390,12 +480,12 @@
         "id": "nace-utnba-motorsport",
         "mark": "2025",
         "year": "UTN BA",
-        "date": "Outubro–novembro de 2025",
+        "date": "Outubro\u2013novembro de 2025",
         "category": "Equipe",
-        "title": "O início da UTN BA Motorsport",
+        "title": "O in\u00edcio da UTN BA Motorsport",
         "paragraphs": [
-          "Entre outubro e novembro de 2025, iniciamos a UTN BA Motorsport com o desafio de projetar e construir um veículo de competição universitário.",
-          "Esse foi o ponto de partida do trabalho da equipe e do nosso caminho rumo à Fórmula SAE Brasil 2027."
+          "Entre outubro e novembro de 2025, iniciamos a UTN BA Motorsport com o desafio de projetar e construir um ve\u00edculo de competi\u00e7\u00e3o universit\u00e1rio.",
+          "Esse foi o ponto de partida do trabalho da equipe e do nosso caminho rumo \u00e0 F\u00f3rmula SAE Brasil 2027."
         ],
         "image": null
       }

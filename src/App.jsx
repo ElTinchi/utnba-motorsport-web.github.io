@@ -1,19 +1,21 @@
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { lazy, Suspense, useEffect } from 'react';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
-import Home from './pages/Home.jsx';
-import Team from './pages/Team.jsx';
-import Car from './pages/Car.jsx';
-import Academy from './pages/Academy.jsx';
-import FormulaStudent from './pages/FormulaStudent.jsx';
-import JoinUs from './pages/JoinUs.jsx';
-import Sponsors from './pages/Sponsors.jsx';
-import News from './pages/News.jsx';
-import NotFound from './pages/NotFound.jsx';
-import PolicyPage from './pages/PolicyPage.jsx';
 import Seo from './components/Seo.jsx';
 import { ROUTES, LEGACY_REDIRECTS } from './routes';
+import './styles/route-loading.css';
+
+const Home = lazy(() => import('./pages/Home.jsx'));
+const Team = lazy(() => import('./pages/Team.jsx'));
+const Car = lazy(() => import('./pages/Car.jsx'));
+const Academy = lazy(() => import('./pages/Academy.jsx'));
+const FormulaStudent = lazy(() => import('./pages/FormulaStudent.jsx'));
+const JoinUs = lazy(() => import('./pages/JoinUs.jsx'));
+const Sponsors = lazy(() => import('./pages/Sponsors.jsx'));
+const News = lazy(() => import('./pages/News.jsx'));
+const NotFound = lazy(() => import('./pages/NotFound.jsx'));
+const PolicyPage = lazy(() => import('./pages/PolicyPage.jsx'));
 
 // Al navegar entre páginas el scroll se queda donde estaba: con React Router
 // no hay recarga que lo resetee.
@@ -35,9 +37,20 @@ function ScrollToTop() {
       return;
     }
 
-    const target = document.getElementById(decodeURIComponent(hash.slice(1)));
-    if (target) target.scrollIntoView();
-    else window.scrollTo(0, 0);
+    // Lazy route chunks and i18n updates can mount the target after this effect.
+    let attempts = 0;
+    let frame;
+    const scrollToTarget = () => {
+      const target = document.getElementById(decodeURIComponent(hash.slice(1)));
+      if (target) {
+        target.scrollIntoView();
+        return;
+      }
+      if (attempts++ < 20) frame = window.requestAnimationFrame(scrollToTarget);
+      else window.scrollTo(0, 0);
+    };
+    frame = window.requestAnimationFrame(scrollToTarget);
+    return () => window.cancelAnimationFrame(frame);
   }, [pathname, hash]);
 
   return null;
@@ -65,7 +78,8 @@ export default function App() {
       <Seo />
       <Header />
       <main className="main">
-        <Routes>
+        <Suspense fallback={<div className="route-loading" role="status" aria-label="Cargando página" />}>
+          <Routes>
           <Route path={ROUTES.home} element={<Home />} />
           <Route path={ROUTES.news} element={<News />} />
           <Route path={ROUTES.team} element={<Team />} />
@@ -83,7 +97,8 @@ export default function App() {
           ))}
 
           <Route path="*" element={<NotFound />} />
-        </Routes>
+          </Routes>
+        </Suspense>
       </main>
       <Footer />
     </>
