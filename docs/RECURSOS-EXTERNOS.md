@@ -27,13 +27,13 @@ Links de la página de Sponsors y del carrusel.
 | Bender | https://www.bender.de/ | ✅ OK |
 | Bosch | https://www.bosch.com/ | ✅ OK |
 | MathWorks | https://www.mathworks.com/ | ⚠️ Revisar — devuelve 403, casi seguro bloqueo anti-bot. El sitio está vivo. |
-| Polimetal Procesos | https://polimetalprocesos.com.ar/ | ❌ **No responde** — el dominio no resuelve. Probado con y sin `www`. |
+| Polimetal Procesos | https://polimetal.com.ar/ | URL actualizada por indicación del equipo el 2026-10-13; pendiente de verificación. |
 | E. Mayer | https://www.emayer.com.ar/ | ❌ **No responde** — el dominio no resuelve. Probado con y sin `www`. |
 | Grupo Paglia (Instagram) | https://www.instagram.com/grupopaglia_/ | ✅ OK |
 | Leandro Di Matteo (LinkedIn) | https://www.linkedin.com/in/leandrodimatteo/?locale=es | ✅ OK |
 | UTN FRBA | https://www.frba.utn.edu.ar/ | ✅ OK |
 
-> **Acción requerida:** Polimetal y E. Mayer no resuelven. Antes de tocarlos hay
+> **Acción requerida:** E. Mayer no resuelve. Antes de tocarlo hay
 > que confirmar con el equipo si cambiaron de dominio, si se cayó el hosting o
 > si dejaron de ser sponsors. Mientras tanto, el logo se puede mostrar sin link
 > en vez de mandar al usuario a una página muerta.
