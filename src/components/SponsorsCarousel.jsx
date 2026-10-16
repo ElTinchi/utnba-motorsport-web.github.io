@@ -15,8 +15,7 @@ export const SPONSORS = [
   { name: 'Ansys', href: 'https://www.ansys.com/', logo: '/assets/img/sponsors/onwhite/ansys.png' },
   { name: 'MathWorks', href: 'https://www.mathworks.com/', logo: '/assets/img/sponsors/onwhite/mathworks.png' },
   { name: 'Bender', href: 'https://www.bender.de/', logo: '/assets/img/sponsors/onwhite/benderlogo.png' },
-  // Inactivo temporalmente; conservar para una futura reactivación.
-  // { name: 'Grupo Paglia', href: 'https://www.instagram.com/grupopaglia_/', logo: '/assets/img/sponsors/onwhite/grupopaglia.png' },
+  { name: 'Grupo Paglia', href: 'https://www.instagram.com/grupopaglia_/', logo: '/assets/img/sponsors/onwhite/grupopaglia.png' },
   { name: 'SIN PAR', href: 'https://sinpar.com.ar/', logo: '/assets/img/sponsors/onwhite/sin-par.png', logoClass: 'sp-car__item--sin-par' },
   { name: 'DSM Diesel Car S.A.', href: 'https://www.dsmdieselcar.com.ar/', logo: '/assets/img/sponsors/onwhite/dsm-diesel-car.png' },
   { name: 'GMG Neumáticos de Competición', href: 'https://www.instagram.com/neumaticosgmg/?hl=es', logo: '/assets/img/sponsors/onwhite/gmg-neumaticos.png' },
