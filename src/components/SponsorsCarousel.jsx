@@ -3,13 +3,12 @@ import '../styles/sponsors-carousel.css';
 // Listado único de sponsors del equipo. Los logos apuntan a
 // public/assets/img/sponsors/onwhite/ — versiones con fondo transparente,
 // recortadas al contenido real y con la tinta preparada para leerse sobre
-// blanco (Ernesto Mayer y Grupo Paglia son originalmente tinta clara sobre
+// blanco (Grupo Paglia es originalmente tinta clara sobre
 // fondo oscuro: ahí se invirtió la luminosidad, conservando el tono de marca).
 export const SPONSORS = [
   { name: 'UTN BA', href: 'https://www.frba.utn.edu.ar/', logo: '/assets/img/sponsors/onwhite/logoutnba.png' },
   { name: 'Cognitive AI', href: 'https://cognitive.com.ar/', logo: '/assets/img/sponsors/onwhite/cognitive.png' },
   { name: 'JDM Inyección', href: 'https://jdminyeccion.com.ar/', logo: '/assets/img/sponsors/onwhite/jdm-inyeccion.webp' },
-  { name: 'Ernesto Mayer SA', href: 'https://www.emayer.com.ar/', logo: '/assets/img/sponsors/onwhite/emayer.png' },
   { name: 'Polimetal Procesos', href: 'https://polimetal.com.ar/', logo: '/assets/img/sponsors/onwhite/polimetal.png' },
   { name: 'PrintALot', href: 'https://printalot.com.ar/', logo: '/assets/img/sponsors/onwhite/printalot.png' },
   { name: 'Aceros Munro', href: 'https://acerosmunro.com.ar/', logo: '/assets/img/sponsors/onwhite/acerosmunro.png' },
