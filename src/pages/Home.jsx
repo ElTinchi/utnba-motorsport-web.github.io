@@ -5,6 +5,7 @@ import { ROUTES, COMMERCIAL_CONTACT_HREF } from '../routes';
 import AreasGrid from '../components/AreasGrid';
 import SponsorsCarousel from '../components/SponsorsCarousel';
 import FundingProgress from '../components/FundingProgress';
+import ScrollCar from '../components/ScrollCar';
 import AnimatedNumber from '../components/AnimatedNumber';
 import useInView from '../hooks/useInView';
 import '../styles/home.css';
@@ -129,6 +130,7 @@ export default function Home() {
 
   return (
     <>
+      <ScrollCar circuitRef={circuitSvgRef} />
       {/* ====== HERO - Auto difuminado de fondo + logo ====== */}
       <section className="hero" aria-label="UTN BA Motorsport">
         <div className="hero__bg">

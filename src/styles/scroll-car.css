@@ -1,0 +1,21 @@
+.scroll-car {
+  position: fixed;
+  top: -20px;
+  left: -28px;
+  width: 56px;
+  height: 40px;
+  z-index: 40;
+  pointer-events: none;
+  opacity: 0;
+  overflow: visible;
+  filter: drop-shadow(0 2px 4px #0009);
+  will-change: transform;
+}
+.scroll-car .hero__car-wheel { fill: #161619; stroke: #f6f1e5; stroke-width: .7; }
+.scroll-car .hero__car-aero { fill: #f6f1e5; stroke: #202025; stroke-width: .7; }
+.scroll-car .hero__car-body { fill: #dd0e0e; stroke: #fff; stroke-width: .8; }
+.scroll-car .hero__car-glass { fill: #17171d; }
+.scroll-car .hero__car-suspension { fill: none; stroke: #bbb; stroke-width: 1; }
+@media (prefers-reduced-motion: reduce) {
+  .scroll-car { display: none; }
+}
