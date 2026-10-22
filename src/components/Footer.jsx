@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ROUTES, CONTACT_EMAIL, CONTACT_HREF } from '../routes';
+import { ROUTES, CONTACT_EMAIL, CONTACT_HREF, COMMERCIAL_CONTACT_HREF } from '../routes';
 
 const SOCIALS = [
   ['Instagram', 'https://www.instagram.com/utnbamotorsport/', 'M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.26.07 1.64.07 4.85s-.01 3.58-.07 4.85c-.15 3.22-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92C.01 15.58 0 15.2 0 12s.01-3.58.07-4.85C.22 3.93 1.73 2.38 4.99 2.23 6.25 2.17 6.63 2.16 9.84 2.16H12zM12 0C8.74 0 8.33.01 7.05.07 2.69.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.73 2.7 21.31.27 16.95.07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 12 18.16 6.16 6.16 0 0 0 12 5.84zm0 10.16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.41-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z'],
@@ -17,7 +17,7 @@ export default function Footer() {
     <div className="footer__container">
       <section className="footer__cta" aria-labelledby="footer-cta-title">
         <div><span className="footer__eyebrow">{t('footer.ctaEyebrow')}</span><h2 id="footer-cta-title" className="footer__title">{t('footer.ctaTitle')}</h2></div>
-        <div className="footer__cta-actions"><NavLink to={ROUTES.sponsors} className="btn btn--primary">{t('footer.sponsorCta')}</NavLink><NavLink to={ROUTES.joinUs} className="footer__text-link">{t('footer.joinCta')} <span aria-hidden="true">↗</span></NavLink></div>
+        <div className="footer__cta-actions"><a href={COMMERCIAL_CONTACT_HREF} className="btn btn--primary">{t('sponsorsPage.primaryCta')}</a><NavLink to={ROUTES.joinUs} className="footer__text-link">{t('footer.joinCta')} <span aria-hidden="true">↗</span></NavLink></div>
       </section>
 
       <div className="footer__main">

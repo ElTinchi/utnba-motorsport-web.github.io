@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ROUTES } from '../routes';
+import { ROUTES, COMMERCIAL_CONTACT_HREF } from '../routes';
 import AreasGrid from '../components/AreasGrid';
 import SponsorsCarousel from '../components/SponsorsCarousel';
 import FundingProgress from '../components/FundingProgress';
@@ -212,7 +212,7 @@ export default function Home() {
           <span className="hero__tagline">{t('home.heroPlate')}</span>
           <h1 className="hero__title">{t('home.heroTitle')}</h1>
           <div className="hero__actions">
-            <NavLink to={`${ROUTES.sponsors}#alianza`} className="btn btn--primary">{t('sponsorsPage.secondaryCta')}</NavLink>
+            <a href={COMMERCIAL_CONTACT_HREF} className="btn btn--primary">{t('sponsorsPage.primaryCta')}</a>
           </div>
         </div>
       </section>
@@ -228,9 +228,9 @@ export default function Home() {
             <p className="intro__description">{t('home.heroSubtitle')}</p>
 
             <div className="intro__actions">
-              <NavLink to={`${ROUTES.sponsors}#alianza`} className="btn btn--primary">
-                {t('sponsorsPage.secondaryCta')}
-              </NavLink>
+              <a href={COMMERCIAL_CONTACT_HREF} className="btn btn--primary">
+                {t('sponsorsPage.primaryCta')}
+              </a>
               <NavLink to={ROUTES.team} className="btn btn--secondary">
                 {t('home.heroCtaSecondary')}
               </NavLink>
@@ -307,7 +307,7 @@ export default function Home() {
             <h2 id="home-sponsors-title" className="home-sponsors__headline">{t('home.sponsorsHeadline')}</h2>
             <p>{t('home.sponsorsBody')}</p>
             <FundingProgress compact />
-            <NavLink to={ROUTES.sponsors} className="btn btn--primary">{t('home.sponsorsCta')}</NavLink>
+            <a href={COMMERCIAL_CONTACT_HREF} className="btn btn--primary">{t('sponsorsPage.primaryCta')}</a>
           </div>
           <h3 className="home-sponsors__title">{t('home.sponsorsTitle')}</h3>
           <SponsorsCarousel />

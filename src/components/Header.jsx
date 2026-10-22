@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ROUTES } from '../routes';
+import { ROUTES, COMMERCIAL_CONTACT_HREF } from '../routes';
 import LanguageSwitcher from './LanguageSwitcher.jsx';
 
 export default function Header() {
@@ -98,9 +98,9 @@ export default function Header() {
 
         <div className="header__actions">
           <LanguageSwitcher />
-          <NavLink to={ROUTES.sponsors} className="btn btn--primary btn--small header__cta" onClick={closeAll}>
-            {t('home.heroCtaPrimary')}
-          </NavLink>
+          <a href={COMMERCIAL_CONTACT_HREF} className="btn btn--primary btn--small header__cta" onClick={closeAll}>
+            {t('sponsorsPage.primaryCta')}
+          </a>
         </div>
       </div>
     </header>

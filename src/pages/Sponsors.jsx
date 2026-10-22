@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 import { ROUTES, COMMERCIAL_CONTACT_HREF } from '../routes';
 import SponsorsCarousel from '../components/SponsorsCarousel';
 import FundingProgress from '../components/FundingProgress';
@@ -46,8 +46,8 @@ export default function Sponsors() {
           <h1 className="sp-page__title">{t('sponsorsPage.title')}</h1>
           <p className="sp-page__intro">{t('sponsorsPage.intro')}</p>
           <div className="sp-hero__actions">
-            <a href="#alianza" className="btn btn--primary">
-              {t('sponsorsPage.secondaryCta')}
+            <a href={COMMERCIAL_CONTACT_HREF} className="btn btn--primary">
+              {t('sponsorsPage.primaryCta')}
             </a>
             <a href="/visor/visor.html" className="btn btn--secondary">
               {t('sponsorsPage.viewer.button')}
@@ -77,11 +77,11 @@ export default function Sponsors() {
               <article key={benefit.title}>
                 <span className="sp-section-kicker" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
                 <h3>{benefit.title}</h3>
-                <p>{benefit.text}</p>
+                <p><Trans i18nKey={`sponsorsPage.benefits.items.${index}.text`} components={{ strong: <strong /> }} /></p>
               </article>
             ))}
           </div>
-          <p className="sp-benefits__continuity">{t('sponsorsPage.benefits.continuity')}</p>
+          <p className="sp-benefits__continuity"><Trans i18nKey="sponsorsPage.benefits.continuity" components={{ strong: <strong /> }} /></p>
           <p className="sp-benefits__note">{t('sponsorsPage.benefits.note')}</p>
         </EditorialReveal>
         <EditorialReveal as="section" className="sp-journey" aria-labelledby="journey-title">

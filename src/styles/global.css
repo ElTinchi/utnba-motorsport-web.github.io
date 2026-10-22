@@ -418,6 +418,16 @@ button {
   white-space: nowrap;
 }
 
+@media (max-width: 420px) {
+  .header__cta {
+    max-width: 105px;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.2;
+    font-size: .75rem;
+  }
+}
+
 /* CTA: en mobile texto corto "Apoyanos" (menos invasivo); en desktop completo */
 .header__cta-full { display: none; }
 .header__cta-short { display: inline; }

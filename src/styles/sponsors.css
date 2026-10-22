@@ -8,6 +8,7 @@
 .sp-benefits__grid h3 { font-size: 1.35rem; line-height: 1.25; margin-bottom: 1rem; }
 .sp-benefits__continuity { max-width: 70ch; border-left: 3px solid var(--color-red); padding-left: 1.5rem; font-size: clamp(1.15rem, 2vw, 1.5rem); line-height: 1.6; font-weight: 700; }
 .sp-benefits__note { max-width: 90ch; margin-top: 1.5rem; font-size: .85rem; }
+.sp-benefits strong { color: var(--color-white); font-weight: 800; }
 .sp-page__container { width: min(100%, 1380px); margin: 0 auto; padding: 0 clamp(1.5rem, 4vw, 3.5rem); }
 
 @media (min-width: 1200px) {

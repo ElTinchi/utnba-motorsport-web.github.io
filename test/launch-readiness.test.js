@@ -76,8 +76,8 @@ test('the primary call to action supports the team from the first screen', async
     readFile(new URL('../src/components/Header.jsx', import.meta.url), 'utf8'),
   ]);
 
-  assert.match(home, /hero__actions[\s\S]*ROUTES\.sponsors/);
-  assert.match(header, /header__cta[\s\S]*heroCtaPrimary/);
+  assert.match(home, /hero__actions[\s\S]*href={COMMERCIAL_CONTACT_HREF}/);
+  assert.match(header, /href={COMMERCIAL_CONTACT_HREF}[\s\S]*header__cta[\s\S]*sponsorsPage.primaryCta/);
 });
 
 test('Vercel serves the site with baseline security headers', async () => {
