@@ -1,4 +1,13 @@
 .sp-page { padding: 3.5rem 0 7rem; overflow: hidden; }
+.sp-benefits { margin-top: clamp(4rem, 9vw, 8rem); }
+.sp-benefits h2 { max-width: 22ch; font-size: clamp(2rem, 4.5vw, 3.6rem); line-height: 1.08; letter-spacing: -.035em; }
+.sp-benefits__intro { max-width: 70ch; margin-top: 1.5rem; }
+.sp-benefits__intro, .sp-benefits__grid p, .sp-benefits__note { color: var(--color-white-muted); line-height: 1.8; }
+.sp-benefits__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 2rem; margin: 3rem 0; }
+.sp-benefits__grid article { min-width: 0; padding-top: 1.5rem; border-top: 1px solid var(--color-red); }
+.sp-benefits__grid h3 { font-size: 1.35rem; line-height: 1.25; margin-bottom: 1rem; }
+.sp-benefits__continuity { max-width: 70ch; border-left: 3px solid var(--color-red); padding-left: 1.5rem; font-size: clamp(1.15rem, 2vw, 1.5rem); line-height: 1.6; font-weight: 700; }
+.sp-benefits__note { max-width: 90ch; margin-top: 1.5rem; font-size: .85rem; }
 .sp-page__container { width: min(100%, 1380px); margin: 0 auto; padding: 0 clamp(1.5rem, 4vw, 3.5rem); }
 
 @media (min-width: 1200px) {

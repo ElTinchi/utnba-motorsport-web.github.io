@@ -261,15 +261,16 @@
     "fsLink": "See the full rulebook and events"
   },
   "sponsorsPage": {
+    "benefits": {"kicker":"What your company gains","title":"The competition ends. Your brand keeps moving.","intro":"Support connects your company with an Argentine engineering story before, during and after Formula SAE Brazil 2027. The car, team and their content bring that story to new audiences.","items":[{"title":"Social media and shared content","text":"Brand welcomes, posts, stories, collaborative reels, interviews and project videos. Content showing your contribution that your company can also share."},{"title":"Radio, newspapers and television","text":"We seek interviews and project coverage on radio, in newspapers, digital outlets and TV. Each appearance is an opportunity to highlight supporting companies."},{"title":"Schools and universities","text":"After the competition, talks, visits and exhibitions at schools and universities bring the car, its supporting brands and engineering to new generations."},{"title":"Events and exhibitions after Brazil","text":"The car keeps travelling to fairs, gatherings, Sponsor Days and exhibitions. Depending on your package, we can coordinate a display at your company event, subject to availability and logistics."},{"title":"Photos and videos for your campaigns","text":"Access to car and team media to tell the story of your partnership. Depending on sponsorship level, we coordinate workshop productions, brand content and joint campaigns."},{"title":"Business connections and talent","text":"Meet partner companies and industry contacts at team gatherings. Depending on your package, connect with students experienced in real projects for recruitment."}],"continuity":"Before Brazil we build the story. At the competition we take it to the track. Afterwards, we keep sharing it through social media, press, educational institutions and events: your brand stays part of the journey.","note":"Activities, formats and brand placement are agreed according to the sponsorship package. Radio, newspaper and TV coverage depends on each outlet; visits and exhibitions are coordinated with each institution or organizer."},
     "kicker": "Become a sponsor",
     "title": "You are not funding a promise: you are accelerating a project already in motion.",
     "logoCta": "Put your logo on the car",
     "intro": "We are building the path that turns students into motorsport professionals. Thanks to those already supporting us, we have made it this far; today we are one final push away from the track.",
     "scrollCta": "Discover the story",
     "proofLabel": "Thank you to the companies already part of the journey",
-    "primaryCta": "Let's discuss a partnership",
+    "primaryCta": "Book a meeting",
     "secondaryCta": "See how your company can participate",
-    "contactPrompt": "If this progress aligns with your company's goals, let's talk directly without forms or intermediaries.",
+    "contactPrompt": "Choose a time in our calendar to discuss your brand, activations and how to support the project.",
     "journey": {
       "kicker": "One academy, three stages",
       "title": "Before Formula, there is a journey.",

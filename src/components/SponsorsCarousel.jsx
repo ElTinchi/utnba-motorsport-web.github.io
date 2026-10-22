@@ -8,6 +8,7 @@ import '../styles/sponsors-carousel.css';
 export const SPONSORS = [
   { name: 'UTN BA', href: 'https://www.frba.utn.edu.ar/', logo: '/assets/img/sponsors/onwhite/logoutnba.png' },
   { name: 'Cognitive AI', href: 'https://cognitive.com.ar/', logo: '/assets/img/sponsors/onwhite/cognitive.png' },
+  { name: 'JDM Inyección', href: 'https://jdminyeccion.com.ar/', logo: '/assets/img/sponsors/onwhite/jdm-inyeccion.webp' },
   { name: 'Ernesto Mayer SA', href: 'https://www.emayer.com.ar/', logo: '/assets/img/sponsors/onwhite/emayer.png' },
   { name: 'Polimetal Procesos', href: 'https://polimetal.com.ar/', logo: '/assets/img/sponsors/onwhite/polimetal.png' },
   { name: 'PrintALot', href: 'https://printalot.com.ar/', logo: '/assets/img/sponsors/onwhite/printalot.png' },

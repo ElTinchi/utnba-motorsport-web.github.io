@@ -38,4 +38,4 @@ export function buildCommercialContactHref({ company = '[empresa]' } = {}) {
   return `${CONTACT_HREF}?subject=${encodeURIComponent(COMMERCIAL_SUBJECT)}&body=${encodeURIComponent(body)}`;
 }
 
-export const COMMERCIAL_CONTACT_HREF = buildCommercialContactHref();
+export const COMMERCIAL_CONTACT_HREF = 'https://calendar.app.google/EvFwD6ZegqKr2mem8';

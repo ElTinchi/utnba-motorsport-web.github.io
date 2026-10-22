@@ -149,9 +149,9 @@ test('sponsor journey offers contact after evidence, value, and at the close', a
     ));
 
     assert.equal((html.match(/data-contact-opportunity=/g) || []).length, 3);
-    assert.equal((html.match(/href="mailto:/g) || []).length, 3);
+    assert.equal((html.match(/href="https:\/\/calendar\.app\.google\/EvFwD6ZegqKr2mem8"/g) || []).length, 3);
     assert.match(html, /id="alianza"/);
-    assert.match(html, /Conversemos sobre una alianza/);
+    assert.match(html, /Agendá una reunión/);
   } finally {
     await server.close();
   }

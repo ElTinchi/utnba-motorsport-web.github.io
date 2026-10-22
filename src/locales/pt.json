@@ -261,15 +261,16 @@
     "fsLink": "Conheça o regulamento e as provas em detalhe"
   },
   "sponsorsPage": {
+    "benefits": {"kicker":"O que sua empresa ganha","title":"A competição termina. Sua marca continua em movimento.","intro":"Seu patrocínio conecta sua empresa a uma história de engenharia argentina antes, durante e depois da Fórmula SAE Brasil 2027. O carro, a equipe e seus conteúdos levam essa história a novos públicos.","items":[{"title":"Redes sociais e conteúdo compartilhado","text":"Boas-vindas à marca, posts, stories, reels colaborativos, entrevistas e vídeos do projeto. Conteúdo que mostra seu apoio e que sua empresa também pode compartilhar."},{"title":"Rádios, jornais e televisão","text":"Buscamos entrevistas e divulgação do projeto em rádios, jornais, veículos digitais e TV. Cada aparição é uma oportunidade de dar visibilidade às empresas parceiras."},{"title":"Escolas e universidades","text":"Depois da competição, o percurso continua com palestras, visitas e exposições em escolas e universidades, aproximando o carro, as marcas parceiras e a engenharia de novas gerações."},{"title":"Eventos e exposições depois do Brasil","text":"O carro continua viajando: feiras, encontros, Sponsor Days e exposições. Conforme o pacote, podemos coordenar sua presença em um evento da empresa, sujeita à disponibilidade e à logística."},{"title":"Fotos e vídeos para suas campanhas","text":"Acesso a materiais do carro e da equipe para contar essa parceria. Conforme o nível de patrocínio, coordenamos produções na oficina, conteúdo da marca e campanhas conjuntas."},{"title":"Conexões empresariais e talentos","text":"Contato com empresas parceiras e profissionais nos encontros da equipe. Conforme o pacote, acesso a perfis de estudantes com experiência em projetos reais para recrutamento."}],"continuity":"Antes do Brasil construímos a história. Na competição a levamos à pista. Depois, seguimos compartilhando nas redes, na imprensa, em instituições de ensino e eventos: sua marca continua fazendo parte do percurso.","note":"Ações, formatos e presença de marca são acordados conforme o pacote. A cobertura em rádios, jornais e TV depende de cada veículo; visitas e exposições são coordenadas com cada instituição ou organizador."},
     "kicker": "Quero ser patrocinador",
     "title": "Você não financia uma promessa: acelera um projeto que já está em andamento.",
     "logoCta": "Coloque sua marca no carro",
     "intro": "Estamos construindo o caminho que transforma estudantes em profissionais do motorsport. Graças a quem já nos apoia, chegamos até aqui; hoje estamos a um último impulso de chegar à pista.",
     "scrollCta": "Conheça a história",
     "proofLabel": "Obrigado às empresas que já fazem parte da jornada",
-    "primaryCta": "Vamos conversar sobre uma parceria",
+    "primaryCta": "Agende uma reunião",
     "secondaryCta": "Veja como sua empresa pode participar",
-    "contactPrompt": "Se este avanço combina com os objetivos da sua empresa, vamos conversar diretamente, sem formulários nem intermediários.",
+    "contactPrompt": "Escolha um horário no nosso calendário para conversar sobre sua marca, as ativações e como apoiar o projeto.",
     "journey": {
       "kicker": "Uma academia, três etapas",
       "title": "Antes do Fórmula, existe um caminho.",

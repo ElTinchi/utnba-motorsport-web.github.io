@@ -29,6 +29,7 @@ export default function Sponsors() {
   const journey = t('sponsorsPage.journey.items', { returnObjects: true });
   const partnershipSteps = t('sponsorsPage.partnership.steps', { returnObjects: true });
   const sizes = t('sponsorsPage.viewer.sizes', { returnObjects: true });
+  const benefits = t('sponsorsPage.benefits.items', { returnObjects: true });
 
   return (
     <section className="sp-page">
@@ -67,6 +68,22 @@ export default function Sponsors() {
       </EditorialReveal>
 
       <div className="sp-page__container" id="recorrido">
+        <EditorialReveal as="section" className="sp-benefits" aria-labelledby="benefits-title">
+          <span className="sp-section-kicker">{t('sponsorsPage.benefits.kicker')}</span>
+          <h2 id="benefits-title">{t('sponsorsPage.benefits.title')}</h2>
+          <p className="sp-benefits__intro">{t('sponsorsPage.benefits.intro')}</p>
+          <div className="sp-benefits__grid">
+            {benefits.map((benefit, index) => (
+              <article key={benefit.title}>
+                <span className="sp-section-kicker" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+                <h3>{benefit.title}</h3>
+                <p>{benefit.text}</p>
+              </article>
+            ))}
+          </div>
+          <p className="sp-benefits__continuity">{t('sponsorsPage.benefits.continuity')}</p>
+          <p className="sp-benefits__note">{t('sponsorsPage.benefits.note')}</p>
+        </EditorialReveal>
         <EditorialReveal as="section" className="sp-journey" aria-labelledby="journey-title">
           <div className="sp-journey__intro">
             <span className="sp-section-kicker">{t('sponsorsPage.journey.kicker')}</span>
