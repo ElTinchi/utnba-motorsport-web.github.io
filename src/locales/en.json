@@ -1,9 +1,9 @@
 {
   "sponsorStory": {
-  "kicker": "Your brand, from day one",
-  "title": "We are building much more than a car.",
-  "intro": "We are training the professionals who will design, build and make decisions in industry. Your company can support them today through technology, materials, services or funding.",
-  "closing": "Brazil 2027 is the next goal. The story continues.",
+  "kicker": "Your next brand story",
+  "title": "We reached Carburando, radio shows and newspapers. Now imagine your brand here.",
+  "intro": "A project shared in the media, built in the workshop and connected with industry. Discover how your company can join the journey before, during and after Brazil 2027.",
+  "closing": "Let the next story carry your brand too.",
   "invitation": "Help take Argentine engineering further. Let's discuss your brand's role, starting at USD 500 in cash or in kind, with benefits agreed with your company.",
   "details": "Explore all the benefits",
   "chapters": [
@@ -16,8 +16,8 @@
     },
     {
       "label": "The project",
-      "title": "A race car. A complete engineering project.",
-      "text": "In Formula SAE, university teams design and build a single-seater from scratch. Our goal is an <strong>electric Formula SAE car for Brazil 2027</strong>. Your contribution can become components, manufacturing and technology, with brand placement on the car, clothing and workshop as agreed.",
+      "title": "Now imagine your logo here.",
+      "text": "This is the electric single-seater we are building for <strong>Formula SAE Brazil 2027</strong>. Behind every component are engineering, people and supporting companies. Try your brand on the 3D model and let's discuss placement, content and activations.",
       "alt": "Working render of the team's electric single-seater.",
       "caption": "Our single-seater · Working render"
     },
@@ -30,8 +30,8 @@
     },
     {
       "label": "Exposure",
-      "title": "Your contribution has a story to tell.",
-      "text": "Our engineering story has already reached Carburando. We want to keep sharing it through <strong>social media, radio, newspapers, digital media and TV</strong>. Posts, reels, interviews and campaign media are agreed by package. We seek coverage; each outlet makes its editorial decisions.",
+      "title": "The project already has a voice. Your brand can join the story.",
+      "text": "We have reached <strong>Carburando, radio shows and newspapers</strong>. Our own channels add posts, stories, reels and team content. Your support gives us new stories to tell and media for your campaigns. Activities depend on the package; each outlet decides its coverage.",
       "alt": "A team member interviewed by Carburando in the workshop.",
       "caption": "Carburando in the workshop · A story already reaching the media"
     },
@@ -42,6 +42,16 @@
       "alt": "Team members speaking with visitors at the UTN Campus.",
       "caption": "UTN Campus activity · Connecting with the community"
     }
+  ],
+  "start": "Discover what your brand gains",
+  "seeCar": "Show me the car",
+  "promise": "Exposure. Talent. Connections. And a car that keeps travelling after the competition.",
+  "tryLogo": "Try your logo on the 3D car",
+  "hooks": [
+    "Exposure is the beginning. Meet the people behind it.",
+    "Could this relationship also open new doors?",
+    "The competition has a finish line. Exposure continues.",
+    "Now imagine all of this with your logo on the car."
   ]
 },
   "nav": {

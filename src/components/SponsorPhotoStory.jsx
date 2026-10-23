@@ -11,6 +11,7 @@ const PHOTOS = [
   ['/assets/img/news/carburando.webp', '/novedades#carburando-2026', 675, 1200],
   ['/assets/img/news/campus-01.webp', '/novedades#circuito-virtual-campus', 1600, 1067],
 ];
+const READING_ORDER = [3, 0, 2, 4, 1];
 
 export default function SponsorPhotoStory() {
   const { t } = useTranslation();
@@ -21,21 +22,36 @@ export default function SponsorPhotoStory() {
         <span className="sponsor-story__kicker">{t('sponsorStory.kicker')}</span>
         <h2 id="sponsor-story-title">{t('sponsorStory.title')}</h2>
         <p>{t('sponsorStory.intro')}</p>
-        <a href={COMMERCIAL_CONTACT_HREF} className="btn btn--primary">{t('sponsorsPage.primaryCta')}</a>
+        <div className="sponsor-story__actions">
+          <a href="#historia-3" className="btn btn--primary">{t('sponsorStory.start')}</a>
+          <a href="#historia-1" className="btn btn--secondary">{t('sponsorStory.seeCar')}</a>
+        </div>
+        <p className="sponsor-story__promise">{t('sponsorStory.promise')}</p>
       </header>
-      {chapters.map((chapter, index) => (
-        <EditorialReveal as="article" className="sponsor-story__chapter" key={PHOTOS[index][0]}>
+      {READING_ORDER.map((index, position) => {
+        const chapter = chapters[index];
+        return (
+        <EditorialReveal as="article" id={`historia-${index}`} className={`sponsor-story__chapter${index === 1 ? ' sponsor-story__chapter--render' : ''}`} key={PHOTOS[index][0]}>
           <figure>
             <img src={PHOTOS[index][0]} width={PHOTOS[index][2]} height={PHOTOS[index][3]} alt={chapter.alt} loading="lazy" decoding="async" />
             <figcaption><NavLink to={PHOTOS[index][1]}>{chapter.caption} <span aria-hidden="true">↗</span></NavLink></figcaption>
           </figure>
           <div className="sponsor-story__copy">
-            <span className="sponsor-story__kicker">{String(index + 1).padStart(2, '0')} / {chapter.label}</span>
+            <span className="sponsor-story__kicker">{String(position + 1).padStart(2, '0')} / {chapter.label}</span>
             <h3>{chapter.title}</h3>
             <p><Trans i18nKey={`sponsorStory.chapters.${index}.text`} components={{ strong: <strong /> }} /></p>
+            {position < READING_ORDER.length - 1 ? (
+              <a className="sponsor-story__next" href={`#historia-${READING_ORDER[position + 1]}`}>{t(`sponsorStory.hooks.${position}`)} <span aria-hidden="true">↓</span></a>
+            ) : (
+              <div className="sponsor-story__actions">
+                <a href="/visor/visor.html" className="btn btn--primary">{t('sponsorStory.tryLogo')}</a>
+                <a href={COMMERCIAL_CONTACT_HREF} className="btn btn--secondary">{t('sponsorsPage.primaryCta')}</a>
+              </div>
+            )}
           </div>
         </EditorialReveal>
-      ))}
+        );
+      })}
       <div className="sponsor-story__close">
         <h3>{t('sponsorStory.closing')}</h3>
         <p>{t('sponsorStory.invitation')}</p>

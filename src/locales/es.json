@@ -1,9 +1,9 @@
 {
   "sponsorStory": {
-  "kicker": "Tu marca, desde el primer día",
-  "title": "Acá se construye mucho más que un auto.",
-  "intro": "Se forman los profesionales que mañana van a diseñar, producir y tomar decisiones en la industria. Tu empresa puede acompañarlos desde hoy: con tecnología, materiales, servicios o apoyo económico.",
-  "closing": "Brasil 2027 es la próxima meta. La historia sigue.",
+  "kicker": "Tu próxima historia de marca",
+  "title": "Ya llegamos a Carburando, radios y diarios. Ahora imaginá tu marca acá.",
+  "intro": "Un proyecto que se cuenta en los medios, se construye en el taller y conecta con la industria. Descubrí cómo tu empresa puede formar parte del recorrido: antes, durante y después de Brasil 2027.",
+  "closing": "Que la próxima historia también lleve tu marca.",
   "invitation": "Queremos llevar la ingeniería argentina cada vez más lejos. Conversemos sobre cómo tu marca puede formar parte: desde USD 500, en dinero o en especie, con una propuesta de beneficios acordada con tu empresa.",
   "details": "Conocé todos los beneficios",
   "chapters": [
@@ -16,8 +16,8 @@
     },
     {
       "label": "El proyecto",
-      "title": "Un auto de carreras. Un proyecto de ingeniería completo.",
-      "text": "En Fórmula SAE, equipos universitarios diseñan y construyen un monoplaza desde cero. Nuestro desafío es llevar un <strong>Fórmula SAE eléctrico a Brasil 2027</strong>. Tu aporte puede convertirse en componentes, fabricación y tecnología, con presencia de marca en el auto, la indumentaria y el taller según la alianza.",
+      "title": "Ahora imaginá tu logo acá.",
+      "text": "Este es el monoplaza eléctrico que estamos construyendo para <strong>Fórmula SAE Brasil 2027</strong>. Detrás de cada componente hay ingeniería, personas y empresas que lo hacen posible. Probá tu marca en el modelo 3D y conversemos sobre ubicación, contenido y activaciones.",
       "alt": "Render del monoplaza eléctrico de UTN BA Motorsport.",
       "caption": "Nuestro monoplaza · Render de trabajo"
     },
@@ -30,8 +30,8 @@
     },
     {
       "label": "La exposición",
-      "title": "Tu aporte también tiene una historia para contar.",
-      "text": "La ingeniería del equipo ya llegó a Carburando. Queremos seguir contándola en <strong>redes, radios, diarios, medios digitales y TV</strong>. Sumamos posteos, reels, entrevistas y material para tus propias campañas según el paquete. Gestionamos la difusión; cada medio decide su cobertura.",
+      "title": "El proyecto ya tiene micrófono. Tu marca puede ser parte de la historia.",
+      "text": "Ya llegamos a <strong>Carburando, programas de radio y diarios</strong>. A eso se suman nuestros canales: posteos, stories, reels y contenido del equipo. Tu aporte nos da nuevas historias para contar y material para tus campañas. Las acciones se acuerdan según el paquete; cada medio decide su cobertura.",
       "alt": "Un integrante del equipo entrevistado por Carburando en el taller.",
       "caption": "Carburando en el taller · Una historia que ya llegó a los medios"
     },
@@ -42,6 +42,16 @@
       "alt": "Integrantes del equipo conversando con visitantes durante una actividad en el Campus de UTN.",
       "caption": "Actividad en el Campus UTN · El vínculo con la comunidad ya comenzó"
     }
+  ],
+  "start": "Descubrí qué gana tu marca",
+  "seeCar": "Quiero ver el auto",
+  "promise": "Exposición. Talento. Conexiones. Y un auto que sigue viajando después de competir.",
+  "tryLogo": "Probá tu logo en el auto 3D",
+  "hooks": [
+    "La exposición es el comienzo. Mirá quiénes están detrás.",
+    "¿Y si esta relación también te abriera nuevas puertas?",
+    "La competencia tiene una meta. La exposición sigue.",
+    "Ahora sí: imaginá todo esto con tu logo en el auto."
   ]
 },
   "nav": {

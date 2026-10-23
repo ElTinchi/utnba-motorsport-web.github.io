@@ -1,9 +1,9 @@
 {
   "sponsorStory": {
-  "kicker": "Sua marca, desde o primeiro dia",
-  "title": "Aqui se constrói muito mais que um carro.",
-  "intro": "Formamos profissionais que vão projetar, produzir e tomar decisões na indústria. Sua empresa pode apoiá-los hoje com tecnologia, materiais, serviços ou recursos financeiros.",
-  "closing": "Brasil 2027 é a próxima meta. A história continua.",
+  "kicker": "A próxima história da sua marca",
+  "title": "Já chegamos ao Carburando, às rádios e aos jornais. Agora imagine sua marca aqui.",
+  "intro": "Um projeto que aparece na imprensa, nasce na oficina e se conecta à indústria. Descubra como sua empresa pode participar antes, durante e depois do Brasil 2027.",
+  "closing": "Que a próxima história também leve sua marca.",
   "invitation": "Ajude a levar a engenharia argentina mais longe. Vamos conversar sobre sua marca: a partir de USD 500, em dinheiro ou em espécie, com benefícios acordados com sua empresa.",
   "details": "Conheça todos os benefícios",
   "chapters": [
@@ -16,8 +16,8 @@
     },
     {
       "label": "O projeto",
-      "title": "Um carro de corrida. Um projeto completo de engenharia.",
-      "text": "Na Fórmula SAE, equipes universitárias projetam e constroem um monoposto do zero. Nossa meta é um <strong>Fórmula SAE elétrico para o Brasil 2027</strong>. Seu apoio pode se tornar componentes, fabricação e tecnologia, com presença da marca no carro, no vestuário e na oficina conforme a parceria.",
+      "title": "Agora imagine sua marca aqui.",
+      "text": "Este é o monoposto elétrico que estamos construindo para a <strong>Fórmula SAE Brasil 2027</strong>. Por trás de cada componente há engenharia, pessoas e empresas parceiras. Teste sua marca no modelo 3D e vamos conversar sobre posição, conteúdo e ativações.",
       "alt": "Render do monoposto elétrico da equipe.",
       "caption": "Nosso monoposto · Render de trabalho"
     },
@@ -30,8 +30,8 @@
     },
     {
       "label": "A exposição",
-      "title": "Seu apoio também tem uma história para contar.",
-      "text": "O projeto já chegou ao Carburando. Queremos continuar contando essa história em <strong>redes sociais, rádios, jornais, veículos digitais e TV</strong>. Posts, reels, entrevistas e materiais para campanhas conforme o pacote. Buscamos divulgação; cada veículo decide sua cobertura.",
+      "title": "O projeto já tem voz. Sua marca pode fazer parte da história.",
+      "text": "Já chegamos ao <strong>Carburando, a programas de rádio e a jornais</strong>. Nossos canais somam posts, stories, reels e conteúdo da equipe. Seu apoio traz novas histórias e materiais para suas campanhas. Ações conforme o pacote; cada veículo decide sua cobertura.",
       "alt": "Integrante da equipe entrevistado pelo Carburando na oficina.",
       "caption": "Carburando na oficina · Uma história que já chegou à imprensa"
     },
@@ -42,6 +42,16 @@
       "alt": "Integrantes conversando com visitantes no Campus da UTN.",
       "caption": "Atividade no Campus UTN · O vínculo com a comunidade já começou"
     }
+  ],
+  "start": "Descubra o que sua marca ganha",
+  "seeCar": "Quero ver o carro",
+  "promise": "Exposição. Talentos. Conexões. E um carro que continua viajando depois da competição.",
+  "tryLogo": "Teste sua marca no carro 3D",
+  "hooks": [
+    "A exposição é o começo. Conheça quem está por trás.",
+    "E se essa relação também abrisse novas portas?",
+    "A competição tem uma chegada. A exposição continua.",
+    "Agora imagine tudo isso com sua marca no carro."
   ]
 },
   "nav": {

@@ -13,6 +13,10 @@
 .sponsor-story__chapter:nth-of-type(even) figure { order: 2; }
 .sponsor-story__close { padding-top: 2.5rem; border-top: 2px solid var(--color-red); }
 .sponsor-story__actions { display: flex; flex-wrap: wrap; gap: 1rem; }
+.sponsor-story__chapter { scroll-margin-top: 110px; }
+.sponsor-story__next { display: inline-block; border-bottom: 1px solid var(--color-red); padding: .75rem 0; color: var(--color-white); font-weight: 800; line-height: 1.5; }
+.sponsor-story .sponsor-story__promise { font-size: .85rem; color: var(--color-white); }
+.sponsor-story__chapter--render { border-top: 2px solid var(--color-red); padding-top: 3rem; }
 @media (max-width: 767px) {
   .sponsor-story__chapter { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
   .sponsor-story__chapter:nth-of-type(even) figure { order: 0; }
