@@ -12,6 +12,11 @@ const PHOTOS = [
   ['/assets/img/news/campus-01.webp', '/novedades#circuito-virtual-campus', 1600, 1067],
 ];
 const READING_ORDER = [3, 0, 2, 4, 1];
+const PRESS = [
+  { name: 'Ámbito', href: 'https://www.ambito.com/autos/utn-ba-motorsport-estudiantes-que-convierten-la-ingenieria-vehiculos-competicion-n6311926' },
+  { name: 'El Destape', href: 'https://www.eldestapeweb.com/sociedad/aula-pista-ingenieria-innovacion-industria-nacional-2026818101412' },
+  { name: 'Carburando / Carburando Radio', href: 'https://www.carburando.com/notas/utn-ba-motorsport-el-equipo-de-estudiantes-argentinos-que-correran-la-formula-sae-2027-en-brasil' },
+];
 
 export default function SponsorPhotoStory() {
   const { t } = useTranslation();
@@ -22,6 +27,10 @@ export default function SponsorPhotoStory() {
         <span className="sponsor-story__kicker">{t('sponsorStory.kicker')}</span>
         <h2 id="sponsor-story-title">{t('sponsorStory.title')}</h2>
         <p>{t('sponsorStory.intro')}</p>
+        <nav className="sponsor-story__press" aria-label={t('sponsorStory.pressLabel')}>
+          <span className="sponsor-story__kicker">{t('sponsorStory.pressLabel')}</span>
+          {PRESS.map(outlet => <a key={outlet.name} href={outlet.href} target="_blank" rel="noopener noreferrer">{outlet.name} <span aria-hidden="true">↗</span></a>)}
+        </nav>
         <div className="sponsor-story__actions">
           <a href="#historia-3" className="btn btn--primary">{t('sponsorStory.start')}</a>
           <a href="#historia-1" className="btn btn--secondary">{t('sponsorStory.seeCar')}</a>

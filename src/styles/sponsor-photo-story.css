@@ -13,6 +13,9 @@
 .sponsor-story__chapter:nth-of-type(even) figure { order: 2; }
 .sponsor-story__close { padding-top: 2.5rem; border-top: 2px solid var(--color-red); }
 .sponsor-story__actions { display: flex; flex-wrap: wrap; gap: 1rem; }
+.sponsor-story__press { display: flex; flex-wrap: wrap; gap: 1rem 2rem; padding: 1.5rem 0; margin-bottom: 1.5rem; border-block: 1px solid var(--color-white-muted); }
+.sponsor-story__press .sponsor-story__kicker { flex-basis: 100%; margin: 0; }
+.sponsor-story__press a { font-size: clamp(1rem, 2vw, 1.35rem); font-weight: 800; text-decoration: underline; text-underline-offset: 5px; }
 .sponsor-story__chapter { scroll-margin-top: 110px; }
 .sponsor-story__next { display: inline-block; border-bottom: 1px solid var(--color-red); padding: .75rem 0; color: var(--color-white); font-weight: 800; line-height: 1.5; }
 .sponsor-story .sponsor-story__promise { font-size: .85rem; color: var(--color-white); }
