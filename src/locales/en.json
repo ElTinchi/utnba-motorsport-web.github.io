@@ -1,4 +1,49 @@
 {
+  "sponsorStory": {
+  "kicker": "Your brand, from day one",
+  "title": "We are building much more than a car.",
+  "intro": "We are training the professionals who will design, build and make decisions in industry. Your company can support them today through technology, materials, services or funding.",
+  "closing": "Brazil 2027 is the next goal. The story continues.",
+  "invitation": "Help take Argentine engineering further. Let's discuss your brand's role, starting at USD 500 in cash or in kind, with benefits agreed with your company.",
+  "details": "Explore all the benefits",
+  "chapters": [
+    {
+      "label": "The people",
+      "title": "Let them know your brand before they choose it.",
+      "text": "Today we are students solving real problems. Tomorrow we take that experience into industry. <strong>The tools and technologies we use today help shape our professional judgement.</strong> Supporting us builds that connection from the beginning.",
+      "alt": "UTN BA Motorsport team gathered behind the car chassis.",
+      "caption": "The team and chassis · July 2026 presentation"
+    },
+    {
+      "label": "The project",
+      "title": "A race car. A complete engineering project.",
+      "text": "In Formula SAE, university teams design and build a single-seater from scratch. Our goal is an <strong>electric Formula SAE car for Brazil 2027</strong>. Your contribution can become components, manufacturing and technology, with brand placement on the car, clothing and workshop as agreed.",
+      "alt": "Working render of the team's electric single-seater.",
+      "caption": "Our single-seater · Working render"
+    },
+    {
+      "label": "Industry",
+      "title": "Connect with the people who make things happen.",
+      "text": "The relationship begins in the workshop and can grow beyond it. <strong>Meet companies, industry contacts and students experienced in real projects</strong>: opportunities for networking, technical exchange and talent connections. Events and access depend on the partnership.",
+      "alt": "Team members touring ABB during a company visit.",
+      "caption": "Visit to ABB · September 2026"
+    },
+    {
+      "label": "Exposure",
+      "title": "Your contribution has a story to tell.",
+      "text": "Our engineering story has already reached Carburando. We want to keep sharing it through <strong>social media, radio, newspapers, digital media and TV</strong>. Posts, reels, interviews and campaign media are agreed by package. We seek coverage; each outlet makes its editorial decisions.",
+      "alt": "A team member interviewed by Carburando in the workshop.",
+      "caption": "Carburando in the workshop · A story already reaching the media"
+    },
+    {
+      "label": "After the competition",
+      "title": "The race ends. Your brand keeps travelling.",
+      "text": "After Brazil, our plan is to bring the car to <strong>technical schools, universities, fairs and as many events as we can</strong>. New generations can discover the project and its supporters. Our Campus activity shows how we already connect with the community; future visits and exhibitions will be coordinated with each institution.",
+      "alt": "Team members speaking with visitors at the UTN Campus.",
+      "caption": "UTN Campus activity · Connecting with the community"
+    }
+  ]
+},
   "nav": {
     "home": "Home",
     "news": "News",

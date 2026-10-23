@@ -6,6 +6,7 @@ import AreasGrid from '../components/AreasGrid';
 import SponsorsCarousel from '../components/SponsorsCarousel';
 import FundingProgress from '../components/FundingProgress';
 import ScrollCar from '../components/ScrollCar';
+import SponsorPhotoStory from '../components/SponsorPhotoStory';
 import AnimatedNumber from '../components/AnimatedNumber';
 import useInView from '../hooks/useInView';
 import '../styles/home.css';
@@ -241,6 +242,7 @@ export default function Home() {
         </section>
 
         {/* ====== Mini-secciones: motivación, sobre nosotros, Fórmula Student, cómo unirte ====== */}
+        <SponsorPhotoStory />
         <section className="home-highlights" aria-label="Quiénes somos y qué es Fórmula Student">
           <div className="home-highlights__container">
             {HIGHLIGHTS.map((highlight, index) => (

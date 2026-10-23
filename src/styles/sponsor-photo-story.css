@@ -1,0 +1,20 @@
+.sponsor-story { max-width: 1380px; margin: 0 auto; padding: clamp(4rem, 9vw, 8rem) clamp(1.5rem, 4vw, 4rem); scroll-margin-top: 100px; }
+.sponsor-story__head { max-width: 900px; margin-bottom: clamp(3rem, 6vw, 6rem); }
+.sponsor-story__kicker { display: block; color: var(--color-red); font-weight: 800; font-size: .75rem; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 1rem; }
+.sponsor-story h2 { font-size: clamp(2.2rem, 5vw, 4.5rem); line-height: 1.07; letter-spacing: -.04em; }
+.sponsor-story p { color: var(--color-white-muted); line-height: 1.8; margin: 1.5rem 0; max-width: 64ch; }
+.sponsor-story strong { color: var(--color-white); font-weight: 800; }
+.sponsor-story__chapter { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); align-items: center; gap: clamp(2rem, 5vw, 5rem); margin-bottom: clamp(4rem, 8vw, 8rem); }
+.sponsor-story__chapter figure { margin: 0; min-width: 0; }
+.sponsor-story__chapter img { width: 100%; height: auto; max-height: 610px; object-fit: contain; display: block; background: #151519; }
+.sponsor-story figcaption { margin-top: .75rem; font-size: .78rem; line-height: 1.6; color: var(--color-white-muted); }
+.sponsor-story figcaption a { text-decoration: underline; text-underline-offset: 4px; }
+.sponsor-story h3 { font-size: clamp(1.7rem, 3vw, 2.8rem); line-height: 1.15; letter-spacing: -.025em; }
+.sponsor-story__chapter:nth-of-type(even) figure { order: 2; }
+.sponsor-story__close { padding-top: 2.5rem; border-top: 2px solid var(--color-red); }
+.sponsor-story__actions { display: flex; flex-wrap: wrap; gap: 1rem; }
+@media (max-width: 767px) {
+  .sponsor-story__chapter { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
+  .sponsor-story__chapter:nth-of-type(even) figure { order: 0; }
+  .sponsor-story__chapter img { max-height: 450px; }
+}

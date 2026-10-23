@@ -1,4 +1,49 @@
 {
+  "sponsorStory": {
+  "kicker": "Sua marca, desde o primeiro dia",
+  "title": "Aqui se constrói muito mais que um carro.",
+  "intro": "Formamos profissionais que vão projetar, produzir e tomar decisões na indústria. Sua empresa pode apoiá-los hoje com tecnologia, materiais, serviços ou recursos financeiros.",
+  "closing": "Brasil 2027 é a próxima meta. A história continua.",
+  "invitation": "Ajude a levar a engenharia argentina mais longe. Vamos conversar sobre sua marca: a partir de USD 500, em dinheiro ou em espécie, com benefícios acordados com sua empresa.",
+  "details": "Conheça todos os benefícios",
+  "chapters": [
+    {
+      "label": "As pessoas",
+      "title": "Que conheçam sua marca antes de escolhê-la.",
+      "text": "Hoje somos estudantes resolvendo problemas reais. Amanhã levaremos essa experiência à indústria. <strong>As ferramentas e tecnologias de hoje ajudam a formar nosso critério profissional.</strong> Apoiar a equipe cria esse vínculo desde o começo.",
+      "alt": "Equipe UTN BA Motorsport reunida atrás do chassi.",
+      "caption": "Equipe e chassi · Apresentação de julho de 2026"
+    },
+    {
+      "label": "O projeto",
+      "title": "Um carro de corrida. Um projeto completo de engenharia.",
+      "text": "Na Fórmula SAE, equipes universitárias projetam e constroem um monoposto do zero. Nossa meta é um <strong>Fórmula SAE elétrico para o Brasil 2027</strong>. Seu apoio pode se tornar componentes, fabricação e tecnologia, com presença da marca no carro, no vestuário e na oficina conforme a parceria.",
+      "alt": "Render do monoposto elétrico da equipe.",
+      "caption": "Nosso monoposto · Render de trabalho"
+    },
+    {
+      "label": "A indústria",
+      "title": "Conecte-se com quem faz acontecer.",
+      "text": "A relação começa na oficina e pode ir além. <strong>Encontros com empresas, profissionais e estudantes com experiência em projetos reais</strong>: networking, intercâmbio técnico e contato com talentos. Eventos e acessos são coordenados conforme o patrocínio.",
+      "alt": "Integrantes da equipe visitando as instalações da ABB.",
+      "caption": "Visita à ABB · Setembro de 2026"
+    },
+    {
+      "label": "A exposição",
+      "title": "Seu apoio também tem uma história para contar.",
+      "text": "O projeto já chegou ao Carburando. Queremos continuar contando essa história em <strong>redes sociais, rádios, jornais, veículos digitais e TV</strong>. Posts, reels, entrevistas e materiais para campanhas conforme o pacote. Buscamos divulgação; cada veículo decide sua cobertura.",
+      "alt": "Integrante da equipe entrevistado pelo Carburando na oficina.",
+      "caption": "Carburando na oficina · Uma história que já chegou à imprensa"
+    },
+    {
+      "label": "Depois de competir",
+      "title": "A corrida termina. Sua marca continua viajando.",
+      "text": "Depois do Brasil, planejamos levar o carro a <strong>escolas técnicas, universidades, feiras e todos os eventos possíveis</strong>. Novas gerações podem conhecer o projeto e seus apoiadores. A atividade no Campus mostra esse vínculo com a comunidade; próximas visitas e exposições serão coordenadas com cada instituição.",
+      "alt": "Integrantes conversando com visitantes no Campus da UTN.",
+      "caption": "Atividade no Campus UTN · O vínculo com a comunidade já começou"
+    }
+  ]
+},
   "nav": {
     "home": "Home",
     "news": "Novidades",
