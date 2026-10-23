@@ -2,13 +2,13 @@ import { useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ROUTES, COMMERCIAL_CONTACT_HREF } from '../routes';
-import AreasGrid from '../components/AreasGrid';
 import SponsorsCarousel from '../components/SponsorsCarousel';
 import FundingProgress from '../components/FundingProgress';
 import ScrollCar from '../components/ScrollCar';
 import SponsorPhotoStory from '../components/SponsorPhotoStory';
+import CarScrollScene from '../components/CarScrollScene';
+import HeroArtwork from '../components/HeroArtwork';
 import AnimatedNumber from '../components/AnimatedNumber';
-import useInView from '../hooks/useInView';
 import '../styles/home.css';
 
 const ACADEMY_LOGOS = [
@@ -16,35 +16,6 @@ const ACADEMY_LOGOS = [
   '/assets/img/academy/baja-utnba.png',
   '/assets/img/logo.png',
 ];
-
-const HIGHLIGHTS = [
-  { id: 'motivation', titleKey: 'home.motivationTitle', hookKey: 'home.motivationHook', subtitleKey: 'home.motivationSubtitle', bodyKey: 'home.motivationBody' },
-  { id: 'about', titleKey: 'home.aboutTitle', hookKey: 'home.aboutHook', subtitleKey: 'home.aboutSubtitle', bodyKey: 'home.aboutBody' },
-  { id: 'formulaStudent', titleKey: 'home.formulaStudentTitle', hookKey: 'home.formulaStudentHook', subtitleKey: 'home.formulaStudentSubtitle', bodyKey: 'home.formulaStudentBody', link: ROUTES.aboutFormulaStudent, linkKey: 'home.formulaStudentLink' },
-  { id: 'join', titleKey: 'home.joinTitle', hookKey: 'home.joinHook', subtitleKey: 'home.joinSubtitle', bodyKey: 'home.joinBody', link: ROUTES.joinUs, linkKey: 'home.joinLink' },
-];
-
-function ReadingHighlight({ highlight, index }) {
-  const { t } = useTranslation();
-  const [ref, isVisible] = useInView({ threshold: 0.22 });
-
-  return (
-    <article
-      ref={ref}
-      className={`home-highlight home-highlight--${index % 2 === 0 ? 'left' : 'right'}${isVisible ? ' home-highlight--visible' : ''}`}
-    >
-      <span className="home-highlight__eyebrow">{t(highlight.titleKey)}</span>
-      <h2 className="home-highlight__title">{t(highlight.hookKey)}</h2>
-      <p className="home-highlight__subtitle">{t(highlight.subtitleKey)}</p>
-      <p className="home-highlight__body">{t(highlight.bodyKey)}</p>
-      {highlight.link && (
-        <NavLink to={highlight.link} className="home-highlight__link">
-          {t(highlight.linkKey)}
-        </NavLink>
-      )}
-    </article>
-  );
-}
 
 // ============================================================
 // Circuito del hero — trazado y perfil de velocidad
@@ -123,32 +94,28 @@ export default function Home() {
   const circuitSvgRef = useRef(null);
 
   useEffect(() => {
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (prefersReducedMotion) {
-      circuitSvgRef.current?.pauseAnimations?.();
-    }
+    const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const update = () => {
+      const pause = preference.matches || document.hidden || window.scrollY >= window.innerHeight;
+      if (pause) circuitSvgRef.current?.pauseAnimations?.();
+      else circuitSvgRef.current?.unpauseAnimations?.();
+    };
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+    document.addEventListener('visibilitychange', update);
+    preference.addEventListener('change', update);
+    return () => {
+      window.removeEventListener('scroll', update);
+      document.removeEventListener('visibilitychange', update);
+      preference.removeEventListener('change', update);
+    };
   }, []);
 
   return (
     <>
       <ScrollCar circuitRef={circuitSvgRef} />
-      {/* ====== HERO - Auto difuminado de fondo + logo ====== */}
-      <section className="hero" aria-label="UTN BA Motorsport">
-        <div className="hero__bg">
-          <img draggable={false}
-            src="/assets/img/render_fsae.jpg"
-            alt="Monoplaza Fórmula SAE eléctrico de UTN BA Motorsport"
-            className="hero__bg-img"
-            width="1920"
-            height="1080"
-            loading="eager"
-          />
-          <div className="hero__overlay" aria-hidden="true"></div>
-        </div>
-
-        {/* ====== Circuito animado alrededor del logo (capa intermedia) ======
-             Va difuminado y a baja opacidad a propósito: es ambiente, el que
-             tiene que ganar la mirada es el logo. */}
+      {/* Portada: render visible y circuito que da origen al auto guía. */}
+      <section className="hero hero--cinematic" aria-label="UTN BA Motorsport">
         <div className="hero__circuit" aria-hidden="true">
           <svg ref={circuitSvgRef} viewBox="0 0 1000 700" xmlns="http://www.w3.org/2000/svg">
             <g className="hero__track">
@@ -209,55 +176,29 @@ export default function Home() {
           </svg>
         </div>
 
-        <span className="hero__ignition" aria-hidden="true" />
+        <HeroArtwork />
         <div className="hero__content">
           <img draggable={false} src="/assets/img/logo.png" alt="UTN BA Motorsport" className="hero__logo" width="440" height="86" />
-          <span className="hero__tagline">{t('home.heroPlate')}</span>
-          <h1 className="hero__title">{t('home.heroTitle')}</h1>
+
+          <h1 className="hero__title">{t('cinematic.heroTitle')}</h1>
+          <p className="hero__description">{t('cinematic.heroIntro')}</p>
           <div className="hero__actions">
             <a href={COMMERCIAL_CONTACT_HREF} className="btn btn--primary">{t('sponsorsPage.primaryCta')}</a>
+            <a href="#auto-en-movimiento" className="hero__explore">{t('home.heroCtaCar')} <span aria-hidden="true">↓</span></a>
           </div>
         </div>
       </section>
 
       {/* El contenido sube y tapa el hero fijo al scrollear */}
       <div className="page">
-        <section className="intro" aria-labelledby="intro-title">
-          <div className="intro__glow" aria-hidden="true"></div>
-          <div className="intro__container">
-            <h2 id="intro-title" className="intro__title">
-              {t('home.heroTitle')}
-            </h2>
-            <p className="intro__description">{t('home.heroSubtitle')}</p>
-
-            <div className="intro__actions">
-              <a href={COMMERCIAL_CONTACT_HREF} className="btn btn--primary">
-                {t('sponsorsPage.primaryCta')}
-              </a>
-              <NavLink to={ROUTES.team} className="btn btn--secondary">
-                {t('home.heroCtaSecondary')}
-              </NavLink>
-            </div>
-          </div>
-        </section>
+        <CarScrollScene />
 
         {/* ====== Mini-secciones: motivación, sobre nosotros, Fórmula Student, cómo unirte ====== */}
         <SponsorPhotoStory />
-        <section className="home-highlights" aria-label="Quiénes somos y qué es Fórmula Student">
-          <div className="home-highlights__container">
-            {HIGHLIGHTS.map((highlight, index) => (
-              <ReadingHighlight key={highlight.id} highlight={highlight} index={index} />
-            ))}
-          </div>
-        </section>
-
-        {/* ====== Las 7 áreas del equipo ====== */}
-        <section className="areas" aria-labelledby="areas-title">
-          <div className="areas__container">
-            <span className="areas__kicker">{t('home.areas.kicker')}</span>
-            <h2 id="areas-title" className="areas__title">{t('home.areas.title')}</h2>
-            <p className="areas__intro">{t('home.areas.intro')}</p>
-            <AreasGrid />
+        <section className="project-bridge">
+          <h2>{t('cinematic.teamTitle')}</h2>
+          <div><p>{t('home.heroSubtitle')}</p>
+            <NavLink to={ROUTES.team} className="btn btn--secondary">{t('home.heroCtaSecondary')}</NavLink>
           </div>
         </section>
 

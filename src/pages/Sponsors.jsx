@@ -30,6 +30,11 @@ export default function Sponsors() {
   const partnershipSteps = t('sponsorsPage.partnership.steps', { returnObjects: true });
   const sizes = t('sponsorsPage.viewer.sizes', { returnObjects: true });
   const benefits = t('sponsorsPage.benefits.items', { returnObjects: true });
+  const benefitGroups = [
+    { key: 'visibility', indices: [0, 1, 4] },
+    { key: 'presence', indices: [2, 3] },
+    { key: 'connections', indices: [5] },
+  ];
 
   return (
     <section className="sp-page">
@@ -73,11 +78,17 @@ export default function Sponsors() {
           <h2 id="benefits-title">{t('sponsorsPage.benefits.title')}</h2>
           <p className="sp-benefits__intro">{t('sponsorsPage.benefits.intro')}</p>
           <div className="sp-benefits__grid">
-            {benefits.map((benefit, index) => (
-              <article key={benefit.title}>
-                <span className="sp-section-kicker" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
-                <h3>{benefit.title}</h3>
-                <p><Trans i18nKey={`sponsorsPage.benefits.items.${index}.text`} components={{ strong: <strong /> }} /></p>
+            {benefitGroups.map(group => (
+              <article key={group.key}>
+                <h3>{t(`cinematic.outcomes.${group.key}`)}</h3>
+                <p>{t(`cinematic.outcomes.${group.key}Text`)}</p>
+                <details className="sp-benefits__details">
+                  <summary>{t('cinematic.seeDeliverables')}</summary>
+                  {group.indices.map(index => <div key={index}>
+                    <h4>{benefits[index].title}</h4>
+                    <p><Trans i18nKey={`sponsorsPage.benefits.items.${index}.text`} components={{ strong: <strong /> }} /></p>
+                  </div>)}
+                </details>
               </article>
             ))}
           </div>

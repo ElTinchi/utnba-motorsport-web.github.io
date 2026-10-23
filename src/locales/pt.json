@@ -1,60 +1,60 @@
 {
   "sponsorStory": {
-  "pressLabel": "O projeto na imprensa · Leia as matérias",
-  "kicker": "A próxima história da sua marca",
-  "title": "Já chegamos ao Carburando, às rádios e aos jornais. Agora imagine sua marca aqui.",
-  "intro": "Um projeto que aparece na imprensa, nasce na oficina e se conecta à indústria. Descubra como sua empresa pode participar antes, durante e depois do Brasil 2027.",
-  "closing": "Que a próxima história também leve sua marca.",
-  "invitation": "Ajude a levar a engenharia argentina mais longe. Vamos conversar sobre sua marca: a partir de USD 500, em dinheiro ou em espécie, com benefícios acordados com sua empresa.",
-  "details": "Conheça todos os benefícios",
-  "chapters": [
-    {
-      "label": "As pessoas",
-      "title": "Que conheçam sua marca antes de escolhê-la.",
-      "text": "Hoje somos estudantes resolvendo problemas reais. Amanhã levaremos essa experiência à indústria. <strong>As ferramentas e tecnologias de hoje ajudam a formar nosso critério profissional.</strong> Apoiar a equipe cria esse vínculo desde o começo.",
-      "alt": "Equipe UTN BA Motorsport reunida atrás do chassi.",
-      "caption": "Equipe e chassi · Apresentação de julho de 2026"
-    },
-    {
-      "label": "O projeto",
-      "title": "Agora imagine sua marca aqui.",
-      "text": "Este é o monoposto elétrico que estamos construindo para a <strong>Fórmula SAE Brasil 2027</strong>. Por trás de cada componente há engenharia, pessoas e empresas parceiras. Teste sua marca no modelo 3D e vamos conversar sobre posição, conteúdo e ativações.",
-      "alt": "Render do monoposto elétrico da equipe.",
-      "caption": "Nosso monoposto · Render de trabalho"
-    },
-    {
-      "label": "A indústria",
-      "title": "Conecte-se com quem faz acontecer.",
-      "text": "A relação começa na oficina e pode ir além. <strong>Encontros com empresas, profissionais e estudantes com experiência em projetos reais</strong>: networking, intercâmbio técnico e contato com talentos. Eventos e acessos são coordenados conforme o patrocínio.",
-      "alt": "Integrantes da equipe visitando as instalações da ABB.",
-      "caption": "Visita à ABB · Setembro de 2026"
-    },
-    {
-      "label": "A exposição",
-      "title": "O projeto já tem voz. Sua marca pode fazer parte da história.",
-      "text": "Já chegamos ao <strong>Carburando, a programas de rádio e a jornais</strong>. Nossos canais somam posts, stories, reels e conteúdo da equipe. Seu apoio traz novas histórias e materiais para suas campanhas. Ações conforme o pacote; cada veículo decide sua cobertura.",
-      "alt": "Integrante da equipe entrevistado pelo Carburando na oficina.",
-      "caption": "Carburando na oficina · Uma história que já chegou à imprensa"
-    },
-    {
-      "label": "Depois de competir",
-      "title": "A corrida termina. Sua marca continua viajando.",
-      "text": "Depois do Brasil, planejamos levar o carro a <strong>escolas técnicas, universidades, feiras e todos os eventos possíveis</strong>. Novas gerações podem conhecer o projeto e seus apoiadores. A atividade no Campus mostra esse vínculo com a comunidade; próximas visitas e exposições serão coordenadas com cada instituição.",
-      "alt": "Integrantes conversando com visitantes no Campus da UTN.",
-      "caption": "Atividade no Campus UTN · O vínculo com a comunidade já começou"
-    }
-  ],
-  "start": "Descubra o que sua marca ganha",
-  "seeCar": "Quero ver o carro",
-  "promise": "Exposição. Talentos. Conexões. E um carro que continua viajando depois da competição.",
-  "tryLogo": "Teste sua marca no carro 3D",
-  "hooks": [
-    "A exposição é o começo. Conheça quem está por trás.",
-    "E se essa relação também abrisse novas portas?",
-    "A competição tem uma chegada. A exposição continua.",
-    "Agora imagine tudo isso com sua marca no carro."
-  ]
-},
+    "pressLabel": "O projeto na imprensa · Leia as matérias",
+    "kicker": "A próxima história da sua marca",
+    "title": "Sua marca nesta história.",
+    "intro": "Um projeto que aparece na imprensa, nasce na oficina e se conecta à indústria. Descubra como sua empresa pode participar antes, durante e depois do Brasil 2027.",
+    "closing": "Que a próxima história também leve sua marca.",
+    "invitation": "Ajude a levar a engenharia argentina mais longe. Vamos conversar sobre sua marca: a partir de USD 500, em dinheiro ou em espécie, com benefícios acordados com sua empresa.",
+    "details": "Conheça todos os benefícios",
+    "chapters": [
+      {
+        "label": "As pessoas",
+        "title": "Talento que conhece sua marca.",
+        "text": "Hoje somos estudantes resolvendo problemas reais. Amanhã levaremos essa experiência à indústria. <strong>As ferramentas e tecnologias de hoje ajudam a formar nosso critério profissional.</strong> Apoiar a equipe cria esse vínculo desde o começo.",
+        "alt": "Equipe UTN BA Motorsport reunida atrás do chassi.",
+        "caption": "Equipe e chassi · Apresentação de julho de 2026"
+      },
+      {
+        "label": "O projeto",
+        "title": "Imagine seu logo aqui.",
+        "text": "Este é o monoposto elétrico que estamos construindo para a <strong>Fórmula SAE Brasil 2027</strong>. Por trás de cada componente há engenharia, pessoas e empresas parceiras. Teste sua marca no modelo 3D e vamos conversar sobre posição, conteúdo e ativações.",
+        "alt": "Render do monoposto elétrico da equipe.",
+        "caption": "Nosso monoposto · Render de trabalho"
+      },
+      {
+        "label": "A indústria",
+        "title": "Conexões que abrem portas.",
+        "text": "A relação começa na oficina e pode ir além. <strong>Encontros com empresas, profissionais e estudantes com experiência em projetos reais</strong>: networking, intercâmbio técnico e contato com talentos. Eventos e acessos são coordenados conforme o patrocínio.",
+        "alt": "Integrantes da equipe visitando as instalações da ABB.",
+        "caption": "Visita à ABB · Setembro de 2026"
+      },
+      {
+        "label": "A exposição",
+        "title": "Já estamos na mídia.",
+        "text": "Já chegamos ao <strong>Carburando, a programas de rádio e a jornais</strong>. Nossos canais somam posts, stories, reels e conteúdo da equipe. Seu apoio traz novas histórias e materiais para suas campanhas. Ações conforme o pacote; cada veículo decide sua cobertura.",
+        "alt": "Integrante da equipe entrevistado pelo Carburando na oficina.",
+        "caption": "Carburando na oficina · Uma história que já chegou à imprensa"
+      },
+      {
+        "label": "Depois de competir",
+        "title": "A corrida termina. Sua marca segue.",
+        "text": "Depois do Brasil, planejamos levar o carro a <strong>escolas técnicas, universidades, feiras e todos os eventos possíveis</strong>. Novas gerações podem conhecer o projeto e seus apoiadores. A atividade no Campus mostra esse vínculo com a comunidade; próximas visitas e exposições serão coordenadas com cada instituição.",
+        "alt": "Integrantes conversando com visitantes no Campus da UTN.",
+        "caption": "Atividade no Campus UTN · O vínculo com a comunidade já começou"
+      }
+    ],
+    "start": "Descubra o que sua marca ganha",
+    "seeCar": "Quero ver o carro",
+    "promise": "Exposição. Talentos. Conexões. E um carro que continua viajando depois da competição.",
+    "tryLogo": "Teste sua marca no carro 3D",
+    "hooks": [
+      "A exposição é o começo. Conheça quem está por trás.",
+      "E se essa relação também abrisse novas portas?",
+      "A competição tem uma chegada. A exposição continua.",
+      "Agora imagine tudo isso com sua marca no carro."
+    ]
+  },
   "nav": {
     "home": "Home",
     "news": "Novidades",
@@ -317,9 +317,41 @@
     "fsLink": "Conheça o regulamento e as provas em detalhe"
   },
   "sponsorsPage": {
-    "benefits": {"kicker":"O que sua empresa ganha","title":"A competição termina. Sua marca continua em movimento.","intro":"Seu patrocínio conecta sua empresa a uma história de engenharia argentina antes, durante e depois da Fórmula SAE Brasil 2027. O carro, a equipe e seus conteúdos levam essa história a novos públicos.","items":[{"title":"Redes sociais e conteúdo compartilhado","text":"Boas-vindas à marca, <strong>posts, stories, reels colaborativos</strong>, entrevistas e vídeos do projeto. Conteúdo que mostra seu apoio e que sua empresa também pode compartilhar."},{"title":"Rádios, jornais e televisão","text":"Buscamos entrevistas e divulgação do projeto em <strong>rádios, jornais, veículos digitais e TV</strong>. Cada aparição é uma oportunidade de dar visibilidade às empresas parceiras."},{"title":"Escolas e universidades","text":"Depois da competição, o percurso continua com palestras, visitas e exposições em <strong>escolas e universidades</strong>, aproximando o carro, as marcas parceiras e a engenharia de novas gerações."},{"title":"Eventos e exposições depois do Brasil","text":"O carro continua viajando: <strong>feiras, encontros, Sponsor Days e exposições</strong>. Conforme o pacote, podemos coordenar sua presença em um evento da empresa, sujeita à disponibilidade e à logística."},{"title":"Fotos e vídeos para suas campanhas","text":"Acesso a <strong>materiais do carro e da equipe</strong> para contar essa parceria. Conforme o nível de patrocínio, coordenamos produções na oficina, conteúdo da marca e campanhas conjuntas."},{"title":"Conexões empresariais e talentos","text":"Contato com <strong>empresas parceiras e profissionais</strong> nos encontros da equipe. Conforme o pacote, acesso a perfis de estudantes com experiência em projetos reais para recrutamento."}],"continuity":"Antes do Brasil construímos a história. Na competição a levamos à pista. Depois, seguimos compartilhando nas redes, na imprensa, em instituições de ensino e eventos: <strong>sua marca continua fazendo parte do percurso</strong>.","note":"Ações, formatos e presença de marca são acordados conforme o pacote. A cobertura em rádios, jornais e TV depende de cada veículo; visitas e exposições são coordenadas com cada instituição ou organizador."},
+    "benefits": {
+      "kicker": "O que sua empresa ganha",
+      "title": "A competição termina. Sua marca continua em movimento.",
+      "intro": "Seu patrocínio conecta sua empresa a uma história de engenharia argentina antes, durante e depois da Fórmula SAE Brasil 2027. O carro, a equipe e seus conteúdos levam essa história a novos públicos.",
+      "items": [
+        {
+          "title": "Redes sociais e conteúdo compartilhado",
+          "text": "Boas-vindas à marca, <strong>posts, stories, reels colaborativos</strong>, entrevistas e vídeos do projeto. Conteúdo que mostra seu apoio e que sua empresa também pode compartilhar."
+        },
+        {
+          "title": "Rádios, jornais e televisão",
+          "text": "Buscamos entrevistas e divulgação do projeto em <strong>rádios, jornais, veículos digitais e TV</strong>. Cada aparição é uma oportunidade de dar visibilidade às empresas parceiras."
+        },
+        {
+          "title": "Escolas e universidades",
+          "text": "Depois da competição, o percurso continua com palestras, visitas e exposições em <strong>escolas e universidades</strong>, aproximando o carro, as marcas parceiras e a engenharia de novas gerações."
+        },
+        {
+          "title": "Eventos e exposições depois do Brasil",
+          "text": "O carro continua viajando: <strong>feiras, encontros, Sponsor Days e exposições</strong>. Conforme o pacote, podemos coordenar sua presença em um evento da empresa, sujeita à disponibilidade e à logística."
+        },
+        {
+          "title": "Fotos e vídeos para suas campanhas",
+          "text": "Acesso a <strong>materiais do carro e da equipe</strong> para contar essa parceria. Conforme o nível de patrocínio, coordenamos produções na oficina, conteúdo da marca e campanhas conjuntas."
+        },
+        {
+          "title": "Conexões empresariais e talentos",
+          "text": "Contato com <strong>empresas parceiras e profissionais</strong> nos encontros da equipe. Conforme o pacote, acesso a perfis de estudantes com experiência em projetos reais para recrutamento."
+        }
+      ],
+      "continuity": "Antes do Brasil construímos a história. Na competição a levamos à pista. Depois, seguimos compartilhando nas redes, na imprensa, em instituições de ensino e eventos: <strong>sua marca continua fazendo parte do percurso</strong>.",
+      "note": "Ações, formatos e presença de marca são acordados conforme o pacote. A cobertura em rádios, jornais e TV depende de cada veículo; visitas e exposições são coordenadas com cada instituição ou organizador."
+    },
     "kicker": "Quero ser patrocinador",
-    "title": "Você não financia uma promessa: acelera um projeto que já está em andamento.",
+    "title": "Sua marca rumo ao Brasil.",
     "logoCta": "Coloque sua marca no carro",
     "intro": "Estamos construindo o caminho que transforma estudantes em profissionais do motorsport. Graças a quem já nos apoia, chegamos até aqui; hoje estamos a um último impulso de chegar à pista.",
     "scrollCta": "Conheça a história",
@@ -332,9 +364,30 @@
       "title": "Antes do Fórmula, existe um caminho.",
       "intro": "A UTN BA Motorsport é uma academia integral: cada categoria acrescenta complexidade, responsabilidade e experiência real. Ninguém chega ao projeto mais exigente por acaso.",
       "items": [
-        { "number": "01", "logoAlt": "Rookie UTNBA", "stage": "Rookies · Karting", "title": "Primeiro, aprender construindo.", "text": "Os novos integrantes projetam e constroem um kart. É a primeira experiência tomando decisões técnicas, fabricando peças e entendendo que cada milímetro tem uma consequência.", "outcome": "Fundamentos · Oficina · Trabalho em equipe" },
-        { "number": "02", "logoAlt": "Baja UTNBA", "stage": "Desenvolvimento · Baja SAE", "title": "Depois, engenharia sob pressão.", "text": "No Baja SAE o desafio cresce: um veículo mais complexo, condições extremas e um regulamento técnico rigoroso. Os estudantes treinam para interpretar cada requisito, documentar suas decisões e passar pelas inspeções; também trabalham com componentes de segurança sujeitos à homologação FIA/SFI quando exigido pelo regulamento.", "outcome": "Regulamento SAE · Segurança FIA/SFI · Inspeção" },
-        { "number": "03", "logoAlt": "UTN BA Motorsport", "stage": "Categoria principal · Fórmula SAE", "title": "Finalmente, construir o carro que nos representa.", "text": "O Fórmula SAE elétrico reúne tudo o que foi aprendido. É o nosso projeto mais ambicioso: um monoposto projetado, fabricado e montado por estudantes para competir no Brasil.", "outcome": "Tecnologia · Alto desempenho · Indústria" }
+        {
+          "number": "01",
+          "logoAlt": "Rookie UTNBA",
+          "stage": "Rookies · Karting",
+          "title": "Primeiro, aprender construindo.",
+          "text": "Os novos integrantes projetam e constroem um kart. É a primeira experiência tomando decisões técnicas, fabricando peças e entendendo que cada milímetro tem uma consequência.",
+          "outcome": "Fundamentos · Oficina · Trabalho em equipe"
+        },
+        {
+          "number": "02",
+          "logoAlt": "Baja UTNBA",
+          "stage": "Desenvolvimento · Baja SAE",
+          "title": "Depois, engenharia sob pressão.",
+          "text": "No Baja SAE o desafio cresce: um veículo mais complexo, condições extremas e um regulamento técnico rigoroso. Os estudantes treinam para interpretar cada requisito, documentar suas decisões e passar pelas inspeções; também trabalham com componentes de segurança sujeitos à homologação FIA/SFI quando exigido pelo regulamento.",
+          "outcome": "Regulamento SAE · Segurança FIA/SFI · Inspeção"
+        },
+        {
+          "number": "03",
+          "logoAlt": "UTN BA Motorsport",
+          "stage": "Categoria principal · Fórmula SAE",
+          "title": "Finalmente, construir o carro que nos representa.",
+          "text": "O Fórmula SAE elétrico reúne tudo o que foi aprendido. É o nosso projeto mais ambicioso: um monoposto projetado, fabricado e montado por estudantes para competir no Brasil.",
+          "outcome": "Tecnologia · Alto desempenho · Indústria"
+        }
       ]
     },
     "investment": {
@@ -353,9 +406,18 @@
       "title": "Sua contribuição se torna uma parte real do carro.",
       "intro": "Trabalhamos com um modelo de gestão assistida para que cada empresa saiba exatamente qual necessidade está resolvendo.",
       "steps": [
-        { "title": "Nos conhecemos", "text": "Conversamos sobre a empresa, seus objetivos e a forma de parceria que faça mais sentido." },
-        { "title": "Definimos a necessidade", "text": "Compartilhamos componentes específicos, fornecedores, links de compra ou uma fatura do projeto." },
-        { "title": "A empresa torna possível", "text": "Ela pode comprar e enviar o material ou pagar diretamente a fatura do fornecedor." }
+        {
+          "title": "Nos conhecemos",
+          "text": "Conversamos sobre a empresa, seus objetivos e a forma de parceria que faça mais sentido."
+        },
+        {
+          "title": "Definimos a necessidade",
+          "text": "Compartilhamos componentes específicos, fornecedores, links de compra ou uma fatura do projeto."
+        },
+        {
+          "title": "A empresa torna possível",
+          "text": "Ela pode comprar e enviar o material ou pagar diretamente a fatura do fornecedor."
+        }
       ],
       "note": "Não solicitamos transferências informais para contas pessoais. Cada colaboração é rastreável e formalizada por meio de um contrato simples de patrocínio."
     },
@@ -364,7 +426,11 @@
       "arrival": "Você chegou até aqui.",
       "title": "Quer ver como fica seu logo no carro?",
       "text": "Carregue a marca da sua empresa, escolha a posição e visualize-a no monoposto 3D. A proposta comercial e a posição final são definidas juntos em uma reunião.",
-      "sizes": ["Grande", "Médio", "Pequeno"],
+      "sizes": [
+        "Grande",
+        "Médio",
+        "Pequeno"
+      ],
       "badge": "Simulador de patrocinadores",
       "imageAlt": "Render do Fórmula SAE elétrico da UTN BA Motorsport",
       "button": "Ver meu logo no carro",
@@ -518,5 +584,25 @@
     "title": "Esta página não existe",
     "text": "Pode ser que o link esteja quebrado ou que a página tenha mudado de endereço. Estes dois sempre funcionam:",
     "home": "Ir para o início"
+  },
+  "cinematic": {
+    "heroTitle": "Engenharia em movimento.",
+    "heroIntro": "Estamos construindo nosso primeiro Fórmula SAE elétrico. Sua marca pode nos acompanhar no Brasil 2027 e muito além.",
+    "carTitle": "Sua marca. Em movimento.",
+    "carIntro": "Este é o carro que estamos construindo. Imagine até onde sua marca pode chegar com ele.",
+    "carScroll": "Continue rolando. O carro gira com você.",
+    "carStill": "Explore o carro e experimente sua marca no visualizador 3D.",
+    "teamTitle": "Muito além de um carro.",
+    "bookShort": "Agende reunião",
+    "carPageTitle": "Nosso Fórmula SAE elétrico",
+    "outcomes": {
+      "visibility": "Seja visto.",
+      "visibilityText": "Redes sociais, conteúdo compartilhado e oportunidades de exposição em rádio, jornais e TV. Histórias que sua empresa também pode contar.",
+      "presence": "Seja lembrado.",
+      "presenceText": "O percurso continua depois do Brasil: escolas, universidades, feiras e exposições com o carro e as marcas que o tornam possível.",
+      "connections": "Crie conexões.",
+      "connectionsText": "Um vínculo com estudantes que aprendem na prática, profissionais da indústria e outras empresas que apoiam a equipe."
+    },
+    "seeDeliverables": "Ver ações e entregas"
   }
 }

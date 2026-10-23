@@ -33,7 +33,7 @@ function ScrollToTop() {
 
   useEffect(() => {
     if (!hash) {
-      window.scrollTo(0, 0);
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
       return;
     }
 
@@ -47,7 +47,7 @@ function ScrollToTop() {
         return;
       }
       if (attempts++ < 20) frame = window.requestAnimationFrame(scrollToTarget);
-      else window.scrollTo(0, 0);
+      else window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     };
     frame = window.requestAnimationFrame(scrollToTarget);
     return () => window.cancelAnimationFrame(frame);

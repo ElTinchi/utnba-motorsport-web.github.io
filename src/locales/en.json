@@ -1,60 +1,60 @@
 {
   "sponsorStory": {
-  "pressLabel": "In the media · Read the coverage",
-  "kicker": "Your next brand story",
-  "title": "We reached Carburando, radio shows and newspapers. Now imagine your brand here.",
-  "intro": "A project shared in the media, built in the workshop and connected with industry. Discover how your company can join the journey before, during and after Brazil 2027.",
-  "closing": "Let the next story carry your brand too.",
-  "invitation": "Help take Argentine engineering further. Let's discuss your brand's role, starting at USD 500 in cash or in kind, with benefits agreed with your company.",
-  "details": "Explore all the benefits",
-  "chapters": [
-    {
-      "label": "The people",
-      "title": "Let them know your brand before they choose it.",
-      "text": "Today we are students solving real problems. Tomorrow we take that experience into industry. <strong>The tools and technologies we use today help shape our professional judgement.</strong> Supporting us builds that connection from the beginning.",
-      "alt": "UTN BA Motorsport team gathered behind the car chassis.",
-      "caption": "The team and chassis · July 2026 presentation"
-    },
-    {
-      "label": "The project",
-      "title": "Now imagine your logo here.",
-      "text": "This is the electric single-seater we are building for <strong>Formula SAE Brazil 2027</strong>. Behind every component are engineering, people and supporting companies. Try your brand on the 3D model and let's discuss placement, content and activations.",
-      "alt": "Working render of the team's electric single-seater.",
-      "caption": "Our single-seater · Working render"
-    },
-    {
-      "label": "Industry",
-      "title": "Connect with the people who make things happen.",
-      "text": "The relationship begins in the workshop and can grow beyond it. <strong>Meet companies, industry contacts and students experienced in real projects</strong>: opportunities for networking, technical exchange and talent connections. Events and access depend on the partnership.",
-      "alt": "Team members touring ABB during a company visit.",
-      "caption": "Visit to ABB · September 2026"
-    },
-    {
-      "label": "Exposure",
-      "title": "The project already has a voice. Your brand can join the story.",
-      "text": "We have reached <strong>Carburando, radio shows and newspapers</strong>. Our own channels add posts, stories, reels and team content. Your support gives us new stories to tell and media for your campaigns. Activities depend on the package; each outlet decides its coverage.",
-      "alt": "A team member interviewed by Carburando in the workshop.",
-      "caption": "Carburando in the workshop · A story already reaching the media"
-    },
-    {
-      "label": "After the competition",
-      "title": "The race ends. Your brand keeps travelling.",
-      "text": "After Brazil, our plan is to bring the car to <strong>technical schools, universities, fairs and as many events as we can</strong>. New generations can discover the project and its supporters. Our Campus activity shows how we already connect with the community; future visits and exhibitions will be coordinated with each institution.",
-      "alt": "Team members speaking with visitors at the UTN Campus.",
-      "caption": "UTN Campus activity · Connecting with the community"
-    }
-  ],
-  "start": "Discover what your brand gains",
-  "seeCar": "Show me the car",
-  "promise": "Exposure. Talent. Connections. And a car that keeps travelling after the competition.",
-  "tryLogo": "Try your logo on the 3D car",
-  "hooks": [
-    "Exposure is the beginning. Meet the people behind it.",
-    "Could this relationship also open new doors?",
-    "The competition has a finish line. Exposure continues.",
-    "Now imagine all of this with your logo on the car."
-  ]
-},
+    "pressLabel": "In the media · Read the coverage",
+    "kicker": "Your next brand story",
+    "title": "Your brand in the story.",
+    "intro": "A project shared in the media, built in the workshop and connected with industry. Discover how your company can join the journey before, during and after Brazil 2027.",
+    "closing": "Let the next story carry your brand too.",
+    "invitation": "Help take Argentine engineering further. Let's discuss your brand's role, starting at USD 500 in cash or in kind, with benefits agreed with your company.",
+    "details": "Explore all the benefits",
+    "chapters": [
+      {
+        "label": "The people",
+        "title": "Talent that knows your brand.",
+        "text": "Today we are students solving real problems. Tomorrow we take that experience into industry. <strong>The tools and technologies we use today help shape our professional judgement.</strong> Supporting us builds that connection from the beginning.",
+        "alt": "UTN BA Motorsport team gathered behind the car chassis.",
+        "caption": "The team and chassis · July 2026 presentation"
+      },
+      {
+        "label": "The project",
+        "title": "Picture your logo here.",
+        "text": "This is the electric single-seater we are building for <strong>Formula SAE Brazil 2027</strong>. Behind every component are engineering, people and supporting companies. Try your brand on the 3D model and let's discuss placement, content and activations.",
+        "alt": "Working render of the team's electric single-seater.",
+        "caption": "Our single-seater · Working render"
+      },
+      {
+        "label": "Industry",
+        "title": "Connections that open doors.",
+        "text": "The relationship begins in the workshop and can grow beyond it. <strong>Meet companies, industry contacts and students experienced in real projects</strong>: opportunities for networking, technical exchange and talent connections. Events and access depend on the partnership.",
+        "alt": "Team members touring ABB during a company visit.",
+        "caption": "Visit to ABB · September 2026"
+      },
+      {
+        "label": "Exposure",
+        "title": "Already in the media.",
+        "text": "We have reached <strong>Carburando, radio shows and newspapers</strong>. Our own channels add posts, stories, reels and team content. Your support gives us new stories to tell and media for your campaigns. Activities depend on the package; each outlet decides its coverage.",
+        "alt": "A team member interviewed by Carburando in the workshop.",
+        "caption": "Carburando in the workshop · A story already reaching the media"
+      },
+      {
+        "label": "After the competition",
+        "title": "The race ends. Your brand stays.",
+        "text": "After Brazil, our plan is to bring the car to <strong>technical schools, universities, fairs and as many events as we can</strong>. New generations can discover the project and its supporters. Our Campus activity shows how we already connect with the community; future visits and exhibitions will be coordinated with each institution.",
+        "alt": "Team members speaking with visitors at the UTN Campus.",
+        "caption": "UTN Campus activity · Connecting with the community"
+      }
+    ],
+    "start": "Discover what your brand gains",
+    "seeCar": "Show me the car",
+    "promise": "Exposure. Talent. Connections. And a car that keeps travelling after the competition.",
+    "tryLogo": "Try your logo on the 3D car",
+    "hooks": [
+      "Exposure is the beginning. Meet the people behind it.",
+      "Could this relationship also open new doors?",
+      "The competition has a finish line. Exposure continues.",
+      "Now imagine all of this with your logo on the car."
+    ]
+  },
   "nav": {
     "home": "Home",
     "news": "News",
@@ -317,9 +317,41 @@
     "fsLink": "See the full rulebook and events"
   },
   "sponsorsPage": {
-    "benefits": {"kicker":"What your company gains","title":"The competition ends. Your brand keeps moving.","intro":"Support connects your company with an Argentine engineering story before, during and after Formula SAE Brazil 2027. The car, team and their content bring that story to new audiences.","items":[{"title":"Social media and shared content","text":"Brand welcomes, <strong>posts, stories, collaborative reels</strong>, interviews and project videos. Content showing your contribution that your company can also share."},{"title":"Radio, newspapers and television","text":"We seek interviews and project coverage on <strong>radio, in newspapers, digital outlets and TV</strong>. Each appearance is an opportunity to highlight supporting companies."},{"title":"Schools and universities","text":"After the competition, talks, visits and exhibitions at <strong>schools and universities</strong> bring the car, its supporting brands and engineering to new generations."},{"title":"Events and exhibitions after Brazil","text":"The car keeps travelling to <strong>fairs, gatherings, Sponsor Days and exhibitions</strong>. Depending on your package, we can coordinate a display at your company event, subject to availability and logistics."},{"title":"Photos and videos for your campaigns","text":"Access to <strong>car and team media</strong> to tell the story of your partnership. Depending on sponsorship level, we coordinate workshop productions, brand content and joint campaigns."},{"title":"Business connections and talent","text":"Meet <strong>partner companies and industry contacts</strong> at team gatherings. Depending on your package, connect with students experienced in real projects for recruitment."}],"continuity":"Before Brazil we build the story. At the competition we take it to the track. Afterwards, we keep sharing it through social media, press, educational institutions and events: <strong>your brand stays part of the journey</strong>.","note":"Activities, formats and brand placement are agreed according to the sponsorship package. Radio, newspaper and TV coverage depends on each outlet; visits and exhibitions are coordinated with each institution or organizer."},
+    "benefits": {
+      "kicker": "What your company gains",
+      "title": "The competition ends. Your brand keeps moving.",
+      "intro": "Support connects your company with an Argentine engineering story before, during and after Formula SAE Brazil 2027. The car, team and their content bring that story to new audiences.",
+      "items": [
+        {
+          "title": "Social media and shared content",
+          "text": "Brand welcomes, <strong>posts, stories, collaborative reels</strong>, interviews and project videos. Content showing your contribution that your company can also share."
+        },
+        {
+          "title": "Radio, newspapers and television",
+          "text": "We seek interviews and project coverage on <strong>radio, in newspapers, digital outlets and TV</strong>. Each appearance is an opportunity to highlight supporting companies."
+        },
+        {
+          "title": "Schools and universities",
+          "text": "After the competition, talks, visits and exhibitions at <strong>schools and universities</strong> bring the car, its supporting brands and engineering to new generations."
+        },
+        {
+          "title": "Events and exhibitions after Brazil",
+          "text": "The car keeps travelling to <strong>fairs, gatherings, Sponsor Days and exhibitions</strong>. Depending on your package, we can coordinate a display at your company event, subject to availability and logistics."
+        },
+        {
+          "title": "Photos and videos for your campaigns",
+          "text": "Access to <strong>car and team media</strong> to tell the story of your partnership. Depending on sponsorship level, we coordinate workshop productions, brand content and joint campaigns."
+        },
+        {
+          "title": "Business connections and talent",
+          "text": "Meet <strong>partner companies and industry contacts</strong> at team gatherings. Depending on your package, connect with students experienced in real projects for recruitment."
+        }
+      ],
+      "continuity": "Before Brazil we build the story. At the competition we take it to the track. Afterwards, we keep sharing it through social media, press, educational institutions and events: <strong>your brand stays part of the journey</strong>.",
+      "note": "Activities, formats and brand placement are agreed according to the sponsorship package. Radio, newspaper and TV coverage depends on each outlet; visits and exhibitions are coordinated with each institution or organizer."
+    },
     "kicker": "Become a sponsor",
-    "title": "You are not funding a promise: you are accelerating a project already in motion.",
+    "title": "Your brand, bound for Brazil.",
     "logoCta": "Put your logo on the car",
     "intro": "We are building the path that turns students into motorsport professionals. Thanks to those already supporting us, we have made it this far; today we are one final push away from the track.",
     "scrollCta": "Discover the story",
@@ -332,9 +364,30 @@
       "title": "Before Formula, there is a journey.",
       "intro": "UTN BA Motorsport is an integrated academy: every category adds complexity, responsibility and real experience. Nobody reaches the toughest project by accident.",
       "items": [
-        { "number": "01", "logoAlt": "Rookie UTNBA", "stage": "Rookies · Karting", "title": "First, learn by building.", "text": "New members design and build a kart. It is their first experience making technical decisions, manufacturing parts and understanding that every millimeter has a consequence.", "outcome": "Fundamentals · Workshop · Teamwork" },
-        { "number": "02", "logoAlt": "Baja UTNBA", "stage": "Development · Baja SAE", "title": "Then, engineer under pressure.", "text": "In Baja SAE the challenge grows: a more complex vehicle, extreme conditions and a strict technical rulebook. Students train to interpret every requirement, document their decisions and pass inspections; they also work with safety components subject to FIA/SFI homologation whenever required by the rules.", "outcome": "SAE rules · FIA/SFI safety · Inspection" },
-        { "number": "03", "logoAlt": "UTN BA Motorsport", "stage": "Top category · Formula SAE", "title": "Finally, build the car that represents us.", "text": "The electric Formula SAE car brings every lesson together. It is our most ambitious project: a single-seater designed, manufactured and assembled by students to compete in Brazil.", "outcome": "Technology · High performance · Industry" }
+        {
+          "number": "01",
+          "logoAlt": "Rookie UTNBA",
+          "stage": "Rookies · Karting",
+          "title": "First, learn by building.",
+          "text": "New members design and build a kart. It is their first experience making technical decisions, manufacturing parts and understanding that every millimeter has a consequence.",
+          "outcome": "Fundamentals · Workshop · Teamwork"
+        },
+        {
+          "number": "02",
+          "logoAlt": "Baja UTNBA",
+          "stage": "Development · Baja SAE",
+          "title": "Then, engineer under pressure.",
+          "text": "In Baja SAE the challenge grows: a more complex vehicle, extreme conditions and a strict technical rulebook. Students train to interpret every requirement, document their decisions and pass inspections; they also work with safety components subject to FIA/SFI homologation whenever required by the rules.",
+          "outcome": "SAE rules · FIA/SFI safety · Inspection"
+        },
+        {
+          "number": "03",
+          "logoAlt": "UTN BA Motorsport",
+          "stage": "Top category · Formula SAE",
+          "title": "Finally, build the car that represents us.",
+          "text": "The electric Formula SAE car brings every lesson together. It is our most ambitious project: a single-seater designed, manufactured and assembled by students to compete in Brazil.",
+          "outcome": "Technology · High performance · Industry"
+        }
       ]
     },
     "investment": {
@@ -353,9 +406,18 @@
       "title": "Your contribution becomes a real part of the car.",
       "intro": "We use an assisted procurement model so every company knows exactly which need it is solving.",
       "steps": [
-        { "title": "We meet", "text": "We discuss the company, its goals and the kind of partnership that makes the most sense." },
-        { "title": "We define the need", "text": "We share specific components, suppliers, purchase links or a project invoice." },
-        { "title": "The company makes it happen", "text": "It can purchase and ship the material or pay the supplier invoice directly." }
+        {
+          "title": "We meet",
+          "text": "We discuss the company, its goals and the kind of partnership that makes the most sense."
+        },
+        {
+          "title": "We define the need",
+          "text": "We share specific components, suppliers, purchase links or a project invoice."
+        },
+        {
+          "title": "The company makes it happen",
+          "text": "It can purchase and ship the material or pay the supplier invoice directly."
+        }
       ],
       "note": "We do not request informal transfers to personal accounts. Every contribution is traceable and formalized through a simple sponsorship agreement."
     },
@@ -364,7 +426,11 @@
       "arrival": "You made it this far.",
       "title": "Want to see your logo on the car?",
       "text": "Upload your company's brand, choose its placement and preview it on the 3D car. We define the commercial proposal and final placement together in a meeting.",
-      "sizes": ["Large", "Medium", "Small"],
+      "sizes": [
+        "Large",
+        "Medium",
+        "Small"
+      ],
       "badge": "Sponsor simulator",
       "imageAlt": "Render of UTN BA Motorsport's electric Formula SAE car",
       "button": "See my logo on the car",
@@ -518,5 +584,25 @@
     "title": "This page doesn't exist",
     "text": "The link may be broken, or the page may have moved. These two always work:",
     "home": "Go to home"
+  },
+  "cinematic": {
+    "heroTitle": "Engineering in motion.",
+    "heroIntro": "We are building our first electric Formula SAE car. Your brand can join us in Brazil 2027 and far beyond.",
+    "carTitle": "Your brand. In motion.",
+    "carIntro": "This is the car we are building. Imagine how far your brand could travel with it.",
+    "carScroll": "Keep scrolling. The car turns with you.",
+    "carStill": "Explore the car and try your brand in the 3D viewer.",
+    "teamTitle": "More than a race car.",
+    "bookShort": "Book a meeting",
+    "carPageTitle": "Our electric Formula SAE car",
+    "outcomes": {
+      "visibility": "Be seen.",
+      "visibilityText": "Social media, shared content and opportunities for radio, newspaper and TV coverage. Stories your company can tell too.",
+      "presence": "Be remembered.",
+      "presenceText": "The journey continues after Brazil: schools, universities, fairs and exhibitions with the car and the brands behind it.",
+      "connections": "Build connections.",
+      "connectionsText": "Connect with students learning through real work, industry professionals and other companies supporting the team."
+    },
+    "seeDeliverables": "See activities and deliverables"
   }
 }

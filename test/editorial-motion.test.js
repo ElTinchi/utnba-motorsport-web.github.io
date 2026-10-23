@@ -199,7 +199,7 @@ test('narrative routes use shared motion while sober routes remain static', asyn
   }
 });
 
-test('home preserves its tuned highlight and seven-area choreography', async () => {
+test('home presents the car and sponsorship story without repeating the institutional overview', async () => {
   const root = fileURLToPath(new URL('..', import.meta.url));
   const server = await createServer({ root, appType: 'custom', server: { middlewareMode: true }, logLevel: 'silent' });
   try {
@@ -215,9 +215,11 @@ test('home preserves its tuned highlight and seven-area choreography', async () 
       createElement(StaticRouter, { location: '/' }, createElement(Home)),
     ));
 
-    assert.doesNotMatch(html, /home-highlight[^\"]*home-highlight--visible/);
-    assert.match(html, /--area-delay:0ms/);
-    assert.match(html, /--area-delay:390ms/);
+    assert.match(html, /id="auto-en-movimiento"/);
+    assert.match(html, /id="tu-marca"/);
+    assert.ok(html.indexOf('id="auto-en-movimiento"') < html.indexOf('id="tu-marca"'));
+    assert.match(html, /href="\/visor\/visor.html"/);
+    assert.doesNotMatch(html, /class="home-highlights"/);
   } finally {
     await server.close();
   }

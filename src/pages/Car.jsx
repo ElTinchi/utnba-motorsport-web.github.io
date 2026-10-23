@@ -19,10 +19,11 @@ export default function Car() {
   return (
     <PageShell
       kicker={t('carPage.kicker')}
-      title={t('carPage.title')}
+      title={t('cinematic.carPageTitle')}
       intro={t('carPage.intro')}
       wide
     >
+      <div className="car-first-action"><a href={RENDER_APP_URL} className="btn btn--primary">{t('carPage.viewer.openButton')}</a></div>
       <EditorialReveal className="shell-block car-hero-reveal">
         <figure className="car-hero">
           <img draggable={false}

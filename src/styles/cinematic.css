@@ -1,0 +1,121 @@
+/* The car is the stage; the rest of the interface supports the sponsorship story. */
+:root { --font-body: 'DM Sans', sans-serif; --color-red-text: #ff7069; }
+body { font-family: var(--font-body); font-size: 17px; }
+h1, h2, h3, h4, .btn, .nav__link, .nav__dropdown-toggle { font-family: var(--font-family); }
+h1, h2, h3 { text-wrap: balance; }
+p { max-width: 72ch; }
+p strong { color: var(--color-white); font-weight: 700; }
+html { scrollbar-color: #77716c #151519; }
+button, input, select, textarea { accent-color: var(--color-red); caret-color: var(--color-red-text); }
+[data-theme='light'] { --color-red-text: #b80b0b; }
+body .header__container { gap: 1.5rem; }
+body .nav__list { gap: 1.4rem; }
+body .nav__link, body .nav__dropdown-toggle { font-size: .76rem; }
+body .lang-switch__toggle { min-height: 44px; }
+body .header__cta { min-height: 44px; }
+body .nav__language { display: none; }
+body .footer__link, body .footer__contact-link { display: inline-flex; align-items: center; min-height: 44px; }
+body .footer__social-link { min-width: 44px; min-height: 44px; }
+body .hero--cinematic { align-items: stretch; justify-content: flex-start; }
+body .hero--cinematic .hero__bg { display: none; }
+body .hero--cinematic .hero__content { align-items: flex-start; text-align: left; width: 56%; padding: max(110px, 15vh) 0 8vh clamp(1.5rem, 5vw, 6rem); gap: 1.5rem; justify-content: center; }
+body .hero--cinematic .hero__content::before { display: none; }
+body .hero--cinematic .hero__logo { width: 210px; filter: none; animation: none; }
+body .hero--cinematic .hero__title { font-size: clamp(2.8rem, 5.2vw, 5.6rem); line-height: 1.03; max-width: 11ch; animation: cinematic-title .8s var(--motion-ease-out) both; }
+body .hero--cinematic .hero__description { font-size: clamp(1.05rem, 1.4vw, 1.25rem); max-width: 37ch; color: #dedbd6; }
+body .hero--cinematic .hero__actions { justify-content: flex-start; align-items: center; gap: 1.5rem; animation: none; }
+body .hero__explore { display: inline-flex; gap: 1rem; align-items: center; min-height: 48px; font-weight: 600; }
+body .hero__explore span { font-size: 1.5rem; }
+body .hero-artwork { position: absolute; right: -15%; top: 16%; width: 84%; height: 80%; z-index: 1; }
+body .hero-artwork img { width: 100%; height: 100%; object-fit: cover; object-position: 56% center; mask-image: linear-gradient(to right, transparent, #000 28%); }
+body .hero-artwork__caption { position: absolute; bottom: 3rem; right: 20%; font-size: .85rem; color: #e5ded7; }
+body .hero--cinematic .hero__circuit { left: 28%; opacity: .14; z-index: 0; animation: none; }
+body .project-bridge { max-width: 1280px; margin: auto; padding: clamp(3rem, 7vw, 7rem) clamp(1.5rem, 4vw, 4rem); display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+body .project-bridge h2 { font-size: clamp(2rem, 3.5vw, 3.2rem); line-height: 1.13; letter-spacing: -.03em; }
+body .project-bridge p { color: var(--color-white-muted); font-size: 1.2rem; margin-bottom: 2rem; }
+body .sponsor-story__head { max-width: none; display: grid; grid-template-columns: 1.2fr 1fr; gap: 0 4rem; }
+body .sponsor-story__head h2 { grid-column: 1; grid-row: 1 / 3; max-width: 15ch; font-size: clamp(2.2rem, 4.5vw, 4.2rem); }
+body .sponsor-story__head > p { margin-top: 0; font-size: 1.15rem; }
+body .sponsor-story__head > .sponsor-story__press, body .sponsor-story__head > .sponsor-story__actions, body .sponsor-story__head > .sponsor-story__promise { grid-column: 2; }
+body .sponsor-story__press { border: 0; padding: 1rem 0; gap: .5rem 1.2rem; }
+body .sponsor-story__press .sponsor-story__kicker { color: var(--color-white-muted); font-family: var(--font-body); text-transform: none; letter-spacing: 0; }
+body .sponsor-story__press a { font-family: var(--font-body); font-size: 1.2rem; }
+body .sponsor-story__kicker { color: var(--color-red-text); text-transform: none; letter-spacing: 0; font-family: var(--font-body); font-size: 1rem; }
+body .sponsor-story__chapter { align-items: start; gap: clamp(2rem, 5vw, 5rem); margin-bottom: clamp(4rem, 9vw, 8rem); }
+body .sponsor-story__copy { padding-top: 2rem; position: sticky; top: 110px; }
+body .sponsor-story__chapter h3 { font-size: clamp(1.8rem, 2.8vw, 2.7rem); }
+body .sponsor-story__chapter p { font-size: 1.12rem; line-height: 1.65; }
+body .cinematic-image { overflow: hidden; background: #151519; }
+body .sponsor-story .cinematic-image img { width: 100%; height: clamp(380px, 44vw, 610px); object-fit: cover; max-height: none; }
+body .sponsor-story__chapter--render .cinematic-image img { height: auto; object-fit: contain; }
+body .sponsor-story__close { border: 0; padding: clamp(2rem, 5vw, 4rem); background: #dd0e0e; color: #fff; }
+body .sponsor-story__close p, body .sponsor-story__close .btn { color: #fff; }
+body .sponsor-story__close .btn--primary { background: #151519; border-color: #151519; }
+body .sponsor-story__close .btn--secondary { border-color: rgba(255,255,255,.7); }
+body .sp-page__title { max-width: 16ch; font-size: clamp(2.2rem, 5vw, 4.5rem); letter-spacing: -.04em; line-height: 1.08; }
+body .sp-page__kicker, body .sp-section-kicker, body .academy__kicker, body .home-sponsors__kicker { display: none; }
+body .sp-hero { min-height: 0; padding-block: 1rem 4rem; }
+body .sp-page__back { margin-bottom: 2rem; }
+body .sp-page__intro { max-width: 58ch; font-size: 1.2rem; }
+body .sp-benefits__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.5rem 3rem; }
+body .sp-benefits__grid article { border: 0; padding: 0; }
+body .sp-benefits__grid p { font-size: 1.1rem; }
+body .sp-benefits__details { margin-top: 1.5rem; }
+body .sp-benefits__details summary { cursor: pointer; padding-block: .75rem; font-weight: 700; text-decoration: underline; text-underline-offset: 5px; }
+body .sp-benefits__details h4 { font-family: var(--font-body); margin: 1.5rem 0 .5rem; font-size: 1.1rem; }
+body .sp-benefits__continuity { border-left: 0; padding-left: 0; }
+body .sp-investment h2, body .sp-viewer h2 { font-size: clamp(1.8rem, 3.2vw, 3rem); }
+body .car-first-action { max-width: 1320px; padding: 0 clamp(1.5rem, 5vw, 4rem); margin: 1.5rem auto 2rem; }
+body .shell:has(.car-first-action) .shell__title { font-size: clamp(2.2rem, 4vw, 4rem); max-width: 20ch; }
+body .shell:has(.car-first-action) .shell__kicker { display: none; }
+body .shell:has(.car-first-action) .shell__intro { max-width: 68ch; }
+@keyframes cinematic-title { from { clip-path: inset(0 0 100%); transform: translate3d(0, 20px, 0); } to { clip-path: inset(0); transform: none; } }
+@media (hover: hover) and (pointer: fine) {
+  body .hero__explore:hover span { transform: translateY(4px); }
+  body .hero__explore span { transition: transform .2s var(--motion-ease-out); }
+}
+@media (min-width: 768px) and (max-width: 1100px) {
+  body .header__actions > .lang-switch { display: none; }
+  body .nav__list { gap: .8rem; }
+  body .header__container { padding-inline: 1.5rem; gap: 1rem; }
+  body .header__logo-img { max-width: 150px; }
+  body .header__cta { font-size: .65rem; padding-inline: .7rem; }
+}
+@media (max-width: 767px) {
+  body .header__actions > .lang-switch { display: none; }
+  body .nav__language { display: block; margin-top: 1.5rem; }
+  body .header__logo { margin-right: auto; }
+  body .header__hamburger { order: 3; }
+  body .header__actions { order: 2; }
+  body .header__container { gap: .6rem; }
+  body .header__cta { max-width: none; white-space: nowrap; font-size: .72rem; line-height: 1; padding-inline: .8rem; }
+  body .hero--cinematic .hero__content { padding: 100px 1.5rem 0; width: 100%; height: 65%; justify-content: flex-start; gap: 1.1rem; }
+  body .hero--cinematic .hero__logo { display: none; }
+  body .hero--cinematic .hero__title { font-size: clamp(2.3rem, 9vw, 3.6rem); max-width: 13ch; }
+  body .hero--cinematic .hero__description { font-size: 1.05rem; max-width: 31ch; }
+  body .hero--cinematic .hero__actions { gap: .5rem 1.2rem; }
+  body .hero--cinematic .hero__actions .btn { font-size: .78rem; padding: .85rem 1rem; }
+  body .hero__explore { font-size: .9rem; gap: .4rem; }
+  body .hero-artwork { right: -6%; top: 42%; width: 112%; height: 59%; }
+  body .hero-artwork img { object-fit: cover; object-position: 58% center; mask-image: linear-gradient(to bottom, transparent, #000 24%, #000 92%, transparent); }
+  body .hero-artwork__caption { right: 12%; bottom: 1.7rem; font-size: .75rem; }
+  body .hero--cinematic .hero__circuit { display: none; }
+  body .project-bridge { grid-template-columns: 1fr; gap: 1.5rem; }
+  body .sponsor-story__head { display: block; }
+  body .sponsor-story__head h2 { max-width: 16ch; margin-bottom: 1.5rem; }
+  body .sponsor-story__head > p { font-size: 1.1rem; }
+  body .sponsor-story__head .sponsor-story__promise { margin-top: 1.5rem; }
+  body .sponsor-story__copy { position: static; padding-top: 0; }
+  body .sponsor-story .cinematic-image img { height: 390px; }
+  body .sponsor-story__chapter:nth-of-type(1) .cinematic-image img { object-position: center 30%; }
+  body .sponsor-story__close { margin-inline: -1.5rem; padding: 2rem 1.5rem; }
+  body .sp-benefits__grid { grid-template-columns: 1fr; gap: 2rem; }
+  body .sp-page__title { max-width: 15ch; }
+  body .sp-hero { padding-bottom: 2.5rem; }
+  body .sp-page__intro { font-size: 1.1rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body .hero--cinematic .hero__title { animation: none; }
+  body .hero__explore:hover span { transform: none; }
+  body .cinematic-image img { transform: none !important; }
+}

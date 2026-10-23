@@ -89,14 +89,15 @@ test('Vercel serves the site with baseline security headers', async () => {
   assert.equal(headers['Referrer-Policy'], 'strict-origin-when-cross-origin');
 });
 
-test('hero uses an ignition sequence with a single primary action', async () => {
+test('hero exposes the actual car with a booking action and reduced-motion alternative', async () => {
   const [home, styles] = await Promise.all([
     readFile(new URL('../src/pages/Home.jsx', import.meta.url), 'utf8'),
-    readFile(new URL('../src/styles/home.css', import.meta.url), 'utf8'),
+    readFile(new URL('../src/styles/cinematic.css', import.meta.url), 'utf8'),
   ]);
 
-  assert.match(home, /hero__ignition/);
+  assert.match(home, /<HeroArtwork/);
   assert.equal((home.match(/hero__actions/g) || []).length, 1);
-  assert.match(styles, /@keyframes hero-ignition-sweep/);
+  assert.match(home, /href="#auto-en-movimiento"/);
+  assert.match(styles, /@keyframes cinematic-title/);
   assert.match(styles, /prefers-reduced-motion: reduce/);
 });

@@ -1,0 +1,26 @@
+.car-scene { position: relative; height: 230svh; background: #151519; color: #fcf6e6; scroll-margin-top: var(--header-height); }
+.car-scene__stage { position: sticky; top: var(--header-height); height: calc(100svh - var(--header-height)); min-height: 560px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; padding: clamp(1.5rem, 4vw, 4rem); }
+.car-scene__heading { position: relative; z-index: 2; pointer-events: none; }
+.car-scene__heading h2 { max-width: 17ch; font-size: clamp(2rem, 4.5vw, 4.5rem); line-height: 1.05; letter-spacing: -.04em; text-wrap: balance; }
+.car-scene__heading p { margin-top: 1.2rem; max-width: 46ch; font-size: 1.15rem; color: rgba(252,246,230,.75); }
+.car-scene__model { position: absolute; inset: 12% 0 12%; }
+.car-scene__model img, .car-scene__model canvas { width: 100%; height: 100%; position: absolute; inset: 0; object-fit: contain; transition: opacity .45s ease; }
+.car-scene__model canvas { opacity: 0; }
+.car-scene__model--ready canvas { opacity: 1; }
+.car-scene__model--ready img { opacity: 0; }
+.car-scene__bottom { position: relative; z-index: 2; display: flex; align-items: flex-end; justify-content: space-between; gap: 1.5rem; }
+.car-scene__bottom p { max-width: 28ch; color: rgba(252,246,230,.72); font-size: .95rem; }
+.car-scene__actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+.car-scene__progress { position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: var(--color-red); transform-origin: left; }
+.car-scene--reduced { height: auto; }
+@media (max-width: 767px) {
+  .car-scene { height: 190svh; }
+  .car-scene__stage { min-height: 600px; padding: 1.5rem; }
+  .car-scene__heading p { font-size: 1rem; max-width: 34ch; }
+  .car-scene__model { inset: 21% -4% 22%; }
+  .car-scene__bottom { flex-direction: column; align-items: stretch; gap: .8rem; }
+  .car-scene__bottom p { max-width: none; font-size: .85rem; }
+  .car-scene__actions .btn { flex: 1; font-size: .8rem; padding-inline: 1rem; }
+  .car-scene--reduced { height: auto; }
+}
+@media (max-height: 600px) and (min-width: 768px) { .car-scene__stage { min-height: 440px; } .car-scene__heading h2 { font-size: 2.5rem; } }

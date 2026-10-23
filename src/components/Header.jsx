@@ -29,7 +29,6 @@ export default function Header() {
   // nosotros", eran cosas que el visitante quiere hacer.
   const dropdownLinks = [
     { to: ROUTES.team, label: t('nav.team') },
-    { to: ROUTES.car, label: t('nav.car') },
     { to: ROUTES.academy, label: t('nav.academy') },
     { to: ROUTES.aboutFormulaStudent, label: t('nav.aboutFormulaStudent') },
   ];
@@ -68,6 +67,7 @@ export default function Header() {
                 {t('nav.news')}
               </NavLink>
             </li>
+            <li><NavLink to={ROUTES.car} className="nav__link" onClick={closeAll}>{t('nav.car')}</NavLink></li>
             <li className="nav__item">
               <button
                 className="nav__dropdown-toggle"
@@ -94,12 +94,14 @@ export default function Header() {
               </NavLink>
             </li>
           </ul>
+          <div className="nav__language"><LanguageSwitcher /></div>
         </nav>
 
         <div className="header__actions">
           <LanguageSwitcher />
           <a href={COMMERCIAL_CONTACT_HREF} className="btn btn--primary btn--small header__cta" onClick={closeAll}>
-            {t('sponsorsPage.primaryCta')}
+            <span className="header__cta-full">{t('sponsorsPage.primaryCta')}</span>
+            <span className="header__cta-short">{t('cinematic.bookShort')}</span>
           </a>
         </div>
       </div>

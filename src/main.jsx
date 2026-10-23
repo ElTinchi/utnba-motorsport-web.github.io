@@ -5,6 +5,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import './i18n';
 import './styles/global.css';
 import './styles/editorial-motion.css';
+import './styles/cinematic.css';
 import App from './App.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
