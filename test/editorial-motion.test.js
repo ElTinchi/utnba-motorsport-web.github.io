@@ -323,12 +323,13 @@ test('sponsors proof band keeps its observed surface unclipped', async () => {
   }
 });
 
-test('MGB sponsor receives a dedicated frame so its embedded subtitle does not shrink the brand mark', async () => {
+test('sponsors retain the MGB identity and use equal frames for both rows', async () => {
   const [carousel, carouselCss] = await Promise.all([
-    readFile(new URL('../src/components/SponsorsCarousel.jsx', import.meta.url), 'utf8'),
+    readFile(new URL('../src/data/sponsors.js', import.meta.url), 'utf8'),
     readFile(new URL('../src/styles/sponsors-carousel.css', import.meta.url), 'utf8'),
   ]);
 
   assert.match(carousel, /name: 'MGB Mecánica & Electromovilidad'[^\n]*logoClass: 'sp-car__item--mgb'/);
-  assert.match(carouselCss, /\.sp-car__item--mgb\s*\{[^}]*height:\s*clamp\(70px,\s*8vw,\s*88px\)/);
+  assert.match(carouselCss, /\.sp-car__item\s*\{[^}]*height:\s*88px/);
+  assert.doesNotMatch(carouselCss, /\.sp-car__item--mgb\s*\{/);
 });

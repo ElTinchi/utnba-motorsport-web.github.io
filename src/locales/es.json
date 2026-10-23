@@ -12,15 +12,15 @@
         "label": "Las personas",
         "title": "Talento que te conoce.",
         "text": "Hoy somos estudiantes aprendiendo a resolver problemas reales. Mañana llevaremos esa experiencia a la industria. <strong>Las herramientas y tecnologías que conocemos hoy forman parte de nuestro criterio profesional.</strong> Acompañarnos es construir ese vínculo desde el comienzo.",
-        "alt": "Integrantes de UTN BA Motorsport reunidos detrás del chasis del monoplaza.",
+        "alt": "Integrantes de UTN BA Motorsport reunidos detrás del chasis del Mini Fórmula 1.",
         "caption": "El equipo y el chasis · Presentación de julio de 2026"
       },
       {
         "label": "El proyecto",
         "title": "Imaginá tu logo acá.",
-        "text": "Este es el monoplaza eléctrico que estamos construyendo para <strong>Fórmula SAE Brasil 2027</strong>. Detrás de cada componente hay ingeniería, personas y empresas que lo hacen posible. Probá tu marca en el modelo 3D y conversemos sobre ubicación, contenido y activaciones.",
-        "alt": "Render del monoplaza eléctrico de UTN BA Motorsport.",
-        "caption": "Nuestro monoplaza · Render de trabajo"
+        "text": "Este es el Mini Fórmula 1 eléctrico que estamos construyendo para <strong>Fórmula SAE Brasil 2027</strong>. Detrás de cada componente hay ingeniería, personas y empresas que lo hacen posible. Probá tu marca en el modelo 3D y conversemos sobre ubicación, contenido y activaciones.",
+        "alt": "Render del Mini Fórmula 1 eléctrico de UTN BA Motorsport.",
+        "caption": "Nuestro Mini Fórmula 1 · Render de trabajo"
       },
       {
         "label": "La industria",
@@ -91,7 +91,7 @@
   "home": {
     "heroPlate": "UTN FRBA · Fórmula SAE",
     "heroTitle": "Nuestro primer Fórmula SAE eléctrico",
-    "heroSubtitle": "Somos una academia integral de motorsport y estamos terminando nuestro primer monoplaza eléctrico para competir en FSAE Brasil 2027.",
+    "heroSubtitle": "Somos una academia integral de motorsport y estamos terminando nuestro primer Mini Fórmula 1 eléctrico para competir en FSAE Brasil 2027.",
     "heroCtaPrimary": "Apoyá al equipo",
     "heroCtaSecondary": "Conocé al equipo",
     "heroCtaCar": "Conocé el auto",
@@ -102,11 +102,11 @@
     "aboutTitle": "Sobre nosotros",
     "aboutHook": "Cada generación tiene que arrancar un poco más adelante.",
     "aboutSubtitle": "Diseñamos un auto, pero estamos construyendo un equipo que perdure.",
-    "aboutBody": "Somos UTN BA Motorsport, un equipo interdisciplinario de estudiantes de la Universidad Tecnológica Nacional – Facultad Regional Buenos Aires. Trabajamos como un equipo de competición real, con estudiantes de distintas ingenierías y áreas que diseñan, fabrican, gestionan y llevan adelante cada proyecto. Hoy nuestro mayor desafío es desarrollar un monoplaza Fórmula SAE 100% eléctrico, pero alrededor de él construimos una estructura mucho más grande: una Academia Motorsport con proyectos de distinta complejidad, pensada para que un estudiante pueda entrar, aprender, crecer dentro del equipo y transmitir lo que aprendió a los que vienen después. La idea es simple: que cada generación arranque un poco más adelante que la anterior.",
+    "aboutBody": "Somos UTN BA Motorsport, un equipo interdisciplinario de estudiantes de la Universidad Tecnológica Nacional – Facultad Regional Buenos Aires. Trabajamos como un equipo de competición real, con estudiantes de distintas ingenierías y áreas que diseñan, fabrican, gestionan y llevan adelante cada proyecto. Hoy nuestro mayor desafío es desarrollar un Mini Fórmula 1 Fórmula SAE 100% eléctrico, pero alrededor de él construimos una estructura mucho más grande: una Academia Motorsport con proyectos de distinta complejidad, pensada para que un estudiante pueda entrar, aprender, crecer dentro del equipo y transmitir lo que aprendió a los que vienen después. La idea es simple: que cada generación arranque un poco más adelante que la anterior.",
     "formulaStudentTitle": "¿Qué es Fórmula Student?",
     "formulaStudentHook": "No se trata solamente de ser el más rápido.",
     "formulaStudentSubtitle": "También se evalúan la ingeniería, la fabricación, los costos y la capacidad de defender el proyecto.",
-    "formulaStudentBody": "Fórmula Student, también conocida como Fórmula SAE, es una de las competencias universitarias de ingeniería más importantes del mundo, impulsada por SAE International. Se realiza en Estados Unidos, Europa, Asia y Oceanía, y tiene en Brasil su única competencia en Latinoamérica. Equipos universitarios de todo el mundo diseñan, fabrican y compiten con un monoplaza propio, pero no se trata solamente de ver quién es más rápido: se evalúan el diseño y las decisiones de ingeniería, los costos, la fabricación, la confiabilidad y la capacidad del equipo para presentar y defender su proyecto. La experiencia obliga a trabajar con problemas, tiempos, recursos y responsabilidades reales, y por eso haber pasado por Fórmula SAE es una experiencia muy valorada en industrias de alta exigencia como la automotriz, el motorsport y la aeroespacial.",
+    "formulaStudentBody": "Fórmula Student, también conocida como Fórmula SAE, es una de las competencias universitarias de ingeniería más importantes del mundo, impulsada por SAE International. Se realiza en Estados Unidos, Europa, Asia y Oceanía, y tiene en Brasil su única competencia en Latinoamérica. Equipos universitarios de todo el mundo diseñan, fabrican y compiten con un Mini Fórmula 1 propio, pero no se trata solamente de ver quién es más rápido: se evalúan el diseño y las decisiones de ingeniería, los costos, la fabricación, la confiabilidad y la capacidad del equipo para presentar y defender su proyecto. La experiencia obliga a trabajar con problemas, tiempos, recursos y responsabilidades reales, y por eso haber pasado por Fórmula SAE es una experiencia muy valorada en industrias de alta exigencia como la automotriz, el motorsport y la aeroespacial.",
     "formulaStudentLink": "Conocé más",
     "joinTitle": "¿Cómo unirte?",
     "joinHook": "Tu primer proyecto puede ser el comienzo de una carrera en motorsport.",
@@ -116,7 +116,7 @@
     "areas": {
       "kicker": "Cómo se divide el equipo",
       "title": "Nuestras 7 áreas",
-      "intro": "Cada área tiene su propio frente de trabajo, y el monoplaza sale de la suma de las siete. No importa de qué ingeniería vengas: hay un lugar donde lo que estudiás se aplica."
+      "intro": "Cada área tiene su propio frente de trabajo, y el Mini Fórmula 1 sale de la suma de las siete. No importa de qué ingeniería vengas: hay un lugar donde lo que estudiás se aplica."
     },
     "academy": {
       "kicker": "La academia UTN BA Motorsport",
@@ -139,7 +139,7 @@
           "logoAlt": "UTN BA Motorsport",
           "number": "Nivel 03",
           "title": "Fórmula SAE",
-          "body": "Nuestra categoría insignia. Diseñamos, fabricamos y competimos con un monoplaza propio contra equipos de todo el mundo."
+          "body": "Nuestra categoría insignia. Diseñamos, fabricamos y competimos con un Mini Fórmula 1 propio contra equipos de todo el mundo."
         }
       ],
       "stats": [
@@ -177,7 +177,7 @@
         "eyebrow": "Para estudiantes",
         "title": "¿Qué es Fórmula Student?",
         "paragraphs": [
-          "Fórmula SAE es una competencia internacional de ingeniería en la que equipos universitarios diseñan, fabrican y compiten con un monoplaza desarrollado por ellos mismos.",
+          "Fórmula SAE es una competencia internacional de ingeniería en la que equipos universitarios diseñan, fabrican y compiten con un Mini Fórmula 1 desarrollado por ellos mismos.",
           "No se trata solamente de qué auto es más rápido. La competencia incluye distintas pruebas en las que se evalúan el diseño y las decisiones de ingeniería, el desempeño del auto, los costos y la presentación del proyecto.",
           "Fórmula SAE se realiza en distintos países alrededor del mundo. Nosotros nos estamos preparando para competir en Fórmula SAE Brasil, bajo su reglamento y sus pruebas específicas."
         ]
@@ -261,7 +261,7 @@
   "motorsportPage": {
     "kicker": "UTN BA Motorsport",
     "title": "Entrás sin experiencia. Salís manejando un proyecto real.",
-    "intro": "Somos la primera generación de Fórmula SAE de la UTN BA y nos formamos a través de tres niveles de complejidad creciente. Así se construye el camino hasta el monoplaza.",
+    "intro": "Somos la primera generación de Fórmula SAE de la UTN BA y nos formamos a través de tres niveles de complejidad creciente. Así se construye el camino hasta el Mini Fórmula 1.",
     "sections": [
       {
         "number": "01",
@@ -269,7 +269,7 @@
         "eyebrow": "Nivel 1 · El primer paso",
         "title": "Rookie",
         "paragraphs": [
-          "Todo arranca acá: tu primer proyecto dentro del equipo es armar un karting — un desafío simple y concreto para empezar a construir con las manos antes de meterte con el monoplaza.",
+          "Todo arranca acá: tu primer proyecto dentro del equipo es armar un karting — un desafío simple y concreto para empezar a construir con las manos antes de meterte con el Mini Fórmula 1.",
           "En el camino das tus primeros pasos en la ingeniería automotriz: soldadura, uso de herramientas como el torno, y el primer acercamiento real a los procesos de fabricación del equipo.",
           "No hace falta experiencia previa. Esta es la puerta de entrada al equipo, pensada para que cualquiera pueda sumarse y crecer."
         ]
@@ -385,7 +385,7 @@
           "logoAlt": "UTN BA Motorsport",
           "stage": "Categoría reina · Fórmula SAE",
           "title": "Finalmente, construir el auto que nos representa.",
-          "text": "El Fórmula SAE eléctrico reúne todo lo aprendido. Es nuestro proyecto más ambicioso: un monoplaza diseñado, fabricado y ensamblado por estudiantes para competir en Brasil.",
+          "text": "El Fórmula SAE eléctrico reúne todo lo aprendido. Es nuestro proyecto más ambicioso: un Mini Fórmula 1 diseñado, fabricado y ensamblado por estudiantes para competir en Brasil.",
           "outcome": "Tecnología · Alto rendimiento · Industria"
         }
       ]
@@ -425,7 +425,7 @@
       "kicker": "Ahora te toca entrar en la historia",
       "arrival": "Llegaste hasta acá.",
       "title": "¿Querés ver cómo queda tu logo en el auto?",
-      "text": "Cargá la marca de tu empresa, elegí su ubicación y visualizala sobre el monoplaza 3D. La propuesta económica y la ubicación final las definimos juntos en una reunión.",
+      "text": "Cargá la marca de tu empresa, elegí su ubicación y visualizala sobre el Mini Fórmula 1 3D. La propuesta económica y la ubicación final las definimos juntos en una reunión.",
       "sizes": [
         "Grande",
         "Mediano",
@@ -447,7 +447,7 @@
       "design": {
         "title": "Diseño",
         "subtitle": "CAD e ingeniería",
-        "body": "Define la geometría del auto. Del chasis a la suspensión, cada pieza se modela en CAD antes de existir: acá se decide cómo va a ser el monoplaza y se prepara todo lo que después se fabrica."
+        "body": "Define la geometría del auto. Del chasis a la suspensión, cada pieza se modela en CAD antes de existir: acá se decide cómo va a ser el Mini Fórmula 1 y se prepara todo lo que después se fabrica."
       },
       "chemistry": {
         "title": "Química",
@@ -457,7 +457,7 @@
       "manufacturing": {
         "title": "Fabricación",
         "subtitle": "Construcción y ensamble",
-        "body": "Donde el diseño se vuelve auto. Corte, soldadura, mecanizado y ensamble: acá se construye físicamente cada parte y se arma el monoplaza completo."
+        "body": "Donde el diseño se vuelve auto. Corte, soldadura, mecanizado y ensamble: acá se construye físicamente cada parte y se arma el Mini Fórmula 1 completo."
       },
       "cnc": {
         "title": "CNC",
@@ -472,7 +472,7 @@
       "electronics": {
         "title": "Electrónica",
         "subtitle": "Hardware y firmware",
-        "body": "Diseña e integra los sistemas eléctricos y electrónicos que almacenan, distribuyen y controlan la energía del auto. Baterías, BMS, unidad de potencia, cableado de alta y baja tensión, sensores, unidades de control y firmware trabajan en conjunto para entregar potencia de forma segura, medir lo que sucede y controlar el vehículo. En un monoplaza eléctrico, Electrónica conecta la energía, el control y la información que hacen posible que el auto funcione."
+        "body": "Diseña e integra los sistemas eléctricos y electrónicos que almacenan, distribuyen y controlan la energía del auto. Baterías, BMS, unidad de potencia, cableado de alta y baja tensión, sensores, unidades de control y firmware trabajan en conjunto para entregar potencia de forma segura, medir lo que sucede y controlar el vehículo. En un Mini Fórmula 1 eléctrico, Electrónica conecta la energía, el control y la información que hacen posible que el auto funcione."
       },
       "communication": {
         "title": "Comunicación",
@@ -485,10 +485,10 @@
     "kicker": "El equipo",
     "title": "No somos un grupo de alumnos. Funcionamos como una escudería.",
     "intro": "Estudiantes de la UTN Buenos Aires construyendo, desde cero, el primer Fórmula SAE eléctrico de la facultad.",
-    "photoAlt": "Integrantes de UTN BA Motorsport junto al chasis del monoplaza",
+    "photoAlt": "Integrantes de UTN BA Motorsport junto al chasis del Mini Fórmula 1",
     "storyTitle": "Quiénes somos",
     "storyParagraphs": [
-      "UTN BA Motorsport es un equipo interdisciplinario de estudiantes de la Universidad Tecnológica Nacional, Facultad Regional Buenos Aires. Mecánica, electrónica, eléctrica, industrial, sistemas, química y naval trabajan sobre un mismo proyecto: un monoplaza 100% eléctrico para competir en Fórmula SAE Brasil 2027.",
+      "UTN BA Motorsport es un equipo interdisciplinario de estudiantes de la Universidad Tecnológica Nacional, Facultad Regional Buenos Aires. Mecánica, electrónica, eléctrica, industrial, sistemas, química y naval trabajan sobre un mismo proyecto: un Mini Fórmula 1 100% eléctrico para competir en Fórmula SAE Brasil 2027.",
       "Somos la primera generación de Fórmula SAE de la UTN BA. Eso quiere decir que no heredamos un auto ni un manual: estamos escribiendo los dos. Todo lo que se decide ahora es el punto de partida de los equipos que vengan después.",
       "Creemos que la mejor forma de aprender ingeniería es construyéndola. Acá lo que se estudia en la facultad se aplica sobre una pieza real, con una fecha de competencia real y consecuencias reales si no funciona."
     ],
@@ -503,8 +503,8 @@
     "kicker": "El auto",
     "title": "Nuestro conocimiento convertido en una máquina.",
     "intro": "Diseñado, fabricado y puesto en pista por estudiantes de la UTN Buenos Aires, para competir en Fórmula SAE Brasil 2027.",
-    "renderAlt": "Render del monoplaza Fórmula SAE eléctrico de UTN BA Motorsport",
-    "renderCaption": "Render de trabajo del monoplaza. El diseño sigue en evolución.",
+    "renderAlt": "Render del Mini Fórmula 1 Fórmula SAE eléctrico de UTN BA Motorsport",
+    "renderCaption": "Render de trabajo del Mini Fórmula 1. El diseño sigue en evolución.",
     "projectTitle": "El proyecto",
     "projectParagraphs": [
       "Es el primer auto del equipo, y arranca de cero: no hay una temporada anterior de la que copiar un chasis o reutilizar un paquete de baterías. Cada decisión de diseño es la primera vez que se toma en la UTN BA.",
@@ -514,7 +514,7 @@
     "specs": {
       "category": {
         "label": "Categoría",
-        "value": "Fórmula SAE — monoplaza eléctrico"
+        "value": "Fórmula SAE — Mini Fórmula 1 eléctrico"
       },
       "powertrain": {
         "label": "Powertrain",
@@ -533,7 +533,7 @@
     "viewer": {
       "kicker": "Para sponsors",
       "title": "Mirá tu logo en el auto, antes de decidir",
-      "text": "Usá el visor 3D del monoplaza para aplicar tu marca sobre la carrocería y explorar el resultado desde distintos ángulos.",
+      "text": "Usá el visor 3D del Mini Fórmula 1 para aplicar tu marca sobre la carrocería y explorar el resultado desde distintos ángulos.",
       "bullets": [
         "Sobre el render real del auto, no sobre un dibujo genérico.",
         "Cambiás la posición y el tamaño y se actualiza al instante.",
@@ -577,7 +577,7 @@
     "loading": "Cargando novedades...",
     "emptyBadge": "Próximamente",
     "emptyTitle": "Estamos armando esta sección",
-    "emptyText": "Mientras tanto, todo lo que hacemos lo contamos en Instagram: fotos del taller, avances del monoplaza y el día a día del equipo.",
+    "emptyText": "Mientras tanto, todo lo que hacemos lo contamos en Instagram: fotos del taller, avances del Mini Fórmula 1 y el día a día del equipo.",
     "emptyButton": "Seguinos en Instagram"
   },
   "notFound": {
@@ -587,10 +587,10 @@
   },
   "cinematic": {
     "heroTitle": "Ingeniería que se ve.",
-    "heroIntro": "Estamos construyendo nuestro primer Fórmula SAE eléctrico. Tu marca puede acompañarnos a Brasil 2027 y mucho más allá.",
+    "heroIntro": "Somos estudiantes de la UTN Buenos Aires. Diseñamos y fabricamos un Mini Fórmula 1 eléctrico para competir en Fórmula SAE Brasil 2027.",
     "carTitle": "Tu marca. En movimiento.",
-    "carIntro": "Este es el auto que estamos construyendo. Imaginá hasta dónde puede llegar tu marca con él.",
-    "carScroll": "Seguí bajando. El auto gira con vos.",
+    "carIntro": "Un Mini Fórmula 1 eléctrico, diseñado y fabricado por estudiantes. Tu empresa puede ayudarnos a llevarlo a la pista.",
+    "carScroll": "Un nuevo ángulo. Y seguimos.",
     "carStill": "Explorá el auto y probá tu marca en el visor 3D.",
     "teamTitle": "Mucho más que un auto.",
     "bookShort": "Agendá reunión",
@@ -603,6 +603,27 @@
       "connections": "Que te conozcan.",
       "connectionsText": "Un vínculo con estudiantes que aprenden haciendo, referentes de la industria y otras empresas que acompañan al equipo."
     },
-    "seeDeliverables": "Ver acciones y entregables"
+    "seeDeliverables": "Ver acciones y entregables",
+    "explainer": {
+      "title": "De la facultad a la pista.",
+      "text": "Fórmula SAE es una competencia internacional de ingeniería: equipos universitarios construyen su propio auto desde cero y ponen a prueba el diseño, los costos, la fabricación y el rendimiento. Ese es nuestro desafío.",
+      "steps": [
+        {
+          "title": "Diseñamos.",
+          "text": "Convertimos lo que aprendemos en ingeniería en un auto real: chasis, suspensión, baterías, electrónica y aerodinámica."
+        },
+        {
+          "title": "Fabricamos.",
+          "text": "En el taller construimos, mecanizamos y ensamblamos las piezas, con el apoyo técnico y los recursos de empresas aliadas."
+        },
+        {
+          "title": "Vamos a competir.",
+          "text": "Nuestro objetivo es Fórmula SAE Brasil 2027. Buscamos sponsors para completar el auto, probarlo y llevar la ingeniería argentina a la pista."
+        }
+      ]
+    },
+    "scrollCue": "Bajá y conocé el proyecto",
+    "pauseSponsors": "Pausar logos",
+    "resumeSponsors": "Reanudar logos"
   }
 }

@@ -24,8 +24,12 @@ body .hero--cinematic .hero__logo { width: 210px; filter: none; animation: none;
 body .hero--cinematic .hero__title { font-size: clamp(2.8rem, 5.2vw, 5.6rem); line-height: 1.03; max-width: 11ch; animation: cinematic-title .8s var(--motion-ease-out) both; }
 body .hero--cinematic .hero__description { font-size: clamp(1.05rem, 1.4vw, 1.25rem); max-width: 37ch; color: #dedbd6; }
 body .hero--cinematic .hero__actions { justify-content: flex-start; align-items: center; gap: 1.5rem; animation: none; }
+body .hero--cinematic .hero__actions .btn { white-space: nowrap; flex-shrink: 0; }
 body .hero__explore { display: inline-flex; gap: 1rem; align-items: center; min-height: 48px; font-weight: 600; }
 body .hero__explore span { font-size: 1.5rem; }
+body .hero__scroll-cue { position: absolute; left: clamp(1.5rem, 5vw, 6rem); bottom: 1.8rem; z-index: 3; display: flex; align-items: center; gap: .75rem; color: #fcf6e6; font-size: .9rem; min-height: 44px; }
+body .hero__scroll-cue svg { width: 24px; height: 24px; }
+body #que-hacemos { scroll-margin-top: var(--header-height); }
 body .hero-artwork { position: absolute; right: -15%; top: 16%; width: 84%; height: 80%; z-index: 1; }
 body .hero-artwork img { width: 100%; height: 100%; object-fit: cover; object-position: 56% center; mask-image: linear-gradient(to right, transparent, #000 28%); }
 body .hero-artwork__caption { position: absolute; bottom: 3rem; right: 20%; font-size: .85rem; color: #e5ded7; }
@@ -49,9 +53,17 @@ body .cinematic-image { overflow: hidden; background: #151519; }
 body .sponsor-story .cinematic-image img { width: 100%; height: clamp(380px, 44vw, 610px); object-fit: cover; max-height: none; }
 body .sponsor-story__chapter--render .cinematic-image img { height: auto; object-fit: contain; }
 body .sponsor-story__close { border: 0; padding: clamp(2rem, 5vw, 4rem); background: #dd0e0e; color: #fff; }
-body .sponsor-story__close p, body .sponsor-story__close .btn { color: #fff; }
+body .sponsor-story__close p { color: #fff; }
+body .sponsor-story__close .btn--primary { color: #fff; }
 body .sponsor-story__close .btn--primary { background: #151519; border-color: #151519; }
-body .sponsor-story__close .btn--secondary { border-color: rgba(255,255,255,.7); }
+body .sponsor-story__close .btn--secondary { color: #151519; background: #fff; border-color: #fff; }
+body .sponsor-story__close .btn--secondary:hover { color: #151519; background: #eee8df; border-color: #eee8df; }
+body .project-explainer { max-width: 1280px; margin: auto; padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 4vw, 4rem); }
+body .project-explainer h2 { max-width: 22ch; font-size: clamp(1.9rem, 3.6vw, 3.5rem); line-height: 1.12; letter-spacing: -.03em; }
+body .project-explainer > p { margin-top: 1.5rem; max-width: 66ch; color: var(--color-white-muted); font-size: 1.15rem; }
+body .project-explainer__steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.5rem; margin-top: 2.5rem; }
+body .project-explainer__steps h3 { font-size: 1.2rem; margin-bottom: .7rem; }
+body .project-explainer__steps p { color: var(--color-white-muted); }
 body .sp-page__title { max-width: 16ch; font-size: clamp(2.2rem, 5vw, 4.5rem); letter-spacing: -.04em; line-height: 1.08; }
 body .sp-page__kicker, body .sp-section-kicker, body .academy__kicker, body .home-sponsors__kicker { display: none; }
 body .sp-hero { min-height: 0; padding-block: 1rem 4rem; }
@@ -99,8 +111,11 @@ body .shell:has(.car-first-action) .shell__intro { max-width: 68ch; }
   body .hero-artwork { right: -6%; top: 42%; width: 112%; height: 59%; }
   body .hero-artwork img { object-fit: cover; object-position: 58% center; mask-image: linear-gradient(to bottom, transparent, #000 24%, #000 92%, transparent); }
   body .hero-artwork__caption { right: 12%; bottom: 1.7rem; font-size: .75rem; }
+  body .hero__scroll-cue { left: 1.5rem; bottom: 1rem; padding-right: .7rem; background: #151519; font-size: .8rem; }
+  body .hero-artwork__caption { display: none; }
   body .hero--cinematic .hero__circuit { display: none; }
   body .project-bridge { grid-template-columns: 1fr; gap: 1.5rem; }
+  body .project-explainer__steps { grid-template-columns: 1fr; gap: 1.5rem; }
   body .sponsor-story__head { display: block; }
   body .sponsor-story__head h2 { max-width: 16ch; margin-bottom: 1.5rem; }
   body .sponsor-story__head > p { font-size: 1.1rem; }
@@ -119,3 +134,6 @@ body .shell:has(.car-first-action) .shell__intro { max-width: 68ch; }
   body .hero__explore:hover span { transform: none; }
   body .cinematic-image img { transform: none !important; }
 }
+
+body .sp-proof .sp-car__item { opacity: 1; transform: none; transition: none; }
+body .sp-proof .sp-car { padding-top: 3.5rem; }

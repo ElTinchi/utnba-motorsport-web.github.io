@@ -1,6 +1,6 @@
 import {cleanUnderbody} from './undertray.js?v=side-rail-20';
 import {reserved} from './zones.js?v=no-sae-20';
-import {CarRenderer,parseGLB,cameraBasis,rayDirection,raycast,norm,cross,dot,scale,add,decodeImage} from './engine.js?v=mobile-memory-21';
+import {CarRenderer,parseGLB,cameraBasis,rayDirection,raycast,norm,cross,dot,scale,add,decodeImage} from './engine.js?v=studio-light-22';
 const $=id=>document.getElementById(id),canvas=$('car-canvas');
 const camera={yaw:.72,pitch:.23,distance:9.5};
 const presets={three:[.72,.23],side:[Math.PI/2,.1],other:[-Math.PI/2,.1],front:[0,.09],rear:[Math.PI,.12],top:[0,Math.PI/2-.001]};

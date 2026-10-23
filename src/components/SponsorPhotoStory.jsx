@@ -1,3 +1,4 @@
+import { PRESS } from '../data/press';
 import { Trans, useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
 import { COMMERCIAL_CONTACT_HREF, ROUTES } from '../routes';
@@ -13,11 +14,7 @@ const PHOTOS = [
   ['/assets/img/news/campus-01.webp', '/novedades#circuito-virtual-campus', 1600, 1067],
 ];
 const READING_ORDER = [3, 0, 2, 4, 1];
-const PRESS = [
-  { name: 'Ámbito', href: 'https://www.ambito.com/autos/utn-ba-motorsport-estudiantes-que-convierten-la-ingenieria-vehiculos-competicion-n6311926' },
-  { name: 'El Destape', href: 'https://www.eldestapeweb.com/sociedad/aula-pista-ingenieria-innovacion-industria-nacional-2026818101412' },
-  { name: 'Carburando / Carburando Radio', href: 'https://www.carburando.com/notas/utn-ba-motorsport-el-equipo-de-estudiantes-argentinos-que-correran-la-formula-sae-2027-en-brasil' },
-];
+
 
 export default function SponsorPhotoStory() {
   const { t } = useTranslation();

@@ -176,10 +176,22 @@ void main(){
    }
   }
  }
- vec3 light=normalize(vec3(-3.,6.,4.));vec3 fill=normalize(vec3(4.,2.,-3.));
- float diffuse=.36+.62*max(dot(normal,light),0.)+.23*max(dot(normal,fill),0.);
- vec3 halfDir=normalize(light+normalize(eye-world));float spec=pow(max(dot(normal,halfDir),0.),48.)*.12;
- vec3 color=base*diffuse+vec3(floorSurface?0.:spec);outColor=vec4(pow(clamp(color,0.,1.),vec3(1./2.2)),1.);
+ // Studio lighting: warm key, cool fill and a broad reflected softbox.
+ // Keep geometry, source livery and uploaded sponsor artwork unchanged.
+ vec3 view=normalize(eye-world),light=normalize(vec3(-3.,6.,4.)),fill=normalize(vec3(4.,2.,-3.));
+ float sky=normal.y*.5+.5;
+ vec3 ambient=mix(vec3(.10,.09,.085),vec3(.29,.33,.39),sky);
+ vec3 diffuse=ambient+vec3(1.12,1.06,.98)*max(dot(normal,light),0.)+vec3(.32,.38,.48)*max(dot(normal,fill),0.);
+ vec3 halfDir=normalize(light+view),fillHalf=normalize(fill+view);
+ float highlight=pow(max(dot(normal,halfDir),0.),bodyMaterial?72.:40.);
+ float broad=pow(max(dot(normal,fillHalf),0.),18.);
+ float fresnel=.04+.20*pow(1.-max(dot(normal,view),0.),5.);
+ float contact=mix(.65,1.,smoothstep(-1.05,-.35,world.y));
+ vec3 color=base*diffuse*contact;
+ if(!floorSurface)color+=vec3(1.,.96,.91)*highlight*(bodyMaterial?.24:.14)+vec3(.66,.77,1.)*broad*fresnel;
+ // Soft highlight rolloff instead of clipping bright reflections to white.
+ color=(color*(2.51*color+.03))/(color*(2.43*color+.59)+.14);
+ outColor=vec4(pow(clamp(color,0.,1.),vec3(1./2.2)),1.);
 }`;
 export class CarRenderer {
   constructor(canvas,model) {

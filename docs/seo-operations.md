@@ -3,7 +3,7 @@
 ## Estado
 
 - **Implementado y validado localmente:** HTML prerenderizado para las diez rutas públicas, Helmet para navegación cliente, catálogo central de metadatos y sitemap generado en cada build.
-- **Pendiente de publicación:** los cambios de este repositorio aún no están en producción. No se inició el workflow de despliegue.
+- **Publicación:** el proyecto se despliega en Vercel mediante cambios en `main`. Verificar el estado del último deployment antes de confirmar publicación.
 - **Pendiente de acceso o gestión externa:** Search Console, verificación DNS y solicitud de enlace editorial a UTN FRBA.
 
 ## Search Console
@@ -26,13 +26,13 @@ Destino recomendado: `https://utnbamotorsport.com.ar/el-equipo` para una nota de
 
 Texto de enlace sugerido: **UTN BA Motorsport**.
 
-Descripción: Equipo de estudiantes de la Facultad Regional Buenos Aires de la Universidad Tecnológica Nacional que trabaja en el desarrollo de un monoplaza eléctrico para Fórmula SAE.
+Descripción: Equipo de estudiantes de la Facultad Regional Buenos Aires de la Universidad Tecnológica Nacional que trabaja en el desarrollo de un Mini Fórmula 1 eléctrico para Fórmula SAE.
 
 **Asunto:** Proyecto estudiantil de ingeniería: UTN BA Motorsport
 
 Hola, equipo de comunicación institucional:
 
-Les escribimos para acercarles UTN BA Motorsport, un proyecto de estudiantes de la Facultad Regional Buenos Aires que desarrolla un monoplaza eléctrico para Fórmula SAE. El sitio presenta al equipo, sus áreas de trabajo y el proyecto: https://utnbamotorsport.com.ar/el-equipo
+Les escribimos para acercarles UTN BA Motorsport, un proyecto de estudiantes de la Facultad Regional Buenos Aires que desarrolla un Mini Fórmula 1 eléctrico para Fórmula SAE. El sitio presenta al equipo, sus áreas de trabajo y el proyecto: https://utnbamotorsport.com.ar/el-equipo
 
 Si consideran que resulta útil para estudiantes y la comunidad universitaria, ¿podrían incluir una referencia a UTN BA Motorsport en una página institucional pertinente, por ejemplo en proyectos estudiantiles, ingeniería, extensión o noticias?
 
@@ -57,3 +57,11 @@ Build de referencia local previo a los cambios: Vite 5.4.21, Home/El equipo/Spon
 Build posterior local: Vite 6.4.3, bundle de entrada 360.70 kB (115.04 kB gzip), CSS de entrada 17.74 kB (4.12 kB gzip), con chunks de página separados. El JS de entrada bajó aproximadamente 7.4% (6.3% gzip) y el CSS 72.3%; Home y las rutas internas cargan su chunk al entrar. Las cifras de recursos no equivalen a una puntuación Lighthouse ni a métricas de campo.
 
 Para completar la línea de base comparable, correr Lighthouse en modo móvil tres veces en cada una de Home, El equipo y Sponsors, registrar la mediana de Performance, LCP, CLS y TBT, además del tamaño transferido y solicitudes. Repetir con el mismo equipo, red, versión del navegador, build y caché. INP requiere datos reales de usuarios cuando estén disponibles.
+
+## Referencias para asistentes y buscadores
+
+`public/llms.txt` contiene el índice curado. En cada build, `scripts/ai-content.js` genera versiones Markdown de las diez rutas, referencias de prensa, FAQs y guía del visor, `llms-full.txt` y `organization.json`. Los textos se obtienen de los mismos locales, noticias, sponsors y fuentes de prensa que usa la web. No editar los archivos de `dist` a mano.
+
+Las páginas enlazan su versión Markdown con `rel="alternate"` y el índice con `rel="describedby"`. `robots.txt` mantiene sus directivas de rastreo; los comentarios de referencias no agregan reglas no estándar. Publicar estos archivos ayuda a ofrecer contexto legible, pero no garantiza indexación, posicionamiento ni uso por un asistente.
+
+Al actualizar la propuesta comercial, revisar las aclaraciones sobre objetivos, cobertura editorial y alcance de beneficios. Los tests verifican cobertura de rutas, enlaces del índice, sponsors actuales y fechas disponibles.

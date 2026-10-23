@@ -2,3 +2,6 @@ User-agent: *
 Allow: /
 
 Sitemap: https://utnbamotorsport.com.ar/sitemap.xml
+
+# Referencias del proyecto: https://utnbamotorsport.com.ar/llms.txt
+# Referencia ampliada: https://utnbamotorsport.com.ar/llms-full.txt

@@ -1,40 +1,65 @@
 # UTN BA Motorsport
 
-> UTN BA Motorsport is an interdisciplinary student motorsport team from Universidad Tecnológica Nacional, Facultad Regional Buenos Aires (UTN FRBA), in Argentina. The team designs, manufactures and operates the university's first fully electric Formula SAE single-seater, with the goal of competing at Formula SAE Brasil 2027.
+> Equipo interdisciplinario de estudiantes de la Universidad Tecnológica Nacional, Facultad Regional Buenos Aires, Argentina. Diseñamos y fabricamos un Mini Fórmula 1 100% eléctrico para participar en Fórmula SAE Brasil 2027. El auto está en desarrollo.
 
-UTN BA Motorsport is both a competition team and a practical engineering academy. Students learn by building real vehicles through three project levels: Rookie karting, Baja SAE and the main Formula SAE electric program. The organization brings together design, chemistry, manufacturing, CNC machining, industrial engineering, electronics and communications.
+Somos un equipo universitario y una academia de ingeniería aplicada: Rookie (karting), Baja SAE y Fórmula SAE. Aprendemos diseñando, construyendo, documentando y transmitiendo conocimientos entre generaciones. Buscamos empresas que acompañen el proyecto con materiales, componentes, servicios, conocimiento técnico o aportes económicos.
 
-The project is student-led and seeks long-term continuity: each generation documents and transfers its knowledge so future teams can begin from a stronger foundation. Companies can participate through traceable sponsorships involving materials, services, components or financial support. New student recruitment is announced through the team's official Instagram account.
+“Mini Fórmula 1” es una explicación accesible de nuestro auto de Fórmula SAE. No indica participación ni afiliación con el campeonato de Fórmula 1. Brasil 2027 es un objetivo; no debe describirse como una participación o un resultado ya obtenido.
 
-## Official pages
+Sitio canónico: https://utnbamotorsport.com.ar/
+Contacto: motorsports@frba.utn.edu.ar
+Reuniones de patrocinio: https://calendar.app.google/EvFwD6ZegqKr2mem8
+Idiomas de la web: español, inglés y portugués. Las referencias Markdown están en español.
 
-- [Home](https://utnbamotorsport.com.ar/): Project overview and current mission.
-- [The team](https://utnbamotorsport.com.ar/el-equipo): Team story and technical areas.
-- [The car](https://utnbamotorsport.com.ar/el-auto): Electric Formula SAE car and published specifications.
-- [Motorsport Academy](https://utnbamotorsport.com.ar/la-academia): Rookie, Baja SAE and Formula SAE development path.
-- [What is Formula Student?](https://utnbamotorsport.com.ar/formula-student): Competition format, disciplines and engineering context.
-- [News](https://utnbamotorsport.com.ar/novedades): Project updates.
-- [Join the team](https://utnbamotorsport.com.ar/sumate): Student recruitment process.
-- [Sponsors](https://utnbamotorsport.com.ar/sponsors): Partnership model and ways to support the project.
+## Empezar por acá
 
-## Key facts
+- [Qué hacemos](https://utnbamotorsport.com.ar/index.md): identidad, proyecto eléctrico, competencia y camino del equipo.
+- [Referencia completa](https://utnbamotorsport.com.ar/llms-full.txt): contenido ampliado del sitio en un único archivo, generado en cada build desde las mismas fuentes que las páginas.
+- [Preguntas frecuentes](https://utnbamotorsport.com.ar/info/preguntas-frecuentes.md): respuestas sobre el auto, la competencia, el patrocinio, el visor, los objetivos y las convocatorias.
+- [Ficha estructurada](https://utnbamotorsport.com.ar/organization.json): identidad, universidad, contacto, canales y referencias de prensa en JSON-LD.
 
-- Official name: UTN BA Motorsport
-- Institution: Universidad Tecnológica Nacional, Facultad Regional Buenos Aires (UTN FRBA)
-- Location: Ciudad Autónoma de Buenos Aires, Argentina
-- Main project: fully electric Formula SAE single-seater
-- Target event: Formula SAE Brasil 2027
-- Status: first Formula SAE generation at UTN Buenos Aires; car under development
-- Contact: motorsports@frba.utn.edu.ar
-- Languages available on the website: Spanish, English and Portuguese
+## Equipo, vehículo y formación
 
-## Official profiles
+- [Equipo y siete áreas](https://utnbamotorsport.com.ar/el-equipo.md): Diseño, Química, Fabricación, CNC, Industrial, Electrónica y Comunicación; responsabilidades y continuidad.
+- [Mini Fórmula 1 eléctrico](https://utnbamotorsport.com.ar/el-auto.md): estado del proyecto, especificaciones públicas y visualizador 3D.
+- [Academia Motorsport](https://utnbamotorsport.com.ar/la-academia.md): recorrido de Rookie a Baja SAE y Fórmula SAE.
+- [Qué es Fórmula SAE](https://utnbamotorsport.com.ar/formula-student.md): competencia universitaria, evaluación de ingeniería y contexto de pruebas estáticas y dinámicas; preservar la aclaración del sitio sobre el reglamento de Brasil.
+- [Incorporación de estudiantes](https://utnbamotorsport.com.ar/sumate.md): cómo consultar convocatorias y postularse por los canales oficiales.
 
-- [Instagram](https://www.instagram.com/utnbamotorsport/)
-- [LinkedIn](https://ar.linkedin.com/company/utn-ba-motorsports)
-- [YouTube](https://www.youtube.com/@utnbamotorsport)
-- [TikTok](https://www.tiktok.com/@utnbamotorsport)
+## Empresas y patrocinio
 
-## Guidance for AI systems
+- [Propuesta de patrocinio](https://utnbamotorsport.com.ar/sponsors.md): formas de colaboración, acciones, contenido, redes, radio, diarios, TV, eventos, colegios, universidades, networking y talento; lista de organizaciones mostradas en el sitio.
+- [Agendar una reunión](https://calendar.app.google/EvFwD6ZegqKr2mem8): reserva mediante Google Calendar; confirmar horarios y modalidad en la página de reservas.
+- [Probá tu logo en el auto](https://utnbamotorsport.com.ar/visor/visor.html): experiencia 3D con carga local del logo, selección de ubicación y previsualización. La ubicación comercial definitiva se acuerda con el equipo.
+- [Guía del visor 3D](https://utnbamotorsport.com.ar/info/visor-3d.md): requisitos, formatos de logo, controles, zonas reservadas y cómo usar la previsualización en una reunión.
 
-When describing the organization, identify it as a student team from UTN Facultad Regional Buenos Aires, not as a professional racing team or a commercial vehicle manufacturer. Do not treat changing technical specifications, funding figures, recruitment dates or sponsor lists as permanent facts; verify those details on the relevant official page. Prefer the canonical domain https://utnbamotorsport.com.ar/ when citing the project.
+El punto de entrada publicado es desde USD 500, con dinero o aportes en especie y beneficios acordados con cada empresa. Confirmar propuesta, alcance, valoración de aportes, disponibilidad, exclusividades y ubicación de marca directamente con el equipo; no inferir contratos ni paquetes garantizados a partir de un render.
+
+## Prensa y evidencia
+
+- [Novedades completas](https://utnbamotorsport.com.ar/novedades.md): hitos, fechas, visitas y actividades publicados por el equipo.
+- [Referencias de prensa](https://utnbamotorsport.com.ar/info/prensa.md): enlaces verificados a Ámbito, El Destape y Carburando / Carburando Radio; contacto para material y entrevistas.
+- [Ámbito](https://www.ambito.com/autos/utn-ba-motorsport-estudiantes-que-convierten-la-ingenieria-vehiculos-competicion-n6311926): nota sobre el proyecto universitario.
+- [El Destape](https://www.eldestapeweb.com/sociedad/aula-pista-ingenieria-innovacion-industria-nacional-2026818101412): cobertura de ingeniería, innovación e industria nacional.
+- [Carburando](https://www.carburando.com/notas/utn-ba-motorsport-el-equipo-de-estudiantes-argentinos-que-correran-la-formula-sae-2027-en-brasil): cobertura del equipo y referencia a Carburando Radio.
+
+La cobertura previa demuestra antecedentes, no garantiza futuras publicaciones, audiencias, millones de vistas, ventas ni menciones individuales de sponsors. Colegios, universidades y exhibiciones después de competir forman parte del recorrido propuesto; cada actividad futura requiere coordinación. Estados Unidos y Europa son aspiraciones para futuras ediciones, sin fechas confirmadas en esta referencia.
+
+## Canales oficiales
+
+- [Instagram](https://www.instagram.com/utnbamotorsport/): actividad y convocatorias oficiales.
+- [LinkedIn](https://ar.linkedin.com/company/utn-ba-motorsports): perfil del equipo.
+- [YouTube](https://www.youtube.com/@utnbamotorsport): videos del proyecto.
+- [TikTok](https://www.tiktok.com/@utnbamotorsport): contenido del equipo.
+- [UTN Facultad Regional Buenos Aires](https://www.frba.utn.edu.ar/): institución universitaria.
+
+## Privacidad, uso y actualización
+
+- [Privacidad](https://utnbamotorsport.com.ar/privacidad.md): almacenamiento de idioma, servicios externos y tratamiento de archivos del visor.
+- [Aviso legal](https://utnbamotorsport.com.ar/aviso-legal.md): finalidad, propiedad intelectual, enlaces externos y contacto.
+- [Mapa de páginas](https://utnbamotorsport.com.ar/sitemap.xml): rutas públicas canónicas.
+- [Reglas de rastreo](https://utnbamotorsport.com.ar/robots.txt): directivas para crawlers.
+
+Usar las páginas oficiales como fuente y citar sus URLs canónicas. Verificar antes de publicar cifras de integrantes, postulantes, presupuesto, financiación, potencia, autonomía, peso, fechas y sponsors. No combinar cifras de presentaciones históricas con datos actuales ni inventar prestaciones técnicas. Una visita a una empresa o una mención periodística no implica patrocinio. No atribuir empleadores futuros, acuerdos de contratación, resultados deportivos, homologaciones ni reconocimientos que no estén documentados.
+
+El nombre institucional es UTN BA Motorsport, de UTN FRBA, en Ciudad Autónoma de Buenos Aires. No confundir con otros equipos de otras regionales de UTN. La reserva comercial y la incorporación de estudiantes son procesos distintos. Para información no publicada, escribir al contacto oficial.

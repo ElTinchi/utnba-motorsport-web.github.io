@@ -147,7 +147,7 @@ export default function Home() {
             <path id="hero-track-line" d={TRACK_PATH} fill="none" stroke="none" />
 
             <g className="hero__car">
-              {/* Monoplaza cenital simplificado. El frente apunta hacia +X,
+              {/* Mini Fórmula 1 cenital simplificado. El frente apunta hacia +X,
                   que es la orientación base que usa animateMotion. */}
               <rect x="-18" y="-14" width="9" height="7" rx="2" className="hero__car-wheel" />
               <rect x="-18" y="7" width="9" height="7" rx="2" className="hero__car-wheel" />
@@ -187,10 +187,23 @@ export default function Home() {
             <a href="#auto-en-movimiento" className="hero__explore">{t('home.heroCtaCar')} <span aria-hidden="true">↓</span></a>
           </div>
         </div>
+        <a href="#que-hacemos" className="hero__scroll-cue">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M12 3v17m-6-6 6 6 6-6" /></svg>
+          {t('cinematic.scrollCue')}
+        </a>
       </section>
 
       {/* El contenido sube y tapa el hero fijo al scrollear */}
       <div className="page">
+        <section className="project-explainer" id="que-hacemos" aria-labelledby="what-we-do-title">
+          <h2 id="what-we-do-title">{t('cinematic.explainer.title')}</h2>
+          <p>{t('cinematic.explainer.text')}</p>
+          <div className="project-explainer__steps">
+            {t('cinematic.explainer.steps', { returnObjects: true }).map(step => (
+              <div key={step.title}><h3>{step.title}</h3><p>{step.text}</p></div>
+            ))}
+          </div>
+        </section>
         <CarScrollScene />
 
         {/* ====== Mini-secciones: motivación, sobre nosotros, Fórmula Student, cómo unirte ====== */}

@@ -18,6 +18,8 @@ export default function Seo() {
       <meta name="description" content={seo.description} />
       <meta name="robots" content={seo.robots} />
       {seo.canonical && <link rel="canonical" href={seo.canonical} />}
+      <link rel="describedby" href="/llms.txt" type="text/plain" />
+      {seo.canonical && <link rel="alternate" type="text/markdown" href={`${seo.canonical === 'https://utnbamotorsport.com.ar/' ? `${seo.canonical}index` : seo.canonical}.md`} />}
       <meta property="og:type" content={seo.ogType || 'website'} />
       <meta property="og:site_name" content={seo.siteName} />
       <meta property="og:title" content={seo.ogTitle || seo.title} />

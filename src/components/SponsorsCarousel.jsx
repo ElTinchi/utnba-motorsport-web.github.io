@@ -1,3 +1,7 @@
+import { useEffect, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { SPONSORS } from '../data/sponsors';
+export { SPONSORS } from '../data/sponsors';
 import '../styles/sponsors-carousel.css';
 
 // Listado único de sponsors del equipo. Los logos apuntan a
@@ -5,22 +9,7 @@ import '../styles/sponsors-carousel.css';
 // recortadas al contenido real y con la tinta preparada para leerse sobre
 // blanco (Grupo Paglia es originalmente tinta clara sobre
 // fondo oscuro: ahí se invirtió la luminosidad, conservando el tono de marca).
-export const SPONSORS = [
-  { name: 'UTN BA', href: 'https://www.frba.utn.edu.ar/', logo: '/assets/img/sponsors/onwhite/logoutnba.png' },
-  { name: 'Cognitive AI', href: 'https://cognitive.com.ar/', logo: '/assets/img/sponsors/onwhite/cognitive.png' },
-  { name: 'JDM Inyección', href: 'https://jdminyeccion.com.ar/', logo: '/assets/img/sponsors/onwhite/jdm-inyeccion.webp' },
-  { name: 'Polimetal Procesos', href: 'https://polimetal.com.ar/', logo: '/assets/img/sponsors/onwhite/polimetal.png' },
-  { name: 'PrintALot', href: 'https://printalot.com.ar/', logo: '/assets/img/sponsors/onwhite/printalot.png' },
-  { name: 'Aceros Munro', href: 'https://acerosmunro.com.ar/', logo: '/assets/img/sponsors/onwhite/acerosmunro.png' },
-  { name: 'Ansys', href: 'https://www.ansys.com/', logo: '/assets/img/sponsors/onwhite/ansys.png' },
-  { name: 'MathWorks', href: 'https://www.mathworks.com/', logo: '/assets/img/sponsors/onwhite/mathworks.png' },
-  { name: 'Bender', href: 'https://www.bender.de/', logo: '/assets/img/sponsors/onwhite/benderlogo.png' },
-  { name: 'Grupo Paglia', href: 'https://www.instagram.com/grupopaglia_/', logo: '/assets/img/sponsors/onwhite/grupopaglia.png' },
-  { name: 'SIN PAR', href: 'https://sinpar.com.ar/', logo: '/assets/img/sponsors/onwhite/sin-par.png', logoClass: 'sp-car__item--sin-par' },
-  { name: 'DSM Diesel Car S.A.', href: 'https://www.dsmdieselcar.com.ar/', logo: '/assets/img/sponsors/onwhite/dsm-diesel-car.png' },
-  { name: 'GMG Neumáticos de Competición', href: 'https://www.instagram.com/neumaticosgmg/?hl=es', logo: '/assets/img/sponsors/onwhite/gmg-neumaticos.png' },
-  { name: 'MGB Mecánica & Electromovilidad', href: 'https://www.instagram.com/gncbahia/?hl=es-la', logo: '/assets/img/sponsors/onwhite/mgb-bahia.png?v=2', logoClass: 'sp-car__item--mgb' },
-];
+
 
 // `duplicate` marca la copia visual del loop: no debe recibir foco de teclado
 // ni ser anunciada, para no repetir los mismos links dos veces.
@@ -28,7 +17,7 @@ function Logo({ sponsor, duplicate = false }) {
   if (!sponsor.href) {
     return (
       <span className={['sp-car__item', sponsor.logoClass].filter(Boolean).join(' ')} aria-hidden={duplicate || undefined}>
-        <img draggable={false} src={sponsor.logo} alt={duplicate ? '' : sponsor.name} loading="lazy" />
+        <span className="sp-car__logo"><img draggable={false} src={sponsor.logo} alt={duplicate ? '' : sponsor.name} loading="lazy" /></span>
       </span>
     );
   }
@@ -42,43 +31,42 @@ function Logo({ sponsor, duplicate = false }) {
       tabIndex={duplicate ? -1 : undefined}
       aria-hidden={duplicate || undefined}
     >
-      <img draggable={false} src={sponsor.logo} alt={duplicate ? '' : sponsor.name} loading="lazy" />
+      <span className="sp-car__logo"><img draggable={false} src={sponsor.logo} alt={duplicate ? '' : sponsor.name} loading="lazy" /></span>
     </a>
   );
 }
 
-/**
- * Banda blanca a todo el ancho con los logos desplazándose en loop continuo.
- * Sin tiles, sin bordes, sin grises: los logos van directo sobre el blanco.
- *
- * El loop es sin costura porque la pista se renderiza DOS veces y la animación
- * la desplaza exactamente un 50% de su ancho: cuando termina, la copia quedó
- * justo donde arrancó el original. La segunda copia es aria-hidden para no
- * duplicar los links en lectores de pantalla.
- *
- * @param {number} speed  Segundos que tarda una vuelta completa.
- */
 export default function SponsorsCarousel({ speed = 35 }) {
+  const { t } = useTranslation();
+  const root = useRef(null);
+  const [paused, setPaused] = useState(false);
+  const [active, setActive] = useState(false);
+  useEffect(() => {
+    let visible = false;
+    const update = () => setActive(visible && !document.hidden);
+    const observer = new IntersectionObserver(entries => { visible = entries[0].isIntersecting; update(); });
+    observer.observe(root.current);
+    document.addEventListener('visibilitychange', update);
+    return () => { observer.disconnect(); document.removeEventListener('visibilitychange', update); };
+  }, []);
+  const rows = [SPONSORS.filter((_, index) => index % 2 === 0), SPONSORS.filter((_, index) => index % 2 === 1)];
   return (
-    <div className="sp-car" style={{ '--sp-car-speed': `${speed}s` }}>
-      {/* El viewport lleva el recorte y el desvanecido de los bordes. Va como
-          hijo y no sobre .sp-car para que la máscara afecte solo a los logos:
-          si se aplica al contenedor, agujerea también la banda blanca y en los
-          extremos se ve el fondo oscuro de la página. */}
-      <div className="sp-car__viewport">
-        <div className="sp-car__track">
-          <div className="sp-car__group">
-            {SPONSORS.map((sponsor) => (
-              <Logo key={sponsor.name} sponsor={sponsor} />
-            ))}
-          </div>
-          <div className="sp-car__group" aria-hidden="true">
-            {SPONSORS.map((sponsor) => (
-              <Logo key={`dup-${sponsor.name}`} sponsor={sponsor} duplicate />
-            ))}
+    <div ref={root} className="sp-car" data-paused={paused || !active} style={{ '--sp-car-speed': `${speed}s` }}>
+      <button type="button" className="sp-car__pause" onClick={() => setPaused(value => !value)} aria-pressed={paused}>
+        {t(paused ? 'cinematic.resumeSponsors' : 'cinematic.pauseSponsors')}
+      </button>
+      {rows.map((sponsors, index) => (
+        <div className={`sp-car__viewport${index === 1 ? ' sp-car__viewport--reverse' : ''}`} key={index}>
+          <div className="sp-car__track">
+            <div className="sp-car__group">
+              {sponsors.map(sponsor => <Logo key={sponsor.name} sponsor={sponsor} />)}
+            </div>
+            <div className="sp-car__group" aria-hidden="true">
+              {sponsors.map(sponsor => <Logo key={sponsor.name} sponsor={sponsor} duplicate />)}
+            </div>
           </div>
         </div>
-      </div>
+      ))}
     </div>
   );
 }

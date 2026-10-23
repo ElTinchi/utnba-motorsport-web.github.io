@@ -18,9 +18,9 @@
       {
         "label": "The project",
         "title": "Picture your logo here.",
-        "text": "This is the electric single-seater we are building for <strong>Formula SAE Brazil 2027</strong>. Behind every component are engineering, people and supporting companies. Try your brand on the 3D model and let's discuss placement, content and activations.",
-        "alt": "Working render of the team's electric single-seater.",
-        "caption": "Our single-seater · Working render"
+        "text": "This is the electric Mini Formula 1 car we are building for <strong>Formula SAE Brazil 2027</strong>. Behind every component are engineering, people and supporting companies. Try your brand on the 3D model and let's discuss placement, content and activations.",
+        "alt": "Working render of the team's electric Mini Formula 1 car.",
+        "caption": "Our Mini Formula 1 car · Working render"
       },
       {
         "label": "Industry",
@@ -91,7 +91,7 @@
   "home": {
     "heroPlate": "UTN FRBA · Formula SAE",
     "heroTitle": "Our first electric Formula SAE car",
-    "heroSubtitle": "We are an integrated motorsport academy completing our first electric single-seater to compete at FSAE Brazil 2027.",
+    "heroSubtitle": "We are an integrated motorsport academy completing our first electric Mini Formula 1 car to compete at FSAE Brazil 2027.",
     "heroCtaPrimary": "Support the team",
     "heroCtaSecondary": "Meet the team",
     "heroCtaCar": "Discover the car",
@@ -102,11 +102,11 @@
     "aboutTitle": "About us",
     "aboutHook": "Every generation should start a little further ahead.",
     "aboutSubtitle": "We are designing a car, but building a team that lasts.",
-    "aboutBody": "We are UTN BA Motorsport, an interdisciplinary team of students from Universidad Tecnológica Nacional – Facultad Regional Buenos Aires. We work like a real racing team, with students from different engineering disciplines and areas designing, manufacturing, managing and delivering every project. Our greatest challenge today is developing a fully electric Formula SAE single-seater, but around it we are building a much larger structure: a Motorsport Academy with projects of different levels of complexity, designed so that students can join, learn, grow within the team and pass what they have learned on to those who follow. The idea is simple: each generation should start a little further ahead than the previous one.",
+    "aboutBody": "We are UTN BA Motorsport, an interdisciplinary team of students from Universidad Tecnológica Nacional – Facultad Regional Buenos Aires. We work like a real racing team, with students from different engineering disciplines and areas designing, manufacturing, managing and delivering every project. Our greatest challenge today is developing a fully electric Formula SAE Mini Formula 1 car, but around it we are building a much larger structure: a Motorsport Academy with projects of different levels of complexity, designed so that students can join, learn, grow within the team and pass what they have learned on to those who follow. The idea is simple: each generation should start a little further ahead than the previous one.",
     "formulaStudentTitle": "What is Formula Student?",
     "formulaStudentHook": "It is not simply about being the fastest.",
     "formulaStudentSubtitle": "Engineering, manufacturing, costs and the ability to defend the project are evaluated too.",
-    "formulaStudentBody": "Formula Student, also known as Formula SAE, is one of the world's most important university engineering competitions, promoted by SAE International. Events are held across the United States, Europe, Asia and Oceania, with Brazil hosting the only competition in Latin America. University teams from around the world design, manufacture and compete with their own single-seater, but it is not simply about who is fastest: engineering design and decisions, costs, manufacturing, reliability and the team's ability to present and defend its project are all evaluated. The experience demands working with real problems, schedules, resources and responsibilities, which is why Formula SAE experience is highly valued in demanding industries such as automotive, motorsport and aerospace.",
+    "formulaStudentBody": "Formula Student, also known as Formula SAE, is one of the world's most important university engineering competitions, promoted by SAE International. Events are held across the United States, Europe, Asia and Oceania, with Brazil hosting the only competition in Latin America. University teams from around the world design, manufacture and compete with their own Mini Formula 1 car, but it is not simply about who is fastest: engineering design and decisions, costs, manufacturing, reliability and the team's ability to present and defend its project are all evaluated. The experience demands working with real problems, schedules, resources and responsibilities, which is why Formula SAE experience is highly valued in demanding industries such as automotive, motorsport and aerospace.",
     "formulaStudentLink": "Learn more",
     "joinTitle": "How to join",
     "joinHook": "Your first project can begin a career in motorsport.",
@@ -139,7 +139,7 @@
           "logoAlt": "UTN BA Motorsport",
           "number": "Level 03",
           "title": "Formula SAE",
-          "body": "Our flagship category. We design, build and race our own single-seater against teams from all over the world."
+          "body": "Our flagship category. We design, build and race our own Mini Formula 1 car against teams from all over the world."
         }
       ],
       "stats": [
@@ -177,7 +177,7 @@
         "eyebrow": "For students",
         "title": "What is Formula Student?",
         "paragraphs": [
-          "Formula SAE is an international engineering competition in which university teams design, manufacture and compete with a single-seater developed by the students themselves.",
+          "Formula SAE is an international engineering competition in which university teams design, manufacture and compete with a Mini Formula 1 car developed by the students themselves.",
           "It is not only about which car is the fastest. The competition includes different events that evaluate the design and engineering decisions, the car's performance, costs and the presentation of the project.",
           "Formula SAE events are held in different countries around the world. We are preparing to compete at Formula SAE Brazil under its specific rules and events."
         ]
@@ -261,7 +261,7 @@
   "motorsportPage": {
     "kicker": "UTN BA Motorsport",
     "title": "You arrive without experience. You leave running a real project.",
-    "intro": "We are UTN BA's first Formula SAE generation and train through three levels of increasing complexity. This is the path that leads to the single-seater.",
+    "intro": "We are UTN BA's first Formula SAE generation and train through three levels of increasing complexity. This is the path that leads to the Mini Formula 1 car.",
     "sections": [
       {
         "number": "01",
@@ -269,7 +269,7 @@
         "eyebrow": "Level 1 · The first step",
         "title": "Rookie",
         "paragraphs": [
-          "It all starts here: your first project inside the team is building a go-kart — a simple, concrete challenge to start building with your hands before you get into the single-seater.",
+          "It all starts here: your first project inside the team is building a go-kart — a simple, concrete challenge to start building with your hands before you get into the Mini Formula 1 car.",
           "Along the way you take your first steps into automotive engineering: welding, using tools like the lathe, and a first real look at the team's manufacturing processes.",
           "No prior experience needed. This is the entry point to the team, built so anyone can join and grow."
         ]
@@ -385,7 +385,7 @@
           "logoAlt": "UTN BA Motorsport",
           "stage": "Top category · Formula SAE",
           "title": "Finally, build the car that represents us.",
-          "text": "The electric Formula SAE car brings every lesson together. It is our most ambitious project: a single-seater designed, manufactured and assembled by students to compete in Brazil.",
+          "text": "The electric Formula SAE car brings every lesson together. It is our most ambitious project: a Mini Formula 1 car designed, manufactured and assembled by students to compete in Brazil.",
           "outcome": "Technology · High performance · Industry"
         }
       ]
@@ -472,7 +472,7 @@
       "electronics": {
         "title": "Electronics",
         "subtitle": "Hardware and firmware",
-        "body": "Designs and integrates the electrical and electronic systems that store, distribute and control the car's energy. Batteries, BMS, power unit, high- and low-voltage wiring, sensors, control units and firmware work together to deliver power safely, measure what is happening and control the vehicle. In an electric single-seater, Electronics connects the energy, control and information that make the car work."
+        "body": "Designs and integrates the electrical and electronic systems that store, distribute and control the car's energy. Batteries, BMS, power unit, high- and low-voltage wiring, sensors, control units and firmware work together to deliver power safely, measure what is happening and control the vehicle. In an electric Mini Formula 1 car, Electronics connects the energy, control and information that make the car work."
       },
       "communication": {
         "title": "Communications",
@@ -485,10 +485,10 @@
     "kicker": "The team",
     "title": "We are not a student group. We operate as a racing team.",
     "intro": "Students at UTN Buenos Aires building, from scratch, the university's first electric Formula SAE car.",
-    "photoAlt": "UTN BA Motorsport members with the single-seater chassis",
+    "photoAlt": "UTN BA Motorsport members with the Mini Formula 1 car chassis",
     "storyTitle": "Who we are",
     "storyParagraphs": [
-      "UTN BA Motorsport is a multidisciplinary team of students from Universidad Tecnológica Nacional, Facultad Regional Buenos Aires. Mechanical, electronic, electrical, industrial, systems, chemical and naval engineering all work on the same project: a fully electric single-seater to compete at Formula SAE Brazil 2027.",
+      "UTN BA Motorsport is a multidisciplinary team of students from Universidad Tecnológica Nacional, Facultad Regional Buenos Aires. Mechanical, electronic, electrical, industrial, systems, chemical and naval engineering all work on the same project: a fully electric Mini Formula 1 car to compete at Formula SAE Brazil 2027.",
       "We are the first Formula SAE generation at UTN BA. That means we inherited neither a car nor a manual: we are writing both. Everything decided now is the starting point for the teams that come after us.",
       "We believe the best way to learn engineering is by building it. Here what you study at university gets applied to a real part, with a real competition date and real consequences if it does not work."
     ],
@@ -514,7 +514,7 @@
     "specs": {
       "category": {
         "label": "Category",
-        "value": "Formula SAE — electric single-seater"
+        "value": "Formula SAE — electric Mini Formula 1 car"
       },
       "powertrain": {
         "label": "Powertrain",
@@ -587,10 +587,10 @@
   },
   "cinematic": {
     "heroTitle": "Engineering in motion.",
-    "heroIntro": "We are building our first electric Formula SAE car. Your brand can join us in Brazil 2027 and far beyond.",
+    "heroIntro": "We are students at UTN Buenos Aires. We design and build an electric Mini Formula 1 car to compete at Formula SAE Brazil 2027.",
     "carTitle": "Your brand. In motion.",
-    "carIntro": "This is the car we are building. Imagine how far your brand could travel with it.",
-    "carScroll": "Keep scrolling. The car turns with you.",
+    "carIntro": "An electric Mini Formula 1 car, designed and built by students. Your company can help us bring it to the track.",
+    "carScroll": "A fresh angle. Then onward.",
     "carStill": "Explore the car and try your brand in the 3D viewer.",
     "teamTitle": "More than a race car.",
     "bookShort": "Book a meeting",
@@ -603,6 +603,27 @@
       "connections": "Build connections.",
       "connectionsText": "Connect with students learning through real work, industry professionals and other companies supporting the team."
     },
-    "seeDeliverables": "See activities and deliverables"
+    "seeDeliverables": "See activities and deliverables",
+    "explainer": {
+      "title": "From university to the track.",
+      "text": "Formula SAE is an international engineering competition: university teams build their own car from scratch and put its design, costs, manufacturing and performance to the test. That is our challenge.",
+      "steps": [
+        {
+          "title": "We design.",
+          "text": "We turn engineering lessons into a real car: chassis, suspension, batteries, electronics and aerodynamics."
+        },
+        {
+          "title": "We build.",
+          "text": "In the workshop we manufacture, machine and assemble components with technical support and resources from partner companies."
+        },
+        {
+          "title": "We aim to race.",
+          "text": "Our goal is Formula SAE Brazil 2027. We seek sponsors to finish the car, test it and bring Argentine engineering to the track."
+        }
+      ]
+    },
+    "scrollCue": "Scroll to discover the project",
+    "pauseSponsors": "Pause logos",
+    "resumeSponsors": "Resume logos"
   }
 }

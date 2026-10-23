@@ -2,6 +2,7 @@ import { mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { createRequire } from 'node:module';
+import { generateAiContent } from './ai-content.js';
 
 const ROOT = process.cwd();
 const DIST = path.join(ROOT, 'dist');
@@ -33,6 +34,7 @@ export async function generateSeoArtifacts() {
   }
 
   await writeFile(path.join(DIST, 'sitemap.xml'), createSitemapXml());
+  await generateAiContent(DIST);
   await rm(path.join(DIST, 'server-render.cjs'), { force: true });
   const assetsDir = path.join(DIST, 'assets');
   for (const file of await readdir(assetsDir)) {

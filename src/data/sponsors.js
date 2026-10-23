@@ -1,0 +1,17 @@
+// Canonical list shared by the website and generated AI reference files.
+export const SPONSORS = [
+  { name: 'UTN BA', href: 'https://www.frba.utn.edu.ar/', logo: '/assets/img/sponsors/onwhite/logoutnba.png' },
+  { name: 'Cognitive AI', href: 'https://cognitive.com.ar/', logo: '/assets/img/sponsors/onwhite/cognitive.png' },
+  { name: 'JDM Inyección', href: 'https://jdminyeccion.com.ar/', logo: '/assets/img/sponsors/onwhite/jdm-inyeccion.webp' },
+  { name: 'Polimetal Procesos', href: 'https://polimetal.com.ar/', logo: '/assets/img/sponsors/onwhite/polimetal.png' },
+  { name: 'PrintALot', href: 'https://printalot.com.ar/', logo: '/assets/img/sponsors/onwhite/printalot.png' },
+  { name: 'Aceros Munro', href: 'https://acerosmunro.com.ar/', logo: '/assets/img/sponsors/onwhite/acerosmunro.png' },
+  { name: 'Ansys', href: 'https://www.ansys.com/', logo: '/assets/img/sponsors/onwhite/ansys.png' },
+  { name: 'MathWorks', href: 'https://www.mathworks.com/', logo: '/assets/img/sponsors/onwhite/mathworks.png' },
+  { name: 'Bender', href: 'https://www.bender.de/', logo: '/assets/img/sponsors/onwhite/benderlogo.png' },
+  { name: 'Grupo Paglia', href: 'https://www.instagram.com/grupopaglia_/', logo: '/assets/img/sponsors/onwhite/grupopaglia.png' },
+  { name: 'SIN PAR', href: 'https://sinpar.com.ar/', logo: '/assets/img/sponsors/onwhite/sin-par.png', logoClass: 'sp-car__item--sin-par' },
+  { name: 'DSM Diesel Car S.A.', href: 'https://www.dsmdieselcar.com.ar/', logo: '/assets/img/sponsors/onwhite/dsm-diesel-car.png' },
+  { name: 'GMG Neumáticos de Competición', href: 'https://www.instagram.com/neumaticosgmg/?hl=es', logo: '/assets/img/sponsors/onwhite/gmg-neumaticos.png' },
+  { name: 'MGB Mecánica & Electromovilidad', href: 'https://www.instagram.com/gncbahia/?hl=es-la', logo: '/assets/img/sponsors/onwhite/mgb-bahia.png?v=2', logoClass: 'sp-car__item--mgb' },
+];

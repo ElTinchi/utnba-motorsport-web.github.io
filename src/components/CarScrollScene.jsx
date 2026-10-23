@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { motion, useScroll, useTransform, useMotionValueEvent } from 'motion/react';
+import { motion, useScroll, useSpring, useTransform, useMotionValueEvent } from 'motion/react';
 import useReducedMotion from '../hooks/useReducedMotion';
 import { useTranslation } from 'react-i18next';
 import { COMMERCIAL_CONTACT_HREF } from '../routes';
@@ -15,7 +15,8 @@ export default function CarScrollScene() {
   const reducedRef = useRef(reduced);
   const [ready, setReady] = useState(false);
   const { scrollYProgress } = useScroll({ target: section, offset: ['start start', 'end end'] });
-  const turn = useTransform(scrollYProgress, [0, 1], [.72, Math.PI * 2 + .72]);
+  const smoothProgress = useSpring(scrollYProgress, { stiffness: 100, damping: 20, mass: 1 });
+  const turn = useTransform(smoothProgress, [0, 1], [.72, 1.42]);
   const line = useTransform(scrollYProgress, value => `scaleX(${value})`);
   useMotionValueEvent(turn, 'change', () => draw.current());
   useEffect(() => { reducedRef.current = reduced; draw.current(); }, [reduced]);
@@ -29,9 +30,9 @@ export default function CarScrollScene() {
     let started = false;
     let frame = 0;
     const paint = () => {
-      cancelAnimationFrame(frame);
-      if (!renderer || !visible || document.hidden || disposed) return;
+      if (frame || !renderer || !visible || document.hidden || disposed) return;
       frame = requestAnimationFrame(() => {
+        frame = 0;
         const aspect = canvas.current.clientWidth / Math.max(1, canvas.current.clientHeight);
         renderer.render({ yaw: reducedRef.current ? .72 : turn.get(), pitch: .26, distance: (aspect < 1.3 ? 10.2 : 7.2) / Math.min(1, aspect) });
       });
@@ -44,7 +45,7 @@ export default function CarScrollScene() {
       if (navigator.connection?.saveData) return;
       try {
         const [{ CarRenderer, parseGLB, raycast }, { cleanUnderbody }, response] = await Promise.all([
-          import(/* @vite-ignore */ String('/visor/engine.js')),
+          import(/* @vite-ignore */ String('/visor/engine.js?v=studio-light-22')),
           import(/* @vite-ignore */ String('/visor/undertray.js')),
           fetch('/visor/assets/model/auto.glb', { signal: controller.signal }),
         ]);
