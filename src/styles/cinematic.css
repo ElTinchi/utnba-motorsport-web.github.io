@@ -31,9 +31,13 @@ body .hero__scroll-cue { position: absolute; left: clamp(1.5rem, 5vw, 6rem); bot
 body .hero__scroll-cue svg { width: 24px; height: 24px; }
 body #que-hacemos { scroll-margin-top: var(--header-height); }
 body .hero-artwork { position: absolute; right: -15%; top: 16%; width: 84%; height: 80%; z-index: 1; }
-body .hero-artwork img { width: 100%; height: 100%; object-fit: cover; object-position: 56% center; mask-image: linear-gradient(to right, transparent, #000 28%); }
+/* Fundido también arriba y abajo: sin esto la foto termina en un corte seco contra el fondo. */
+body .hero-artwork img { width: 100%; height: 100%; object-fit: cover; object-position: 56% center; --fade: linear-gradient(to right, transparent, #000 28%), linear-gradient(to bottom, transparent, #000 18%, #000 82%, transparent); -webkit-mask-image: var(--fade); mask-image: var(--fade); -webkit-mask-composite: source-in; mask-composite: intersect; }
+/* Flecha en los botones principales y secundarios, salvo los que ya traen su propio ícono. */
+body .btn--primary:not(:has(svg, [aria-hidden]))::after, body .btn--secondary:not(:has(svg, [aria-hidden]))::after { content: ''; flex: none; width: 1.1em; height: 1.1em; background: currentColor; -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E") center / contain no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E") center / contain no-repeat; transition: transform .2s ease; }
+body .btn--primary:hover::after, body .btn--secondary:hover::after { transform: translateX(4px); }
 body .hero-artwork__caption { position: absolute; bottom: 3rem; right: 20%; font-size: .85rem; color: #e5ded7; }
-body .hero--cinematic .hero__circuit { left: 28%; opacity: .14; z-index: 0; animation: none; }
+body .hero--cinematic .hero__circuit { left: 28%; opacity: .4; z-index: 0; animation: none; }
 body .project-bridge { max-width: 1280px; margin: auto; padding: clamp(3rem, 7vw, 7rem) clamp(1.5rem, 4vw, 4rem); display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
 body .project-bridge h2 { font-size: clamp(2rem, 3.5vw, 3.2rem); line-height: 1.13; letter-spacing: -.03em; }
 body .project-bridge p { color: var(--color-white-muted); font-size: 1.2rem; margin-bottom: 2rem; }

@@ -16,7 +16,7 @@ export default function CarScrollScene() {
   const [ready, setReady] = useState(false);
   const { scrollYProgress } = useScroll({ target: section, offset: ['start start', 'end end'] });
   const smoothProgress = useSpring(scrollYProgress, { stiffness: 100, damping: 20, mass: 1 });
-  const turn = useTransform(smoothProgress, [0, 1], [.72, 1.42]);
+  const turn = useTransform(smoothProgress, [0, 1], [.72, 2.4]);
   const line = useTransform(scrollYProgress, value => `scaleX(${value})`);
   useMotionValueEvent(turn, 'change', () => draw.current());
   useEffect(() => { reducedRef.current = reduced; draw.current(); }, [reduced]);

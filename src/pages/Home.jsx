@@ -116,6 +116,7 @@ export default function Home() {
       <ScrollCar circuitRef={circuitSvgRef} />
       {/* Portada: render visible y circuito que da origen al auto guía. */}
       <section className="hero hero--cinematic" aria-label="UTN BA Motorsport">
+        <span className="hero__ignition" aria-hidden="true" />
         <div className="hero__circuit" aria-hidden="true">
           <svg ref={circuitSvgRef} viewBox="0 0 1000 700" xmlns="http://www.w3.org/2000/svg">
             <g className="hero__track">
@@ -153,8 +154,6 @@ export default function Home() {
               <rect x="-18" y="7" width="9" height="7" rx="2" className="hero__car-wheel" />
               <rect x="7" y="-13" width="8" height="6" rx="2" className="hero__car-wheel" />
               <rect x="7" y="7" width="8" height="6" rx="2" className="hero__car-wheel" />
-              <path d="M-22,-11 L-16,-11 L-16,11 L-22,11 Z" className="hero__car-aero" />
-              <path d="M13,-10 L19,-8 L19,8 L13,10 Z" className="hero__car-aero" />
               <path
                 d="M-17,-7 C-11,-8 -7,-7 -3,-5 L7,-4 L17,-1.8 L21,0 L17,1.8 L7,4 L-3,5 C-7,7 -11,8 -17,7 L-19,4 L-19,-4 Z"
                 className="hero__car-body"
