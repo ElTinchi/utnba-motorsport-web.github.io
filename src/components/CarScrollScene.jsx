@@ -44,16 +44,21 @@ export default function CarScrollScene() {
       // Data saver keeps the immediately available poster and link to the full viewer.
       if (navigator.connection?.saveData) return;
       try {
-        const [{ CarRenderer, parseGLB, raycast }, { cleanUnderbody }, response] = await Promise.all([
+        const [{ CarRenderer }, response] = await Promise.all([
           import(/* @vite-ignore */ String('/visor/engine.js?v=studio-light-22')),
-          import(/* @vite-ignore */ String('/visor/undertray.js')),
           fetch('/visor/assets/model/auto.glb', { signal: controller.signal }),
         ]);
         if (!response.ok) throw new Error('Model unavailable');
         const buffer = await response.arrayBuffer();
         if (disposed) return;
-        const model = parseGLB(buffer);
-        cleanUnderbody(model, raycast);
+        // Parsing and clipping the model take a few hundred ms: do it off the main thread so scrolling stays smooth.
+        const model = await new Promise((resolve, reject) => {
+          const worker = new Worker('/visor/model-worker.js?v=1', { type: 'module' });
+          worker.onmessage = ({ data }) => { worker.terminate(); data.error ? reject(new Error(data.error)) : resolve(data.model); };
+          worker.onerror = event => { worker.terminate(); reject(event); };
+          worker.postMessage({ buffer }, [buffer]);
+        });
+        if (disposed) return;
         renderer = new CarRenderer(canvas.current, model);
         await renderer.initTextures();
         if (disposed) { renderer.dispose(); renderer = null; return; }

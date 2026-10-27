@@ -80,13 +80,14 @@ test('the primary call to action supports the team from the first screen', async
   assert.match(header, /href={COMMERCIAL_CONTACT_HREF}[\s\S]*header__cta[\s\S]*sponsorsPage.primaryCta/);
 });
 
-test('Vercel serves the site with baseline security headers', async () => {
-  const config = JSON.parse(await readFile(new URL('../vercel.json', import.meta.url), 'utf8'));
-  const headers = Object.fromEntries(config.headers[0].headers.map(({ key, value }) => [key, value]));
+test('the cPanel server sends baseline security headers and compresses the 3D model', async () => {
+  const htaccess = await readFile(new URL('../public/.htaccess', import.meta.url), 'utf8');
 
-  assert.match(headers['Strict-Transport-Security'], /max-age=31536000/);
-  assert.equal(headers['X-Content-Type-Options'], 'nosniff');
-  assert.equal(headers['Referrer-Policy'], 'strict-origin-when-cross-origin');
+  assert.match(htaccess, /Header always set Strict-Transport-Security "max-age=31536000"/);
+  assert.match(htaccess, /Header always set X-Content-Type-Options "nosniff"/);
+  assert.match(htaccess, /Header always set X-Frame-Options "SAMEORIGIN"/);
+  assert.match(htaccess, /Header always set Referrer-Policy "strict-origin-when-cross-origin"/);
+  assert.match(htaccess, /AddOutputFilterByType DEFLATE model\/gltf-binary/);
 });
 
 test('hero exposes the actual car with a booking action and reduced-motion alternative', async () => {

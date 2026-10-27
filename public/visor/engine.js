@@ -63,10 +63,15 @@ export function parseGLB(buffer) {
     for(const primitive of g.meshes[node.mesh].primitives) {
       const src=access(primitive.attributes.POSITION),sn=access(primitive.attributes.NORMAL);
       const positions=new Float32Array(src.length),normals=new Float32Array(src.length);
+      // Escalares, sin arrays por vértice: con millones de vértices esto era lo que congelaba la página.
       for(let i=0;i<src.length;i+=3) {
-        const v=add(rotate(r,[src[i]*s[0],src[i+1]*s[1],src[i+2]*s[2]]),t);
-        const n=norm(rotate(r,[sn[i]/s[0],sn[i+1]/s[1],sn[i+2]/s[2]]));
-        for(let k=0;k<3;k++){positions[i+k]=v[k];normals[i+k]=n[k];min[k]=Math.min(min[k],v[k]);max[k]=Math.max(max[k],v[k]);}
+        const x=src[i]*s[0],y=src[i+1]*s[1],z=src[i+2]*s[2];
+        const vx=r[0]*x+r[1]*y+r[2]*z+t[0],vy=r[3]*x+r[4]*y+r[5]*z+t[1],vz=r[6]*x+r[7]*y+r[8]*z+t[2];
+        const a=sn[i]/s[0],b=sn[i+1]/s[1],c=sn[i+2]/s[2];
+        const nx=r[0]*a+r[1]*b+r[2]*c,ny=r[3]*a+r[4]*b+r[5]*c,nz=r[6]*a+r[7]*b+r[8]*c,l=1/(Math.hypot(nx,ny,nz)||1);
+        positions[i]=vx;positions[i+1]=vy;positions[i+2]=vz;
+        normals[i]=nx*l;normals[i+1]=ny*l;normals[i+2]=nz*l;
+        if(vx<min[0])min[0]=vx;if(vx>max[0])max[0]=vx;if(vy<min[1])min[1]=vy;if(vy>max[1])max[1]=vy;if(vz<min[2])min[2]=vz;if(vz>max[2])max[2]=vz;
       }
       meshes.push({positions,normals,uv:access(primitive.attributes.TEXCOORD_0),indices:access(primitive.indices),material:primitive.material,body:node.name.startsWith('FSAE_UTN'),name:node.name});
     }
