@@ -14,7 +14,6 @@
 }
 .scroll-reading-progress { position: fixed; top: var(--header-height); left: 0; width: 100%; height: 2px; z-index: 101; background: var(--color-red); transform-origin: left; pointer-events: none; }
 .scroll-car .hero__car-wheel { fill: #161619; stroke: #f6f1e5; stroke-width: .7; }
-.scroll-car .hero__car-aero { fill: #f6f1e5; stroke: #202025; stroke-width: .7; }
 .scroll-car .hero__car-body { fill: #dd0e0e; stroke: #fff; stroke-width: .8; }
 .scroll-car .hero__car-glass { fill: #17171d; }
 .scroll-car .hero__car-suspension { fill: none; stroke: #bbb; stroke-width: 1; }

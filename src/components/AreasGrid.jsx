@@ -4,7 +4,7 @@ import { ROUTES } from '../routes';
 import useInView from '../hooks/useInView';
 
 // Las 7 áreas del equipo. Los íconos salen del manual de marca
-// (assets/Recursos Gráficos/Logos por Area/SVG/): un círculo de color por área
+// (Logos por Área, SVG): un círculo de color por área
 // con el glifo adentro. Son SVG, así que se ven nítidos en cualquier pantalla
 // y pesan ~1 KB en vez de los ~25 KB que pesaban los PNG del sitio viejo.
 //

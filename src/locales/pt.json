@@ -605,6 +605,7 @@
     },
     "seeDeliverables": "Ver ações e entregas",
     "explainer": {
+      "kicker": "O que fazemos",
       "title": "Da universidade para a pista.",
       "text": "Fórmula SAE é uma competição internacional de engenharia: equipes universitárias constroem seu próprio carro do zero e colocam à prova o projeto, os custos, a fabricação e o desempenho. Esse é o nosso desafio.",
       "steps": [

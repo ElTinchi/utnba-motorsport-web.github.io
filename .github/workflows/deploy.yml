@@ -28,6 +28,7 @@ jobs:
       - name: Instalar dependencias y compilar (sitio React)
         run: |
           npm ci
+          npm test
           npm run build
 
       - name: Subir por FTP a public_html

@@ -29,6 +29,7 @@ export default function useInView({
   rootMargin = '-8% 0px -8% 0px',
   threshold = 0.2,
   exitThreshold = 0.02,
+  once = false,
 } = {}) {
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -37,6 +38,20 @@ export default function useInView({
   useEffect(() => {
     if (!ref.current) return undefined;
     const hasObserver = typeof window !== 'undefined' && 'IntersectionObserver' in window;
+    if (once) {
+      if (!hasObserver) {
+        setIsVisible(true);
+        return undefined;
+      }
+      const observer = new IntersectionObserver(([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      }, { rootMargin, threshold });
+      observer.observe(ref.current);
+      return () => observer.disconnect();
+    }
     if (getVisibilityFallback({ hasObserver, reducedMotion })) {
       setIsVisible(true);
       return undefined;
@@ -57,7 +72,7 @@ export default function useInView({
 
     observer.observe(ref.current);
     return () => observer.disconnect();
-  }, [exitThreshold, reducedMotion, rootMargin, threshold]);
+  }, [exitThreshold, once, reducedMotion, rootMargin, threshold]);
 
   return [ref, isVisible];
 }

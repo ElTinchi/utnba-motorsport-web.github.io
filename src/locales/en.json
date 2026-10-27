@@ -605,6 +605,7 @@
     },
     "seeDeliverables": "See activities and deliverables",
     "explainer": {
+      "kicker": "What we do",
       "title": "From university to the track.",
       "text": "Formula SAE is an international engineering competition: university teams build their own car from scratch and put its design, costs, manufacturing and performance to the test. That is our challenge.",
       "steps": [

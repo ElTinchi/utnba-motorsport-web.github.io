@@ -17,7 +17,6 @@ body .nav__language { display: none; }
 body .footer__link, body .footer__contact-link { display: inline-flex; align-items: center; min-height: 44px; }
 body .footer__social-link { min-width: 44px; min-height: 44px; }
 body .hero--cinematic { align-items: stretch; justify-content: flex-start; }
-body .hero--cinematic .hero__bg { display: none; }
 body .hero--cinematic .hero__content { align-items: flex-start; text-align: left; width: 56%; padding: max(110px, 15vh) 0 8vh clamp(1.5rem, 5vw, 6rem); gap: 1.5rem; justify-content: center; }
 body .hero--cinematic .hero__content::before { display: none; }
 body .hero--cinematic .hero__logo { width: 210px; filter: none; animation: none; }
@@ -38,6 +37,17 @@ body .btn--primary:not(:has(svg, [aria-hidden]))::after, body .btn--secondary:no
 body .btn--primary:hover::after, body .btn--secondary:hover::after { transform: translateX(4px); }
 body .hero-artwork__caption { position: absolute; bottom: 3rem; right: 20%; font-size: .85rem; color: #e5ded7; }
 body .hero--cinematic .hero__circuit { left: 28%; opacity: .4; z-index: 0; animation: none; }
+/* Qué hacemos: título grande a la izquierda, pasos numerados que entran de a uno. */
+body .project-explainer { max-width: 1280px; margin: auto; min-height: 88vh; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(2rem, 6vw, 6rem); align-items: center; padding: clamp(4rem, 10vw, 9rem) clamp(1.5rem, 4vw, 4rem); }
+body .project-explainer__kicker { display: block; margin-bottom: 1.2rem; color: var(--color-red-text); font-size: .85rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+body .project-explainer h2 { max-width: 12ch; font-size: clamp(2.6rem, 5.4vw, 5rem); line-height: 1.02; letter-spacing: -.035em; }
+body .project-explainer__intro > p { margin-top: 1.6rem; max-width: 44ch; color: var(--color-white-muted); font-size: 1.2rem; }
+body .project-explainer__steps { list-style: none; counter-reset: step; margin: 0; padding: 0; }
+body .project-explainer__step { counter-increment: step; position: relative; padding: 1.8rem 0 1.8rem 4.5rem; border-top: 1px solid rgba(252, 246, 230, .16); }
+body .project-explainer__step:last-child { border-bottom: 1px solid rgba(252, 246, 230, .16); }
+body .project-explainer__step::before { content: counter(step, decimal-leading-zero); position: absolute; left: 0; top: 1.75rem; font-family: var(--font-family); font-size: 1.6rem; font-weight: 800; color: var(--color-red-text); }
+body .project-explainer__step h3 { font-size: clamp(1.5rem, 2.2vw, 2rem); margin-bottom: .6rem; }
+body .project-explainer__step p { color: var(--color-white-muted); font-size: 1.1rem; max-width: 46ch; }
 body .project-bridge { max-width: 1280px; margin: auto; padding: clamp(3rem, 7vw, 7rem) clamp(1.5rem, 4vw, 4rem); display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
 body .project-bridge h2 { font-size: clamp(2rem, 3.5vw, 3.2rem); line-height: 1.13; letter-spacing: -.03em; }
 body .project-bridge p { color: var(--color-white-muted); font-size: 1.2rem; margin-bottom: 2rem; }
@@ -62,12 +72,6 @@ body .sponsor-story__close .btn--primary { color: #fff; }
 body .sponsor-story__close .btn--primary { background: #151519; border-color: #151519; }
 body .sponsor-story__close .btn--secondary { color: #151519; background: #fff; border-color: #fff; }
 body .sponsor-story__close .btn--secondary:hover { color: #151519; background: #eee8df; border-color: #eee8df; }
-body .project-explainer { max-width: 1280px; margin: auto; padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 4vw, 4rem); }
-body .project-explainer h2 { max-width: 22ch; font-size: clamp(1.9rem, 3.6vw, 3.5rem); line-height: 1.12; letter-spacing: -.03em; }
-body .project-explainer > p { margin-top: 1.5rem; max-width: 66ch; color: var(--color-white-muted); font-size: 1.15rem; }
-body .project-explainer__steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.5rem; margin-top: 2.5rem; }
-body .project-explainer__steps h3 { font-size: 1.2rem; margin-bottom: .7rem; }
-body .project-explainer__steps p { color: var(--color-white-muted); }
 body .sp-page__title { max-width: 16ch; font-size: clamp(2.2rem, 5vw, 4.5rem); letter-spacing: -.04em; line-height: 1.08; }
 body .sp-page__kicker, body .sp-section-kicker, body .academy__kicker, body .home-sponsors__kicker { display: none; }
 body .sp-hero { min-height: 0; padding-block: 1rem 4rem; }
@@ -119,7 +123,8 @@ body .shell:has(.car-first-action) .shell__intro { max-width: 68ch; }
   body .hero-artwork__caption { display: none; }
   body .hero--cinematic .hero__circuit { display: none; }
   body .project-bridge { grid-template-columns: 1fr; gap: 1.5rem; }
-  body .project-explainer__steps { grid-template-columns: 1fr; gap: 1.5rem; }
+  body .project-explainer { grid-template-columns: 1fr; min-height: 0; gap: 2.5rem; }
+  body .project-explainer__step { padding-left: 3.5rem; }
   body .sponsor-story__head { display: block; }
   body .sponsor-story__head h2 { max-width: 16ch; margin-bottom: 1.5rem; }
   body .sponsor-story__head > p { font-size: 1.1rem; }

@@ -26,6 +26,11 @@ export async function generateSeoArtifacts() {
       .replace('</head>', `${helmet.meta}\n${helmet.link}\n${helmet.script}\n</head>`)
       .replace('<!--app-html-->', appHtml);
 
+    const count = (re) => (html.match(re) || []).length;
+    if (count(/<title/g) !== 1 || (route !== '/__not-found__' && count(/rel="canonical"/g) !== 1) || html.includes('<!--app-html-->')) {
+      throw new Error(`HTML SEO inválido para la ruta ${route}: se esperaba exactamente un <title> y un rel="canonical" (salvo 404), sin <!--app-html-->`);
+    }
+
     const output = route === '/__not-found__'
       ? path.join(DIST, '404.html')
       : route === '/' ? path.join(DIST, 'index.html') : path.join(DIST, route.slice(1), 'index.html');

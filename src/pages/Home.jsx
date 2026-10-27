@@ -9,6 +9,8 @@ import SponsorPhotoStory from '../components/SponsorPhotoStory';
 import CarScrollScene from '../components/CarScrollScene';
 import HeroArtwork from '../components/HeroArtwork';
 import AnimatedNumber from '../components/AnimatedNumber';
+import EditorialReveal from '../components/EditorialReveal';
+import StaggerList from '../components/StaggerList';
 import '../styles/home.css';
 
 const ACADEMY_LOGOS = [
@@ -195,13 +197,19 @@ export default function Home() {
       {/* El contenido sube y tapa el hero fijo al scrollear */}
       <div className="page">
         <section className="project-explainer" id="que-hacemos" aria-labelledby="what-we-do-title">
-          <h2 id="what-we-do-title">{t('cinematic.explainer.title')}</h2>
-          <p>{t('cinematic.explainer.text')}</p>
-          <div className="project-explainer__steps">
-            {t('cinematic.explainer.steps', { returnObjects: true }).map(step => (
-              <div key={step.title}><h3>{step.title}</h3><p>{step.text}</p></div>
-            ))}
-          </div>
+          <EditorialReveal className="project-explainer__intro">
+            <span className="project-explainer__kicker">{t('cinematic.explainer.kicker')}</span>
+            <h2 id="what-we-do-title">{t('cinematic.explainer.title')}</h2>
+            <p>{t('cinematic.explainer.text')}</p>
+          </EditorialReveal>
+          <StaggerList
+            as="ol"
+            className="project-explainer__steps"
+            itemClassName="project-explainer__step"
+            interval={100}
+            items={t('cinematic.explainer.steps', { returnObjects: true })}
+            renderItem={step => <><h3>{step.title}</h3><p>{step.text}</p></>}
+          />
         </section>
         <CarScrollScene />
 

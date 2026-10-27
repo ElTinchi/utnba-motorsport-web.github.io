@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import useInViewOnce from '../hooks/useInViewOnce';
+import useInView from '../hooks/useInView';
 import '../styles/funding-progress.css';
 
 const FUNDING_SEGMENTS = [
@@ -11,7 +11,7 @@ const FUNDING_SEGMENTS = [
 
 export default function FundingProgress({ compact = false }) {
   const { t } = useTranslation();
-  const [progressRef, isVisible] = useInViewOnce({ threshold: 0.35 });
+  const [progressRef, isVisible] = useInView({ once: true, rootMargin: '0px 0px -12% 0px', threshold: 0.35 });
   const [displayPercent, setDisplayPercent] = useState(0);
 
   useEffect(() => {
