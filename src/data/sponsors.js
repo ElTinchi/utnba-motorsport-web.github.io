@@ -1,5 +1,9 @@
 // Canonical list shared by the website and generated AI reference files.
 export const SPONSORS = [
+  { name: 'Metrar', href: 'https://metrar.com.ar/', logo: '/assets/img/sponsors/onwhite/metrar.svg' },
+  { name: 'Bosch', href: 'https://www.bosch.com.ar/', logo: '/assets/img/sponsors/onwhite/bosch.svg' },
+  { name: '3M', href: 'https://www.3m.com.ar/3M/es_AR/inicio/', logo: '/assets/img/sponsors/onwhite/3m.svg' },
+  { name: 'MEX Argentina', href: 'https://www.mexargentina.com.ar/', logo: '/assets/img/sponsors/onwhite/mex-argentina.png' },
   { name: 'UTN BA', href: 'https://www.frba.utn.edu.ar/', logo: '/assets/img/sponsors/onwhite/logoutnba.png' },
   { name: 'Cognitive AI', href: 'https://cognitive.com.ar/', logo: '/assets/img/sponsors/onwhite/cognitive.png' },
   { name: 'JDM Inyección', href: 'https://jdminyeccion.com.ar/', logo: '/assets/img/sponsors/onwhite/jdm-inyeccion.webp' },
