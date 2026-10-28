@@ -13,6 +13,7 @@
 .sp-car__item { display: flex; align-items: center; justify-content: center; flex: 0 0 auto; width: clamp(150px, 16vw, 210px); height: 88px; padding: 10px; }
 .sp-car__logo { display: block; position: relative; width: 100%; height: 100%; overflow: hidden; }
 .sp-car__item img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.sp-car__item--mex img { filter: brightness(0); }
 .sp-car__item--sin-par .sp-car__logo { mix-blend-mode: multiply; }
 .sp-car__item--sin-par img { position: absolute; max-width: none; width: 120%; height: auto; left: 50%; top: 50%; transform: translate(-50%, -49.5%); }
 .sp-car__item:focus-visible { outline: 2px solid #b80b0b; outline-offset: -2px; }
