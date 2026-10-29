@@ -47,6 +47,8 @@ export default function Car() {
       {/* ====== Ficha técnica ====== */}
       <EditorialReveal className="shell-block">
         <h2 className="shell-block__title">{t('carPage.specsTitle')}</h2>
+        <div className="car-specs-layout">
+        <div>
         <StaggerList as="dl" itemAs="div" className="car-specs" itemClassName="car-specs__row" items={SPECS} renderItem={(spec) => (
             <>
               <dt>{t(`carPage.specs.${spec}.label`)}</dt>
@@ -55,10 +57,12 @@ export default function Car() {
           )} />
         <p className="shell-note">{t('carPage.specsNote')}</p>
         <p><a href="https://emrax.com/e-motors/emrax-228/" target="_blank" rel="noopener noreferrer">{t('carPage.motorLink')} ↗</a></p>
-        <div className="car-record">
+        </div>
+        <aside className="car-record">
           <h3>{t('carPage.recordTitle')}</h3>
           <p>{t('carPage.recordText')}</p>
           <a href="https://www.guinnessworldrecords.com/world-records/fastest-0-100-kmh-acceleration-electric-car" target="_blank" rel="noopener noreferrer">{t('carPage.recordLink')} ↗</a>
+        </aside>
         </div>
       </EditorialReveal>
 

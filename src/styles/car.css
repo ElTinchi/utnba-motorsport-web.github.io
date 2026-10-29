@@ -218,3 +218,10 @@
 
 .car-record h3 { margin: 0 0 .7rem; font-size: 1.3rem; }
 .car-record p { margin: 0 0 .8rem; color: var(--color-white-muted); line-height: 1.7; }
+
+.car-specs-layout { display: grid; gap: 2rem; }
+.car-specs-layout > div { min-width: 0; }
+.car-record { margin-top: 0; align-self: start; }
+@media (min-width: 900px) {
+  .car-specs-layout { grid-template-columns: minmax(0, 2fr) minmax(240px, 1fr); gap: clamp(2rem, 4vw, 4rem); }
+}

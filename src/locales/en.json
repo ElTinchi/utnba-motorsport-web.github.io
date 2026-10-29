@@ -514,7 +514,7 @@
     "specs": {
       "mass": {
         "label": "Estimated weight",
-        "value": "≈ 230 kg"
+        "value": "≈ 230 kg without driver"
       },
       "power": {
         "label": "Project power",
@@ -526,7 +526,7 @@
       },
       "motor": {
         "label": "Motor",
-        "value": "Liquid-cooled electric EMRAX 228"
+        "value": "Water-cooled electric EMRAX 228"
       },
       "motorPeak": {
         "label": "Motor catalogue power",
@@ -534,11 +534,11 @@
       },
       "battery": {
         "label": "Battery",
-        "value": "High-voltage battery pack; capacity to be confirmed"
+        "value": "600 V peak; capacity to be confirmed"
       },
       "category": {
         "label": "Category",
-        "value": "Formula SAE — electric Mini Formula 1 car"
+        "value": "Formula SAE"
       },
       "powertrain": {
         "label": "Powertrain",

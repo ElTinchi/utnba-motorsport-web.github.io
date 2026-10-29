@@ -514,7 +514,7 @@
     "specs": {
       "mass": {
         "label": "Peso estimado",
-        "value": "≈ 230 kg"
+        "value": "≈ 230 kg sin piloto"
       },
       "power": {
         "label": "Potencia del proyecto",
@@ -526,7 +526,7 @@
       },
       "motor": {
         "label": "Motor",
-        "value": "EMRAX 228 eléctrico, refrigerado por líquido"
+        "value": "EMRAX 228 eléctrico, refrigerado por agua"
       },
       "motorPeak": {
         "label": "Potencia de catálogo del motor",
@@ -534,11 +534,11 @@
       },
       "battery": {
         "label": "Batería",
-        "value": "Paquete de baterías de alta tensión; capacidad por confirmar"
+        "value": "600 V pico; capacidad por confirmar"
       },
       "category": {
         "label": "Categoría",
-        "value": "Fórmula SAE — Mini Fórmula 1 eléctrico"
+        "value": "Fórmula SAE"
       },
       "powertrain": {
         "label": "Powertrain",
