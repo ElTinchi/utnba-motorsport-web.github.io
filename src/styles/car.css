@@ -207,3 +207,14 @@
     transition: none;
   }
 }
+
+.car-record {
+  max-width: 68ch;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-left: 3px solid var(--color-red);
+  background: rgba(var(--ink-rgb), 0.055);
+}
+
+.car-record h3 { margin: 0 0 .7rem; font-size: 1.3rem; }
+.car-record p { margin: 0 0 .8rem; color: var(--color-white-muted); line-height: 1.7; }

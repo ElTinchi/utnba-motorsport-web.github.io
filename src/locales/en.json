@@ -512,6 +512,30 @@
     ],
     "specsTitle": "Specifications",
     "specs": {
+      "mass": {
+        "label": "Estimated weight",
+        "value": "≈ 230 kg"
+      },
+      "power": {
+        "label": "Project power",
+        "value": "80 kW ≈ 107 hp"
+      },
+      "ratio": {
+        "label": "Power-to-weight ratio",
+        "value": "≈ 466 hp/tonne (at 230 kg and 80 kW)"
+      },
+      "motor": {
+        "label": "Motor",
+        "value": "Liquid-cooled electric EMRAX 228"
+      },
+      "motorPeak": {
+        "label": "Motor catalogue power",
+        "value": "Up to 124 kW ≈ 166 hp peak; varies by version and conditions"
+      },
+      "battery": {
+        "label": "Battery",
+        "value": "High-voltage battery pack; capacity to be confirmed"
+      },
       "category": {
         "label": "Category",
         "value": "Formula SAE — electric Mini Formula 1 car"
@@ -529,7 +553,11 @@
         "value": "The team's first"
       }
     },
-    "specsNote": "The full spec sheet (mass, power, battery, suspension, tyres) is published as the design gets frozen. We don't put out numbers that can still change.",
+    "specsNote": "Design estimates are subject to change. Power-to-weight is calculated from the stated mass and power; battery capacity is measured in kWh.",
+    "motorLink": "See EMRAX 228 specifications",
+    "recordTitle": "The benchmark: under one second",
+    "recordText": "AMZ Racing’s mythen accelerated from 0 to 100 km/h in 0.956 seconds in 2023. It holds the Guinness world record for an electric car, set by another Formula Student team.",
+    "recordLink": "See the Guinness World Records entry",
     "viewer": {
       "kicker": "For sponsors",
       "title": "See your logo on the car before you decide",

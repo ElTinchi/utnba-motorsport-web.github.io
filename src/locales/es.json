@@ -512,6 +512,30 @@
     ],
     "specsTitle": "Ficha técnica",
     "specs": {
+      "mass": {
+        "label": "Peso estimado",
+        "value": "≈ 230 kg"
+      },
+      "power": {
+        "label": "Potencia del proyecto",
+        "value": "80 kW ≈ 107 HP"
+      },
+      "ratio": {
+        "label": "Relación potencia/peso",
+        "value": "≈ 466 HP/tonelada (con 230 kg y 80 kW)"
+      },
+      "motor": {
+        "label": "Motor",
+        "value": "EMRAX 228 eléctrico, refrigerado por líquido"
+      },
+      "motorPeak": {
+        "label": "Potencia de catálogo del motor",
+        "value": "Hasta 124 kW ≈ 166 HP de pico; depende de la versión y las condiciones"
+      },
+      "battery": {
+        "label": "Batería",
+        "value": "Paquete de baterías de alta tensión; capacidad por confirmar"
+      },
       "category": {
         "label": "Categoría",
         "value": "Fórmula SAE — Mini Fórmula 1 eléctrico"
@@ -529,7 +553,11 @@
         "value": "Primera del equipo"
       }
     },
-    "specsNote": "La ficha completa (masa, potencia, batería, suspensión, neumáticos) se publica a medida que el diseño se va congelando. No adelantamos números que todavía pueden cambiar.",
+    "specsNote": "Valores estimados de diseño, sujetos a cambios. La relación potencia/peso se calcula con la masa y la potencia indicadas; la capacidad de la batería se expresa en kWh.",
+    "motorLink": "Ver ficha del EMRAX 228",
+    "recordTitle": "La referencia: menos de un segundo",
+    "recordText": "El mythen de AMZ Racing aceleró de 0 a 100 km/h en 0,956 segundos en 2023. Es el récord mundial Guinness para un auto eléctrico, conseguido por otro equipo de Formula Student.",
+    "recordLink": "Ver el récord en Guinness World Records",
     "viewer": {
       "kicker": "Para sponsors",
       "title": "Mirá tu logo en el auto, antes de decidir",

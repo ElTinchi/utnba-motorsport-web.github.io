@@ -9,7 +9,7 @@ const RENDER_APP_URL = '/visor/visor.html';
 // Ficha técnica. Solo están cargados los datos que hoy son públicos y ciertos;
 // el resto lo completa el equipo. El texto de cada fila vive en los locales,
 // así se traduce como todo lo demás.
-const SPECS = ['category', 'powertrain', 'competition', 'generation'];
+const SPECS = ['mass', 'power', 'ratio', 'motor', 'motorPeak', 'battery', 'category', 'powertrain', 'competition', 'generation'];
 
 export default function Car() {
   const { t } = useTranslation();
@@ -44,6 +44,24 @@ export default function Car() {
         ))}
       </EditorialReveal>
 
+      {/* ====== Ficha técnica ====== */}
+      <EditorialReveal className="shell-block">
+        <h2 className="shell-block__title">{t('carPage.specsTitle')}</h2>
+        <StaggerList as="dl" itemAs="div" className="car-specs" itemClassName="car-specs__row" items={SPECS} renderItem={(spec) => (
+            <>
+              <dt>{t(`carPage.specs.${spec}.label`)}</dt>
+              <dd>{t(`carPage.specs.${spec}.value`)}</dd>
+            </>
+          )} />
+        <p className="shell-note">{t('carPage.specsNote')}</p>
+        <p><a href="https://emrax.com/e-motors/emrax-228/" target="_blank" rel="noopener noreferrer">{t('carPage.motorLink')} ↗</a></p>
+        <div className="car-record">
+          <h3>{t('carPage.recordTitle')}</h3>
+          <p>{t('carPage.recordText')}</p>
+          <a href="https://www.guinnessworldrecords.com/world-records/fastest-0-100-kmh-acceleration-electric-car" target="_blank" rel="noopener noreferrer">{t('carPage.recordLink')} ↗</a>
+        </div>
+      </EditorialReveal>
+
       {/* ====== Visor de sponsors ====== */}
       <EditorialReveal className="shell-block" direction="right">
         <div className="car-viewer">
@@ -70,17 +88,6 @@ export default function Car() {
         </div>
       </EditorialReveal>
 
-      {/* ====== Ficha técnica ====== */}
-      <EditorialReveal className="shell-block">
-        <h2 className="shell-block__title">{t('carPage.specsTitle')}</h2>
-        <StaggerList as="dl" itemAs="div" className="car-specs" itemClassName="car-specs__row" items={SPECS} renderItem={(spec) => (
-            <>
-              <dt>{t(`carPage.specs.${spec}.label`)}</dt>
-              <dd>{t(`carPage.specs.${spec}.value`)}</dd>
-            </>
-          )} />
-        <p className="shell-note">{t('carPage.specsNote')}</p>
-      </EditorialReveal>
     </PageShell>
   );
 }
