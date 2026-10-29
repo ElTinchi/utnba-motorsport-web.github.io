@@ -555,15 +555,15 @@
     },
     "specsNote": "Valores estimados de projeto, sujeitos a alterações. A relação potência/peso usa a massa e a potência indicadas; a capacidade da bateria é expressa em kWh.",
     "comparison": {
-      "title": "A aceleração em perspectiva",
-      "intro": "Duas referências para imaginar o 0 a 100 km/h. O recorde pertence à AMZ Racing: nosso carro ainda não tem tempo medido.",
-      "amz": "AMZ Racing · mythen",
-      "road": "Toyota Corolla 1.8 Hybrid hatchback (2023)",
-      "run": "Ver comparação",
-      "replay": "Repetir comparação",
-      "caption": "Animação ilustrativa com aceleração constante: mostra a velocidade, não a distância. O Corolla mede 0 a 62 mph (≈ 100 km/h); os testes tiveram condições diferentes.",
+      "title": "Imagine a largada",
+      "intro": "Um quarto de milha: nosso Fórmula SAE ao lado de um carro de rua.",
+      "amz": "UTN BA Motorsport · Fórmula SAE",
+      "road": "Carro de rua",
+      "run": "Largar!",
+      "replay": "Largar novamente",
+      "caption": "Simulação ilustrativa: as posições não representam resultados medidos nem uma previsão de desempenho do carro.",
       "source": "Ficha da Toyota",
-      "time": "0 a 100 km/h: ainda não medido"
+      "time": ""
     },
     "motorLink": "Ver ficha do EMRAX 228",
     "recordTitle": "A referência: menos de um segundo",

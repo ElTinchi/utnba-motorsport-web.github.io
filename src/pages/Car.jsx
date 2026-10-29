@@ -72,19 +72,18 @@ export default function Car() {
         <div className="car-comparison">
           <h2 className="shell-block__title">{t('carPage.comparison.title')}</h2>
           <p>{t('carPage.comparison.intro')}</p>
-          <p className="car-comparison__own">UTN BA Motorsport · {t('carPage.comparison.time')}</p>
           <div key={comparisonRun} className={`car-comparison__lanes ${comparisonRun ? 'is-running' : ''}`}>
             <div className="car-comparison__lane">
-              <div className="car-comparison__label"><strong>{t('carPage.comparison.amz')}</strong><span>0,956 s</span></div>
-              <div className="car-comparison__track" aria-hidden="true"><span className="car-comparison__marker car-comparison__marker--amz">◆</span></div>
+              <div className="car-comparison__label"><strong>{t('carPage.comparison.amz')}</strong></div>
+              <div className="car-comparison__track" aria-hidden="true"><span className="car-comparison__marker car-comparison__marker--formula"><svg viewBox="0 0 90 38"><path d="M5 14h11l8-6h34l9 6h12v10H67l-9 6H24l-8-6H5z" fill="currentColor"/><path d="M32 11h21l8 8-8 8H32l-6-8z" fill="#202024"/><path d="M5 9h9v20H5zm64 0h9v20h-9z" fill="#202024"/></svg></span></div>
             </div>
             <div className="car-comparison__lane">
-              <div className="car-comparison__label"><strong>{t('carPage.comparison.road')}</strong><span>9,1 s</span></div>
-              <div className="car-comparison__track" aria-hidden="true"><span className="car-comparison__marker car-comparison__marker--road">◆</span></div>
+              <div className="car-comparison__label"><strong>{t('carPage.comparison.road')}</strong></div>
+              <div className="car-comparison__track" aria-hidden="true"><span className="car-comparison__marker car-comparison__marker--road"><svg viewBox="0 0 90 38"><path d="M7 11Q8 6 16 6h52q12 0 15 8v10q-3 8-15 8H16Q8 32 7 27z" fill="currentColor"/><path d="M33 9h23l9 5v10l-9 5H33l-7-5V14z" fill="#303034"/><path d="M14 4h12v4H14zm0 26h12v4H14zm43-26h12v4H57zm0 26h12v4H57z" fill="#202024"/></svg></span></div>
             </div>
           </div>
           <button className="btn btn--primary" type="button" onClick={() => setComparisonRun(n => n + 1)}>{t(comparisonRun ? 'carPage.comparison.replay' : 'carPage.comparison.run')}</button>
-          <p className="car-comparison__caption">{t('carPage.comparison.caption')} <a href="https://www.guinnessworldrecords.com/world-records/fastest-0-100-kmh-acceleration-electric-car" target="_blank" rel="noopener noreferrer">Guinness ↗</a> · <a href="https://media.toyota.co.uk/toyota-launches-the-new-corolla-with-fifth-generation-hybrid-electric-technology/" target="_blank" rel="noopener noreferrer">{t('carPage.comparison.source')} ↗</a></p>
+          <p className="car-comparison__caption">{t('carPage.comparison.caption')}</p>
         </div>
       </EditorialReveal>
 
