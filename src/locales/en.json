@@ -534,7 +534,7 @@
       },
       "battery": {
         "label": "Battery",
-        "value": "600 V peak; capacity to be confirmed"
+        "value": "600 V peak · maximum capacity: 8 kWh"
       },
       "category": {
         "label": "Category",

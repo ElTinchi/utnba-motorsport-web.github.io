@@ -534,7 +534,7 @@
       },
       "battery": {
         "label": "Bateria",
-        "value": "600 V de pico; capacidade a confirmar"
+        "value": "600 V de pico · capacidade máxima: 8 kWh"
       },
       "category": {
         "label": "Categoria",
