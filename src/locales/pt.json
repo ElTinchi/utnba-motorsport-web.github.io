@@ -517,11 +517,11 @@
         "value": "≈ 230 kg sem piloto"
       },
       "power": {
-        "label": "Potência do projeto",
-        "value": "80 kW ≈ 107 hp"
+        "label": "Potência de pico do projeto",
+        "value": "Até 80 kW ≈ 107 hp por tempo limitado"
       },
       "ratio": {
-        "label": "Relação potência/peso",
+        "label": "Relação potência de pico/peso",
         "value": "≈ 466 hp/tonelada (com 230 kg e 80 kW)"
       },
       "motor": {
@@ -554,6 +554,17 @@
       }
     },
     "specsNote": "Valores estimados de projeto, sujeitos a alterações. A relação potência/peso usa a massa e a potência indicadas; a capacidade da bateria é expressa em kWh.",
+    "comparison": {
+      "title": "A aceleração em perspectiva",
+      "intro": "Duas referências para imaginar o 0 a 100 km/h. O recorde pertence à AMZ Racing: nosso carro ainda não tem tempo medido.",
+      "amz": "AMZ Racing · mythen",
+      "road": "Toyota Corolla 1.8 Hybrid hatchback (2023)",
+      "run": "Ver comparação",
+      "replay": "Repetir comparação",
+      "caption": "Animação ilustrativa com aceleração constante: mostra a velocidade, não a distância. O Corolla mede 0 a 62 mph (≈ 100 km/h); os testes tiveram condições diferentes.",
+      "source": "Ficha da Toyota",
+      "time": "0 a 100 km/h: ainda não medido"
+    },
     "motorLink": "Ver ficha do EMRAX 228",
     "recordTitle": "A referência: menos de um segundo",
     "recordText": "O mythen da AMZ Racing acelerou de 0 a 100 km/h em 0,956 segundo em 2023. É o recorde mundial Guinness para um carro elétrico, alcançado por outra equipe de Formula Student.",

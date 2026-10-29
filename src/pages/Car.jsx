@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import PageShell from '../components/PageShell.jsx';
 import EditorialReveal from '../components/EditorialReveal.jsx';
@@ -13,6 +14,7 @@ const SPECS = ['mass', 'power', 'ratio', 'motor', 'motorPeak', 'battery', 'categ
 
 export default function Car() {
   const { t } = useTranslation();
+  const [comparisonRun, setComparisonRun] = useState(0);
   const projectParagraphs = t('carPage.projectParagraphs', { returnObjects: true });
   const viewerBullets = t('carPage.viewer.bullets', { returnObjects: true });
 
@@ -63,6 +65,26 @@ export default function Car() {
           <p>{t('carPage.recordText')}</p>
           <a href="https://www.guinnessworldrecords.com/world-records/fastest-0-100-kmh-acceleration-electric-car" target="_blank" rel="noopener noreferrer">{t('carPage.recordLink')} ↗</a>
         </aside>
+        </div>
+      </EditorialReveal>
+
+      <EditorialReveal className="shell-block">
+        <div className="car-comparison">
+          <h2 className="shell-block__title">{t('carPage.comparison.title')}</h2>
+          <p>{t('carPage.comparison.intro')}</p>
+          <p className="car-comparison__own">UTN BA Motorsport · {t('carPage.comparison.time')}</p>
+          <div key={comparisonRun} className={`car-comparison__lanes ${comparisonRun ? 'is-running' : ''}`}>
+            <div className="car-comparison__lane">
+              <div className="car-comparison__label"><strong>{t('carPage.comparison.amz')}</strong><span>0,956 s</span></div>
+              <div className="car-comparison__track" aria-hidden="true"><span className="car-comparison__marker car-comparison__marker--amz">◆</span></div>
+            </div>
+            <div className="car-comparison__lane">
+              <div className="car-comparison__label"><strong>{t('carPage.comparison.road')}</strong><span>9,1 s</span></div>
+              <div className="car-comparison__track" aria-hidden="true"><span className="car-comparison__marker car-comparison__marker--road">◆</span></div>
+            </div>
+          </div>
+          <button className="btn btn--primary" type="button" onClick={() => setComparisonRun(n => n + 1)}>{t(comparisonRun ? 'carPage.comparison.replay' : 'carPage.comparison.run')}</button>
+          <p className="car-comparison__caption">{t('carPage.comparison.caption')} <a href="https://www.guinnessworldrecords.com/world-records/fastest-0-100-kmh-acceleration-electric-car" target="_blank" rel="noopener noreferrer">Guinness ↗</a> · <a href="https://media.toyota.co.uk/toyota-launches-the-new-corolla-with-fifth-generation-hybrid-electric-technology/" target="_blank" rel="noopener noreferrer">{t('carPage.comparison.source')} ↗</a></p>
         </div>
       </EditorialReveal>
 

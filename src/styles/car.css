@@ -225,3 +225,19 @@
 @media (min-width: 900px) {
   .car-specs-layout { grid-template-columns: minmax(0, 2fr) minmax(240px, 1fr); gap: clamp(2rem, 4vw, 4rem); }
 }
+
+.car-comparison { padding: clamp(1.5rem, 4vw, 3rem); background: rgba(var(--ink-rgb), .055); border: 1px solid rgba(var(--ink-rgb), .1); border-radius: 18px; }
+.car-comparison > p { max-width: 70ch; line-height: 1.7; color: var(--color-white-muted); }
+.car-comparison__own { font-weight: 700; }
+.car-comparison__lanes { display: grid; gap: 1.5rem; margin: 2rem 0; }
+.car-comparison__label { display: flex; justify-content: space-between; gap: 1rem; font-size: .9rem; }
+.car-comparison__label span { white-space: nowrap; font-weight: 800; }
+.car-comparison__track { position: relative; margin: .8rem 1rem 0; height: 18px; border-bottom: 2px solid rgba(var(--ink-rgb), .25); }
+.car-comparison__track::after { content: '100 km/h'; position: absolute; right: 0; bottom: -1.3rem; font-size: .65rem; color: var(--color-white-subtle); }
+.car-comparison__marker { position: absolute; left: 0; bottom: -4px; color: var(--color-red); font-size: 1.1rem; }
+.car-comparison__marker--road { color: var(--color-white); }
+.is-running .car-comparison__marker { animation: car-comparison-run 9.1s linear forwards; }
+.is-running .car-comparison__marker--amz { animation-duration: .956s; }
+@keyframes car-comparison-run { to { left: 100%; transform: translateX(-100%); } }
+.car-comparison__caption { margin-top: 1.5rem; font-size: .82rem; }
+@media (prefers-reduced-motion: reduce) { .is-running .car-comparison__marker { animation: none; left: 100%; transform: translateX(-100%); } }
