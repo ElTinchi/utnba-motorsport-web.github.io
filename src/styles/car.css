@@ -249,5 +249,6 @@
 .is-running .car-comparison__marker--formula { animation: formula-sprint 4s linear forwards; }
 .is-running .car-comparison__marker--road { animation: road-sprint 4s linear forwards; }
 @keyframes formula-sprint { to { left: calc(96% - 72px); } }
-@keyframes road-sprint { to { left: calc(58% - 42px); } }
-@media (prefers-reduced-motion: reduce) { .is-running .car-comparison__marker--formula { animation: none; left: calc(96% - 72px); transform: none; } .is-running .car-comparison__marker--road { animation: none; left: calc(58% - 42px); transform: none; } }
+@keyframes road-sprint { to { left: calc(32% - 22px); } }
+@media (prefers-reduced-motion: reduce) { .is-running .car-comparison__marker--formula { animation: none; left: calc(96% - 72px); transform: none; } .is-running .car-comparison__marker--road { animation: none; left: calc(32% - 22px); transform: none; } }
+
