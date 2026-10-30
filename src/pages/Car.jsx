@@ -79,12 +79,22 @@ export default function Car() {
               <div className="car-comparison__track" aria-hidden="true"><span className="car-comparison__marker car-comparison__marker--formula"><svg viewBox="-28 -20 56 40"><FormulaCarArt /></svg></span></div>
             </div>
             <div className="car-comparison__lane">
+              <div className="car-comparison__label"><strong>{t('carPage.comparison.sports')}</strong></div>
+              <div className="car-comparison__track" aria-hidden="true"><span className="car-comparison__marker car-comparison__marker--sports"><svg viewBox="0 0 90 38"><path d="M7 11Q8 6 16 6h52q12 0 15 8v10q-3 8-15 8H16Q8 32 7 27z" fill="currentColor"/><path d="M33 9h23l9 5v10l-9 5H33l-7-5V14z" fill="#303034"/><path d="M14 4h12v4H14zm0 26h12v4H14zm43-26h12v4H57zm0 26h12v4H57z" fill="#202024"/></svg></span></div>
+            </div>
+            <div className="car-comparison__lane">
               <div className="car-comparison__label"><strong>{t('carPage.comparison.road')}</strong></div>
               <div className="car-comparison__track" aria-hidden="true"><span className="car-comparison__marker car-comparison__marker--road"><svg viewBox="0 0 90 38"><path d="M7 11Q8 6 16 6h52q12 0 15 8v10q-3 8-15 8H16Q8 32 7 27z" fill="currentColor"/><path d="M33 9h23l9 5v10l-9 5H33l-7-5V14z" fill="#303034"/><path d="M14 4h12v4H14zm0 26h12v4H14zm43-26h12v4H57zm0 26h12v4H57z" fill="#202024"/></svg></span></div>
             </div>
           </div>
           <button className="btn btn--primary" type="button" onClick={() => setComparisonRun(n => n + 1)}>{t(comparisonRun ? 'carPage.comparison.replay' : 'carPage.comparison.run')}</button>
           <p className="car-comparison__caption">{t('carPage.comparison.caption')}</p>
+          <div className="car-comparison__references" role="group" aria-label={t('carPage.comparison.referencesTitle')}>
+            <h3>{t('carPage.comparison.referencesTitle')}</h3>
+            <p>{t('carPage.comparison.formulaRef')}</p>
+            <p>{t('carPage.comparison.sportsRef')}</p>
+            <p>{t('carPage.comparison.roadRef')}</p>
+          </div>
         </div>
       </EditorialReveal>
 

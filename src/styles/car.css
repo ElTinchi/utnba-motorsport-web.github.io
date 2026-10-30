@@ -249,7 +249,15 @@
 .is-running .car-comparison__marker--formula { animation: formula-sprint 4s cubic-bezier(.33, 0, .67, .33) forwards; }
 .is-running .car-comparison__marker--road { animation: road-sprint 4s cubic-bezier(.33, 0, .67, .33) forwards; }
 @keyframes formula-sprint { to { left: calc(96% - 72px); } }
-@keyframes road-sprint { to { left: calc(32% - 22px); } }
-@media (prefers-reduced-motion: reduce) { .is-running .car-comparison__marker--formula { animation: none; left: calc(96% - 72px); transform: none; } .is-running .car-comparison__marker--road { animation: none; left: calc(32% - 22px); transform: none; } }
+@keyframes road-sprint { to { left: calc(53% - 35px); } }
+@media (prefers-reduced-motion: reduce) { .is-running .car-comparison__marker--formula { animation: none; left: calc(96% - 72px); transform: none; } .is-running .car-comparison__marker--road { animation: none; left: calc(53% - 35px); transform: none; } }
 
+
+.car-comparison__marker--sports { color: #e8ad4a; }
+.is-running .car-comparison__marker--sports { animation: sports-sprint 4s cubic-bezier(.33, 0, .67, .33) forwards; }
+@keyframes sports-sprint { to { left: calc(70% - 50px); } }
+.car-comparison__references { margin-top: 1.5rem; border-top: 1px solid rgba(var(--ink-rgb), .14); padding-top: 1.2rem; }
+.car-comparison__references h3 { font-size: 1rem; margin: 0 0 .7rem; }
+.car-comparison__references p { color: var(--color-white-muted); font-size: .85rem; line-height: 1.6; margin: .35rem 0; }
+@media (prefers-reduced-motion: reduce) { .is-running .car-comparison__marker--sports { animation: none; left: calc(70% - 50px); transform: none; } }
 
