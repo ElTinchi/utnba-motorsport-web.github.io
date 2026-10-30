@@ -28,7 +28,7 @@ export default function FormulaStudent() {
           <p className="fs-page__notice">{t('fsPage.adaptNotice')}</p>
         </EditorialReveal>
 
-        <EditorialReveal className="fs-section"><FormulaExplainer /></EditorialReveal>
+        <EditorialReveal className="fs-explainer"><FormulaExplainer /></EditorialReveal>
 
         {sections.map((section, sectionIndex) => (
           <EditorialReveal as="article" direction={sectionIndex % 2 === 0 ? 'left' : 'right'} key={section.number} className="fs-section">
@@ -74,3 +74,4 @@ export default function FormulaStudent() {
     </section>
   );
 }
+
