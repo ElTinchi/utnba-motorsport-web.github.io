@@ -2,13 +2,14 @@ const contact = 'motorsports@frba.utn.edu.ar';
 
 export const POLICY_CONTENT = {
   es: {
-    updated: 'Última actualización: 26 de septiembre de 2026',
+    updated: 'Última actualización: 29 de octubre de 2026',
     legal: {
       kicker: 'Información del sitio', title: 'Aviso legal',
       intro: 'Condiciones generales de acceso y uso del sitio oficial de UTN BA Motorsport.',
       sections: [
         { title: 'Responsable del contenido', paragraphs: [`Este sitio comunica las actividades de UTN BA Motorsport, equipo estudiantil de la Universidad Tecnológica Nacional, Facultad Regional Buenos Aires. Para consultas sobre el sitio podés escribir a ${contact}.`] },
         { title: 'Finalidad', paragraphs: ['La información publicada presenta el proyecto, sus actividades, convocatorias y posibilidades de colaboración. Los objetivos, fechas, especificaciones y estados del vehículo pueden actualizarse a medida que avance el desarrollo.'] },
+        { title: 'Simulación y referencias de rendimiento', paragraphs: ["La animación de aceleración es ilustrativa. Los rangos son orientativos para cada tipo de vehículo y no constituyen mediciones ni una predicción del desempeño del auto de UTN BA Motorsport."] },
         { title: 'Propiedad intelectual', paragraphs: ['Los textos, diseños, fotografías, marcas y demás contenidos pertenecen a sus respectivos titulares. No se autoriza su uso comercial ni la atribución de respaldo institucional sin permiso previo.'] },
         { title: 'Enlaces externos', paragraphs: ['El sitio contiene enlaces a redes sociales, instituciones y medios de terceros. UTN BA Motorsport no controla su disponibilidad, contenido ni políticas.'] },
       ],
@@ -26,13 +27,14 @@ export const POLICY_CONTENT = {
     },
   },
   en: {
-    updated: 'Last updated: September 26, 2026',
+    updated: 'Last updated: October 29, 2026',
     legal: {
       kicker: 'Site information', title: 'Legal notice',
       intro: 'General terms for accessing and using the official UTN BA Motorsport website.',
       sections: [
         { title: 'Content owner', paragraphs: [`This website communicates the activities of UTN BA Motorsport, a student team at Universidad Tecnológica Nacional, Facultad Regional Buenos Aires. Website enquiries can be sent to ${contact}.`] },
         { title: 'Purpose', paragraphs: ['Published information presents the project, its activities, recruitment rounds and collaboration opportunities. Goals, dates, specifications and vehicle status may change as development progresses.'] },
+        { title: 'Simulation and performance references', paragraphs: ["The acceleration animation is illustrative. Ranges are indicative for each vehicle type and are not measurements or a prediction of the UTN BA Motorsport car’s performance."] },
         { title: 'Intellectual property', paragraphs: ['Texts, designs, photographs, trademarks and other materials belong to their respective owners. Commercial use or any claim of institutional endorsement requires prior permission.'] },
         { title: 'External links', paragraphs: ['This website links to third-party social networks, institutions and media. UTN BA Motorsport does not control their availability, content or policies.'] },
       ],
@@ -50,13 +52,14 @@ export const POLICY_CONTENT = {
     },
   },
   pt: {
-    updated: 'Última atualização: 26 de setembro de 2026',
+    updated: 'Última atualização: 29 de outubro de 2026',
     legal: {
       kicker: 'Informações do site', title: 'Aviso legal',
       intro: 'Condições gerais de acesso e uso do site oficial da UTN BA Motorsport.',
       sections: [
         { title: 'Responsável pelo conteúdo', paragraphs: [`Este site comunica as atividades da UTN BA Motorsport, equipe estudantil da Universidad Tecnológica Nacional, Facultad Regional Buenos Aires. Para consultas sobre o site, escreva para ${contact}.`] },
         { title: 'Finalidade', paragraphs: ['As informações publicadas apresentam o projeto, suas atividades, processos seletivos e possibilidades de colaboração. Objetivos, datas, especificações e o estado do veículo podem mudar conforme o desenvolvimento avança.'] },
+        { title: 'Simulação e referências de desempenho', paragraphs: ["A animação de aceleração é ilustrativa. As faixas são indicativas para cada tipo de veículo e não são medições nem uma previsão do desempenho do carro da UTN BA Motorsport."] },
         { title: 'Propriedade intelectual', paragraphs: ['Textos, designs, fotografias, marcas e demais conteúdos pertencem aos seus respectivos titulares. O uso comercial ou a atribuição de apoio institucional exige autorização prévia.'] },
         { title: 'Links externos', paragraphs: ['O site contém links para redes sociais, instituições e meios de terceiros. A UTN BA Motorsport não controla sua disponibilidade, conteúdo ou políticas.'] },
       ],

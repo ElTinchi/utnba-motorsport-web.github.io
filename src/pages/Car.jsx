@@ -88,7 +88,6 @@ export default function Car() {
             </div>
           </div>
           <button className="btn btn--primary" type="button" onClick={() => setComparisonRun(n => n + 1)}>{t(comparisonRun ? 'carPage.comparison.replay' : 'carPage.comparison.run')}</button>
-          <p className="car-comparison__caption">{t('carPage.comparison.caption')}</p>
           <div className="car-comparison__references" role="group" aria-label={t('carPage.comparison.referencesTitle')}>
             <h3>{t('carPage.comparison.referencesTitle')}</h3>
             <p>{t('carPage.comparison.formulaRef')}</p>
