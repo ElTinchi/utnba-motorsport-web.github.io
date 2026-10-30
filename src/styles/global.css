@@ -892,3 +892,11 @@ img, picture {
   -webkit-user-select: none;
   user-select: none;
 }
+
+.formula-explainer { max-width: 78ch; padding: clamp(1.5rem, 3vw, 2.5rem); background: rgba(var(--ink-rgb), .055); border-left: 3px solid var(--color-red); scroll-margin-top: calc(var(--header-height) + 1rem); }
+.formula-explainer h2 { font-size: clamp(1.35rem, 2vw, 1.8rem); margin: 0 0 1rem; }
+.formula-explainer h3 { font-size: 1.05rem; margin: 1.4rem 0 .5rem; }
+.formula-explainer p { color: var(--color-white-muted); line-height: 1.7; margin: 0 0 .8rem; }
+.formula-footnote { font-size: .8rem; line-height: 1.6; color: var(--color-white-muted); margin: 2rem 0 1rem; }
+.formula-footnote a { text-decoration: underline; text-underline-offset: .2em; }
+.formula-explainer__sources { font-size: .8rem; }

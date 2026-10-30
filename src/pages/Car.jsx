@@ -1,3 +1,4 @@
+import FormulaExplainer from '../components/FormulaExplainer.jsx';
 import FormulaCarArt from '../components/FormulaCarArt.jsx';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -46,6 +47,8 @@ export default function Car() {
           <p key={i} className="shell-block__text">{paragraph}</p>
         ))}
       </EditorialReveal>
+
+      <EditorialReveal className="shell-block"><FormulaExplainer /></EditorialReveal>
 
       {/* ====== Ficha técnica ====== */}
       <EditorialReveal className="shell-block">

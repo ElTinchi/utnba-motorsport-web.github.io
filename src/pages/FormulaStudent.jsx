@@ -1,3 +1,4 @@
+import FormulaExplainer from '../components/FormulaExplainer.jsx';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ROUTES } from '../routes';
@@ -26,6 +27,8 @@ export default function FormulaStudent() {
           <h1 className="fs-page__title">{t('fsPage.title')}</h1>
           <p className="fs-page__notice">{t('fsPage.adaptNotice')}</p>
         </EditorialReveal>
+
+        <EditorialReveal className="fs-section"><FormulaExplainer /></EditorialReveal>
 
         {sections.map((section, sectionIndex) => (
           <EditorialReveal as="article" direction={sectionIndex % 2 === 0 ? 'left' : 'right'} key={section.number} className="fs-section">

@@ -35,6 +35,8 @@ export default function Footer() {
         <address className="footer__contact"><span className="footer__heading">{t('footer.contactLabel')}</span><a href={CONTACT_HREF} className="footer__contact-link">{CONTACT_EMAIL}</a><span className="footer__contact-place">{t('footer.address')}</span><NavLink to={ROUTES.legal} className="footer__link">{t('footer.legal')}</NavLink><NavLink to={ROUTES.privacy} className="footer__link">{t('footer.privacy')}</NavLink></address>
       </div>
 
+      <p className="formula-footnote"><NavLink to={`${ROUTES.aboutFormulaStudent}#que-es-formula-sae`}>{t('formulaExplainer.footnote')}</NavLink></p>
+
       <div className="footer__bottom"><p className="footer__copyright">{t('footer.copyright', { year })}</p><button type="button" className="footer__back-top" onClick={() => window.scrollTo({ top: 0 })}>{t('footer.backToTop')} <span aria-hidden="true">↑</span></button></div>
     </div>
   </footer>;

@@ -10,19 +10,19 @@ export const INDEXABLE_PATHS = Object.values(ROUTES);
 const SEO_BY_PATH = {
   [ROUTES.home]: {
     title: `${SITE_NAME} — Ingeniería y Fórmula SAE eléctrica`,
-    description: 'Conocé UTN BA Motorsport, el equipo de estudiantes de UTN Buenos Aires que desarrolla un Mini Fórmula 1 eléctrico para competir en Fórmula SAE.',
+    description: 'Conocé UTN BA Motorsport, el equipo de estudiantes de UTN Buenos Aires que desarrolla un «mini Fórmula 1» eléctrico para competir en Fórmula SAE.',
   },
   [ROUTES.news]: {
     title: `Novedades | ${SITE_NAME}`,
-    description: 'Conocé los avances, actividades y apariciones de UTN BA Motorsport mientras construimos nuestro Mini Fórmula 1 eléctrico de Fórmula SAE.',
+    description: 'Conocé los avances, actividades y apariciones de UTN BA Motorsport mientras construimos nuestro «mini Fórmula 1» eléctrico de Fórmula SAE.',
   },
   [ROUTES.team]: {
     title: `El equipo y nuestro proyecto | ${SITE_NAME}`,
-    description: 'Conocé a los estudiantes y las áreas de UTN BA Motorsport que transforman conocimientos de ingeniería en un Mini Fórmula 1 eléctrico de Fórmula SAE.',
+    description: 'Conocé a los estudiantes y las áreas de UTN BA Motorsport que transforman conocimientos de ingeniería en un «mini Fórmula 1» eléctrico de Fórmula SAE.',
   },
   [ROUTES.car]: {
-    title: `El Mini Fórmula 1 eléctrico | ${SITE_NAME}`,
-    description: 'Descubrí el Mini Fórmula 1 100% eléctrico que estudiantes de UTN Buenos Aires desarrollan para competir en Fórmula SAE Brasil 2027.',
+    title: `El «mini Fórmula 1» eléctrico | ${SITE_NAME}`,
+    description: 'Descubrí el «mini Fórmula 1» 100% eléctrico que estudiantes de UTN Buenos Aires desarrollan para competir en Fórmula SAE Brasil 2027.',
   },
   [ROUTES.academy]: {
     title: `Academia de Motorsport | ${SITE_NAME}`,
@@ -74,13 +74,13 @@ export function getSeoForPath(pathname) {
     ogDescription: routeSeo.description,
     ogUrl: canonical,
     ogImage: DEFAULT_OG_IMAGE,
-    ogImageAlt: 'Mini Fórmula 1 eléctrico de Fórmula SAE de UTN BA Motorsport',
+    ogImageAlt: '«mini Fórmula 1» eléctrico de Fórmula SAE de UTN BA Motorsport',
     ogLocale: 'es_AR',
     twitterCard: 'summary_large_image',
     twitterTitle: routeSeo.title,
     twitterDescription: routeSeo.description,
     twitterImage: DEFAULT_OG_IMAGE,
-    twitterImageAlt: 'Mini Fórmula 1 eléctrico de Fórmula SAE de UTN BA Motorsport',
+    twitterImageAlt: '«mini Fórmula 1» eléctrico de Fórmula SAE de UTN BA Motorsport',
   };
 }
 
