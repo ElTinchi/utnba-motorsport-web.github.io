@@ -1,3 +1,4 @@
+import FormulaCarArt from '../components/FormulaCarArt.jsx';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import PageShell from '../components/PageShell.jsx';
@@ -75,7 +76,7 @@ export default function Car() {
           <div key={comparisonRun} className={`car-comparison__lanes ${comparisonRun ? 'is-running' : ''}`}>
             <div className="car-comparison__lane">
               <div className="car-comparison__label"><strong>{t('carPage.comparison.amz')}</strong></div>
-              <div className="car-comparison__track" aria-hidden="true"><span className="car-comparison__marker car-comparison__marker--formula"><svg viewBox="0 0 90 38"><path d="M5 14h11l8-6h34l9 6h12v10H67l-9 6H24l-8-6H5z" fill="currentColor"/><path d="M32 11h21l8 8-8 8H32l-6-8z" fill="#202024"/><path d="M5 9h9v20H5zm64 0h9v20h-9z" fill="#202024"/></svg></span></div>
+              <div className="car-comparison__track" aria-hidden="true"><span className="car-comparison__marker car-comparison__marker--formula"><svg viewBox="-28 -20 56 40"><FormulaCarArt /></svg></span></div>
             </div>
             <div className="car-comparison__lane">
               <div className="car-comparison__label"><strong>{t('carPage.comparison.road')}</strong></div>

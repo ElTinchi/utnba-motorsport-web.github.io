@@ -1,3 +1,4 @@
+import FormulaCarArt from '../components/FormulaCarArt.jsx';
 import { useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -149,19 +150,7 @@ export default function Home() {
             {/* Recorrido del auto: mismo trazado, sin pintar */}
             <path id="hero-track-line" d={TRACK_PATH} fill="none" stroke="none" />
 
-            <g className="hero__car">
-              {/* Mini Fórmula 1 cenital simplificado. El frente apunta hacia +X,
-                  que es la orientación base que usa animateMotion. */}
-              <rect x="-18" y="-14" width="9" height="7" rx="2" className="hero__car-wheel" />
-              <rect x="-18" y="7" width="9" height="7" rx="2" className="hero__car-wheel" />
-              <rect x="7" y="-13" width="8" height="6" rx="2" className="hero__car-wheel" />
-              <rect x="7" y="7" width="8" height="6" rx="2" className="hero__car-wheel" />
-              <path
-                d="M-17,-7 C-11,-8 -7,-7 -3,-5 L7,-4 L17,-1.8 L21,0 L17,1.8 L7,4 L-3,5 C-7,7 -11,8 -17,7 L-19,4 L-19,-4 Z"
-                className="hero__car-body"
-              />
-              <path d="M-10,-4 C-5,-5 0,-3.5 3,0 C0,3.5 -5,5 -10,4 Z" className="hero__car-glass" />
-              <path d="M-8,-5.2 L-2,-8 M-8,5.2 L-2,8 M7,-4 L11,-8 M7,4 L11,8" className="hero__car-suspension" />
+            <FormulaCarArt className="hero__car">
               <animateMotion
                 dur="38.04s"
                 begin="-19.77s"
@@ -173,7 +162,7 @@ export default function Home() {
               >
                 <mpath xlinkHref="#hero-track-line" />
               </animateMotion>
-            </g>
+            </FormulaCarArt>
           </svg>
         </div>
 

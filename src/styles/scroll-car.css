@@ -20,3 +20,12 @@
 @media (prefers-reduced-motion: reduce) {
   .scroll-car { display: none; }
 }
+
+.page-scroll-car { position: fixed; top: 0; right: 8px; width: 42px; height: 30px; z-index: 40; pointer-events: none; filter: drop-shadow(0 2px 4px #0009); }
+.page-scroll-car .hero__car-wheel, .car-comparison__marker .hero__car-wheel { fill: #161619; stroke: #f6f1e5; stroke-width: .7; }
+.page-scroll-car .hero__car-body, .car-comparison__marker .hero__car-body { fill: #dd0e0e; stroke: #fff; stroke-width: .8; }
+.page-scroll-car .hero__car-glass, .car-comparison__marker .hero__car-glass { fill: #17171d; }
+.page-scroll-car .hero__car-suspension, .car-comparison__marker .hero__car-suspension { fill: none; stroke: #bbb; stroke-width: 1; }
+@media (max-width: 767px) { .page-scroll-car { width: 28px; height: 20px; right: 0; opacity: .8; } }
+@media (prefers-reduced-motion: reduce) { .page-scroll-car { display: none; } }
+

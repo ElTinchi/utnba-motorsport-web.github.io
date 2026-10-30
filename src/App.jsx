@@ -1,3 +1,4 @@
+import PageScrollCar from './components/PageScrollCar.jsx';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { lazy, Suspense, useEffect } from 'react';
 import Header from './components/Header.jsx';
@@ -57,6 +58,7 @@ function ScrollToTop() {
 }
 
 export default function App() {
+  const { pathname } = useLocation();
   useEffect(() => {
     // Discourage casual image copying without blocking text or normal navigation.
     const protectImage = (event) => {
@@ -77,6 +79,7 @@ export default function App() {
       <ScrollToTop />
       <Seo />
       <Header />
+      {pathname !== ROUTES.home && <PageScrollCar key={pathname} />}
       <main className="main">
         <Suspense fallback={<div className="route-loading" role="status" aria-label="Cargando página" />}>
           <Routes>
