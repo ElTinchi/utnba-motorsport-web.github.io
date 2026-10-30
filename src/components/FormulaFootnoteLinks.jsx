@@ -21,13 +21,14 @@ export default function FormulaFootnoteLinks() {
       for (const node of nodes) {
         let current = node;
         while (current.data.includes('¹')) {
-          const index = current.data.indexOf('¹');
-          const tail = current.splitText(index);
-          tail.deleteData(0, 1);
+          const match = current.data.match(/"mini F[oó]rmula 1"¹/i);
+          if (!match) break;
+          const tail = current.splitText(match.index);
+          tail.deleteData(0, match[0].length);
           const link = document.createElement('a');
           link.href = '/formula-student#que-es-formula-sae';
           link.className = 'formula-reference';
-          link.textContent = '¹';
+          link.textContent = match[0];
           link.setAttribute('aria-label', i18n.t('formulaExplainer.title'));
           tail.before(link);
           inserted.add(link);
@@ -40,7 +41,7 @@ export default function FormulaFootnoteLinks() {
     observer.observe(root, { childList: true, characterData: true, subtree: true });
     return () => {
       observer.disconnect();
-      for (const link of inserted) if (link.isConnected) link.replaceWith(document.createTextNode('¹'));
+      for (const link of inserted) if (link.isConnected) link.replaceWith(document.createTextNode(link.textContent));
     };
   }, [pathname, i18n, i18n.resolvedLanguage]);
   return null;
