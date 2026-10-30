@@ -1,3 +1,4 @@
+import FormulaFootnoteLinks from './components/FormulaFootnoteLinks.jsx';
 import PageScrollCar from './components/PageScrollCar.jsx';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { lazy, Suspense, useEffect } from 'react';
@@ -77,6 +78,7 @@ export default function App() {
   return (
     <>
       <ScrollToTop />
+      <FormulaFootnoteLinks />
       <Seo />
       <Header />
       {pathname !== ROUTES.home && <PageScrollCar key={pathname} />}

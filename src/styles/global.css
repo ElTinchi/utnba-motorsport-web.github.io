@@ -900,3 +900,4 @@ img, picture {
 .formula-footnote { font-size: .8rem; line-height: 1.6; color: var(--color-white-muted); margin: 2rem 0 1rem; }
 .formula-footnote a { text-decoration: underline; text-underline-offset: .2em; }
 .formula-explainer__sources { font-size: .8rem; }
+.formula-reference { color: var(--color-red); font-weight: 700; text-decoration: underline; text-underline-offset: .15em; padding: 0 .1em; }
