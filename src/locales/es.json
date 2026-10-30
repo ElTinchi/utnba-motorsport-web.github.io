@@ -522,7 +522,7 @@
       },
       "ratio": {
         "label": "Relación potencia pico/peso",
-        "value": "≈ 466 HP/tonelada (con 230 kg y 80 kW)"
+        "value": "≈ 0,47 HP/kg (con 230 kg y 80 kW)"
       },
       "motor": {
         "label": "Motor",

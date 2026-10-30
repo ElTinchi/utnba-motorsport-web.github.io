@@ -522,7 +522,7 @@
       },
       "ratio": {
         "label": "Peak power-to-weight ratio",
-        "value": "≈ 466 hp/tonne (at 230 kg and 80 kW)"
+        "value": "≈ 0.47 hp/kg (at 230 kg and 80 kW)"
       },
       "motor": {
         "label": "Motor",
