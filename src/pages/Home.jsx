@@ -2,7 +2,7 @@ import FormulaCarArt from '../components/FormulaCarArt.jsx';
 import { useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ROUTES, COMMERCIAL_CONTACT_HREF } from '../routes';
+import { ROUTES, COMMERCIAL_CONTACT_HREF, DINNER_EVENT_HREF } from '../routes';
 import SponsorsCarousel from '../components/SponsorsCarousel';
 import FundingProgress from '../components/FundingProgress';
 import ScrollCar from '../components/ScrollCar';
@@ -251,6 +251,16 @@ export default function Home() {
             <NavLink to={ROUTES.academy} className="academy__cta">
               {t('home.academy.cta')}
             </NavLink>
+          </div>
+        </section>
+
+        {/* ====== Cena a beneficio: la app todavía no está publicada; el botón
+            ya apunta a DINNER_EVENT_HREF (src/routes.js) para cuando lo esté ====== */}
+        <section className="project-bridge">
+          <h2>{t('dinner.title')}</h2>
+          <div>
+            <p>{t('dinner.body')}</p>
+            <a href={DINNER_EVENT_HREF} className="btn btn--secondary">{t('dinner.cta')}</a>
           </div>
         </section>
 

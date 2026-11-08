@@ -24,22 +24,22 @@
       },
       {
         "label": "La industria",
-        "title": "Conexiones que abren puertas.",
-        "text": "La relación empieza en el taller y puede crecer mucho más allá. <strong>Encuentros con empresas, referentes y estudiantes con experiencia en proyectos reales</strong>: oportunidades de networking, intercambio técnico y vinculación con talento. Los eventos y accesos se coordinan según el patrocinio.",
+        "title": "Tu marca va a sonar en cada empresa que nos acompaña.",
+        "text": "La relación empieza en el taller y puede llegar mucho más lejos. Vas a conectar con <strong>empresas, referentes de la industria y estudiantes con experiencia en proyectos reales</strong>. Los encuentros y el acceso se coordinan según tu nivel de patrocinio.",
         "alt": "Integrantes del equipo recorriendo las instalaciones de ABB durante una visita.",
         "caption": "Visita a ABB · Septiembre de 2026"
       },
       {
         "label": "La exposición",
         "title": "Ya estamos en los medios.",
-        "text": "Ya llegamos a <strong>Carburando, programas de radio y diarios</strong>. A eso se suman nuestros canales: posteos, stories, reels y contenido del equipo. Tu aporte nos da nuevas historias para contar y material para tus campañas. Las acciones se acuerdan según el paquete; cada medio decide su cobertura.",
+        "text": "Nuestro proyecto ya se cuenta en los medios: estuvimos en <strong>Carburando, Ámbito y El Destape</strong>. Y esto recién empieza. Vamos a seguir sumando espacios — notas, colegios técnicos, universidades y lugares icónicos de Buenos Aires, como el Obelisco — y <strong>tu marca va a estar en cada una de esas historias</strong>.",
         "alt": "Un integrante del equipo entrevistado por Carburando en el taller.",
         "caption": "Carburando en el taller · Una historia que ya llegó a los medios"
       },
       {
         "label": "Después de competir",
         "title": "La carrera termina. La marca sigue.",
-        "text": "Nuestro plan después de Brasil es llevar el auto a <strong>colegios técnicos, universidades, ferias y todos los eventos que podamos</strong>. Que nuevas generaciones conozcan el proyecto y a quienes lo hicieron posible. La experiencia en el Campus ya muestra cómo acercamos esta historia a la comunidad; las próximas visitas y exhibiciones se coordinarán con cada institución.",
+        "text": "Ya lo hicimos una vez: en el Campus de la UTN llevamos esta historia a la comunidad. Después de Brasil, vamos por más — <strong>colegios técnicos, universidades, ferias y todos los eventos que podamos</strong> — para que nuevas generaciones conozcan el proyecto y a quienes lo hicieron posible. Tu marca viaja con el auto a cada lugar.",
         "alt": "Integrantes del equipo conversando con visitantes durante una actividad en el Campus de UTN.",
         "caption": "Actividad en el Campus UTN · El vínculo con la comunidad ya comenzó"
       }
@@ -68,6 +68,11 @@
   "theme": {
     "useLight": "Usar modo claro",
     "useDark": "Usar modo oscuro"
+  },
+  "dinner": {
+    "title": "Cena a beneficio de UTN BA Motorsport",
+    "body": "Organizamos una cena solidaria para acompañar el desarrollo de nuestro Fórmula SAE eléctrico. Lo recaudado se destina a sostener el proyecto del equipo. Sumate y ayudanos a llegar a la pista.",
+    "cta": "Reservá tu entrada"
   },
   "footer": {
     "copyright": "© {{year}} UTN BA Motorsport · Universidad Tecnológica Nacional · Facultad Regional Buenos Aires",
@@ -98,7 +103,7 @@
     "motivationTitle": "¿Qué nos motiva?",
     "motivationHook": "Competir en 2027 es solo el comienzo.",
     "motivationSubtitle": "Queremos que el equipo siga en 2028, 2029 y muchos años más.",
-    "motivationBody": "No queremos construir un auto, competir una vez y que todo termine ahí. UTN BA Motorsport nació con el desafío de desarrollar nuestro primer Fórmula SAE 100% eléctrico y competir en Brasil 2027, pero desde el principio entendimos que queríamos hacer algo que perdure mucho más allá de ese auto. Por eso creamos nuestra Academia Motorsport: un camino para que más estudiantes puedan acercarse al automovilismo desde los primeros años de la carrera, aprender haciendo, sumar experiencia en proyectos cada vez más complejos y, eventualmente, formar parte de los próximos Fórmula SAE de la UTN. Queremos competir en 2027, sí, pero también queremos que haya un equipo en 2028, 2030 y muchos años más. El auto es una parte del proyecto; lo que realmente queremos construir es algo que quede.",
+    "motivationBody": "No queremos construir un auto y listo. Queremos un equipo que dure. UTN BA Motorsport nació para desarrollar nuestro primer Fórmula SAE 100% eléctrico y competir en Brasil 2027, pero buscamos algo que siga después de ese auto. Por eso creamos la Academia Motorsport: el camino para que más estudiantes aprendan haciendo y lleguen al Fórmula SAE. Queremos competir en 2027, sí. Pero también que haya equipo en 2028, 2029 y más allá.",
     "aboutTitle": "Sobre nosotros",
     "aboutHook": "Cada generación tiene que arrancar un poco más adelante.",
     "aboutSubtitle": "Diseñamos un auto, pero estamos construyendo un equipo que perdure.",

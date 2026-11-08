@@ -39,3 +39,7 @@ export function buildCommercialContactHref({ company = '[empresa]' } = {}) {
 }
 
 export const COMMERCIAL_CONTACT_HREF = 'https://calendar.app.google/EvFwD6ZegqKr2mem8';
+
+// Inscripción y pago de la cena a beneficio: vive en la app, no en este repo.
+// Si la ruta definitiva cambia, solo hay que actualizar esta constante.
+export const DINNER_EVENT_HREF = 'https://app.utnbamotorsport.com.ar/cena';
