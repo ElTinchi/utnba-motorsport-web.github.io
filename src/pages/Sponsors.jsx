@@ -1,11 +1,12 @@
 import { NavLink } from 'react-router-dom';
 import { Trans, useTranslation } from 'react-i18next';
-import { ROUTES, COMMERCIAL_CONTACT_HREF } from '../routes';
+import { ROUTES, COMMERCIAL_CONTACT_HREF, DINNER_EVENT_HREF } from '../routes';
 import SponsorsCarousel from '../components/SponsorsCarousel';
 import FundingProgress from '../components/FundingProgress';
 import EditorialReveal from '../components/EditorialReveal';
 import StaggerList from '../components/StaggerList';
 import '../styles/sponsors.css';
+import '../styles/dinner.css';
 
 const JOURNEY_LOGOS = [
   '/assets/img/academy/rookie-utnba.png',
@@ -135,6 +136,15 @@ export default function Sponsors() {
           </div>
           <FundingProgress />
         </EditorialReveal>
+
+        {/* Mismo banner que en el Home — misma clase, mismo id="cena" para
+            que el link compartible funcione también si alguien llega acá. */}
+        <section className="dinner-banner" id="cena" aria-labelledby="dinner-title">
+          <span className="dinner-banner__kicker">{t('dinner.kicker')}</span>
+          <h2 id="dinner-title">{t('dinner.title')}</h2>
+          <p>{t('dinner.body')}</p>
+          <a href={DINNER_EVENT_HREF} className="btn btn--secondary">{t('dinner.cta')}</a>
+        </section>
 
         <CommercialContact t={t} opportunity="after-evidence" />
 

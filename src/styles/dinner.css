@@ -1,0 +1,44 @@
+/* Banner de la cena a beneficio — reutilizado en Home y Sponsors. Rojo sólido
+   a propósito: tiene que destacar frente al resto de las secciones, no
+   mezclarse con ellas. scroll-margin-top evita que el header fijo la tape
+   cuando se llega acá por el link compartible #cena. */
+.dinner-banner {
+  max-width: var(--max-width);
+  margin: clamp(3rem, 7vw, 6rem) auto;
+  padding: clamp(2.5rem, 6vw, 4rem) clamp(1.5rem, 5vw, 4rem);
+  background: var(--color-red);
+  border-radius: 20px;
+  text-align: center;
+  scroll-margin-top: 100px;
+}
+
+.dinner-banner__kicker {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 0.75rem;
+}
+
+.dinner-banner h2 {
+  font-size: clamp(1.9rem, 4.5vw, 3.2rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.dinner-banner p {
+  max-width: 60ch;
+  margin: 0 auto 1.75rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+@media (max-width: 640px) {
+  .dinner-banner {
+    border-radius: 14px;
+  }
+}

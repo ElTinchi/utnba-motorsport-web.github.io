@@ -13,6 +13,7 @@ import AnimatedNumber from '../components/AnimatedNumber';
 import EditorialReveal from '../components/EditorialReveal';
 import StaggerList from '../components/StaggerList';
 import '../styles/home.css';
+import '../styles/dinner.css';
 
 const ACADEMY_LOGOS = [
   '/assets/img/academy/rookie-utnba.png',
@@ -254,14 +255,16 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ====== Cena a beneficio: la app todavía no está publicada; el botón
-            ya apunta a DINNER_EVENT_HREF (src/routes.js) para cuando lo esté ====== */}
-        <section className="project-bridge">
-          <h2>{t('dinner.title')}</h2>
-          <div>
-            <p>{t('dinner.body')}</p>
-            <a href={DINNER_EVENT_HREF} className="btn btn--secondary">{t('dinner.cta')}</a>
-          </div>
+        {/* ====== Cena a beneficio: banner propio, bien destacado, con id="cena"
+            para poder compartir el link directo (.../#cena) y que entre
+            scrolleado a esta sección. La app todavía no está publicada; el
+            botón ya apunta a DINNER_EVENT_HREF (src/routes.js) para cuando
+            lo esté. ====== */}
+        <section className="dinner-banner" id="cena" aria-labelledby="dinner-title">
+          <span className="dinner-banner__kicker">{t('dinner.kicker')}</span>
+          <h2 id="dinner-title">{t('dinner.title')}</h2>
+          <p>{t('dinner.body')}</p>
+          <a href={DINNER_EVENT_HREF} className="btn btn--secondary">{t('dinner.cta')}</a>
         </section>
 
         {/* ====== Sponsors: la misma banda blanca que la página de Sponsors ====== */}
