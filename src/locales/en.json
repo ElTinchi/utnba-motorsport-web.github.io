@@ -70,10 +70,10 @@
     "useDark": "Use dark mode"
   },
   "dinner": {
-    "kicker": "Benefit dinner",
-    "title": "Benefit dinner for UTN BA Motorsport",
-    "body": "We're hosting a benefit dinner to support the development of our electric Formula SAE car. The funds raised go toward sustaining the team's project. Join us and help us get to the track.",
-    "cta": "Reserve your seat"
+    "kicker": "An invitation from UTN BA Motorsport",
+    "title": "Sunset",
+    "body": "Join the team for an event supporting our electric Formula SAE car. Proceeds help bring the project to the track.",
+    "cta": "Reserve your ticket"
   },
   "footer": {
     "copyright": "© {{year}} UTN BA Motorsport · Universidad Tecnológica Nacional · Facultad Regional Buenos Aires",

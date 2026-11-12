@@ -2,7 +2,7 @@ import FormulaCarArt from '../components/FormulaCarArt.jsx';
 import { useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ROUTES, COMMERCIAL_CONTACT_HREF, DINNER_EVENT_HREF } from '../routes';
+import { ROUTES, COMMERCIAL_CONTACT_HREF } from '../routes';
 import SponsorsCarousel from '../components/SponsorsCarousel';
 import FundingProgress from '../components/FundingProgress';
 import ScrollCar from '../components/ScrollCar';
@@ -13,7 +13,7 @@ import AnimatedNumber from '../components/AnimatedNumber';
 import EditorialReveal from '../components/EditorialReveal';
 import StaggerList from '../components/StaggerList';
 import '../styles/home.css';
-import '../styles/dinner.css';
+import SunsetInvitation from '../components/SunsetInvitation';
 
 const ACADEMY_LOGOS = [
   '/assets/img/academy/rookie-utnba.png',
@@ -254,18 +254,7 @@ export default function Home() {
             </NavLink>
           </div>
         </section>
-
-        {/* ====== Cena a beneficio: banner propio, bien destacado, con id="cena"
-            para poder compartir el link directo (.../#cena) y que entre
-            scrolleado a esta sección. La app todavía no está publicada; el
-            botón ya apunta a DINNER_EVENT_HREF (src/routes.js) para cuando
-            lo esté. ====== */}
-        <section className="dinner-banner" id="cena" aria-labelledby="dinner-title">
-          <span className="dinner-banner__kicker">{t('dinner.kicker')}</span>
-          <h2 id="dinner-title">{t('dinner.title')}</h2>
-          <p>{t('dinner.body')}</p>
-          <a href={DINNER_EVENT_HREF} className="btn btn--secondary">{t('dinner.cta')}</a>
-        </section>
+        <SunsetInvitation />
 
         {/* ====== Sponsors: la misma banda blanca que la página de Sponsors ====== */}
         <section className="home-sponsors" aria-labelledby="home-sponsors-title">

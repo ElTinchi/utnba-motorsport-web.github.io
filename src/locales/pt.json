@@ -70,10 +70,10 @@
     "useDark": "Usar modo escuro"
   },
   "dinner": {
-    "kicker": "Jantar beneficente",
-    "title": "Jantar beneficente da UTN BA Motorsport",
-    "body": "Organizamos um jantar beneficente para apoiar o desenvolvimento do nosso Fórmula SAE elétrico. O valor arrecadado é destinado a sustentar o projeto da equipe. Participe e nos ajude a chegar à pista.",
-    "cta": "Reserve seu lugar"
+    "kicker": "Um convite da UTN BA Motorsport",
+    "title": "Sunset",
+    "body": "Venha encontrar a equipe e apoiar nosso Fórmula SAE elétrico. A arrecadação ajuda a levar o projeto para a pista.",
+    "cta": "Reserve seu ingresso"
   },
   "footer": {
     "copyright": "© {{year}} UTN BA Motorsport · Universidad Tecnológica Nacional · Facultad Regional Buenos Aires",

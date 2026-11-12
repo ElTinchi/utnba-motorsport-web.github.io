@@ -1,44 +1,36 @@
-/* Banner de la cena a beneficio — reutilizado en Home y Sponsors. Rojo sólido
-   a propósito: tiene que destacar frente al resto de las secciones, no
-   mezclarse con ellas. scroll-margin-top evita que el header fijo la tape
-   cuando se llega acá por el link compartible #cena. */
+/* A shared invitation with a sunset motif, keeping the original anchor. */
 .dinner-banner {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  min-height: 390px;
   max-width: var(--max-width);
   margin: clamp(3rem, 7vw, 6rem) auto;
-  padding: clamp(2.5rem, 6vw, 4rem) clamp(1.5rem, 5vw, 4rem);
-  background: var(--color-red);
+  padding: clamp(2rem, 5vw, 4.5rem);
+  border: 1px solid #63342e;
   border-radius: 20px;
-  text-align: center;
+  background: #20151a;
+  color: #fff8ed;
   scroll-margin-top: 100px;
 }
-
-.dinner-banner__kicker {
-  display: block;
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.85);
-  margin-bottom: 0.75rem;
-}
-
-.dinner-banner h2 {
-  font-size: clamp(1.9rem, 4.5vw, 3.2rem);
-  line-height: 1.1;
-  letter-spacing: -0.03em;
-  color: #fff;
-  margin-bottom: 1rem;
-}
-
-.dinner-banner p {
-  max-width: 60ch;
-  margin: 0 auto 1.75rem;
-  line-height: 1.7;
-  color: rgba(255, 255, 255, 0.92);
-}
-
+.dinner-banner__content { position: relative; z-index: 1; max-width: 34rem; }
+.dinner-banner__kicker { display: block; margin-bottom: 1rem; color: #ffc4a3; font-size: .75rem; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
+.dinner-banner h2 { margin: 0 0 1rem; color: #fff8ed; font-size: clamp(3.5rem, 9vw, 7rem); line-height: .9; letter-spacing: -.06em; }
+.dinner-banner p { max-width: 43ch; margin: 0 0 2rem; color: #f2ded6; line-height: 1.7; }
+.dinner-banner__cta { display: inline-flex; align-items: center; gap: 2.5rem; padding: 1rem 1.25rem; border: 1px solid #fff8ed; background: #fff8ed; color: #20151a; font-weight: 800; text-decoration: none; transition: background .2s, color .2s; }
+.dinner-banner__cta span { font-size: 1.25rem; line-height: 1; }
+.dinner-banner__cta:hover { background: transparent; color: #fff8ed; }
+.dinner-banner__cta:focus-visible { outline: 3px solid #ffc4a3; outline-offset: 4px; }
+.dinner-banner__art { position: absolute; inset: 0 0 0 50%; overflow: hidden; pointer-events: none; }
+.dinner-banner__art::before { content: ''; position: absolute; width: min(35vw, 420px); aspect-ratio: 1; right: 10%; top: 50%; transform: translateY(-50%); border-radius: 50%; background: linear-gradient(180deg, #f8c07c 0%, #e9684d 65%, #b72c35 100%); }
+.dinner-banner__art::after { content: ''; position: absolute; inset: 50% 0 0; background: repeating-linear-gradient(to bottom, transparent 0 18px, #20151a 18px 23px); }
 @media (max-width: 640px) {
-  .dinner-banner {
-    border-radius: 14px;
-  }
+  .dinner-banner { min-height: 0; padding: 2rem 1.5rem; border-radius: 14px; }
+  .dinner-banner__art { inset: 0 0 auto 42%; height: 180px; opacity: .42; }
+  .dinner-banner__art::before { width: 180px; right: -20px; }
+  .dinner-banner__content { padding-top: 1rem; }
+  .dinner-banner p { max-width: 35ch; }
 }
+@media (prefers-reduced-motion: reduce) { .dinner-banner__cta { transition: none; } }
