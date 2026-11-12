@@ -3,8 +3,10 @@
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
+  gap: clamp(1rem, 4vw, 3rem);
   min-height: 390px;
   max-width: var(--max-width);
   margin: clamp(3rem, 7vw, 6rem) auto;
@@ -23,14 +25,13 @@
 .dinner-banner__cta span { font-size: 1.25rem; line-height: 1; }
 .dinner-banner__cta:hover { background: transparent; color: #fff8ed; }
 .dinner-banner__cta:focus-visible { outline: 3px solid #ffc4a3; outline-offset: 4px; }
-.dinner-banner__art { position: absolute; inset: 0 0 0 50%; overflow: hidden; pointer-events: none; }
-.dinner-banner__art::before { content: ''; position: absolute; width: min(35vw, 420px); aspect-ratio: 1; right: 10%; top: 50%; transform: translateY(-50%); border-radius: 50%; background: linear-gradient(180deg, #f8c07c 0%, #e9684d 65%, #b72c35 100%); }
-.dinner-banner__art::after { content: ''; position: absolute; inset: 50% 0 0; background: repeating-linear-gradient(to bottom, transparent 0 18px, #20151a 18px 23px); }
+ .dinner-banner__art { position: relative; width: 100%; max-width: 420px; aspect-ratio: 1; justify-self: center; pointer-events: none; color: #20151a; }
+.dinner-banner__sun { position: absolute; inset: 0; border-radius: 50%; overflow: hidden; background: linear-gradient(180deg, #f8c07c 0%, #e9684d 65%, #b72c35 100%); }
+.dinner-banner__sun::after { content: ''; position: absolute; inset: 50% 0 0; background: repeating-linear-gradient(to bottom, transparent 0 18px, #20151a 18px 23px); }
+.dinner-banner__scene { position: absolute; width: 100%; left: 0; top: 25%; overflow: visible; }
 @media (max-width: 640px) {
-  .dinner-banner { min-height: 0; padding: 2rem 1.5rem; border-radius: 14px; }
-  .dinner-banner__art { inset: 0 0 auto 42%; height: 180px; opacity: .42; }
-  .dinner-banner__art::before { width: 180px; right: -20px; }
-  .dinner-banner__content { padding-top: 1rem; }
+  .dinner-banner { grid-template-columns: 1fr; gap: 1.5rem; min-height: 0; padding: 2rem 1.5rem; border-radius: 14px; }
+  .dinner-banner__art { width: min(65%, 230px); }
   .dinner-banner p { max-width: 35ch; }
 }
 @media (prefers-reduced-motion: reduce) { .dinner-banner__cta { transition: none; } }
