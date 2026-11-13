@@ -23,7 +23,7 @@ Idiomas de la web: español, inglés y portugués. Las referencias Markdown est�
 - [Equipo y siete áreas](https://utnbamotorsport.com.ar/el-equipo.md): Diseño, Química, Fabricación, CNC, Industrial, Electrónica y Comunicación; responsabilidades y continuidad.
 - [Mini Fórmula 1 eléctrico](https://utnbamotorsport.com.ar/el-auto.md): estado del proyecto, especificaciones públicas y visualizador 3D.
 - [Academia Motorsport](https://utnbamotorsport.com.ar/la-academia.md): recorrido de Rookie a Baja SAE y Fórmula SAE.
-- [Qué es Fórmula SAE](https://utnbamotorsport.com.ar/formula-student.md): competencia universitaria, evaluación de ingeniería y contexto de pruebas estáticas y dinámicas; preservar la aclaración del sitio sobre el reglamento de Brasil.
+- [Qué es Fórmula SAE](https://utnbamotorsport.com.ar/formula-sae.md): competencia universitaria, evaluación de ingeniería y contexto de pruebas estáticas y dinámicas; preservar la aclaración del sitio sobre el reglamento de Brasil.
 - [Incorporación de estudiantes](https://utnbamotorsport.com.ar/sumate.md): cómo consultar convocatorias y postularse por los canales oficiales.
 
 ## Empresas y patrocinio

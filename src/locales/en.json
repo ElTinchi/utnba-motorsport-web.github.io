@@ -61,7 +61,7 @@
     "team": "The team",
     "car": "The car",
     "academy": "The academy",
-    "aboutFormulaStudent": "What is Formula Student",
+    "aboutFormulaStudent": "What is Formula SAE",
     "joinUs": "Join us",
     "sponsors": "Sponsors"
   },
@@ -175,15 +175,15 @@
   },
   "fsPage": {
     "kicker": "UTN BA Motorsport",
-    "title": "A competition where the car is the exam.",
+    "title": "Formula SAE: the competition where the car is the exam.",
     "adaptNotice": "This page describes the Formula Student competition in general. We still have to adapt the specifics to the Formula SAE Brazil rulebook — we'll fill that in as the project moves forward.",
     "sections": [
       {
         "number": "01",
-        "eyebrow": "For students",
-        "title": "What is Formula Student?",
+        "eyebrow": "The competition",
+        "title": "What is Formula SAE?",
         "paragraphs": [
-          "Formula SAE is an international engineering competition in which university teams design, manufacture and compete with a \"mini Formula 1\"¹ car developed by the students themselves.",
+          "Formula SAE (FSAE), also known as Formula Student, is an international engineering competition for universities: each student team designs, builds and races its own \"mini Formula 1\"¹ car.",
           "It is not only about which car is the fastest. The competition includes different events that evaluate the design and engineering decisions, the car's performance, costs and the presentation of the project.",
           "Formula SAE events are held in different countries around the world. We are preparing to compete at Formula SAE Brazil under its specific rules and events."
         ]

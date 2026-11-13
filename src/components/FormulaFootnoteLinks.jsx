@@ -26,7 +26,7 @@ export default function FormulaFootnoteLinks() {
           const tail = current.splitText(match.index);
           tail.deleteData(0, match[0].length);
           const link = document.createElement('a');
-          link.href = '/formula-student#que-es-formula-sae';
+          link.href = '/formula-sae#que-es-formula-sae';
           link.className = 'formula-reference';
           link.textContent = match[0];
           link.setAttribute('aria-label', i18n.t('formulaExplainer.title'));

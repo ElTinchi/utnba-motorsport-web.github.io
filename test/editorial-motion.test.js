@@ -179,7 +179,7 @@ test('narrative routes use shared motion while sober routes remain static', asyn
   try {
     const narrativeRoutes = [
       ['/src/pages/Academy.jsx', '/la-academia'],
-      ['/src/pages/FormulaStudent.jsx', '/formula-student'],
+      ['/src/pages/FormulaStudent.jsx', '/formula-sae'],
       ['/src/pages/Car.jsx', '/el-auto'],
       ['/src/pages/Team.jsx', '/el-equipo'],
       ['/src/pages/News.jsx', '/novedades'],

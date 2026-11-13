@@ -9,8 +9,8 @@ export const INDEXABLE_PATHS = Object.values(ROUTES);
 
 const SEO_BY_PATH = {
   [ROUTES.home]: {
-    title: `${SITE_NAME} — Ingeniería y Fórmula SAE eléctrica`,
-    description: 'Conocé UTN BA Motorsport, el equipo de estudiantes de UTN Buenos Aires que desarrolla un "mini Fórmula 1" eléctrico para competir en Fórmula SAE.',
+    title: `${SITE_NAME} — Equipo de Fórmula SAE de la UTN FRBA`,
+    description: 'UTN BA Motorsport (UTNBA) es el equipo de Fórmula SAE / Fórmula Student de la UTN Facultad Regional Buenos Aires: estudiantes que construyen un auto de carrera eléctrico.',
   },
   [ROUTES.news]: {
     title: `Novedades | ${SITE_NAME}`,
@@ -21,7 +21,7 @@ const SEO_BY_PATH = {
     description: 'Conocé a los estudiantes y las áreas de UTN BA Motorsport que transforman conocimientos de ingeniería en un "mini Fórmula 1" eléctrico de Fórmula SAE.',
   },
   [ROUTES.car]: {
-    title: `El "mini Fórmula 1" eléctrico | ${SITE_NAME}`,
+    title: `El auto eléctrico de Fórmula SAE | ${SITE_NAME}`,
     description: 'Descubrí el "mini Fórmula 1" 100% eléctrico que estudiantes de UTN Buenos Aires desarrollan para competir en Fórmula SAE Brasil 2027.',
   },
   [ROUTES.academy]: {
@@ -29,11 +29,11 @@ const SEO_BY_PATH = {
     description: 'Rookie, Baja SAE y Fórmula SAE forman el recorrido práctico con el que estudiantes de UTN Buenos Aires aprenden ingeniería construyendo.',
   },
   [ROUTES.aboutFormulaStudent]: {
-    title: `Qué es Fórmula Student | ${SITE_NAME}`,
-    description: 'Conocé cómo funciona Fórmula Student, qué pruebas evalúa y por qué es una de las competencias universitarias de ingeniería más exigentes.',
+    title: `Qué es la Fórmula SAE (FSAE) | ${SITE_NAME}`,
+    description: 'La Fórmula SAE (FSAE o Fórmula Student) es la competencia universitaria donde estudiantes diseñan, fabrican y corren su propio auto. Cómo funciona y qué pruebas tiene.',
   },
   [ROUTES.joinUs]: {
-    title: `Sumate al equipo | ${SITE_NAME}`,
+    title: `Sumate al equipo de Fórmula SAE | ${SITE_NAME}`,
     description: 'Información sobre convocatorias y el proceso para incorporarte a UTN BA Motorsport como estudiante de la Facultad Regional Buenos Aires.',
   },
   [ROUTES.sponsors]: {

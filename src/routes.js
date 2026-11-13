@@ -12,7 +12,7 @@ export const ROUTES = {
   team: '/el-equipo',
   car: '/el-auto',
   academy: '/la-academia',
-  aboutFormulaStudent: '/formula-student',
+  aboutFormulaStudent: '/formula-sae',
   joinUs: '/sumate',
   sponsors: '/sponsors',
   legal: '/aviso-legal',
@@ -26,6 +26,7 @@ export const LEGACY_REDIRECTS = {
   '/equipo': ROUTES.team,
   '/motorsport': ROUTES.academy,
   '/contacto': ROUTES.joinUs,
+  '/formula-student': ROUTES.aboutFormulaStudent,
 };
 
 export const CONTACT_EMAIL = 'motorsports@frba.utn.edu.ar';

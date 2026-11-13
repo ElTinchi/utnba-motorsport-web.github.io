@@ -61,7 +61,7 @@
     "team": "O time",
     "car": "O carro",
     "academy": "A academia",
-    "aboutFormulaStudent": "O que é Fórmula Student",
+    "aboutFormulaStudent": "O que é Fórmula SAE",
     "joinUs": "Participe",
     "sponsors": "Patrocinadores"
   },
@@ -175,15 +175,15 @@
   },
   "fsPage": {
     "kicker": "UTN BA Motorsport",
-    "title": "Uma competição em que o carro é a prova.",
+    "title": "Fórmula SAE: a competição em que o carro é a prova.",
     "adaptNotice": "Esta página descreve a competição de Fórmula Student de forma geral. Ainda precisamos ajustar os detalhes específicos ao regulamento da Fórmula SAE Brasil — vamos completar isso conforme o projeto avança.",
     "sections": [
       {
         "number": "01",
-        "eyebrow": "Para estudantes",
-        "title": "O que é a Fórmula Student?",
+        "eyebrow": "A competição",
+        "title": "O que é a Fórmula SAE?",
         "paragraphs": [
-          "A Fórmula SAE é uma competição internacional de engenharia na qual equipes universitárias projetam, fabricam e competem com um \"mini Fórmula 1\"¹ desenvolvido por elas mesmas.",
+          "A Fórmula SAE (FSAE), também conhecida como Fórmula Student, é uma competição internacional de engenharia para universidades: cada equipe de estudantes projeta, fabrica e corre com seu próprio \"mini Fórmula 1\"¹.",
           "Não se trata apenas de qual carro é o mais rápido. A competição inclui diferentes provas nas quais são avaliados o projeto e as decisões de engenharia, o desempenho do carro, os custos e a apresentação do projeto.",
           "A Fórmula SAE é realizada em diferentes países ao redor do mundo. Estamos nos preparando para competir na Fórmula SAE Brasil, seguindo seu regulamento e suas provas específicas."
         ]

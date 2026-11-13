@@ -3,12 +3,17 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
-  RewriteCond %{REQUEST_URI} !/$
-  RewriteCond %{REQUEST_FILENAME}/index.html -f
-  RewriteRule ^(.+)$ $1/index.html [L]
+  # Una sola versión del sitio para Google: http y www redirigen al dominio canónico.
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} ^www\. [NC]
+  RewriteRule ^(.*)$ https://utnbamotorsport.com.ar/$1 [R=301,L,NE]
   RewriteRule ^(?:sobre-nosotros|equipo)/?$ /el-equipo [R=301,L,NE]
   RewriteRule ^motorsport/?$ /la-academia [R=301,L,NE]
   RewriteRule ^contacto/?$ /sumate [R=301,L,NE]
+  RewriteRule ^formula-student/?$ /formula-sae [R=301,L,NE]
+  RewriteCond %{REQUEST_URI} !/$
+  RewriteCond %{REQUEST_FILENAME}/index.html -f
+  RewriteRule ^(.+)$ $1/index.html [L]
 </IfModule>
 
 ErrorDocument 404 /404.html
