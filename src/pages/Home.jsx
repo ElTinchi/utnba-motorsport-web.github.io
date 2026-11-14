@@ -107,6 +107,7 @@ export default function Home() {
           <div className="hero__actions">
             <a href={COMMERCIAL_CONTACT_HREF} className="btn btn--primary">{t('sponsorsPage.primaryCta')}</a>
             <a href="#auto-en-movimiento" className="hero__explore">{t('home.heroCtaCar')} <span aria-hidden="true">↓</span></a>
+            <NavLink to={ROUTES.aboutFormulaStudent} className="hero__explore">{t('home.heroCtaFormula')} <span aria-hidden="true">→</span></NavLink>
           </div>
         </div>
         <a href="#que-hacemos" className="hero__scroll-cue">

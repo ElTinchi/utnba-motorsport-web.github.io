@@ -266,3 +266,80 @@
 .fs-anim--skidpad[data-phase="4"] .fs-anim__times div:nth-child(2) dd { color: var(--color-red-text); }
 .fs-anim__times dd:has(+ span) { min-width: 0; }
 .fs-anim__times dd + span { margin-left: -0.2rem; color: var(--color-white-subtle); }
+
+/* ========================================
+   Cabecera con números y accesos directos
+   ======================================== */
+.fs-hero { margin-bottom: 1rem; }
+.fs-hero__lead {
+  font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+  line-height: 1.6;
+  color: var(--color-white-muted);
+  max-width: 56ch;
+  margin-bottom: 2rem;
+}
+.fs-hero__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 3rem;
+  margin: 0 0 2rem;
+}
+.fs-hero__stats div { display: flex; flex-direction: column-reverse; }
+.fs-hero__stats dd {
+  margin: 0;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--color-red-text);
+  font-variant-numeric: tabular-nums;
+}
+.fs-hero__stats dt { font-size: 0.85rem; color: var(--color-white-subtle); margin-top: 0.35rem; }
+.fs-hero__jump { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.fs-hero__jump a {
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(var(--ink-rgb), 0.16);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-white-muted);
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+.fs-hero__jump a:hover,
+.fs-hero__jump a:focus-visible { border-color: var(--color-red); color: var(--color-white); background: rgba(var(--red-rgb), 0.1); }
+
+.fs-page .fs-events { margin-top: 4rem; scroll-margin-top: calc(var(--header-height) + 1rem); }
+.fs-page .fs-events__title { font-size: clamp(1.5rem, 3vw, 2.1rem); font-weight: 800; letter-spacing: -0.01em; }
+
+/* ========================================
+   Para entenderlo mejor (preguntas)
+   ======================================== */
+.fs-learn { margin-top: 5rem; padding-top: 3rem; border-top: 1px solid rgba(var(--ink-rgb), 0.1); scroll-margin-top: calc(var(--header-height) + 1rem); }
+.fs-learn .fs-explainer { margin: 1.5rem 0 2rem; }
+.fs-faq { border-top: 1px solid rgba(var(--ink-rgb), 0.1); }
+.fs-faq:last-of-type { border-bottom: 1px solid rgba(var(--ink-rgb), 0.1); }
+.fs-faq summary {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 1.25rem 2.5rem 1.25rem 0;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+}
+.fs-faq summary::-webkit-details-marker { display: none; }
+.fs-faq summary::after {
+  content: '+';
+  position: absolute;
+  right: 0.25rem;
+  top: 50%;
+  translate: 0 -50%;
+  font-size: 1.5rem;
+  color: var(--color-red-text);
+  transition: rotate 0.25s ease;
+}
+.fs-faq[open] summary::after { rotate: 45deg; }
+.fs-faq summary .fs-section__eyebrow { margin-bottom: 0; }
+.fs-faq__question { font-size: clamp(1.05rem, 2vw, 1.3rem); font-weight: 700; }
+.fs-faq > p { padding-bottom: 0.5rem; }
+.fs-faq > p:last-child { padding-bottom: 1.5rem; }
+.fs-learn .fs-page__notice { margin: 2.5rem 0 0; }

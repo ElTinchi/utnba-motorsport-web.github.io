@@ -63,7 +63,8 @@
     "academy": "The academy",
     "aboutFormulaStudent": "What is Formula SAE",
     "joinUs": "Join us",
-    "sponsors": "Sponsors"
+    "sponsors": "Sponsors",
+    "formulaSae": "Formula SAE"
   },
   "theme": {
     "useLight": "Use light mode",
@@ -171,7 +172,8 @@
     "sponsorsRemaining": "to complete through cash and in-kind support",
     "sponsorsCta": "Discover how to take part",
     "sponsorsTitle": "Thank you to those already making it possible",
-    "sponsorsLink": "Meet all our sponsors"
+    "sponsorsLink": "Meet all our sponsors",
+    "heroCtaFormula": "What is Formula SAE?"
   },
   "fsPage": {
     "kicker": "UTN BA Motorsport",
@@ -364,7 +366,10 @@
         "total": "Total",
         "pieces": "Parts"
       }
-    }
+    },
+    "lead": "Students around the world design, build and race their own car. The fastest car does not win on its own: design, cost and the business plan are judged too.",
+    "jumpLabel": "Jump to a section",
+    "learnTitle": "Learn more"
   },
   "motorsportPage": {
     "kicker": "UTN BA Motorsport",

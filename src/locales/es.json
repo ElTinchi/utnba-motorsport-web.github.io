@@ -63,7 +63,8 @@
     "academy": "La academia",
     "aboutFormulaStudent": "Qué es Fórmula SAE",
     "joinUs": "Sumate",
-    "sponsors": "Sponsors"
+    "sponsors": "Sponsors",
+    "formulaSae": "Fórmula SAE"
   },
   "theme": {
     "useLight": "Usar modo claro",
@@ -171,7 +172,8 @@
     "sponsorsRemaining": "para completar en efectivo y canje",
     "sponsorsCta": "Conocé cómo ser parte",
     "sponsorsTitle": "Gracias a quienes ya lo hacen posible",
-    "sponsorsLink": "Conocé a todos nuestros sponsors"
+    "sponsorsLink": "Conocé a todos nuestros sponsors",
+    "heroCtaFormula": "¿Qué es la Fórmula SAE?"
   },
   "fsPage": {
     "kicker": "UTN BA Motorsport",
@@ -364,7 +366,10 @@
         "total": "Total",
         "pieces": "Piezas"
       }
-    }
+    },
+    "lead": "Estudiantes de todo el mundo diseñan, construyen y corren su propio auto. No gana solo el más rápido: también se juzgan el diseño, los costos y el plan de negocios.",
+    "jumpLabel": "Ir a una sección",
+    "learnTitle": "Para entenderlo mejor"
   },
   "motorsportPage": {
     "kicker": "UTN BA Motorsport",

@@ -25,13 +25,13 @@ export default function Header() {
     setDropdownOpen(false);
   }
 
-  // El desplegable agrupa las cuatro páginas que explican el proyecto. Sumate
+  // Fórmula SAE salió del desplegable: es lo que más explica el proyecto y
+  // quedaba escondido. El desplegable agrupa las páginas que explican el proyecto. Sumate
   // salió de acá (es el botón de acción) y Contacto también: no eran "sobre
   // nosotros", eran cosas que el visitante quiere hacer.
   const dropdownLinks = [
     { to: ROUTES.team, label: t('nav.team') },
     { to: ROUTES.academy, label: t('nav.academy') },
-    { to: ROUTES.aboutFormulaStudent, label: t('nav.aboutFormulaStudent') },
   ];
 
   return (
@@ -89,6 +89,7 @@ export default function Header() {
                 ))}
               </div>
             </li>
+            <li><NavLink to={ROUTES.aboutFormulaStudent} className="nav__link" onClick={closeAll}>{t('nav.formulaSae')}</NavLink></li>
             <li>
               <NavLink to={ROUTES.sponsors} className="nav__link" onClick={closeAll}>
                 {t('nav.sponsors')}
