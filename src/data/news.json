@@ -19,6 +19,23 @@
     },
     "posts": [
       {
+        "id": "taller-de-tito-2026",
+        "dateTime": "2026-11-06",
+        "mark": "06.11",
+        "year": "2026",
+        "date": "6 de noviembre de 2026",
+        "category": "Prensa",
+        "title": "Estuvimos en El Taller de Tito, de Carburando",
+        "paragraphs": [
+          "El Taller de Tito, el ciclo de Carburando, nos visit\u00f3 en el taller para conocer de cerca UTN BA Motorsport. El programa se llam\u00f3 \u201cDel aula a la pista: el desaf\u00edo de la UTN BA Motorsport\u201d.",
+          "Mostramos el chasis, contamos c\u00f3mo trabaja el equipo y compartimos nuestro objetivo de competir en F\u00f3rmula SAE Brasil 2027."
+        ],
+        "image": "/assets/img/news/taller-de-tito.webp",
+        "imageAlt": "Integrantes del equipo junto a Tito y el chasis en el taller, al lado del render del auto.",
+        "sourceUrl": "https://www.youtube.com/watch?v=9idTT-bgGy0",
+        "sourceLabel": "Ver en YouTube"
+      },
+      {
         "id": "visita-abb-2026",
         "dateTime": "2026-09-28",
         "mark": "28.09",
@@ -179,6 +196,23 @@
     },
     "posts": [
       {
+        "id": "taller-de-tito-2026",
+        "dateTime": "2026-11-06",
+        "mark": "06.11",
+        "year": "2026",
+        "date": "November 6, 2026",
+        "category": "Press",
+        "title": "We were on El Taller de Tito, by Carburando",
+        "paragraphs": [
+          "El Taller de Tito, the Carburando show, visited our workshop to get to know UTN BA Motorsport up close. The episode is titled \u201cFrom the classroom to the track: the UTN BA Motorsport challenge\u201d.",
+          "We showed the chassis, explained how the team works and shared our goal of competing in Formula SAE Brazil 2027."
+        ],
+        "image": "/assets/img/news/taller-de-tito.webp",
+        "imageAlt": "Team members with Tito and the chassis in the workshop, next to a render of the car.",
+        "sourceUrl": "https://www.youtube.com/watch?v=9idTT-bgGy0",
+        "sourceLabel": "Watch on YouTube"
+      },
+      {
         "id": "visita-abb-2026",
         "dateTime": "2026-09-28",
         "mark": "28.09",
@@ -338,6 +372,23 @@
       "copyLink": "Link da not\u00edcia"
     },
     "posts": [
+      {
+        "id": "taller-de-tito-2026",
+        "dateTime": "2026-11-06",
+        "mark": "06.11",
+        "year": "2026",
+        "date": "6 de novembro de 2026",
+        "category": "Imprensa",
+        "title": "Estivemos no El Taller de Tito, do Carburando",
+        "paragraphs": [
+          "O El Taller de Tito, programa do Carburando, visitou nossa oficina para conhecer de perto a UTN BA Motorsport. O epis\u00f3dio se chama \u201cDa sala de aula \u00e0 pista: o desafio da UTN BA Motorsport\u201d.",
+          "Mostramos o chassi, contamos como a equipe trabalha e compartilhamos nosso objetivo de competir na F\u00f3rmula SAE Brasil 2027."
+        ],
+        "image": "/assets/img/news/taller-de-tito.webp",
+        "imageAlt": "Integrantes da equipe com o Tito e o chassi na oficina, ao lado do render do carro.",
+        "sourceUrl": "https://www.youtube.com/watch?v=9idTT-bgGy0",
+        "sourceLabel": "Assistir no YouTube"
+      },
       {
         "id": "visita-abb-2026",
         "dateTime": "2026-09-28",
