@@ -78,8 +78,9 @@ export default function Stand() {
         </div>
       </div> },
       { seconds: 9, render: () => <div className="stand-intro">
-        <span className="stand-kicker">{t('stand.fsaeKicker')}</span>
-        <h2 className="stand-title stand-title--xl">{t('stand.fsaeTitle')}</h2>
+        <span className="stand-kicker">UTN BA Motorsport</span>
+        <h2 className="stand-title stand-title--xl">{t('stand.fsaeQuestion')}</h2>
+        <p className="stand-lead stand-lead--statement">{t('stand.fsaeTitle')}</p>
         <dl className="stand-stats">
           <div><dt>{t('stand.statEvents')}</dt><dd>{dynamicEvents.length + staticEvents.length}</dd></div>
           <div><dt>{t('stand.statPoints')}</dt><dd>{total}</dd></div>

@@ -82,10 +82,11 @@
 
 /* Intro, press: centred statements */
 .stand-intro { height: 100%; display: flex; flex-direction: column; justify-content: center; }
-.stand-stats { display: flex; gap: 6vw; margin: 5vh 0 0; }
+.stand-stats { display: flex; gap: 5vw; margin: 5vh 0 0; }
+.stand-lead--statement { font-size: clamp(1.2rem, 2.1vw, 2.8rem); max-width: 40ch; color: var(--color-white-muted); }
 .stand-stats dt { order: 2; font-size: clamp(0.9rem, 1.3vw, 1.7rem); color: var(--color-white-muted); }
 .stand-stats div { display: flex; flex-direction: column; }
-.stand-stats dd { margin: 0; font-size: clamp(3rem, 8vw, 10rem); font-weight: 800; line-height: 1; color: var(--color-red); font-variant-numeric: tabular-nums; }
+.stand-stats dd { margin: 0; font-size: clamp(2.6rem, 5.5vw, 7rem); font-weight: 800; line-height: 1; color: var(--color-red); font-variant-numeric: tabular-nums; }
 
 .stand-press { list-style: none; margin: 3vh 0 0; padding: 0; display: grid; gap: 2.5vh; }
 .stand-press li {
