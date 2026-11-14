@@ -51,3 +51,10 @@
   0%, 75% { opacity: 1; }
   100% { opacity: 0; }
 }
+
+/* In the footer: team tools, small and quiet until hovered. */
+.footer__tools { display: flex; gap: 0.5rem; }
+.footer__tools .presentation-toggle { width: 32px; height: 32px; opacity: 0.45; transition: opacity 0.2s ease, color 0.2s ease, border-color 0.2s ease, background 0.2s ease; }
+.footer__tools .presentation-toggle:hover,
+.footer__tools .presentation-toggle:focus-visible { opacity: 1; }
+.footer__tools .presentation-toggle svg { width: 0.85rem; height: 0.85rem; }

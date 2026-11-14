@@ -100,6 +100,9 @@ export default function PresentationMode() {
       window.removeEventListener('touchstart', stop);
       document.removeEventListener('fullscreenchange', onFullscreen);
       if (document.fullscreenElement) document.exitFullscreen().catch(() => {});
+      // After leaving fullscreen the viewport changes size: nudge scroll and resize so
+      // reveal animations and the 3D canvas repaint for the new size.
+      setTimeout(() => { window.scrollBy(0, 1); window.scrollBy(0, -1); window.dispatchEvent(new Event('resize')); }, 300);
       pausedRef.current = false;
       setPaused(false);
     };

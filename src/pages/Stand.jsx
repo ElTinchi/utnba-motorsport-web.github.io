@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import SponsorsCarousel from '../components/SponsorsCarousel.jsx';
 import CarSpin from '../components/CarSpin.jsx';
@@ -74,6 +74,28 @@ export default function Stand() {
   const { t, i18n } = useTranslation();
   const [current, setCurrent] = useState(0);
   const [paused, setPaused] = useState(false);
+  const navigate = useNavigate();
+  const [idle, setIdle] = useState(true);
+
+  // Leaving the stand: Esc (which also drops fullscreen) or the ×. Always hand back a
+  // normal, non-fullscreen page so the site never stays stuck in a dark full screen.
+  useEffect(() => {
+    const leave = () => navigate(ROUTES.home);
+    const onFullscreen = () => { if (!document.fullscreenElement) leave(); };
+    document.addEventListener('fullscreenchange', onFullscreen);
+    return () => {
+      document.removeEventListener('fullscreenchange', onFullscreen);
+      if (document.fullscreenElement) document.exitFullscreen().catch(() => {});
+    };
+  }, [navigate]);
+
+  // The cursor and the exit button show while the mouse moves, then hide again.
+  useEffect(() => {
+    let timer = 0;
+    const wake = () => { setIdle(false); clearTimeout(timer); timer = setTimeout(() => setIdle(true), 2500); };
+    window.addEventListener('mousemove', wake);
+    return () => { window.removeEventListener('mousemove', wake); clearTimeout(timer); };
+  }, []);
   // Start downloading the 3D car now so the 360° slide is ready when it comes up.
   useEffect(() => { loadCarModel().catch(() => {}); }, []);
   // src -> short side in px, measured once; unmeasured photos are shown until known.
@@ -178,10 +200,11 @@ export default function Stand() {
       if (event.key === 'ArrowRight') setCurrent(c => (c + 1) % slides.length);
       if (event.key === 'ArrowLeft') setCurrent(c => (c - 1 + slides.length) % slides.length);
       if (event.key === 'f') document.documentElement.requestFullscreen?.().catch(() => {});
+      if (event.key === 'Escape') navigate(ROUTES.home);
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
-  }, [slides.length]);
+  }, [slides.length, navigate]);
 
   let body;
   if (slide.event) {
@@ -198,7 +221,7 @@ export default function Stand() {
     body = slide.render();
   }
 
-  return <div className="stand" data-paused={paused}>
+  return <div className="stand" data-paused={paused} data-idle={idle}>
     <div className="stand__progress" aria-hidden="true">
       {slides.map((s, i) => <span key={i} className={i < current ? 'is-done' : i === current ? 'is-current' : ''} style={i === current ? { '--slide-seconds': `${s.seconds}s` } : undefined} />)}
     </div>

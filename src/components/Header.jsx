@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ROUTES, COMMERCIAL_CONTACT_HREF, STAND_PATH } from '../routes';
+import { ROUTES, COMMERCIAL_CONTACT_HREF } from '../routes';
 import LanguageSwitcher from './LanguageSwitcher.jsx';
-import PresentationMode from './PresentationMode.jsx';
 
 export default function Header() {
   const { t } = useTranslation();
@@ -100,16 +99,6 @@ export default function Header() {
         </nav>
 
         <div className="header__actions">
-          <PresentationMode />
-          <NavLink
-            to={STAND_PATH}
-            className="presentation-toggle"
-            aria-label={t('stand.open')}
-            title={t('stand.open')}
-            onClick={() => document.documentElement.requestFullscreen?.().catch(() => {})}
-          >
-            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 5h18v11H3zM8 20h8M12 16v4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
-          </NavLink>
           <LanguageSwitcher />
           <a href={COMMERCIAL_CONTACT_HREF} className="btn btn--primary btn--small header__cta" onClick={closeAll}>
             <span className="header__cta-full">{t('sponsorsPage.primaryCta')}</span>

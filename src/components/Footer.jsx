@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ROUTES, CONTACT_EMAIL, CONTACT_HREF, COMMERCIAL_CONTACT_HREF } from '../routes';
+import { ROUTES, CONTACT_EMAIL, CONTACT_HREF, COMMERCIAL_CONTACT_HREF, STAND_PATH } from '../routes';
+import PresentationMode from './PresentationMode.jsx';
 
 const SOCIALS = [
   ['Instagram', 'https://www.instagram.com/utnbamotorsport/', 'M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.26.07 1.64.07 4.85s-.01 3.58-.07 4.85c-.15 3.22-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92C.01 15.58 0 15.2 0 12s.01-3.58.07-4.85C.22 3.93 1.73 2.38 4.99 2.23 6.25 2.17 6.63 2.16 9.84 2.16H12zM12 0C8.74 0 8.33.01 7.05.07 2.69.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.73 2.7 21.31.27 16.95.07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 12 18.16 6.16 6.16 0 0 0 12 5.84zm0 10.16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.41-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z'],
@@ -37,7 +38,7 @@ export default function Footer() {
 
       <p className="formula-footnote"><NavLink to={`${ROUTES.aboutFormulaStudent}#que-es-formula-sae`}>{t('formulaExplainer.footnote')}</NavLink></p>
 
-      <div className="footer__bottom"><p className="footer__copyright">{t('footer.copyright', { year })}</p><button type="button" className="footer__back-top" onClick={() => window.scrollTo({ top: 0 })}>{t('footer.backToTop')} <span aria-hidden="true">↑</span></button></div>
+      <div className="footer__bottom"><p className="footer__copyright">{t('footer.copyright', { year })}</p><div className="footer__tools" aria-label={t('footer.toolsLabel')}><PresentationMode /><NavLink to={STAND_PATH} className="presentation-toggle" aria-label={t('stand.open')} title={t('stand.open')} onClick={() => document.documentElement.requestFullscreen?.().catch(() => {})} > <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 5h18v11H3zM8 20h8M12 16v4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg> </NavLink></div><button type="button" className="footer__back-top" onClick={() => window.scrollTo({ top: 0 })}>{t('footer.backToTop')} <span aria-hidden="true">↑</span></button></div>
     </div>
   </footer>;
 }

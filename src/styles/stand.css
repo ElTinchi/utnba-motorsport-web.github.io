@@ -17,8 +17,8 @@
   background: rgb(var(--surface-rgb));
   color: var(--color-white);
   overflow: hidden;
-  cursor: none;
 }
+.stand[data-idle="true"] { cursor: none; }
 
 .stand__stage {
   position: relative;
@@ -181,7 +181,9 @@
   line-height: 1;
   color: rgba(var(--ink-rgb), 0.25);
   cursor: pointer;
+  transition: color 0.2s ease;
 }
+.stand[data-idle="false"] .stand__exit { color: rgba(var(--ink-rgb), 0.85); }
 .stand__exit:hover { color: var(--color-white); }
 
 /* Sponsors: permanent band at the bottom */
