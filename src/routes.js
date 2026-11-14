@@ -6,6 +6,9 @@
 //     los datos de contacto en el footer
 //   - /motorsport se renombró a /la-academia (el nombre viejo no decía nada)
 //   - /el-auto es nueva
+// Stand slideshow: kept out of ROUTES on purpose so it is never prerendered, indexed or in the sitemap.
+export const STAND_PATH = '/stand';
+
 export const ROUTES = {
   home: '/',
   news: '/novedades',

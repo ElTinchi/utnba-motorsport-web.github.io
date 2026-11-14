@@ -791,5 +791,35 @@
     "start": "Presentation mode",
     "hint": "Esc or any click to exit · Space to pause",
     "paused": "Paused · Space to resume"
+  },
+  "stand": {
+    "open": "Stand mode (slideshow)",
+    "exit": "Exit stand mode",
+    "heroLead": "UTN FRBA students building an electric race car. On the road to Formula SAE Brazil 2027.",
+    "fsaeKicker": "What is Formula SAE",
+    "fsaeTitle": "The world’s largest university automotive engineering competition.",
+    "statEvents": "events",
+    "statPoints": "points at stake",
+    "statGoal": "Brazil",
+    "dynamicKicker": "Dynamic event · {{n}}/{{total}}",
+    "staticKicker": "Static event · {{n}}/{{total}}",
+    "taglines": [
+      "From 0 to over 100 km/h in 75 metres: traction and powertrain win it.",
+      "A figure eight between cones: it measures how much lateral grip the car has.",
+      "One fast lap of a closed circuit. It sets the endurance start order.",
+      "Using little energy is not enough: it is about getting the most out of it.",
+      "A long run, a mandatory driver change and a single attempt. The event worth the most points.",
+      "Defending every engineering decision in front of industry judges.",
+      "What it costs to build the car, part by part.",
+      "Convincing investors the car can be a business."
+    ],
+    "workshopKicker": "In the workshop",
+    "momentsKicker": "What we have been up to",
+    "carKicker": "The car",
+    "pressKicker": "As seen in",
+    "ctaKicker": "Become a sponsor",
+    "ctaTitle": "Your brand on the car?",
+    "ctaLead": "Scan the code and see how to join us on the road to Brazil 2027.",
+    "sponsorsLabel": "With the support of"
   }
 }

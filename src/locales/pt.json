@@ -791,5 +791,35 @@
     "start": "Modo apresentação",
     "hint": "Esc ou qualquer clique para sair · Espaço para pausar",
     "paused": "Em pausa · Espaço para continuar"
+  },
+  "stand": {
+    "open": "Modo estande (slides)",
+    "exit": "Sair do modo estande",
+    "heroLead": "Estudantes da UTN FRBA construindo um carro de corrida elétrico. Rumo à Fórmula SAE Brasil 2027.",
+    "fsaeKicker": "O que é a Fórmula SAE",
+    "fsaeTitle": "A maior competição universitária de engenharia automotiva do mundo.",
+    "statEvents": "provas",
+    "statPoints": "pontos em disputa",
+    "statGoal": "Brasil",
+    "dynamicKicker": "Prova dinâmica · {{n}}/{{total}}",
+    "staticKicker": "Prova estática · {{n}}/{{total}}",
+    "taglines": [
+      "De 0 a mais de 100 km/h em 75 metros: vencem a tração e o powertrain.",
+      "Um oito entre cones: mede quanta aderência lateral o carro tem.",
+      "Uma volta rápida num circuito fechado. Define a largada da resistência.",
+      "Não basta gastar pouco: vence quem aproveita melhor a energia.",
+      "Um percurso longo, troca de piloto obrigatória e uma única tentativa. A prova que mais vale pontos.",
+      "Defender cada decisão de engenharia diante de jurados da indústria.",
+      "Quanto custa fabricar o carro, peça por peça.",
+      "Convencer investidores de que o carro pode ser um negócio."
+    ],
+    "workshopKicker": "Na oficina",
+    "momentsKicker": "O que temos feito",
+    "carKicker": "O carro",
+    "pressKicker": "Saímos em",
+    "ctaKicker": "Seja patrocinador",
+    "ctaTitle": "Sua marca no carro?",
+    "ctaLead": "Escaneie o código e veja como nos acompanhar rumo ao Brasil 2027.",
+    "sponsorsLabel": "Com o apoio de"
   }
 }

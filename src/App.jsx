@@ -5,7 +5,7 @@ import { lazy, Suspense, useEffect } from 'react';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import Seo from './components/Seo.jsx';
-import { ROUTES, LEGACY_REDIRECTS } from './routes';
+import { ROUTES, LEGACY_REDIRECTS, STAND_PATH } from './routes';
 import './styles/route-loading.css';
 
 const Home = lazy(() => import('./pages/Home.jsx'));
@@ -18,6 +18,7 @@ const Sponsors = lazy(() => import('./pages/Sponsors.jsx'));
 const News = lazy(() => import('./pages/News.jsx'));
 const NotFound = lazy(() => import('./pages/NotFound.jsx'));
 const PolicyPage = lazy(() => import('./pages/PolicyPage.jsx'));
+const Stand = lazy(() => import('./pages/Stand.jsx'));
 
 // Al navegar entre páginas el scroll se queda donde estaba: con React Router
 // no hay recarga que lo resetee.
@@ -74,6 +75,11 @@ export default function App() {
       document.removeEventListener('dragstart', protectImage);
     };
   }, []);
+
+  // The stand slideshow owns the whole screen: no header, footer or guide car.
+  if (pathname === STAND_PATH) {
+    return <><Seo /><Suspense fallback={null}><Stand /></Suspense></>;
+  }
 
   return (
     <>

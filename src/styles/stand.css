@@ -1,0 +1,182 @@
+/* Stand slideshow: built for a 16:9 screen, so sizes follow the viewport. Always dark. */
+.stand {
+  --ink-rgb: 252, 246, 230;
+  --surface-rgb: 21, 21, 25;
+  --red-rgb: 221, 14, 14;
+  --color-white: rgb(var(--ink-rgb));
+  --color-white-muted: rgba(var(--ink-rgb), 0.7);
+  --color-white-subtle: rgba(var(--ink-rgb), 0.5);
+  --color-red: rgb(var(--red-rgb));
+  --color-red-text: rgb(var(--red-rgb));
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr);
+  background: rgb(var(--surface-rgb));
+  color: var(--color-white);
+  overflow: hidden;
+  cursor: none;
+}
+
+.stand__stage {
+  position: relative;
+  min-height: 0;
+  padding: 6vh 5vw 4vh;
+  animation: stand-in 0.9s var(--motion-ease-out, ease) both;
+}
+@keyframes stand-in { from { opacity: 0; transform: translateY(1.5vh); } }
+
+.stand-kicker {
+  display: block;
+  font-size: clamp(0.8rem, 1.05vw, 1.4rem);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-red);
+  margin-bottom: 1.2vh;
+}
+.stand-title {
+  font-size: clamp(2rem, 4.2vw, 5.5rem);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  margin: 0 0 2vh;
+}
+.stand-title--xl { font-size: clamp(2.4rem, 5.4vw, 7rem); max-width: 18ch; }
+.stand-lead {
+  font-size: clamp(1rem, 1.6vw, 2.1rem);
+  line-height: 1.4;
+  color: var(--color-white-muted);
+  max-width: 34ch;
+  margin: 0;
+}
+
+/* Hero and car: full-bleed render with a slow push-in. */
+.stand-hero, .stand-car, .stand-photos { position: absolute; inset: 0; overflow: hidden; }
+.stand-hero__img, .stand-car__img, .stand-photos__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: stand-kenburns 14s linear both;
+}
+@keyframes stand-kenburns { from { transform: scale(1.02); } to { transform: scale(1.12); } }
+.stand-hero::after, .stand-car::after, .stand-photos::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(var(--surface-rgb), 0.92) 0%, rgba(var(--surface-rgb), 0.55) 38%, transparent 70%),
+    linear-gradient(0deg, rgba(var(--surface-rgb), 0.85) 0%, transparent 35%);
+}
+.stand-hero__copy, .stand-car__copy, .stand-photos__caption {
+  position: absolute;
+  z-index: 1;
+  left: 5vw;
+  bottom: 7vh;
+  max-width: 44vw;
+}
+.stand-hero__logo { width: min(38vw, 720px); height: auto; margin-bottom: 3vh; }
+
+/* Intro, press: centred statements */
+.stand-intro { height: 100%; display: flex; flex-direction: column; justify-content: center; }
+.stand-stats { display: flex; gap: 6vw; margin: 5vh 0 0; }
+.stand-stats dt { order: 2; font-size: clamp(0.9rem, 1.3vw, 1.7rem); color: var(--color-white-muted); }
+.stand-stats div { display: flex; flex-direction: column; }
+.stand-stats dd { margin: 0; font-size: clamp(3rem, 8vw, 10rem); font-weight: 800; line-height: 1; color: var(--color-red); font-variant-numeric: tabular-nums; }
+
+.stand-press { list-style: none; margin: 3vh 0 0; padding: 0; display: grid; gap: 2.5vh; }
+.stand-press li {
+  font-size: clamp(1.6rem, 3.6vw, 4.6rem);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  animation: stand-in 0.8s var(--motion-ease-out, ease) both;
+}
+.stand-press li:nth-child(2) { animation-delay: 0.25s; }
+.stand-press li:nth-child(3) { animation-delay: 0.5s; }
+.stand-press li:nth-child(4) { animation-delay: 0.75s; }
+
+/* Events: animation is the protagonist */
+.stand-event {
+  height: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+  gap: 4.5vw;
+  align-items: center;
+}
+.stand-event__stage { min-width: 0; display: flex; justify-content: center; }
+.stand-event__stage .fs-anim { width: 100%; background: rgba(var(--ink-rgb), 0.035); }
+.stand-event__stage .fs-anim svg { max-height: 54vh; }
+.stand-event__stage .fs-anim__hud { font-size: clamp(0.85rem, 1.15vw, 1.5rem); padding: 1.4vh 1.6vw; }
+.stand-event__points { margin: 4vh 0 0; font-size: clamp(1rem, 1.5vw, 2rem); color: var(--color-white-muted); }
+.stand-event__points strong { font-size: clamp(2.6rem, 5.5vw, 7rem); font-weight: 800; color: var(--color-red); line-height: 1; margin-right: 0.4vw; }
+
+/* Photos: crossfade with push-in */
+.stand-photos__img { opacity: 0; transition: opacity 1.2s ease; animation: none; }
+.stand-photos__img.is-active { opacity: 1; animation: stand-kenburns 6s linear both; }
+.stand-photos__title {
+  font-size: clamp(1.4rem, 2.8vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0;
+  animation: stand-in 0.8s var(--motion-ease-out, ease) both;
+}
+
+/* Car specs */
+.stand-specs { display: grid; gap: 2vh; margin: 2vh 0 0; }
+.stand-specs dt { font-size: clamp(0.8rem, 1vw, 1.3rem); color: var(--color-white-subtle); text-transform: uppercase; letter-spacing: 0.06em; }
+.stand-specs dd { margin: 0.3vh 0 0; font-size: clamp(1.1rem, 1.7vw, 2.2rem); font-weight: 700; }
+
+/* Call to action with QR */
+.stand-cta { height: 100%; display: grid; grid-template-columns: 1fr auto; gap: 5vw; align-items: center; }
+.stand-cta__qr { margin: 0; padding: 1.6vw; background: #fff; border-radius: 1.2vw; text-align: center; }
+.stand-cta__qr img { display: block; width: min(22vw, 38vh); height: auto; }
+.stand-cta__qr figcaption { margin-top: 1vh; color: #151519; font-weight: 700; font-size: clamp(0.8rem, 1vw, 1.3rem); }
+
+/* Progress: one segment per slide */
+.stand__progress { position: absolute; z-index: 3; top: 2vh; left: 5vw; right: 8vw; display: flex; gap: 0.4vw; }
+.stand__progress span { flex: 1; height: 3px; border-radius: 3px; background: rgba(var(--ink-rgb), 0.18); overflow: hidden; position: relative; }
+.stand__progress span::after { content: ''; position: absolute; inset: 0; background: var(--color-red); transform-origin: left; transform: scaleX(0); }
+.stand__progress .is-done::after { transform: scaleX(1); }
+.stand__progress .is-current::after { animation: stand-progress var(--slide-seconds, 10s) linear forwards; }
+.stand[data-paused="true"] .stand__progress .is-current::after { animation-play-state: paused; }
+@keyframes stand-progress { to { transform: scaleX(1); } }
+
+.stand__exit {
+  position: absolute;
+  z-index: 3;
+  top: 0.8vh;
+  right: 2vw;
+  font-size: 2rem;
+  line-height: 1;
+  color: rgba(var(--ink-rgb), 0.25);
+  cursor: pointer;
+}
+.stand__exit:hover { color: var(--color-white); }
+
+/* Sponsors: permanent band at the bottom */
+.stand__sponsors { position: relative; background: #f6f1e5; }
+.stand__sponsors-label {
+  position: absolute;
+  z-index: 1;
+  top: 1vh;
+  left: 5vw;
+  font-size: clamp(0.7rem, 0.85vw, 1.1rem);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #b80b0b;
+}
+.stand .sp-car { padding: 4vh 0 1.5vh; }
+.stand .sp-car__pause { display: none; }
+.stand .sp-car__item { height: clamp(56px, 7vh, 96px); width: clamp(130px, 12vw, 240px); }
+.stand .sp-car__viewport + .sp-car__viewport { margin-top: 0.6vh; }
+
+@media (prefers-reduced-motion: reduce) {
+  .stand__stage, .stand-hero__img, .stand-car__img, .stand-photos__img.is-active, .stand-press li, .stand-photos__title { animation: none; }
+}
+
+/* The render centres the car: shift it right so the copy sits on empty asphalt. */
+.stand-hero__img, .stand-car__img { left: auto; right: 0; width: 80%; -webkit-mask-image: linear-gradient(90deg, transparent, #000 30%); mask-image: linear-gradient(90deg, transparent, #000 30%); }
