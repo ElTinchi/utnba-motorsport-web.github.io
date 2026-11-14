@@ -281,3 +281,7 @@
 @media (prefers-reduced-motion: reduce) {
   .stand-cork__note, .stand-cork__photos li { animation: none; }
 }
+
+/* Event titles size to their column so long words ("Presentación") never split mid-word. */
+.stand-event__copy { container-type: inline-size; min-width: 0; }
+.stand-event__copy .stand-title { font-size: clamp(1.8rem, 10cqi, 5rem); overflow-wrap: normal; word-break: normal; hyphens: manual; }
