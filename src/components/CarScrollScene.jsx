@@ -4,7 +4,6 @@ import useReducedMotion from '../hooks/useReducedMotion';
 import { useTranslation } from 'react-i18next';
 import { COMMERCIAL_CONTACT_HREF } from '../routes';
 import { loadCarModel } from './carModel.js';
-import { applyLivery } from './carLivery.js';
 import '../styles/car-scroll-scene.css';
 
 // Reuse the viewer's local renderer; no second 3D framework or permanent render loop.
@@ -49,7 +48,6 @@ export default function CarScrollScene() {
         if (disposed) return;
         renderer = new CarRenderer(canvas.current, model);
         await renderer.initTextures();
-        await applyLivery(renderer).catch(() => {});
         if (disposed) { renderer.dispose(); renderer = null; return; }
         initialized = true;
         setReady(true);

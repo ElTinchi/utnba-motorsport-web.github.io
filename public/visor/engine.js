@@ -133,14 +133,13 @@ uniform sampler2D baseTexture;uniform sampler2D logoTexture;uniform vec3 eye;uni
 uniform sampler2D institutionTexture;uniform vec4 institutionBoxes[2];uniform sampler2D numberTexture;uniform vec4 numberBoxes[3];uniform sampler2D reservationTexture;uniform vec4 logoBox;uniform bool logoMirror;uniform bool hasLogo;uniform vec3 logoCenter;uniform vec3 logoNormal;uniform vec3 logoRight;uniform vec3 logoUp;uniform vec2 logoSize;
 void main(){
  vec4 tex=texture(baseTexture,texcoord);if(tex.a<.1)discard;
- // Bodywork panels in one uniform red, matching the texture's own red (255,6,6)
- // so no patch edge shows. The side band held black stripes and the old team
- // wordmark; sponsors now go there as decals. Chassis, cockpit and floor keep
- // their texture.
+ // Keep the original side livery. Only the upper nose panels are plain red;
+ // the previously removed team wordmarks stay cleared for sponsor placement.
  if(bodyMaterial){
-  bool sideBand=texcoord.x>.2&&texcoord.x<.8&&texcoord.y>.02&&texcoord.y<.205;
+  bool leftWordmark=texcoord.x>.312&&texcoord.x<.379&&texcoord.y>.080&&texcoord.y<.113;
+  bool rightWordmark=texcoord.x>.613&&texcoord.x<.677&&texcoord.y>.080&&texcoord.y<.113;
   bool nosePanels=texcoord.x>.23&&texcoord.x<.59&&texcoord.y>.215&&texcoord.y<.34;
-  if(sideBand||nosePanels)tex=vec4(1.,6./255.,6./255.,1.);
+  if(nosePanels||leftWordmark||rightWordmark)tex=vec4(221./255.,14./255.,14./255.,1.);
  }
  vec3 normal=normalize(surfaceNormal);if(!gl_FrontFacing)normal=-normal;
  if(floorSurface||(bodyMaterial&&world.y<-.75&&normal.y<-.55))tex=vec4(.018,.018,.018,1.);

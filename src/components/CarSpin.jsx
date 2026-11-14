@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import useReducedMotion from '../hooks/useReducedMotion.js';
 import { loadCarModel } from './carModel.js';
-import { applyLivery } from './carLivery.js';
 
 const START_YAW = 0.72; // same three-quarter view the home scene opens with
 
@@ -21,8 +20,6 @@ export default function CarSpin({ seconds = 12, className = '' }) {
       if (disposed) return;
       renderer = new CarRenderer(canvas.current, model);
       await renderer.initTextures();
-      // Decals are a bonus: a failed logo load keeps the plain red car.
-      await applyLivery(renderer).catch(() => {});
       if (disposed) { renderer.dispose(); return; }
       live = true;
       setReady(true);
