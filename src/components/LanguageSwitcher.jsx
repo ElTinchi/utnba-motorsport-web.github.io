@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { SUPPORTED_LANGUAGES } from '../i18n';
+import { SUPPORTED_LANGUAGES, LANGUAGE_CHOICE_KEY } from '../i18n';
 import { FLAG_COMPONENTS } from './Flags.jsx';
 
 export default function LanguageSwitcher() {
@@ -24,6 +24,7 @@ export default function LanguageSwitcher() {
 
   function selectLanguage(code) {
     i18n.changeLanguage(code);
+    try { localStorage.setItem(LANGUAGE_CHOICE_KEY, code); } catch { /* private mode: choice lasts this visit */ }
     setOpen(false);
   }
 

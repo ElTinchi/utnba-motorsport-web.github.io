@@ -11,6 +11,11 @@ const es = parseLocale(esJson);
 const en = parseLocale(enJson);
 const pt = parseLocale(ptJson);
 
+// Only written by an explicit choice. The old 'utnba_lang' key also held
+// auto-detected values, so it is dropped instead of trusted.
+export const LANGUAGE_CHOICE_KEY = 'utnba_lang_choice';
+try { localStorage.removeItem('utnba_lang'); } catch { /* storage blocked */ }
+
 export const SUPPORTED_LANGUAGES = [
   { code: 'es', label: 'Español' },
   { code: 'en', label: 'English' },
@@ -31,10 +36,14 @@ i18n
     interpolation: {
       escapeValue: false,
     },
+    // Spanish unless the visitor picked another language in the switcher.
+    // The browser language is ignored on purpose: many people in Argentina run
+    // their browser in English, got the English site and then Chrome's machine
+    // translation back to Spanish.
     detection: {
-      order: ['localStorage', 'navigator'],
-      caches: ['localStorage'],
-      lookupLocalStorage: 'utnba_lang',
+      order: ['localStorage'],
+      caches: [],
+      lookupLocalStorage: LANGUAGE_CHOICE_KEY,
     },
   });
 
