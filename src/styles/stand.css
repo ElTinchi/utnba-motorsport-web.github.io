@@ -216,7 +216,7 @@
 .stand-cork {
   position: absolute;
   inset: 0;
-  padding: 8vh 5vw 11vh 20vw;
+  padding: 8vh 5vw 6vh 20vw;
   background:
     radial-gradient(rgba(60, 30, 5, 0.28) 1px, transparent 1.6px) 0 0 / 7px 7px,
     radial-gradient(rgba(255, 235, 200, 0.16) 1px, transparent 1.6px) 3px 4px / 11px 11px,
@@ -276,20 +276,6 @@
 }
 @keyframes stand-drop {
   from { opacity: 0; transform: translateY(-4vh) scale(1.04); }
-}
-
-/* Soft hand-off from the dark stage into the light sponsors band */
-.stand__stage { padding-bottom: 9vh; }
-.stand__sponsors::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 100%;
-  height: 9vh;
-  background: linear-gradient(to bottom, rgba(246, 241, 229, 0), rgba(246, 241, 229, 0.18) 45%, rgba(246, 241, 229, 0.75) 85%, #f6f1e5);
-  pointer-events: none;
-  z-index: 2;
 }
 
 @media (prefers-reduced-motion: reduce) {
