@@ -5,10 +5,18 @@ import { ROUTES } from '../routes';
 import EditorialReveal from '../components/EditorialReveal';
 import StaggerList from '../components/StaggerList';
 import SkidPadAnimation from '../components/events/SkidPadAnimation.jsx';
+import AccelerationAnimation from '../components/events/AccelerationAnimation.jsx';
+import EfficiencyAnimation from '../components/events/EfficiencyAnimation.jsx';
+import AutocrossAnimation from '../components/events/AutocrossAnimation.jsx';
+import EnduranceAnimation from '../components/events/EnduranceAnimation.jsx';
+import DesignAnimation from '../components/events/DesignAnimation.jsx';
+import CostAnimation from '../components/events/CostAnimation.jsx';
+import BusinessPlanAnimation from '../components/events/BusinessPlanAnimation.jsx';
 import '../styles/formulaStudent.css';
 
 // Same order in every locale's fsPage.dynamicEvents.
-const DYNAMIC_ANIMATIONS = [null, SkidPadAnimation];
+const DYNAMIC_ANIMATIONS = [AccelerationAnimation, SkidPadAnimation, AutocrossAnimation, EfficiencyAnimation, EnduranceAnimation];
+const STATIC_ANIMATIONS = [DesignAnimation, CostAnimation, BusinessPlanAnimation];
 
 export default function FormulaStudent() {
   const { t } = useTranslation();
@@ -67,13 +75,19 @@ export default function FormulaStudent() {
                   <div className="fs-events">
                     <h3 className="fs-events__title">{t('fsPage.staticTitle')}</h3>
                     <p className="fs-events__intro">{t('fsPage.staticIntro')}</p>
-                    <StaggerList as="div" itemAs="article" className="fs-events__grid" itemClassName="fs-event" items={staticEvents} renderItem={(ev) => (
-                        <>
-                          <h4 className="fs-event__title">{ev.title}</h4>
-                          <p className="fs-event__body">{ev.body}</p>
-                          <p className="fs-event__score">{ev.score}</p>
-                        </>
-                      )} />
+                    <StaggerList as="div" itemAs="article" className="fs-events__grid" itemClassName="fs-event" items={staticEvents} renderItem={(ev, i) => {
+                        const Animation = STATIC_ANIMATIONS[i];
+                        return (
+                          <>
+                            <div className="fs-event__text">
+                              <h4 className="fs-event__title">{ev.title}</h4>
+                              <p className="fs-event__body">{ev.body}</p>
+                              <p className="fs-event__score">{ev.score}</p>
+                            </div>
+                            {Animation && <Animation />}
+                          </>
+                        );
+                      }} />
                   </div>
                 </>
               )}

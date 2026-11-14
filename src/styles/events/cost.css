@@ -1,0 +1,9 @@
+.fs-anim-cost__tag { fill: rgba(var(--ink-rgb), 0.1); stroke: rgba(var(--ink-rgb), 0.35); stroke-width: 1; }
+.fs-anim-cost__name { fill: rgba(var(--ink-rgb), 0.7); font: 600 7px sans-serif; text-anchor: middle; }
+.fs-anim-cost__price { fill: var(--color-red-text); font: 800 9.5px sans-serif; text-anchor: middle; }
+.fs-anim-cost__clip { fill: rgba(var(--ink-rgb), 0.12); stroke: rgba(var(--ink-rgb), 0.45); stroke-width: 1; }
+.fs-anim-cost__row { fill: rgba(var(--ink-rgb), 0.4); }
+.fs-anim-cost__tick { fill: none; stroke: var(--color-red-text); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.fs-anim--cost .fs-anim__times div:first-child dd { min-width: 4.8em; }
+.fs-anim--cost .fs-anim__times div:first-child dd,
+.fs-anim--cost[data-phase="0"] .fs-anim__times div:first-child dd { color: var(--color-red-text); }

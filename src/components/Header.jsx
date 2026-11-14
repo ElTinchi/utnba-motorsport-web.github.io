@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ROUTES, COMMERCIAL_CONTACT_HREF } from '../routes';
 import LanguageSwitcher from './LanguageSwitcher.jsx';
+import PresentationMode from './PresentationMode.jsx';
 
 export default function Header() {
   const { t } = useTranslation();
@@ -98,6 +99,7 @@ export default function Header() {
         </nav>
 
         <div className="header__actions">
+          <PresentationMode />
           <LanguageSwitcher />
           <a href={COMMERCIAL_CONTACT_HREF} className="btn btn--primary btn--small header__cta" onClick={closeAll}>
             <span className="header__cta-full">{t('sponsorsPage.primaryCta')}</span>

@@ -1,0 +1,12 @@
+/* Pictogram people and side-view car shared by the static-event scenes. */
+.fs-person--team { --p: rgba(var(--red-rgb), 0.9); }
+.fs-person--judge { --p: rgba(var(--ink-rgb), 0.55); }
+.fs-person rect, .fs-person circle { fill: var(--p); }
+.fs-person__arm { stroke: var(--p); stroke-width: 5; stroke-linecap: round; }
+
+.fs-side-car__body { fill: #dd0e0e; stroke: #fff; stroke-width: 0.8; stroke-linejoin: round; }
+.fs-side-car__wheel { fill: #161619; stroke: #f6f1e5; stroke-width: 1; }
+.fs-side-car__hub { fill: #f6f1e5; }
+.fs-side-car__metal { fill: none; stroke: #bbb; stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; }
+.fs-side-car__engine { fill: #2a2a31; stroke: #bbb; stroke-width: 0.8; }
+.fs-side-car__helmet { fill: #f6f1e5; }

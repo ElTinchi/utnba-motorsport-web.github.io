@@ -1,0 +1,2 @@
+.fs-anim--autocross .fs-anim__cone { stroke: rgba(var(--ink-rgb), .35); stroke-width: .8; }
+.fs-anim--autocross .fs-anim__trail { stroke-width: 5; opacity: .75; }

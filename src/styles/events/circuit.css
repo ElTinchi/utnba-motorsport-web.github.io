@@ -1,0 +1,16 @@
+/* Circuito compartido de Autocross y Resistencia (mismo look del hero, sin blur). */
+.fs-anim-ci__road,
+.fs-anim-ci__center,
+.fs-anim-ci__curb,
+.fs-anim-ci__mask-out,
+.fs-anim-ci__mask-in { fill: none; stroke-linejoin: round; stroke-linecap: round; }
+.fs-anim-ci__road { stroke: rgba(var(--ink-rgb), .1); stroke-width: 40; }
+.fs-anim-ci__center { stroke: rgba(var(--ink-rgb), .4); stroke-width: 2.5; stroke-dasharray: 9 11; }
+.fs-anim-ci__curb { stroke-width: 46; stroke-dasharray: 14 14; }
+.fs-anim-ci__curb--white { stroke: rgba(var(--ink-rgb), .3); stroke-dashoffset: 14; }
+.fs-anim-ci__curb--red { stroke: rgba(var(--red-rgb), .6); }
+.fs-anim-ci__mask-out { stroke: #fff; stroke-width: 46; }
+.fs-anim-ci__mask-in { stroke: #000; stroke-width: 40; }
+.fs-anim-ci__tile--l { fill: rgba(var(--ink-rgb), .9); }
+.fs-anim-ci__tile--d { fill: rgba(var(--ink-rgb), .22); }
+.fs-anim-ci__start { opacity: .85; }

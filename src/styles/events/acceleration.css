@@ -1,0 +1,5 @@
+.fs-anim-accel__road { fill: rgba(var(--ink-rgb), 0.06); stroke: none; }
+.fs-anim-accel__runoff { fill: rgba(var(--ink-rgb), 0.03); stroke: rgba(var(--ink-rgb), 0.12); stroke-dasharray: 2 3; }
+.fs-anim-accel__label { fill: rgba(var(--ink-rgb), 0.55); font-size: 7px; font-weight: 700; letter-spacing: 0.08em; text-anchor: middle; }
+.fs-anim-accel__dist { fill: rgba(var(--ink-rgb), 0.4); font-size: 6px; text-anchor: middle; }
+.fs-anim--acceleration .fs-anim__times span { color: var(--color-white-subtle); }

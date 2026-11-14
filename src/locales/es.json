@@ -277,6 +277,92 @@
           "Círculo izquierdo · vuelta cronometrada",
           "Salida · promedio de ambas vueltas"
         ]
+      },
+      "acceleration": {
+        "label": "Animación de la prueba de aceleración: el auto larga desde parado, recorre 75 metros en línea recta y cruza la meta cronometrada a unos 142 km/h.",
+        "start": "LARGADA",
+        "finish": "META",
+        "time": "Tiempo",
+        "speed": "Velocidad",
+        "phases": [
+          "En la grilla",
+          "Aceleración a fondo sobre 75 m",
+          "Frenando en la zona de salida",
+          "Resultado final"
+        ]
+      },
+      "efficiency": {
+        "label": "Animación de la prueba de eficiencia: el auto da vueltas a un circuito mientras la batería se va vaciando; lo que cuenta es la energía usada en relación con la velocidad.",
+        "battery": "BATERÍA",
+        "energy": "Energía usada",
+        "speed": "Velocidad media",
+        "factor": "Eficiencia (km/h por kWh)",
+        "phases": [
+          "Midiendo el consumo durante la resistencia",
+          "Resultado: menos energía a igual velocidad es más eficiencia"
+        ]
+      },
+      "autocross": {
+        "label": "Animación de una vuelta de autocross: el auto sale de la línea, recorre el circuito entre conos y se detiene con el tiempo final.",
+        "phases": [
+          "En la largada",
+          "Vuelta cronometrada",
+          "Vuelta completa · define la largada de la resistencia"
+        ],
+        "time": "Tiempo",
+        "cones": "Conos"
+      },
+      "endurance": {
+        "label": "Animación de la prueba de resistencia: tres autos dan vueltas al circuito y el nuestro para a mitad de carrera para el cambio de piloto.",
+        "phases": [
+          "En la grilla",
+          "En carrera",
+          "Cambio de piloto obligatorio",
+          "Fin · se suman tiempo, consumo y confiabilidad"
+        ],
+        "lap": "Vuelta",
+        "driver": "Piloto"
+      },
+      "businessPlan": {
+        "label": "Animación del pitch del plan de negocios: el equipo presenta diapositivas ante los jueces y después responde sus preguntas.",
+        "phases": [
+          "Pitch del plan de negocios",
+          "Preguntas de los jueces"
+        ],
+        "slides": [
+          "Plan de negocios",
+          "Mercado objetivo",
+          "Proyección de ventas",
+          "UTN BA Motorsport"
+        ],
+        "slide": "Diapositiva",
+        "time": "Tiempo"
+      },
+      "design": {
+        "label": "Animación de la defensa del diseño: los jueces hacen preguntas sobre las partes del auto y el equipo las responde.",
+        "phase": "Defensa del diseño · {{part}}",
+        "parts": [
+          "Suspensión",
+          "Chasis",
+          "Aerodinámica",
+          "Powertrain"
+        ],
+        "questions": "Preguntas"
+      },
+      "cost": {
+        "label": "Animación de la prueba de costos: las piezas del auto se separan una a una con su precio y después los jueces revisan el reporte.",
+        "phases": [
+          "Desglose de costos por pieza",
+          "Revisión con los jueces"
+        ],
+        "parts": [
+          "Rueda",
+          "Motor",
+          "Alerón",
+          "Chasis"
+        ],
+        "total": "Total",
+        "pieces": "Piezas"
       }
     }
   },
@@ -700,5 +786,10 @@
     "scrollCue": "Bajá y conocé el proyecto",
     "pauseSponsors": "Pausar logos",
     "resumeSponsors": "Reanudar logos"
+  },
+  "presentation": {
+    "start": "Modo presentación",
+    "hint": "Esc o cualquier clic para salir · Espacio para pausar",
+    "paused": "En pausa · Espacio para seguir"
   }
 }

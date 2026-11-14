@@ -1,0 +1,7 @@
+.fs-anim-eff__road { fill: none; stroke: rgba(var(--ink-rgb), 0.07); stroke-width: 26; }
+.fs-anim-eff__battery { fill: none; stroke: rgba(var(--ink-rgb), 0.55); stroke-width: 1.5; }
+.fs-anim-eff__cap { fill: rgba(var(--ink-rgb), 0.55); }
+.fs-anim-eff__fill { fill: rgba(var(--red-rgb), 0.8); }
+.fs-anim-eff__gauge-label { fill: rgba(var(--ink-rgb), 0.55); font-size: 7px; font-weight: 700; letter-spacing: 0.08em; text-anchor: middle; }
+.fs-anim--efficiency .fs-anim__times { flex-wrap: wrap; }
+.fs-anim--efficiency .fs-anim__times span { color: var(--color-white-subtle); }

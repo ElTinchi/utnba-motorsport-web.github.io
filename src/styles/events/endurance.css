@@ -1,0 +1,18 @@
+.fs-anim--endurance .fs-anim__cone { opacity: .85; }
+.fs-anim .fs-anim-end__car--b .hero__car-body { fill: #7d93a8; }
+.fs-anim .fs-anim-end__car--c .hero__car-body { fill: #e8b923; }
+/* Pulsing ring around our car during the mandatory driver swap. */
+.fs-anim-end__ring {
+  fill: none;
+  stroke: var(--color-red-text);
+  stroke-width: 2.5;
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.fs-anim--endurance[data-phase="2"] .fs-anim-end__ring { opacity: .9; animation: fs-anim-end-pulse 1s ease-out infinite; }
+.fs-anim--endurance[data-phase="3"] .fs-anim__phase { color: var(--color-red-text); }
+@keyframes fs-anim-end-pulse { from { transform: scale(.55); opacity: .9; } to { transform: scale(1.2); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .fs-anim--endurance[data-phase="2"] .fs-anim-end__ring { animation: none; opacity: .7; }
+}

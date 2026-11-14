@@ -1,0 +1,7 @@
+.fs-anim-design__line { fill: none; stroke: rgba(var(--red-rgb), 0.9); stroke-width: 1.2; stroke-dasharray: 1; stroke-dashoffset: 1; }
+.fs-anim-design__dot { fill: var(--color-red-text); }
+.fs-anim-design__label { fill: rgba(var(--ink-rgb), 0.85); font: 700 10px sans-serif; text-anchor: middle; }
+.fs-anim-design__bubble { fill: rgba(var(--ink-rgb), 0.1); stroke: rgba(var(--ink-rgb), 0.35); stroke-width: 1; }
+.fs-anim-design__ans { fill: rgba(var(--ink-rgb), 0.45); }
+.fs-anim-design__q { fill: var(--color-red-text); font: 800 14px sans-serif; text-anchor: middle; }
+.fs-anim--design .fs-anim__times dd { min-width: 1.5em; }

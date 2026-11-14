@@ -1,0 +1,14 @@
+.fs-anim-bp__screen { fill: rgba(var(--ink-rgb), 0.07); stroke: rgba(var(--ink-rgb), 0.3); stroke-width: 1.2; }
+.fs-anim-bp__t { fill: rgba(var(--ink-rgb), 0.85); font: 700 13px sans-serif; text-anchor: middle; }
+.fs-anim-bp__label { fill: rgba(var(--ink-rgb), 0.7); font: 600 9px sans-serif; }
+.fs-anim-bp__bar { fill: rgba(var(--ink-rgb), 0.35); }
+.fs-anim-bp__bar:last-of-type { fill: rgba(var(--red-rgb), 0.9); }
+.fs-anim-bp__grid { stroke: rgba(var(--ink-rgb), 0.15); stroke-width: 1; }
+.fs-anim-bp__chart { fill: none; stroke: rgba(var(--red-rgb), 0.95); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+.fs-anim-bp__dot { fill: rgba(var(--red-rgb), 0.95); }
+.fs-anim-bp__sub { fill: rgba(var(--ink-rgb), 0.25); }
+.fs-anim-bp__table { fill: rgba(var(--ink-rgb), 0.18); stroke: rgba(var(--ink-rgb), 0.3); stroke-width: 1; }
+.fs-anim-bp__aud { fill: rgba(var(--ink-rgb), 0.2); }
+.fs-anim-bp__bubble { fill: rgba(var(--ink-rgb), 0.1); stroke: rgba(var(--ink-rgb), 0.35); stroke-width: 1; }
+.fs-anim-bp__q { fill: var(--color-red-text); font: 800 14px sans-serif; text-anchor: middle; }
+.fs-anim--businessplan .fs-anim__times dd { min-width: 3.2em; }

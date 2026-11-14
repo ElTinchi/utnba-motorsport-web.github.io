@@ -277,6 +277,92 @@
           "Left circle · timed lap",
           "Exit · average of both laps"
         ]
+      },
+      "acceleration": {
+        "label": "Acceleration event animation: the car launches from a standstill, covers 75 meters in a straight line and crosses the timed finish at about 142 km/h.",
+        "start": "START",
+        "finish": "FINISH",
+        "time": "Time",
+        "speed": "Speed",
+        "phases": [
+          "Staged on the grid",
+          "Full acceleration over 75 m",
+          "Braking in the run-off zone",
+          "Final result"
+        ]
+      },
+      "efficiency": {
+        "label": "Efficiency event animation: the car laps a circuit while the battery drains; what counts is the energy used relative to speed.",
+        "battery": "BATTERY",
+        "energy": "Energy used",
+        "speed": "Average speed",
+        "factor": "Efficiency (km/h per kWh)",
+        "phases": [
+          "Measuring consumption during the endurance run",
+          "Result: less energy at the same speed means higher efficiency"
+        ]
+      },
+      "autocross": {
+        "label": "Autocross lap animation: the car leaves the line, runs the circuit between cones and stops with its final time.",
+        "phases": [
+          "On the start line",
+          "Timed lap",
+          "Lap complete · sets the endurance start order"
+        ],
+        "time": "Time",
+        "cones": "Cones"
+      },
+      "endurance": {
+        "label": "Endurance animation: three cars lap the circuit and ours stops mid-race for the mandatory driver change.",
+        "phases": [
+          "On the grid",
+          "Racing",
+          "Mandatory driver change",
+          "Finish · time, efficiency and reliability add up"
+        ],
+        "lap": "Lap",
+        "driver": "Driver"
+      },
+      "businessPlan": {
+        "label": "Business plan pitch animation: the team presents slides to the judges, then answers their questions.",
+        "phases": [
+          "Business plan pitch",
+          "Judges' questions"
+        ],
+        "slides": [
+          "Business plan",
+          "Target market",
+          "Sales forecast",
+          "UTN BA Motorsport"
+        ],
+        "slide": "Slide",
+        "time": "Time"
+      },
+      "design": {
+        "label": "Design defense animation: judges ask questions about the car's parts and the team answers them.",
+        "phase": "Design defense · {{part}}",
+        "parts": [
+          "Suspension",
+          "Chassis",
+          "Aerodynamics",
+          "Powertrain"
+        ],
+        "questions": "Questions"
+      },
+      "cost": {
+        "label": "Cost event animation: the car's parts lift off one by one with their price, then the judges review the report.",
+        "phases": [
+          "Cost breakdown by part",
+          "Review with the judges"
+        ],
+        "parts": [
+          "Wheel",
+          "Engine",
+          "Wing",
+          "Chassis"
+        ],
+        "total": "Total",
+        "pieces": "Parts"
       }
     }
   },
@@ -700,5 +786,10 @@
     "scrollCue": "Scroll to discover the project",
     "pauseSponsors": "Pause logos",
     "resumeSponsors": "Resume logos"
+  },
+  "presentation": {
+    "start": "Presentation mode",
+    "hint": "Esc or any click to exit · Space to pause",
+    "paused": "Paused · Space to resume"
   }
 }

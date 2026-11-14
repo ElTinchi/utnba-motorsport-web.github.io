@@ -261,5 +261,8 @@
   color: var(--color-white-muted);
 }
 .fs-anim__result dd { color: var(--color-red-text); }
-.fs-anim[data-phase="2"] .fs-anim__times div:nth-child(1) dd,
-.fs-anim[data-phase="4"] .fs-anim__times div:nth-child(2) dd { color: var(--color-red-text); }
+.fs-anim__times dd.is-live,
+.fs-anim--skidpad[data-phase="2"] .fs-anim__times div:nth-child(1) dd,
+.fs-anim--skidpad[data-phase="4"] .fs-anim__times div:nth-child(2) dd { color: var(--color-red-text); }
+.fs-anim__times dd:has(+ span) { min-width: 0; }
+.fs-anim__times dd + span { margin-left: -0.2rem; color: var(--color-white-subtle); }
