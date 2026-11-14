@@ -170,3 +170,96 @@
   color: var(--color-white-subtle);
 }
 .fs-explainer { margin: 2.5rem 0; }
+
+/* ========================================
+   Animaciones de pruebas
+   ======================================== */
+.fs-event:has(.fs-anim) {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+@media (min-width: 860px) {
+  .fs-event:has(.fs-anim) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+    gap: 2.25rem;
+  }
+  .fs-event:has(.fs-anim):nth-child(even) .fs-anim { order: -1; }
+}
+
+.fs-anim {
+  margin: 0;
+  border-radius: 12px;
+  background: rgba(var(--ink-rgb), 0.04);
+  border: 1px solid rgba(var(--ink-rgb), 0.08);
+  overflow: hidden;
+}
+
+.fs-anim svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.fs-anim__line {
+  fill: none;
+  stroke: rgba(var(--ink-rgb), 0.14);
+  stroke-width: 1;
+  stroke-dasharray: 3 4;
+}
+
+.fs-anim__trail {
+  fill: none;
+  stroke: rgba(var(--red-rgb), 0.55);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.fs-anim__timing {
+  stroke: rgba(var(--ink-rgb), 0.55);
+  stroke-width: 1.2;
+  stroke-dasharray: 2 2;
+}
+
+.fs-anim__cone { fill: #f07a1a; }
+.fs-anim__car .hero__car-wheel { fill: #161619; stroke: #f6f1e5; stroke-width: .7; }
+.fs-anim__car .hero__car-body { fill: #dd0e0e; stroke: #fff; stroke-width: .8; }
+.fs-anim__car .hero__car-glass { fill: #17171d; }
+.fs-anim__car .hero__car-suspension { fill: none; stroke: #bbb; stroke-width: 1; }
+
+.fs-anim__hud {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem 1rem;
+  padding: 0.75rem 1rem;
+  border-top: 1px solid rgba(var(--ink-rgb), 0.08);
+  font-size: 0.75rem;
+}
+
+.fs-anim__phase {
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.fs-anim__times {
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+}
+
+.fs-anim__times div { display: flex; gap: 0.35rem; }
+.fs-anim__times dt { color: var(--color-white-subtle); }
+.fs-anim__times dd {
+  margin: 0;
+  min-width: 2.6em;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  color: var(--color-white-muted);
+}
+.fs-anim__result dd { color: var(--color-red-text); }
+.fs-anim[data-phase="2"] .fs-anim__times div:nth-child(1) dd,
+.fs-anim[data-phase="4"] .fs-anim__times div:nth-child(2) dd { color: var(--color-red-text); }

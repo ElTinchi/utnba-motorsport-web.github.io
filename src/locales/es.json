@@ -262,7 +262,23 @@
         "body": "Cada equipo presenta un producto o servicio relacionado directamente con el auto que construyó esa temporada, como si estuviera ante inversores reales. El objetivo es convencer a los jueces —que actúan como una empresa ficticia— de que la propuesta responde a las necesidades de un mercado objetivo y puede funcionar comercialmente. Después de la presentación hay una ronda de preguntas, donde el equipo tiene que responder con seguridad y capacidad de adaptación. Se evalúan tanto el contenido y la estructura de la presentación como el desempeño del equipo al exponerla.",
         "score": "Puntaje máximo: 85."
       }
-    ]
+    ],
+    "anim": {
+      "skidpad": {
+        "label": "Animación del Skid Pad: el auto recorre el ocho, dos vueltas por círculo, y se toma la segunda de cada lado.",
+        "right": "Derecho",
+        "left": "Izquierdo",
+        "average": "Tiempo",
+        "phases": [
+          "Entrada al ocho",
+          "Círculo derecho · vuelta de calentamiento",
+          "Círculo derecho · vuelta cronometrada",
+          "Círculo izquierdo · vuelta de calentamiento",
+          "Círculo izquierdo · vuelta cronometrada",
+          "Salida · promedio de ambas vueltas"
+        ]
+      }
+    }
   },
   "motorsportPage": {
     "kicker": "UTN BA Motorsport",

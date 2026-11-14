@@ -4,7 +4,11 @@ import { useTranslation } from 'react-i18next';
 import { ROUTES } from '../routes';
 import EditorialReveal from '../components/EditorialReveal';
 import StaggerList from '../components/StaggerList';
+import SkidPadAnimation from '../components/events/SkidPadAnimation.jsx';
 import '../styles/formulaStudent.css';
+
+// Same order in every locale's fsPage.dynamicEvents.
+const DYNAMIC_ANIMATIONS = [null, SkidPadAnimation];
 
 export default function FormulaStudent() {
   const { t } = useTranslation();
@@ -45,13 +49,19 @@ export default function FormulaStudent() {
                   <div className="fs-events">
                     <h3 className="fs-events__title">{t('fsPage.dynamicTitle')}</h3>
                     <p className="fs-events__intro">{t('fsPage.dynamicIntro')}</p>
-                    <StaggerList as="div" itemAs="article" className="fs-events__grid" itemClassName="fs-event" items={dynamicEvents} renderItem={(ev) => (
-                        <>
-                          <h4 className="fs-event__title">{ev.title}</h4>
-                          <p className="fs-event__body">{ev.body}</p>
-                          <p className="fs-event__score">{ev.score}</p>
-                        </>
-                      )} />
+                    <StaggerList as="div" itemAs="article" className="fs-events__grid" itemClassName="fs-event" items={dynamicEvents} renderItem={(ev, i) => {
+                        const Animation = DYNAMIC_ANIMATIONS[i];
+                        return (
+                          <>
+                            <div className="fs-event__text">
+                              <h4 className="fs-event__title">{ev.title}</h4>
+                              <p className="fs-event__body">{ev.body}</p>
+                              <p className="fs-event__score">{ev.score}</p>
+                            </div>
+                            {Animation && <Animation />}
+                          </>
+                        );
+                      }} />
                   </div>
 
                   <div className="fs-events">

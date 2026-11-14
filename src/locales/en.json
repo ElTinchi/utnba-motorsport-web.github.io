@@ -262,7 +262,23 @@
         "body": "Each team pitches a product or service directly related to the vehicle they built that season, as if presenting to potential investors. The goal is to convince the judges — acting as a fictitious company — that their concept meets the needs of a target market and could succeed commercially. The pitch is followed by a question round, where the team must respond confidently and adaptively. Both the content and structure of the presentation, as well as the team's delivery, are evaluated.",
         "score": "Maximum score: 85."
       }
-    ]
+    ],
+    "anim": {
+      "skidpad": {
+        "label": "Skid Pad animation: the car drives the figure eight, two laps per circle, and the second lap on each side is timed.",
+        "right": "Right",
+        "left": "Left",
+        "average": "Time",
+        "phases": [
+          "Entering the eight",
+          "Right circle · warm-up lap",
+          "Right circle · timed lap",
+          "Left circle · warm-up lap",
+          "Left circle · timed lap",
+          "Exit · average of both laps"
+        ]
+      }
+    }
   },
   "motorsportPage": {
     "kicker": "UTN BA Motorsport",
