@@ -25,8 +25,7 @@ const STATIC = [[DesignAnimation, 12], [CostAnimation, 12], [BusinessPlanAnimati
 // A stand cell is ~560x600 px at 1080p: photos whose short side is below this get upscaled and look soft.
 const MIN_PHOTO_SIDE = 600;
 const AREA_SECONDS = 6;
-const MOMENT_SECONDS = 9;
-const chunk = (list, size) => Array.from({ length: Math.ceil(list.length / size) }, (_, i) => list.slice(i * size, i * size + size));
+const NEWS_SECONDS = 8;
 const points = score => Number(String(score).match(/\d+/)?.[0] || 0);
 
 function EventSlide({ Animation, event, kicker, tagline }) {
@@ -55,6 +54,20 @@ function PhotoGridSlide({ kicker, title, photos }) {
   </div>;
 }
 
+// Area photos as paper prints pinned to a corkboard; tilt and drop vary per photo.
+const TILTS = [-4, 3, -2];
+function CorkSlide({ kicker, title, photos }) {
+  return <div className="stand-cork">
+    <div className="stand-cork__note"><span className="stand-kicker">{kicker}</span><h2 className="stand-title">{title}</h2></div>
+    <ul className={`stand-cork__photos stand-cork__photos--${photos.length}`}>
+      {photos.map((photo, i) => <li key={photo.src} style={{ '--i': i, '--tilt': `${TILTS[i % TILTS.length]}deg` }}>
+        <span className="stand-cork__pin" aria-hidden="true" />
+        <img src={photo.src} alt="" draggable={false} />
+      </li>)}
+    </ul>
+  </div>;
+}
+
 export default function Stand() {
   const { t, i18n } = useTranslation();
   const [current, setCurrent] = useState(0);
@@ -62,7 +75,7 @@ export default function Stand() {
   // src -> short side in px, measured once; unmeasured photos are shown until known.
   const [sizes, setSizes] = useState({});
   useEffect(() => {
-    Object.values(PHOTOS_BY_AREA).flat().forEach(src => {
+    [...Object.values(PHOTOS_BY_AREA).flat(), ...NEWS.es.posts.flatMap(p => [p.image, ...(p.gallery || []).map(g => g.src)])].filter(Boolean).forEach(src => {
       const img = new Image();
       img.onload = () => setSizes(prev => ({ ...prev, [src]: Math.min(img.naturalWidth, img.naturalHeight) }));
       img.src = src;
@@ -82,11 +95,14 @@ export default function Stand() {
       .filter(({ photos }) => photos.length)
       .map(({ a, photos }) => ({
         seconds: AREA_SECONDS,
-        grid: { kicker: t('stand.workshopKicker'), title: t(`areas.items.${a.id}.title`), photos: photos.map(src => ({ src })) },
+        cork: { kicker: t('stand.workshopKicker'), title: t(`areas.items.${a.id}.title`), photos: photos.map(src => ({ src })) },
       }));
     const half = Math.ceil(areaSlides.length / 2);
-    const moments = chunk(NEWS[lang].posts.filter(p => p.image).slice(0, 6).map(p => ({ src: p.image, caption: p.title })), 3)
-      .map(photos => ({ seconds: MOMENT_SECONDS, grid: { kicker: t('stand.momentsKicker'), photos } }));
+    // One slide per news post with its cover plus gallery, so each story shows its own photos.
+    const moments = NEWS[lang].posts.filter(p => p.image).map(p => ({
+      seconds: NEWS_SECONDS,
+      grid: { kicker: p.date, title: p.title, photos: [p.image, ...(p.gallery || []).map(g => g.src)].filter(sharp).slice(0, 3).map(src => ({ src })) },
+    })).filter(slide => slide.grid.photos.length);
     const ev = (list, i, kind, n) => ({ list, i, kind, n });
     return [
       { seconds: 9, render: () => <div className="stand-hero">
@@ -163,6 +179,8 @@ export default function Stand() {
     const offset = kind === 'dynamic' ? 0 : DYNAMIC.length;
     body = <EventSlide Animation={Animation} event={list[i]} tagline={slide.taglines[offset + i]}
       kicker={t(kind === 'dynamic' ? 'stand.dynamicKicker' : 'stand.staticKicker', { n: i + 1, total: n })} />;
+  } else if (slide.cork) {
+    body = <CorkSlide {...slide.cork} />;
   } else if (slide.grid) {
     body = <PhotoGridSlide {...slide.grid} />;
   } else {

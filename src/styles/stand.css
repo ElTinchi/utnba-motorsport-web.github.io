@@ -208,3 +208,90 @@
 
 /* The render centres the car: shift it right so the copy sits on empty asphalt. */
 .stand-hero__img, .stand-car__img { left: auto; right: 0; width: 80%; -webkit-mask-image: linear-gradient(90deg, transparent, #000 30%); mask-image: linear-gradient(90deg, transparent, #000 30%); }
+
+/* News slide titles are full sentences: smaller than section titles. */
+.stand-grid .stand-title { font-size: clamp(1.6rem, 2.8vw, 3.6rem); max-width: 30ch; }
+
+/* Corkboard: area photos as pinned paper prints */
+.stand-cork {
+  position: absolute;
+  inset: 0;
+  padding: 8vh 5vw 11vh 20vw;
+  background:
+    radial-gradient(rgba(60, 30, 5, 0.28) 1px, transparent 1.6px) 0 0 / 7px 7px,
+    radial-gradient(rgba(255, 235, 200, 0.16) 1px, transparent 1.6px) 3px 4px / 11px 11px,
+    radial-gradient(rgba(70, 35, 10, 0.3) 1.6px, transparent 2.2px) 5px 2px / 17px 17px,
+    radial-gradient(ellipse at 50% 40%, #c4935e, #9c6c3d 75%);
+  box-shadow: inset 0 0 12vh rgba(0, 0, 0, 0.45);
+}
+.stand-cork__note {
+  position: absolute;
+  z-index: 2;
+  top: 7vh;
+  left: 4vw;
+  padding: 2.2vh 1.8vw 1.4vh;
+  background: #fbf6e9;
+  color: #151519;
+  rotate: -3deg;
+  box-shadow: 0 1vh 2.5vh rgba(0, 0, 0, 0.35);
+  animation: stand-drop 0.7s var(--motion-ease-out, ease) both;
+}
+.stand-cork__note .stand-title { margin: 0; font-size: clamp(1.8rem, 3.2vw, 4.2rem); color: #151519; }
+.stand-cork__note .stand-kicker { color: #b80b0b; }
+.stand-cork__photos {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5vw;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.stand-cork__photos li {
+  position: relative;
+  flex: 0 1 auto;
+  height: min(50vh, 100%);
+  aspect-ratio: 4 / 5;
+  padding: 1vw 1vw 4.5vh;
+  background: #fdfbf5;
+  rotate: var(--tilt);
+  translate: 0 calc((var(--i) - 1) * -2vh);
+  box-shadow: 0 1.4vh 3vh rgba(0, 0, 0, 0.4), 0 0.2vh 0.5vh rgba(0, 0, 0, 0.25);
+  animation: stand-drop 0.8s var(--motion-ease-out, ease) both;
+  animation-delay: calc(0.25s + var(--i) * 0.22s);
+}
+.stand-cork__photos li > img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.stand-cork__pin {
+  position: absolute;
+  z-index: 1;
+  top: -1.1vh;
+  left: 50%;
+  width: 2.4vh;
+  height: 2.4vh;
+  margin-left: -1.2vh;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #ff6b5e, #c4100a 55%, #7a0805);
+  box-shadow: 0 0.5vh 0.8vh rgba(0, 0, 0, 0.45);
+}
+@keyframes stand-drop {
+  from { opacity: 0; transform: translateY(-4vh) scale(1.04); }
+}
+
+/* Soft hand-off from the dark stage into the light sponsors band */
+.stand__stage { padding-bottom: 9vh; }
+.stand__sponsors::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  height: 9vh;
+  background: linear-gradient(to bottom, rgba(246, 241, 229, 0), rgba(246, 241, 229, 0.18) 45%, rgba(246, 241, 229, 0.75) 85%, #f6f1e5);
+  pointer-events: none;
+  z-index: 2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stand-cork__note, .stand-cork__photos li { animation: none; }
+}
