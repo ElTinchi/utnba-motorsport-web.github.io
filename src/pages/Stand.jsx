@@ -22,7 +22,11 @@ const NEWS = JSON.parse(newsJson.replace(/^﻿/, ''));
 // Same order as fsPage.dynamicEvents / staticEvents; seconds ≈ one full animation cycle.
 const DYNAMIC = [[AccelerationAnimation, 9], [SkidPadAnimation, 13], [AutocrossAnimation, 11.5], [EfficiencyAnimation, 11], [EnduranceAnimation, 14]];
 const STATIC = [[DesignAnimation, 12], [CostAnimation, 12], [BusinessPlanAnimation, 12]];
-const PHOTO_SECONDS = 4.5;
+// A stand cell is ~560x600 px at 1080p: photos whose short side is below this get upscaled and look soft.
+const MIN_PHOTO_SIDE = 600;
+const AREA_SECONDS = 6;
+const MOMENT_SECONDS = 9;
+const chunk = (list, size) => Array.from({ length: Math.ceil(list.length / size) }, (_, i) => list.slice(i * size, i * size + size));
 const points = score => Number(String(score).match(/\d+/)?.[0] || 0);
 
 function EventSlide({ Animation, event, kicker, tagline }) {
@@ -37,18 +41,17 @@ function EventSlide({ Animation, event, kicker, tagline }) {
   </div>;
 }
 
-function PhotoSlide({ photos, kicker }) {
-  const [index, setIndex] = useState(0);
-  useEffect(() => {
-    const id = setInterval(() => setIndex(i => (i + 1) % photos.length), PHOTO_SECONDS * 1000);
-    return () => clearInterval(id);
-  }, [photos.length]);
-  return <div className="stand-photos">
-    {photos.map((photo, i) => <img key={photo.src} src={photo.src} alt="" className={`stand-photos__img${i === index ? ' is-active' : ''}`} draggable={false} />)}
-    <div className="stand-photos__caption">
-      <span className="stand-kicker">{kicker}</span>
-      <p className="stand-photos__title" key={index}>{photos[index].caption}</p>
-    </div>
+// Two or three photos at once: a single full-screen photo looked oversized and soft.
+function PhotoGridSlide({ kicker, title, photos }) {
+  return <div className="stand-grid">
+    <span className="stand-kicker">{kicker}</span>
+    {title && <h2 className="stand-title">{title}</h2>}
+    <ul className={`stand-grid__photos stand-grid__photos--${photos.length}`}>
+      {photos.map((photo, i) => <li key={photo.src} style={{ '--i': i }}>
+        <img src={photo.src} alt="" draggable={false} />
+        {photo.caption && <p>{photo.caption}</p>}
+      </li>)}
+    </ul>
   </div>;
 }
 
@@ -56,6 +59,15 @@ export default function Stand() {
   const { t, i18n } = useTranslation();
   const [current, setCurrent] = useState(0);
   const [paused, setPaused] = useState(false);
+  // src -> short side in px, measured once; unmeasured photos are shown until known.
+  const [sizes, setSizes] = useState({});
+  useEffect(() => {
+    Object.values(PHOTOS_BY_AREA).flat().forEach(src => {
+      const img = new Image();
+      img.onload = () => setSizes(prev => ({ ...prev, [src]: Math.min(img.naturalWidth, img.naturalHeight) }));
+      img.src = src;
+    });
+  }, []);
 
   const slides = useMemo(() => {
     const dynamicEvents = t('fsPage.dynamicEvents', { returnObjects: true });
@@ -64,10 +76,17 @@ export default function Stand() {
     const specs = Object.values(t('carPage.specs', { returnObjects: true })).slice(0, 4);
     const lang = NEWS[i18n.resolvedLanguage?.split('-')[0]] ? i18n.resolvedLanguage.split('-')[0] : 'es';
     const total = [...dynamicEvents, ...staticEvents].reduce((sum, e) => sum + points(e.score), 0);
-    // Interleave areas so consecutive photos come from different teams.
-    const areaPhotos = AREAS.map(a => (PHOTOS_BY_AREA[a.folder] || []).map(src => ({ src, caption: t(`areas.items.${a.id}.title`) })));
-    const workshop = Array.from({ length: Math.max(...areaPhotos.map(p => p.length)) }, (_, i) => areaPhotos.map(p => p[i])).flat().filter(Boolean);
-    const moments = NEWS[lang].posts.filter(p => p.image).slice(0, 6).map(p => ({ src: p.image, caption: p.title }));
+    // One slide per area with up to three of its photos; split in two blocks around the static events.
+    const sharp = src => (sizes[src] ?? Infinity) >= MIN_PHOTO_SIDE;
+    const areaSlides = AREAS.map(a => ({ a, photos: (PHOTOS_BY_AREA[a.folder] || []).filter(sharp).slice(0, 3) }))
+      .filter(({ photos }) => photos.length)
+      .map(({ a, photos }) => ({
+        seconds: AREA_SECONDS,
+        grid: { kicker: t('stand.workshopKicker'), title: t(`areas.items.${a.id}.title`), photos: photos.map(src => ({ src })) },
+      }));
+    const half = Math.ceil(areaSlides.length / 2);
+    const moments = chunk(NEWS[lang].posts.filter(p => p.image).slice(0, 6).map(p => ({ src: p.image, caption: p.title })), 3)
+      .map(photos => ({ seconds: MOMENT_SECONDS, grid: { kicker: t('stand.momentsKicker'), photos } }));
     const ev = (list, i, kind, n) => ({ list, i, kind, n });
     return [
       { seconds: 9, render: () => <div className="stand-hero">
@@ -88,7 +107,7 @@ export default function Stand() {
         </dl>
       </div> },
       ...DYNAMIC.map(([, seconds], i) => ({ seconds, event: ev(dynamicEvents, i, 'dynamic', DYNAMIC.length) })),
-      { seconds: PHOTO_SECONDS * Math.min(5, workshop.length), photos: workshop.slice(0, 5), kicker: t('stand.workshopKicker') },
+      ...areaSlides.slice(0, half),
       ...STATIC.map(([, seconds], i) => ({ seconds, event: ev(staticEvents, i, 'static', STATIC.length) })),
       { seconds: 10, render: () => <div className="stand-car">
         <img src="/assets/img/render_fsae.jpg" alt="" className="stand-car__img" draggable={false} />
@@ -98,8 +117,8 @@ export default function Stand() {
           <dl className="stand-specs">{specs.map(s => <div key={s.label}><dt>{s.label}</dt><dd>{s.value}</dd></div>)}</dl>
         </div>
       </div> },
-      { seconds: PHOTO_SECONDS * Math.min(5, workshop.length - 5), photos: workshop.slice(5, 10), kicker: t('stand.workshopKicker') },
-      { seconds: PHOTO_SECONDS * moments.length, photos: moments, kicker: t('stand.momentsKicker') },
+      ...areaSlides.slice(half),
+      ...moments,
       { seconds: 8, render: () => <div className="stand-intro">
         <span className="stand-kicker">{t('stand.pressKicker')}</span>
         <ul className="stand-press">{PRESS.map(p => <li key={p.name}>{p.name}</li>)}</ul>
@@ -115,8 +134,8 @@ export default function Stand() {
           <figcaption>utnbamotorsport.com.ar/sponsors</figcaption>
         </figure>
       </div> },
-    ].filter(s => !s.photos || s.photos.length).map(s => ({ ...s, taglines }));
-  }, [t, i18n.resolvedLanguage]);
+    ].map(s => ({ ...s, taglines }));
+  }, [t, i18n.resolvedLanguage, sizes]);
 
   const slide = slides[current % slides.length];
 
@@ -144,8 +163,8 @@ export default function Stand() {
     const offset = kind === 'dynamic' ? 0 : DYNAMIC.length;
     body = <EventSlide Animation={Animation} event={list[i]} tagline={slide.taglines[offset + i]}
       kicker={t(kind === 'dynamic' ? 'stand.dynamicKicker' : 'stand.staticKicker', { n: i + 1, total: n })} />;
-  } else if (slide.photos) {
-    body = <PhotoSlide photos={slide.photos} kicker={slide.kicker} />;
+  } else if (slide.grid) {
+    body = <PhotoGridSlide {...slide.grid} />;
   } else {
     body = slide.render();
   }
