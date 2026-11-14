@@ -2,6 +2,8 @@ import { useEffect, useMemo, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import SponsorsCarousel from '../components/SponsorsCarousel.jsx';
+import CarSpin from '../components/CarSpin.jsx';
+import { loadCarModel } from '../components/carModel.js';
 import { PHOTOS_BY_AREA } from '../components/Gallery.jsx';
 import { AREAS } from '../components/AreasGrid.jsx';
 import { PRESS } from '../data/press.js';
@@ -72,6 +74,8 @@ export default function Stand() {
   const { t, i18n } = useTranslation();
   const [current, setCurrent] = useState(0);
   const [paused, setPaused] = useState(false);
+  // Start downloading the 3D car now so the 360° slide is ready when it comes up.
+  useEffect(() => { loadCarModel().catch(() => {}); }, []);
   // src -> short side in px, measured once; unmeasured photos are shown until known.
   const [sizes, setSizes] = useState({});
   useEffect(() => {
@@ -125,6 +129,13 @@ export default function Stand() {
       ...DYNAMIC.map(([, seconds], i) => ({ seconds, event: ev(dynamicEvents, i, 'dynamic', DYNAMIC.length) })),
       ...areaSlides.slice(0, half),
       ...STATIC.map(([, seconds], i) => ({ seconds, event: ev(staticEvents, i, 'static', STATIC.length) })),
+      { seconds: 12, render: () => <div className="stand-spin">
+        <CarSpin seconds={12} className="stand-spin__car" />
+        <div className="stand-spin__copy">
+          <span className="stand-kicker">{t('stand.carKicker')}</span>
+          <h2 className="stand-title">{t('stand.spinTitle')}</h2>
+        </div>
+      </div> },
       { seconds: 10, render: () => <div className="stand-car">
         <img src="/assets/img/render_fsae.jpg" alt="" className="stand-car__img" draggable={false} />
         <div className="stand-car__copy">

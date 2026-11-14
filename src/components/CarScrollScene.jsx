@@ -3,6 +3,7 @@ import { motion, useScroll, useSpring, useTransform, useMotionValueEvent } from 
 import useReducedMotion from '../hooks/useReducedMotion';
 import { useTranslation } from 'react-i18next';
 import { COMMERCIAL_CONTACT_HREF } from '../routes';
+import { loadCarModel } from './carModel.js';
 import '../styles/car-scroll-scene.css';
 
 // Reuse the viewer's local renderer; no second 3D framework or permanent render loop.
@@ -22,7 +23,6 @@ export default function CarScrollScene() {
   useEffect(() => { reducedRef.current = reduced; draw.current(); }, [reduced]);
 
   useEffect(() => {
-    const controller = new AbortController();
     let renderer;
     let initialized = false;
     let disposed = false;
@@ -44,20 +44,7 @@ export default function CarScrollScene() {
       // Data saver keeps the immediately available poster and link to the full viewer.
       if (navigator.connection?.saveData) return;
       try {
-        const [{ CarRenderer }, response] = await Promise.all([
-          import(/* @vite-ignore */ String('/visor/engine.js?v=studio-light-22')),
-          fetch('/visor/assets/model/auto.glb', { signal: controller.signal }),
-        ]);
-        if (!response.ok) throw new Error('Model unavailable');
-        const buffer = await response.arrayBuffer();
-        if (disposed) return;
-        // Parsing and clipping the model take a few hundred ms: do it off the main thread so scrolling stays smooth.
-        const model = await new Promise((resolve, reject) => {
-          const worker = new Worker('/visor/model-worker.js?v=1', { type: 'module' });
-          worker.onmessage = ({ data }) => { worker.terminate(); data.error ? reject(new Error(data.error)) : resolve(data.model); };
-          worker.onerror = event => { worker.terminate(); reject(event); };
-          worker.postMessage({ buffer }, [buffer]);
-        });
+        const { CarRenderer, model } = await loadCarModel();
         if (disposed) return;
         renderer = new CarRenderer(canvas.current, model);
         await renderer.initTextures();
@@ -81,7 +68,6 @@ export default function CarScrollScene() {
     document.addEventListener('visibilitychange', paint);
     return () => {
       disposed = true;
-      controller.abort();
       cancelAnimationFrame(frame);
       preload.disconnect(); visibility.disconnect(); resize.disconnect();
       document.removeEventListener('visibilitychange', paint);
