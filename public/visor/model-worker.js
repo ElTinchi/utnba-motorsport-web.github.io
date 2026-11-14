@@ -1,5 +1,5 @@
 // Parses and cleans the car model off the main thread (see CarScrollScene).
-import { parseGLB, raycast } from './engine.js?v=studio-light-22';
+import { parseGLB, raycast } from './engine.js?v=studio-light-23';
 import { cleanUnderbody } from './undertray.js?v=1';
 
 self.onmessage = ({ data }) => {
